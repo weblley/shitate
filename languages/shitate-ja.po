@@ -1,0 +1,273 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+
+msgid " / year"
+msgstr " / 年"
+
+msgid "1 site · updates & support"
+msgstr "1サイト · 更新＆サポート"
+
+msgid "12+ premium blocks"
+msgstr "12以上のプレミアムブロック"
+
+msgid "A clean, flexible foundation for corporate websites. Tell your story, showcase your services and convert visitors into customers."
+msgstr "コーポレートサイトのためのクリーンで柔軟な土台。ストーリーを伝え、サービスを見せ、訪問者を顧客に変えましょう。"
+
+msgid "A growing library of pro patterns"
+msgstr "拡充され続けるProパターン集"
+
+msgid "A short summary of the services your company offers. Edit this text to match your business."
+msgstr "御社が提供するサービスの概要です。ビジネスに合わせてこのテキストを編集してください。"
+
+msgid "Agency"
+msgstr "Agency"
+
+msgid "Annual plans include updates and support. Need more than one site? Choose Business or Agency."
+msgstr "年間プランには更新とサポートが含まれます。複数サイトならBusinessまたはAgencyを。"
+
+msgid "Apply rounding to font sizes"
+msgstr "フォントサイズにラウンドを適用"
+
+msgid "Augmented Fourth — 1.414"
+msgstr "増4度 — 1.414"
+
+msgid "Base size (px)"
+msgstr "基準サイズ（px）"
+
+msgid "Bigger ratio = more contrast between headings (like typescale.com)."
+msgstr "比率が大きいほど見出しの強弱が大きくなります（typescale.com と同様）。"
+
+msgid "Body text size. The whole scale is built from this."
+msgstr "本文の文字サイズ。これを基準に全スケールが算出されます。"
+
+msgid "Build a site that works as hard as you do"
+msgstr "あなたと同じくらい働くサイトをつくろう"
+
+msgid "Built with the WordPress Interactivity API for fast, accessible interactions."
+msgstr "高速でアクセシブルな操作性を、WordPress標準の技術で実現。"
+
+msgid "Business"
+msgstr "Business"
+
+msgid "Buy Lifetime"
+msgstr "Lifetimeを購入"
+
+msgid "Center horizontally (mx-auto)"
+msgstr "左右中央寄せ（mx-auto）"
+
+msgid "Choose Agency"
+msgstr "Agencyを選ぶ"
+
+msgid "Choose Business"
+msgstr "Businessを選ぶ"
+
+msgid "Choose Personal"
+msgstr "Personalを選ぶ"
+
+msgid "Clear spacing classes"
+msgstr "余白クラスをクリア"
+
+msgid "Communicate plans and answer questions with structured, accessible sections."
+msgstr "構造化されたアクセシブルなセクションで、プランと疑問に答えます。"
+
+msgid "Concept"
+msgstr "コンセプト"
+
+msgid "Consulting"
+msgstr "コンサルティング"
+
+msgid "Contact us"
+msgstr "お問い合わせ"
+
+msgid "Default"
+msgstr "既定"
+
+msgid "Describe this service in a sentence or two. Explain the value it brings to your customers."
+msgstr "このサービスを1〜2文で説明し、お客様にもたらす価値を伝えましょう。"
+
+msgid "Design that gets out of your way"
+msgstr "邪魔をしないデザイン"
+
+msgid "Development"
+msgstr "開発"
+
+msgid "Frequently asked questions"
+msgstr "よくある質問"
+
+msgid "Get started"
+msgstr "はじめる"
+
+msgid "Go further with premium blocks"
+msgstr "プレミアムブロックでさらに先へ"
+
+msgid "Golden Ratio — 1.618"
+msgstr "黄金比 — 1.618"
+
+msgid "Hero & banners"
+msgstr "ヒーローとバナー"
+
+msgid "How many sites can I use one license on?"
+msgstr "1ライセンスで何サイト使えますか？"
+
+msgid "Is the Shitate theme free?"
+msgstr "Shitateテーマは無料ですか？"
+
+msgid "Latest posts"
+msgstr "最新の投稿"
+
+msgid "Learn more"
+msgstr "詳しく見る"
+
+msgid "Lifetime — pay once"
+msgstr "Lifetime — 買い切り"
+
+msgid "Major Second — 1.125"
+msgstr "長2度 — 1.125"
+
+msgid "Major Third — 1.25"
+msgstr "長3度 — 1.25"
+
+msgid "Make a strong first impression with flexible hero and call-to-action sections."
+msgstr "柔軟なヒーローとCTAセクションで、力強い第一印象を。"
+
+msgid "Margin bottom"
+msgstr "下マージン"
+
+msgid "Margin top"
+msgstr "上マージン"
+
+msgid "Mega menu, project slider and contact form"
+msgstr "メガメニュー・実績スライダー・お問い合わせフォーム"
+
+msgid "Minor Second — 1.067"
+msgstr "短2度 — 1.067"
+
+msgid "Minor Third — 1.2"
+msgstr "短3度 — 1.2"
+
+msgid "Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the Shitate category."
+msgstr "出来合いのセクションを組み合わせて、数分でページを作成。ブロック挿入ツールの「Shitate」カテゴリから挿入できます。"
+
+msgid "Most popular"
+msgstr "一番人気"
+
+msgid "No page builder lock-in, no heavy dependencies. Just clean, fast, standards-based output that you fully own."
+msgstr "ページビルダーへのロックインも重い依存もなし。クリーンで速い、標準準拠の出力だけがあなたのものになります。"
+
+msgid "No posts yet."
+msgstr "まだ投稿がありません。"
+
+msgid "Padding bottom"
+msgstr "下パディング"
+
+msgid "Padding left/right"
+msgstr "左右パディング"
+
+msgid "Padding top"
+msgstr "上パディング"
+
+msgid "Patterns for every page"
+msgstr "あらゆるページに使えるパターン"
+
+msgid "Perfect Fifth — 1.5"
+msgstr "完全5度 — 1.5"
+
+msgid "Perfect Fourth — 1.333"
+msgstr "完全4度 — 1.333"
+
+msgid "Personal"
+msgstr "Personal"
+
+msgid "Personal covers 1 site, Business up to 5 sites and Agency unlimited sites. The one-time Lifetime license covers a single site."
+msgstr "Personalは1サイト、Businessは最大5サイト、Agencyは無制限です。買い切りのLifetimeは1サイトのみです。"
+
+msgid "Present what you offer with clean, responsive multi-column layouts."
+msgstr "クリーンでレスポンシブなマルチカラムで提供内容を紹介。"
+
+msgid "Pricing & FAQ"
+msgstr "料金とFAQ"
+
+msgid "Pricing tables, testimonial carousels and animated counters"
+msgstr "料金表・お客様の声カルーセル・アニメーション数値"
+
+msgid "Ready to get started?"
+msgstr "さあ、はじめましょう"
+
+msgid "Scale ratio"
+msgstr "スケール比率"
+
+msgid "Services & features"
+msgstr "サービスと特長"
+
+msgid "Shitate"
+msgstr "Shitate"
+
+msgid "Shitate Pro Blocks"
+msgstr "Shitate Pro Blocks"
+
+msgid "Shitate is built on the WordPress Site Editor with a carefully tuned theme.json. Every color, font size and spacing value is a design token, so your site stays consistent as it grows."
+msgstr "Shitateは丁寧に調整されたtheme.jsonとサイトエディターを土台に作られています。色・文字サイズ・余白はすべてデザイントークンなので、サイトが成長しても一貫性が保たれます。"
+
+msgid "Simple, transparent pricing"
+msgstr "シンプルで明快な料金"
+
+msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
+msgstr "各サイズを偶数px（2px単位）に丸め、見出しは選択した比率と自動算出されたスマホ用比率の間で流体的に変化します。"
+
+msgid "Spacing"
+msgstr "余白"
+
+msgid "Support"
+msgstr "サポート"
+
+msgid "Tell us about your project and we will get back to you within one business day."
+msgstr "プロジェクトについてお聞かせください。1営業日以内にご返信します。"
+
+msgid "The Shitate Pro Blocks plugin adds advanced, business-ready blocks that integrate seamlessly with the theme, all editable right inside the Site Editor."
+msgstr "Shitate Pro Blocksプラグインは、テーマとシームレスに統合されたビジネス向けの高度なブロックを追加します。すべてサイトエディター内で編集できます。"
+
+msgid "Typography Scale"
+msgstr "タイポグラフィスケール"
+
+msgid "Unlimited sites · priority support"
+msgstr "サイト数無制限 · 優先サポート"
+
+msgid "Up to 5 sites · updates & support"
+msgstr "最大5サイト · 更新＆サポート"
+
+msgid "View Pro Blocks"
+msgstr "Pro Blocksを見る"
+
+msgid "View all"
+msgstr "すべて見る"
+
+msgid "Welcome to your business"
+msgstr "ようこそ、あなたのビジネスへ"
+
+msgid "What happens when my subscription ends?"
+msgstr "サブスクリプションが終了するとどうなりますか？"
+
+msgid "What we do"
+msgstr "私たちにできること"
+
+msgid "Yes. The Shitate theme is free and open source under the GPL. Shitate Pro Blocks is a paid plugin that extends it."
+msgstr "はい。ShitateテーマはGPLのもと無料・オープンソースです。Shitate Pro Blocksはそれを拡張する有料プラグインです。"
+
+msgid "Your site keeps working. You simply stop receiving new updates and support until you renew."
+msgstr "サイトはそのまま動き続けます。更新するまで新しいアップデートとサポートが受けられなくなるだけです。"
+
+msgid "¥29,800"
+msgstr "¥29,800"
+
+msgid "¥49,800 one-time · 1 site · lifetime updates"
+msgstr "¥49,800（一括） · 1サイト · 永久アップデート"
+
+msgid "¥69,800"
+msgstr "¥69,800"
+
+msgid "¥9,800"
+msgstr "¥9,800"

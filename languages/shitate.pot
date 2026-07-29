@@ -1,0 +1,273 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+
+msgid " / year"
+msgstr ""
+
+msgid "1 site · updates & support"
+msgstr ""
+
+msgid "12+ premium blocks"
+msgstr ""
+
+msgid "A clean, flexible foundation for corporate websites. Tell your story, showcase your services and convert visitors into customers."
+msgstr ""
+
+msgid "A growing library of pro patterns"
+msgstr ""
+
+msgid "A short summary of the services your company offers. Edit this text to match your business."
+msgstr ""
+
+msgid "Agency"
+msgstr ""
+
+msgid "Annual plans include updates and support. Need more than one site? Choose Business or Agency."
+msgstr ""
+
+msgid "Apply rounding to font sizes"
+msgstr ""
+
+msgid "Augmented Fourth — 1.414"
+msgstr ""
+
+msgid "Base size (px)"
+msgstr ""
+
+msgid "Bigger ratio = more contrast between headings (like typescale.com)."
+msgstr ""
+
+msgid "Body text size. The whole scale is built from this."
+msgstr ""
+
+msgid "Build a site that works as hard as you do"
+msgstr ""
+
+msgid "Built with the WordPress Interactivity API for fast, accessible interactions."
+msgstr ""
+
+msgid "Business"
+msgstr ""
+
+msgid "Buy Lifetime"
+msgstr ""
+
+msgid "Center horizontally (mx-auto)"
+msgstr ""
+
+msgid "Choose Agency"
+msgstr ""
+
+msgid "Choose Business"
+msgstr ""
+
+msgid "Choose Personal"
+msgstr ""
+
+msgid "Clear spacing classes"
+msgstr ""
+
+msgid "Communicate plans and answer questions with structured, accessible sections."
+msgstr ""
+
+msgid "Concept"
+msgstr ""
+
+msgid "Consulting"
+msgstr ""
+
+msgid "Contact us"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Describe this service in a sentence or two. Explain the value it brings to your customers."
+msgstr ""
+
+msgid "Design that gets out of your way"
+msgstr ""
+
+msgid "Development"
+msgstr ""
+
+msgid "Frequently asked questions"
+msgstr ""
+
+msgid "Get started"
+msgstr ""
+
+msgid "Go further with premium blocks"
+msgstr ""
+
+msgid "Golden Ratio — 1.618"
+msgstr ""
+
+msgid "Hero & banners"
+msgstr ""
+
+msgid "How many sites can I use one license on?"
+msgstr ""
+
+msgid "Is the Shitate theme free?"
+msgstr ""
+
+msgid "Latest posts"
+msgstr ""
+
+msgid "Learn more"
+msgstr ""
+
+msgid "Lifetime — pay once"
+msgstr ""
+
+msgid "Major Second — 1.125"
+msgstr ""
+
+msgid "Major Third — 1.25"
+msgstr ""
+
+msgid "Make a strong first impression with flexible hero and call-to-action sections."
+msgstr ""
+
+msgid "Margin bottom"
+msgstr ""
+
+msgid "Margin top"
+msgstr ""
+
+msgid "Mega menu, project slider and contact form"
+msgstr ""
+
+msgid "Minor Second — 1.067"
+msgstr ""
+
+msgid "Minor Third — 1.2"
+msgstr ""
+
+msgid "Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the Shitate category."
+msgstr ""
+
+msgid "Most popular"
+msgstr ""
+
+msgid "No page builder lock-in, no heavy dependencies. Just clean, fast, standards-based output that you fully own."
+msgstr ""
+
+msgid "No posts yet."
+msgstr ""
+
+msgid "Padding bottom"
+msgstr ""
+
+msgid "Padding left/right"
+msgstr ""
+
+msgid "Padding top"
+msgstr ""
+
+msgid "Patterns for every page"
+msgstr ""
+
+msgid "Perfect Fifth — 1.5"
+msgstr ""
+
+msgid "Perfect Fourth — 1.333"
+msgstr ""
+
+msgid "Personal"
+msgstr ""
+
+msgid "Personal covers 1 site, Business up to 5 sites and Agency unlimited sites. The one-time Lifetime license covers a single site."
+msgstr ""
+
+msgid "Present what you offer with clean, responsive multi-column layouts."
+msgstr ""
+
+msgid "Pricing & FAQ"
+msgstr ""
+
+msgid "Pricing tables, testimonial carousels and animated counters"
+msgstr ""
+
+msgid "Ready to get started?"
+msgstr ""
+
+msgid "Scale ratio"
+msgstr ""
+
+msgid "Services & features"
+msgstr ""
+
+msgid "Shitate"
+msgstr ""
+
+msgid "Shitate Pro Blocks"
+msgstr ""
+
+msgid "Shitate is built on the WordPress Site Editor with a carefully tuned theme.json. Every color, font size and spacing value is a design token, so your site stays consistent as it grows."
+msgstr ""
+
+msgid "Simple, transparent pricing"
+msgstr ""
+
+msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
+msgstr ""
+
+msgid "Spacing"
+msgstr ""
+
+msgid "Support"
+msgstr ""
+
+msgid "Tell us about your project and we will get back to you within one business day."
+msgstr ""
+
+msgid "The Shitate Pro Blocks plugin adds advanced, business-ready blocks that integrate seamlessly with the theme, all editable right inside the Site Editor."
+msgstr ""
+
+msgid "Typography Scale"
+msgstr ""
+
+msgid "Unlimited sites · priority support"
+msgstr ""
+
+msgid "Up to 5 sites · updates & support"
+msgstr ""
+
+msgid "View Pro Blocks"
+msgstr ""
+
+msgid "View all"
+msgstr ""
+
+msgid "Welcome to your business"
+msgstr ""
+
+msgid "What happens when my subscription ends?"
+msgstr ""
+
+msgid "What we do"
+msgstr ""
+
+msgid "Yes. The Shitate theme is free and open source under the GPL. Shitate Pro Blocks is a paid plugin that extends it."
+msgstr ""
+
+msgid "Your site keeps working. You simply stop receiving new updates and support until you renew."
+msgstr ""
+
+msgid "¥29,800"
+msgstr ""
+
+msgid "¥49,800 one-time · 1 site · lifetime updates"
+msgstr ""
+
+msgid "¥69,800"
+msgstr ""
+
+msgid "¥9,800"
+msgstr ""
