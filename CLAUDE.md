@@ -36,6 +36,10 @@ cd - && msgfmt languages/shitate-ja.po -o languages/ja.mo
 ```
 JS翻訳（utilities-toolbar）は `languages/shitate-ja-st-utilities-toolbar.json`（ハンドル名命名）。
 
+## GitHub自動アップデート（.org掲載までの暫定配信・実機検証済み）
+- `inc/github-updater.php` ＋ style.css の `Update URI` ヘッダで、GitHub Releases 最新版を導入サイトに更新通知（6時間キャッシュ、`update_themes_github.com` フィルタ、リポジトリはpublic）
+- **⚠️ .org提出前に削除必須**: ①inc/github-updater.php ②functions.phpのrequire ③style.cssのUpdate URIヘッダ ④build-zip.shの `inc`。削除版を最後のGitHub経由リリースとして配信してから提出
+
 ## リリース（GitHub）
 - リポジトリ: `weblley/shitate`（private）。アップデート情報は **CHANGELOG.md** に記録していく（普段は [Unreleased] に追記）
 - リリース手順:
