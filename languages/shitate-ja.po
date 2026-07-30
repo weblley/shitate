@@ -170,6 +170,9 @@ msgstr "左右パディング"
 msgid "Padding top"
 msgstr "上パディング"
 
+msgid "Patterns"
+msgstr "パターン"
+
 msgid "Patterns for every page"
 msgstr "あらゆるページに使えるパターン"
 

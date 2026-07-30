@@ -45,6 +45,23 @@ function st_register_pattern_categories() {
 add_action( 'init', 'st_register_pattern_categories' );
 
 /**
+ * Appearance → Patterns shortcut.
+ *
+ * Block themes only get "Editor" under Appearance, which buries pattern
+ * management inside the Site Editor. Link straight to its patterns view,
+ * using the same URL core shows classic themes (wp-admin/menu.php).
+ */
+function st_patterns_admin_menu() {
+	add_theme_page(
+		__( 'Patterns', 'shitate' ),
+		__( 'Patterns', 'shitate' ),
+		'edit_theme_options',
+		'site-editor.php?p=/pattern'
+	);
+}
+add_action( 'admin_menu', 'st_patterns_admin_menu' );
+
+/**
  * Drive vertical layout with margin-top only.
  *
  * Vertical rhythm follows DADS using margin-top: the base gap comes from

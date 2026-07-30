@@ -8,6 +8,8 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Added
 
+- 管理画面メニュー「外観 → パターン」: サイトエディターのパターン画面（site-editor.php?p=/pattern）への直リンク。ブロックテーマでは「エディター」の奥に隠れるパターン管理への動線（add_theme_page使用＝.org審査で許可されているAPI）
+
 - screenshot.png（フロントページの実キャプチャ・.org規定の1200×900）
 - readme.txt に Copyright セクション（GPL宣言＋サードパーティリソース非同梱の明記）
 
