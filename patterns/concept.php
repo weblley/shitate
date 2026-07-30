@@ -23,7 +23,7 @@
 
 <!-- wp:column {"verticalAlignment":"top","width":"60%"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:60%"><!-- wp:paragraph {"fontSize":"large","textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color has-large-font-size"><?php esc_html_e( 'Shitate is built on the WordPress Site Editor with a carefully tuned theme.json. Every color, font size and spacing value is a design token, so your site stays consistent as it grows.', 'shitate' ); ?></p>
+<p class="has-contrast-2-color has-text-color has-large-font-size"><?php esc_html_e( 'shitate is built on the WordPress Site Editor with a carefully tuned theme.json. Every color, font size and spacing value is a design token, so your site stays consistent as it grows.', 'shitate' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"contrast-2"} -->

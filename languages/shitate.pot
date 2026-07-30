@@ -113,7 +113,7 @@ msgstr ""
 msgid "How many sites can I use one license on?"
 msgstr ""
 
-msgid "Is the Shitate theme free?"
+msgid "Is the shitate theme free?"
 msgstr ""
 
 msgid "Latest posts"
@@ -149,7 +149,7 @@ msgstr ""
 msgid "Minor Third — 1.2"
 msgstr ""
 
-msgid "Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the Shitate category."
+msgid "Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the shitate category."
 msgstr ""
 
 msgid "Most popular"
@@ -203,15 +203,6 @@ msgstr ""
 msgid "Services & features"
 msgstr ""
 
-msgid "Shitate"
-msgstr ""
-
-msgid "Shitate Pro Blocks"
-msgstr ""
-
-msgid "Shitate is built on the WordPress Site Editor with a carefully tuned theme.json. Every color, font size and spacing value is a design token, so your site stays consistent as it grows."
-msgstr ""
-
 msgid "Simple, transparent pricing"
 msgstr ""
 
@@ -227,7 +218,7 @@ msgstr ""
 msgid "Tell us about your project and we will get back to you within one business day."
 msgstr ""
 
-msgid "The Shitate Pro Blocks plugin adds advanced, business-ready blocks that integrate seamlessly with the theme, all editable right inside the Site Editor."
+msgid "The shitate pro blocks plugin adds advanced, business-ready blocks that integrate seamlessly with the theme, all editable right inside the Site Editor."
 msgstr ""
 
 msgid "Typography Scale"
@@ -254,10 +245,19 @@ msgstr ""
 msgid "What we do"
 msgstr ""
 
-msgid "Yes. The Shitate theme is free and open source under the GPL. Shitate Pro Blocks is a paid plugin that extends it."
+msgid "Yes. The shitate theme is free and open source under the GPL. shitate pro blocks is a paid plugin that extends it."
 msgstr ""
 
 msgid "Your site keeps working. You simply stop receiving new updates and support until you renew."
+msgstr ""
+
+msgid "shitate"
+msgstr ""
+
+msgid "shitate is built on the WordPress Site Editor with a carefully tuned theme.json. Every color, font size and spacing value is a design token, so your site stays consistent as it grows."
+msgstr ""
+
+msgid "shitate pro blocks"
 msgstr ""
 
 msgid "¥29,800"

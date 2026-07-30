@@ -1,9 +1,9 @@
 <?php
 /**
- * Title: Product introduction (Shitate Pro Blocks)
+ * Title: Product introduction (shitate pro blocks)
  * Slug: st/product
  * Categories: st, call-to-action, featured
- * Description: A product introduction section with a heading, feature list and a call-to-action, designed to promote the Shitate Pro Blocks plugin.
+ * Description: A product introduction section with a heading, feature list and a call-to-action, designed to promote the shitate pro blocks plugin.
  * Keywords: product, plugin, pro, upgrade, feature
  * Block Types: core/columns
  * Viewport Width: 1400
@@ -13,7 +13,7 @@
 <section class="wp-block-group alignfull has-base-2-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|50"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"1px"}},"textColor":"primary","fontSize":"small"} -->
-<p class="has-primary-color has-text-color has-small-font-size" style="text-transform:uppercase;letter-spacing:1px"><?php esc_html_e( 'Shitate Pro Blocks', 'shitate' ); ?></p>
+<p class="has-primary-color has-text-color has-small-font-size" style="text-transform:uppercase;letter-spacing:1px"><?php esc_html_e( 'shitate pro blocks', 'shitate' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"fontSize":"xx-large"} -->
@@ -21,7 +21,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"large","textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color has-large-font-size"><?php esc_html_e( 'The Shitate Pro Blocks plugin adds advanced, business-ready blocks that integrate seamlessly with the theme, all editable right inside the Site Editor.', 'shitate' ); ?></p>
+<p class="has-contrast-2-color has-text-color has-large-font-size"><?php esc_html_e( 'The shitate pro blocks plugin adds advanced, business-ready blocks that integrate seamlessly with the theme, all editable right inside the Site Editor.', 'shitate' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list {"className":"is-style-none"} -->

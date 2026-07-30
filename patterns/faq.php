@@ -16,8 +16,8 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
 <div class="wp-block-group"><!-- wp:details {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"border"} -->
-<details class="wp-block-details has-border-color" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><summary><?php esc_html_e( 'Is the Shitate theme free?', 'shitate' ); ?></summary><!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Yes. The Shitate theme is free and open source under the GPL. Shitate Pro Blocks is a paid plugin that extends it.', 'shitate' ); ?></p>
+<details class="wp-block-details has-border-color" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><summary><?php esc_html_e( 'Is the shitate theme free?', 'shitate' ); ?></summary><!-- wp:paragraph {"textColor":"contrast-2"} -->
+<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Yes. The shitate theme is free and open source under the GPL. shitate pro blocks is a paid plugin that extends it.', 'shitate' ); ?></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 

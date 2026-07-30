@@ -1,6 +1,6 @@
 <?php
 /**
- * Shitate theme functions.
+ * shitate theme functions.
  *
  * Naming convention:
  *   st  = shitate theme  (this theme's PHP, constants, CSS vars, handles)
@@ -8,7 +8,7 @@
  * The text domain stays "shitate" because WordPress.org requires it to match
  * the theme slug.
  *
- * @package Shitate
+ * @package shitate
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -39,7 +39,7 @@ add_action( 'after_setup_theme', 'st_setup' );
 function st_register_pattern_categories() {
 	register_block_pattern_category(
 		'st',
-		array( 'label' => __( 'Shitate', 'shitate' ) )
+		array( 'label' => __( 'shitate', 'shitate' ) )
 	);
 }
 add_action( 'init', 'st_register_pattern_categories' );

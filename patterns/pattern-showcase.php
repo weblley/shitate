@@ -16,7 +16,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"neutral"} -->
-<p class="has-text-align-center has-neutral-color has-text-color"><?php esc_html_e( 'Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the Shitate category.', 'shitate' ); ?></p>
+<p class="has-text-align-center has-neutral-color has-text-color"><?php esc_html_e( 'Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the shitate category.', 'shitate' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
