@@ -19,6 +19,10 @@ if ( ! defined( 'ST_VERSION' ) ) {
 	define( 'ST_VERSION', '0.1.0' );
 }
 
+// GitHub-based updates while distributed outside WordPress.org.
+// REMOVE before .org submission (see inc/github-updater.php).
+require_once get_template_directory() . '/inc/github-updater.php';
+
 /**
  * Theme setup.
  */

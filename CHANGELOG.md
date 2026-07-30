@@ -6,6 +6,12 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-30
+
+### Added
+
+- GitHub経由の自動アップデート（.org掲載までの暫定配信）: style.css の `Update URI` ＋ `inc/github-updater.php`。GitHub Releases の最新版を6時間キャッシュで確認し、「外観 → テーマ」に通常の更新通知を表示。**.org提出前に削除必須**（inc/github-updater.php・functions.phpのrequire・Update URIヘッダ・build-zip.shの inc）
+
 ### Fixed
 
 - アイキャッチ画像が荒い問題: アイキャッチブロックが出力する `post-thumbnail` サイズをテーマで未定義だったため、旧テーマ由来の150×150定義が残ったサイトで極小画像が引き伸ばされていた。`set_post_thumbnail_size( 1568, 9999 )`（等比・クロップ無し）を定義して解消。**既存サイトでは対象画像の再生成（wp media regenerate）が必要**
