@@ -27,7 +27,7 @@ NOTES="$(awk -v ver="$VERSION" '
 	exit 1
 }
 
-echo "→ Bumping version to $VERSION…"
+echo "→ Bumping version to ${VERSION}"
 perl -pi -e "s/^(Version: ).*/\${1}$VERSION/" style.css
 perl -pi -e "s/^(Stable tag: ).*/\${1}$VERSION/" readme.txt
 
