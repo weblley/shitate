@@ -3,7 +3,7 @@ Contributors: weblley
 Requires at least: 6.6
 Tested up to: 7.0
 Requires PHP: 7.2
-Stable tag: 0.1.0
+Stable tag: 0.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, portfolio, block-patterns, full-site-editing, block-styles, style-variations, wide-blocks, editor-style, custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
