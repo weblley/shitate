@@ -28,6 +28,11 @@ function st_setup() {
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'html5', array( 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) );
+	// The featured-image block renders the "post-thumbnail" size. Without this,
+	// a tiny legacy size (e.g. 150x150 from a previous classic theme) can win
+	// and get stretched blurry. Proportional, not cropped: templates shape the
+	// image with aspectRatio + object-fit. Existing uploads need a regenerate.
+	set_post_thumbnail_size( 1568, 9999 );
 	add_editor_style( array( 'assets/css/tokens.css', 'assets/css/utilities.css', 'assets/css/editor.css' ) );
 	load_theme_textdomain( 'shitate', get_template_directory() . '/languages' );
 }
