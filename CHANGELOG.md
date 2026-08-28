@@ -6,6 +6,18 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-08-28
+
+WordPress.org 提出準備リリース（GitHub経由の自動配信はこの版で終了）。
+
+### Removed
+
+- GitHub経由の自動アップデート一式を削除（inc/github-updater.php・functions.phpのrequire・style.cssのUpdate URIヘッダ・build-zip.shの inc）。.org審査要件（Update URI不可・外部通信不可）への対応。以後の更新はWordPress.org公式ディレクトリから配信
+
+### Changed
+
+- Tested up to を 7.1 に更新（style.css / readme.txt。7.1は2026-08-19正式リリース、beta3でスモークテスト済み）
+
 ## [0.2.0] - 2026-07-30
 
 ### Added
