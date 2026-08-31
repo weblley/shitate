@@ -10,6 +10,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 WordPress.org 提出準備リリース（GitHub経由の自動配信はこの版で終了）。
 
+### Fixed
+
+- 枠線色を設定したブロックの文字色まで薄い境界色に変わる問題: パレットのスラッグ `border` が、WPコア生成の文字色クラス `.has-border-color` を生んで**枠線用の構造クラスと同名衝突**していた。スラッグを `line` に改名（表示名「Border」は不変、theme.json＋全スタイルバリエーション＋tokens.css＋パターン/フッターの参照とクラスを一括更新）。従来この衝突経由で偶然色が付いていた枠線には `has-line-border-color` を明示付与
+
 ### Removed
 
 - GitHub経由の自動アップデート一式を削除（inc/github-updater.php・functions.phpのrequire・style.cssのUpdate URIヘッダ・build-zip.shの inc）。.org審査要件（Update URI不可・外部通信不可）への対応。以後の更新はWordPress.org公式ディレクトリから配信

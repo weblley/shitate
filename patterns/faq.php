@@ -15,20 +15,20 @@
 <!-- /wp:heading -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
-<div class="wp-block-group"><!-- wp:details {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"border"} -->
-<details class="wp-block-details has-border-color" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><summary><?php esc_html_e( 'Is the shitate theme free?', 'shitate' ); ?></summary><!-- wp:paragraph {"textColor":"contrast-2"} -->
+<div class="wp-block-group"><!-- wp:details {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"line"} -->
+<details class="wp-block-details has-border-color has-line-border-color" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><summary><?php esc_html_e( 'Is the shitate theme free?', 'shitate' ); ?></summary><!-- wp:paragraph {"textColor":"contrast-2"} -->
 <p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Yes. The shitate theme is free and open source under the GPL. shitate pro blocks is a paid plugin that extends it.', 'shitate' ); ?></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
-<!-- wp:details {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"border"} -->
-<details class="wp-block-details has-border-color" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><summary><?php esc_html_e( 'How many sites can I use one license on?', 'shitate' ); ?></summary><!-- wp:paragraph {"textColor":"contrast-2"} -->
+<!-- wp:details {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"line"} -->
+<details class="wp-block-details has-border-color has-line-border-color" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><summary><?php esc_html_e( 'How many sites can I use one license on?', 'shitate' ); ?></summary><!-- wp:paragraph {"textColor":"contrast-2"} -->
 <p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Personal covers 1 site, Business up to 5 sites and Agency unlimited sites. The one-time Lifetime license covers a single site.', 'shitate' ); ?></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details -->
 
-<!-- wp:details {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"border"} -->
-<details class="wp-block-details has-border-color" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><summary><?php esc_html_e( 'What happens when my subscription ends?', 'shitate' ); ?></summary><!-- wp:paragraph {"textColor":"contrast-2"} -->
+<!-- wp:details {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"line"} -->
+<details class="wp-block-details has-border-color has-line-border-color" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><summary><?php esc_html_e( 'What happens when my subscription ends?', 'shitate' ); ?></summary><!-- wp:paragraph {"textColor":"contrast-2"} -->
 <p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Your site keeps working. You simply stop receiving new updates and support until you renew.', 'shitate' ); ?></p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></div>

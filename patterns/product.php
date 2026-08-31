@@ -50,8 +50,8 @@
 <h3 class="wp-block-heading has-text-align-center has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( '12+ premium blocks', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"border"} -->
-<p class="has-text-align-center has-border-color has-text-color"><?php esc_html_e( 'Built with the WordPress Interactivity API for fast, accessible interactions.', 'shitate' ); ?></p>
+<!-- wp:paragraph {"align":"center","textColor":"line"} -->
+<p class="has-text-align-center has-line-color has-text-color"><?php esc_html_e( 'Built with the WordPress Interactivity API for fast, accessible interactions.', 'shitate' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></section>

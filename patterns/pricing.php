@@ -21,8 +21,8 @@
 <!-- /wp:group -->
 
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"}}}} -->
-<div class="wp-block-columns alignwide"><!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"12px","width":"1px"}},"borderColor":"border","backgroundColor":"base"} -->
-<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-width:1px;border-radius:12px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<div class="wp-block-columns alignwide"><!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"12px","width":"1px"}},"borderColor":"line","backgroundColor":"base"} -->
+<div class="wp-block-column has-border-color has-line-border-color has-base-background-color has-background" style="border-width:1px;border-radius:12px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
 <h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Personal', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
@@ -65,8 +65,8 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"12px","width":"1px"}},"borderColor":"border","backgroundColor":"base"} -->
-<div class="wp-block-column has-border-color has-base-background-color has-background" style="border-width:1px;border-radius:12px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"12px","width":"1px"}},"borderColor":"line","backgroundColor":"base"} -->
+<div class="wp-block-column has-border-color has-line-border-color has-base-background-color has-background" style="border-width:1px;border-radius:12px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
 <h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Agency', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
@@ -92,8 +92,8 @@
 <h3 class="wp-block-heading has-base-color has-text-color has-large-font-size"><?php esc_html_e( 'Lifetime — pay once', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"border"} -->
-<p class="has-border-color has-text-color"><?php esc_html_e( '¥49,800 one-time · 1 site · lifetime updates', 'shitate' ); ?></p>
+<!-- wp:paragraph {"textColor":"line"} -->
+<p class="has-line-color has-text-color"><?php esc_html_e( '¥49,800 one-time · 1 site · lifetime updates', 'shitate' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

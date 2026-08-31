@@ -15,8 +15,8 @@
 <h2 class="wp-block-heading has-text-align-center has-base-color has-text-color"><?php esc_html_e( 'Ready to get started?', 'shitate' ); ?></h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"border","fontSize":"large"} -->
-<p class="has-text-align-center has-border-color has-text-color has-large-font-size"><?php esc_html_e( 'Tell us about your project and we will get back to you within one business day.', 'shitate' ); ?></p>
+<!-- wp:paragraph {"align":"center","textColor":"line","fontSize":"large"} -->
+<p class="has-text-align-center has-line-color has-text-color has-large-font-size"><?php esc_html_e( 'Tell us about your project and we will get back to you within one business day.', 'shitate' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->

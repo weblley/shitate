@@ -21,8 +21,8 @@
 <!-- /wp:group -->
 
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40","top":"var:preset|spacing|40"}}}} -->
-<div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"10px","width":"1px"}},"borderColor":"border"} -->
-<div class="wp-block-column has-border-color" style="border-width:1px;border-radius:10px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"10px","width":"1px"}},"borderColor":"line"} -->
+<div class="wp-block-column has-border-color has-line-border-color" style="border-width:1px;border-radius:10px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
 <h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Hero & banners', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
@@ -31,8 +31,8 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"10px","width":"1px"}},"borderColor":"border"} -->
-<div class="wp-block-column has-border-color" style="border-width:1px;border-radius:10px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"10px","width":"1px"}},"borderColor":"line"} -->
+<div class="wp-block-column has-border-color has-line-border-color" style="border-width:1px;border-radius:10px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
 <h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Services & features', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
@@ -41,8 +41,8 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"10px","width":"1px"}},"borderColor":"border"} -->
-<div class="wp-block-column has-border-color" style="border-width:1px;border-radius:10px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"10px","width":"1px"}},"borderColor":"line"} -->
+<div class="wp-block-column has-border-color has-line-border-color" style="border-width:1px;border-radius:10px;padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
 <h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Pricing & FAQ', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
