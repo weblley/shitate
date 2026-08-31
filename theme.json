@@ -60,14 +60,21 @@
 			"customSpacingSize": true,
 			"units": [ "px", "em", "rem", "vh", "vw", "%" ],
 			"spacingSizes": [
-				{ "slug": "10", "name": "XXS · 4px", "size": "var(--st-space-xxs)" },
-				{ "slug": "20", "name": "XS · 8px", "size": "var(--st-space-xs)" },
-				{ "slug": "25", "name": "S · 12px", "size": "var(--st-space-s)" },
-				{ "slug": "30", "name": "M · 16px", "size": "var(--st-space-m)" },
-				{ "slug": "40", "name": "L · 24px", "size": "var(--st-space-l)" },
-				{ "slug": "50", "name": "XL · 40px", "size": "var(--st-space-xl)" },
-				{ "slug": "60", "name": "XXL · 64px", "size": "var(--st-space-xxl)" },
-				{ "slug": "70", "name": "XXXL · 104px", "size": "var(--st-space-xxxl)" }
+				{ "slug": "10", "name": "1", "size": "var(--st-space-1)" },
+				{ "slug": "14", "name": "2", "size": "var(--st-space-2)" },
+				{ "slug": "18", "name": "3", "size": "var(--st-space-3)" },
+				{ "slug": "20", "name": "4", "size": "var(--st-space-4)" },
+				{ "slug": "23", "name": "5", "size": "var(--st-space-5)" },
+				{ "slug": "25", "name": "6", "size": "var(--st-space-6)" },
+				{ "slug": "30", "name": "7 · Base", "size": "var(--st-space-7)" },
+				{ "slug": "35", "name": "8", "size": "var(--st-space-8)" },
+				{ "slug": "40", "name": "9", "size": "var(--st-space-9)" },
+				{ "slug": "45", "name": "10", "size": "var(--st-space-10)" },
+				{ "slug": "50", "name": "11", "size": "var(--st-space-11)" },
+				{ "slug": "55", "name": "12", "size": "var(--st-space-12)" },
+				{ "slug": "60", "name": "13", "size": "var(--st-space-13)" },
+				{ "slug": "65", "name": "14", "size": "var(--st-space-14)" },
+				{ "slug": "70", "name": "15", "size": "var(--st-space-15)" }
 			]
 		},
 		"border": {

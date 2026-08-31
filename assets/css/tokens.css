@@ -44,26 +44,46 @@
 	--st-color-border: var(--wp--preset--color--line, #e4e9f7);
 
 	/*
-	 * Spacing scale — Digital Agency Design System (DADS) proportions, named
-	 * like the type scale (xxs … xxxl) and anchored to --st-text-m, so type and
-	 * space share one base. At m = 16px these equal the DADS values
-	 * (4 / 8 / 12 / 16 / 24 / 40 / 64 / 104px).
-	 * https://design.digital.go.jp/dads/foundations/spacing/
+	 * Spacing scale — a pure modular ladder, built exactly like the type
+	 * scale: 15 steps, each one --st-ratio apart, anchored at step 7 =
+	 * --st-text-m. No hand-picked multipliers; change the ratio (or the base
+	 * size) in the Customizer and every step follows.
 	 *
-	 * The whole ladder also follows the type-scale ratio: --st-space-scale is
-	 * 1 at the default ratio (1.25), so DADS values stay exact there, and the
-	 * DADS proportions between steps never change — only the overall size
-	 * breathes with the chosen ratio (1.067 → ×0.85 … 1.618 → ×1.29).
+	 * At the default ratio 1.25 the ladder approximates DADS
+	 * (4.2 / 5.2 / 6.6 / 8.2 / 10.2 / 12.8 / 16 / 20 / 25 / 31 / 39 / 49 /
+	 * 61 / 76 / 95px). Small ratios tighten the whole ladder, large ones
+	 * open it up — that is the intended behavior of a modular scale.
 	 */
-	--st-space-scale: calc(var(--st-ratio, 1.25) / 1.25);
-	--st-space-xxs: calc(var(--st-text-m) * 0.25 * var(--st-space-scale)); /* 4px  */
-	--st-space-xs: calc(var(--st-text-m) * 0.5 * var(--st-space-scale)); /* 8px  */
-	--st-space-s: calc(var(--st-text-m) * 0.75 * var(--st-space-scale)); /* 12px */
-	--st-space-m: calc(var(--st-text-m) * 1 * var(--st-space-scale)); /* 16px */
-	--st-space-l: calc(var(--st-text-m) * 1.5 * var(--st-space-scale)); /* 24px */
-	--st-space-xl: calc(var(--st-text-m) * 2.5 * var(--st-space-scale)); /* 40px */
-	--st-space-xxl: calc(var(--st-text-m) * 4 * var(--st-space-scale)); /* 64px */
-	--st-space-xxxl: calc(var(--st-text-m) * 6.5 * var(--st-space-scale)); /* 104px */
+	--st-space-7: var(--st-text-m);
+	--st-space-6: calc(var(--st-space-7) / var(--st-ratio, 1.25));
+	--st-space-5: calc(var(--st-space-6) / var(--st-ratio, 1.25));
+	--st-space-4: calc(var(--st-space-5) / var(--st-ratio, 1.25));
+	--st-space-3: calc(var(--st-space-4) / var(--st-ratio, 1.25));
+	--st-space-2: calc(var(--st-space-3) / var(--st-ratio, 1.25));
+	--st-space-1: calc(var(--st-space-2) / var(--st-ratio, 1.25));
+	--st-space-8: calc(var(--st-space-7) * var(--st-ratio, 1.25));
+	--st-space-9: calc(var(--st-space-8) * var(--st-ratio, 1.25));
+	--st-space-10: calc(var(--st-space-9) * var(--st-ratio, 1.25));
+	--st-space-11: calc(var(--st-space-10) * var(--st-ratio, 1.25));
+	--st-space-12: calc(var(--st-space-11) * var(--st-ratio, 1.25));
+	--st-space-13: calc(var(--st-space-12) * var(--st-ratio, 1.25));
+	--st-space-14: calc(var(--st-space-13) * var(--st-ratio, 1.25));
+	--st-space-15: calc(var(--st-space-14) * var(--st-ratio, 1.25));
+
+	/*
+	 * Legacy t-shirt names (pre-0.3.0), aliased to the nearest ladder step so
+	 * utilities.css classes, plugin fallbacks and saved content keep their
+	 * approximate sizes (xxs 4→4.2, xs 8→8.2, s 12→12.8, m 16, l 24→25,
+	 * xl 40→39, xxl 64→61, xxxl 104→95 at the default ratio).
+	 */
+	--st-space-xxs: var(--st-space-1);
+	--st-space-xs: var(--st-space-4);
+	--st-space-s: var(--st-space-6);
+	--st-space-m: var(--st-space-7);
+	--st-space-l: var(--st-space-9);
+	--st-space-xl: var(--st-space-11);
+	--st-space-xxl: var(--st-space-13);
+	--st-space-xxxl: var(--st-space-15);
 
 	/* Layout */
 	--st-width-max: 1260px; /* = wideSize */

@@ -14,8 +14,8 @@
 - **トークンは `assets/css/tokens.css` の `--st-*` に集約**。theme.json の custom は使わない
 - **色**: theme.json パレット（実値）が源。`--st-color-*` はプリセットのエイリアス（`var(--wp--preset--color--primary, #2952cc)` 形式）。ブランド色 #2952cc。スタイルバリエーション（styles/dark|cream|mist|mono.json）はパレット上書き方式で、**primary は全バリエーション #2952cc 固定**
 - **文字**: モジュラースケール（typescale.com方式）。`--st-ratio`（既定1.25）×基準 `--st-text-m`（16px固定）→ `--st-text-xxs〜xxxl`。カスタマイザー「Typography Scale」で ratio/base/丸めを変更可（`st_ratio` / `st_text_m` / `st_round_scale`）。丸めONで流体clamp＋`round(…,2px)`偶数スナップ（ratio-min は `(1+ratio)/2` 自動派生）
-- **余白**: DADS（デジタル庁）比率を `--st-space-xxs〜xxxl`（基準×0.25/0.5/0.75/1/1.5/2.5/4/6.5）。theme.json spacingSizes（slug 10〜70）も同変数参照
-- **余白はタイプスケールに連動**（2026-08-28）: `--st-space-scale: calc(var(--st-ratio,1.25)/1.25)` を全 `--st-space-*` に乗算。デフォルト比率1.25ではDADS値と完全一致、比率変更で全体が比例伸縮（段間のDADS比率は不変）。丸めはしない
+- **余白＝純モジュラー15段**（2026-08-28にDADS固定係数から全面変更）: `--st-space-1〜15`、1段=×`--st-ratio`、基準は7=`--st-text-m`。文字と完全に同じ規則で、比率・基準サイズ変更に全段追従。既定比率1.25でDADS近似（4.2〜95px）。**小比率で圧縮・大比率で拡大するのは仕様**（1.618だとstep15≈750px）
+- 旧名 `--st-space-xxs/xs/s/m/l/xl/xxl/xxxl` は近似段（1/4/6/7/9/11/13/15）へのエイリアスとして維持（utilities.css・プラグインfallback・保存済みコンテンツ互換）。theme.json spacingSizes は15個（旧slug 10/20/25/30/40/50/60/70維持＋中間slug 14/18/23/35/45/55/65追加、名前は"1"〜"15"）
 - **縦リズム**: margin-top方式。基本= blockGap(24px)、見出しは前を広く（h1/h2=64px, h3/h4=40px、tokens.css内の `:root :where(...)` ルール）。全コアブロックは `register_block_type_args` フィルタで**上マージンのみ**
 - **メディアクエリ禁止**（clamp/grid/auto-fitで解決）。例外はデバイス出し分けのみ
 - **!important 禁止**。例外は utilities.css（ユーティリティ層）のみ
