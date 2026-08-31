@@ -98,21 +98,23 @@
 }
 
 /*
- * Vertical rhythm (DADS, margin-top).
+ * Vertical rhythm (margin-top).
  *
- * The base gap between sibling blocks comes from blockGap (DADS 24px), which
- * WordPress applies as margin-block-start in flow/constrained layouts. On top
- * of that, headings get MORE space before them so information hierarchy reads
- * clearly (DADS): the space before a heading is larger than the space after it.
- * First children keep no top margin. The `:root` prefix lifts specificity just
- * above the core block-gap rule without needing !important.
+ * The base gap between sibling blocks comes from blockGap, which WordPress
+ * applies as margin-block-start in flow/constrained layouts and exposes as
+ * --wp--style--block-gap on each layout container. Headings get MORE space
+ * before them so hierarchy reads clearly — expressed as a multiple of the
+ * LOCAL gap, so the extra space stays proportional to the surrounding rhythm
+ * and tightens automatically inside dense contexts (cards, boxes).
+ * First children keep no top margin. The `:root` prefix lifts specificity
+ * just above the core block-gap rule without needing !important.
  */
 :root :where( .is-layout-flow, .is-layout-constrained ) > h1:not( :first-child ),
 :root :where( .is-layout-flow, .is-layout-constrained ) > h2:not( :first-child ) {
-	margin-block-start: var( --st-space-xxl, 4rem );
+	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * 1.75 );
 }
 
 :root :where( .is-layout-flow, .is-layout-constrained ) > h3:not( :first-child ),
 :root :where( .is-layout-flow, .is-layout-constrained ) > h4:not( :first-child ) {
-	margin-block-start: var( --st-space-xl, 2.5rem );
+	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * 1.25 );
 }
