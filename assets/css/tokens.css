@@ -49,15 +49,21 @@
 	 * space share one base. At m = 16px these equal the DADS values
 	 * (4 / 8 / 12 / 16 / 24 / 40 / 64 / 104px).
 	 * https://design.digital.go.jp/dads/foundations/spacing/
+	 *
+	 * The whole ladder also follows the type-scale ratio: --st-space-scale is
+	 * 1 at the default ratio (1.25), so DADS values stay exact there, and the
+	 * DADS proportions between steps never change — only the overall size
+	 * breathes with the chosen ratio (1.067 → ×0.85 … 1.618 → ×1.29).
 	 */
-	--st-space-xxs: calc(var(--st-text-m) * 0.25); /* 4px  */
-	--st-space-xs: calc(var(--st-text-m) * 0.5); /* 8px  */
-	--st-space-s: calc(var(--st-text-m) * 0.75); /* 12px */
-	--st-space-m: calc(var(--st-text-m) * 1); /* 16px */
-	--st-space-l: calc(var(--st-text-m) * 1.5); /* 24px */
-	--st-space-xl: calc(var(--st-text-m) * 2.5); /* 40px */
-	--st-space-xxl: calc(var(--st-text-m) * 4); /* 64px */
-	--st-space-xxxl: calc(var(--st-text-m) * 6.5); /* 104px */
+	--st-space-scale: calc(var(--st-ratio, 1.25) / 1.25);
+	--st-space-xxs: calc(var(--st-text-m) * 0.25 * var(--st-space-scale)); /* 4px  */
+	--st-space-xs: calc(var(--st-text-m) * 0.5 * var(--st-space-scale)); /* 8px  */
+	--st-space-s: calc(var(--st-text-m) * 0.75 * var(--st-space-scale)); /* 12px */
+	--st-space-m: calc(var(--st-text-m) * 1 * var(--st-space-scale)); /* 16px */
+	--st-space-l: calc(var(--st-text-m) * 1.5 * var(--st-space-scale)); /* 24px */
+	--st-space-xl: calc(var(--st-text-m) * 2.5 * var(--st-space-scale)); /* 40px */
+	--st-space-xxl: calc(var(--st-text-m) * 4 * var(--st-space-scale)); /* 64px */
+	--st-space-xxxl: calc(var(--st-text-m) * 6.5 * var(--st-space-scale)); /* 104px */
 
 	/* Layout */
 	--st-width-max: 1260px; /* = wideSize */
