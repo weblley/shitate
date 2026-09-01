@@ -1,0 +1,485 @@
+<!-- wp:paragraph -->
+<p>shitate は、サイトエディター（フルサイト編集）専用の WordPress ブロックテーマです。コーポレートサイト・ビジネスサイト向けに、依存ライブラリなしの軽量な出力と、ひとつの数値からサイト全体の見た目が決まる「トークン駆動のデザインシステム」を組み合わせています。このページはテーマの公式マニュアル兼設計書です。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">このテーマの考え方</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>shitate の設計は、次の 4 つの原則の上に成り立っています。設定項目を増やすのではなく、少数の基準値から全体が導かれるようにすることで、誰が編集しても崩れにくいサイトを目指しています。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>ひとつの比率がすべてを決める</strong> — 文字サイズも余白も、同じ「基準サイズ × 比率」から機械的に生成されます。カスタマイザーで比率を変えると、見出しの大きさもセクションの余白も同時に、破綻せずに変わります。</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><strong>メディアクエリを書かない</strong> — 画面幅ごとの分岐ではなく、clamp とグリッドの自動折り返しでレスポンシブを実現しています。狭い画面ではリズム全体が自動的に締まります。</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><strong>縦の余白は上方向だけ</strong> — 要素の上マージンだけで縦のリズムを作ります。上下からマージンが来て相殺されたり二重になったりする事故が起きません。</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><strong>色はパレットがすべての起点</strong> — サイトエディターのパレットを編集すれば、テーマの CSS 変数もプラグインのブロックも自動的に追従します。</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">動作要件</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><tbody><tr><td><strong>WordPress</strong></td><td>6.6 以上（7.1 で動作確認済み）</td></tr><tr><td><strong>PHP</strong></td><td>7.2 以上</td></tr><tr><td><strong>ライセンス</strong></td><td>GNU General Public License v2 or later</td></tr><tr><td><strong>同梱物</strong></td><td>フォント・画像・外部ライブラリは一切同梱していません。外部への通信も行いません。</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">インストールと初期設定</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li>「外観 → テーマ → 新規追加」からテーマをインストールし、有効化します。</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>「外観 → エディター」でサイトエディターを開き、ヘッダーのロゴ（サイトロゴブロック）とナビゲーションメニューを設定します。</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>「外観 → エディター → スタイル」でスタイルバリエーション（Dark / Cream / Mist / Mono）を選ぶか、パレットの色を自分のブランドカラーに変更します。</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>「外観 → カスタマイズ → Typography Scale」で本文サイズとスケール比率を決めます。ここがサイト全体の見た目の基準になります。</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>固定ページを作り、「表示設定」でホームページに指定します。トップページ用のテンプレートには、テーマ同梱のパターンが最初から並んでいます。</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>パターンの管理画面へは「外観 → パターン」から直接ジャンプできます（ブロックテーマではエディターの奥に埋もれてしまうため、テーマ側でショートカットを追加しています）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">デザインシステム</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>テーマ独自の値はすべて <code>assets/css/tokens.css</code> に <code>--st-</code> 接頭辞の CSS 変数として定義されています。theme.json の <code>custom</code> セクションは使っていません。変数の見分け方はシンプルです。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><code>--st-*</code> … このテーマが定義した変数。カスタム CSS ではこちらを使ってください。</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><code>--wp--*</code> … WordPress が theme.json から自動生成した変数。</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">色</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>色の正本は theme.json のパレットです。サイトエディターの「スタイル → 色」でそのまま編集でき、スタイルバリエーションもパレットを差し替えるだけの仕組みになっています。<code>--st-color-*</code> はパレットへの短いエイリアスなので、パレットを変更すればカスタム CSS もプラグインのブロックも自動的に追従します。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>スラッグ</th><th>既定値</th><th>用途</th></tr></thead><tbody><tr><td><code>base</code></td><td>#ffffff</td><td>ページ背景</td></tr><tr><td><code>base-2</code></td><td>#f4f6fc</td><td>セクションの塗り分け・カード背景</td></tr><tr><td><code>contrast</code></td><td>#171f33</td><td>本文・見出しの文字色</td></tr><tr><td><code>contrast-2</code></td><td>#515766</td><td>補足テキスト</td></tr><tr><td><code>neutral</code></td><td>#5c6b90</td><td>日付・メタ情報</td></tr><tr><td><code>line</code>（表示名 Border）</td><td>#e4e9f7</td><td>罫線・枠線</td></tr><tr><td><code>primary</code></td><td>#2952cc</td><td>ブランドカラー。リンク・ボタン</td></tr><tr><td><code>primary-hover</code></td><td>#20409f</td><td>リンク・ボタンのホバー</td></tr><tr><td><code>accent</code></td><td>#0fae8e</td><td>差し色</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p><strong>パレットを自分で増やすときの注意:</strong> スラッグに <code>border</code> や <code>background</code> といった、WordPress が構造用のクラス名として使う語を選ばないでください。たとえば <code>border</code> というスラッグはコアに <code>.has-border-color</code> という<em>文字色</em>のクラスを生成させ、枠線を設定したブロックの文字色を意図せず上書きします。このテーマが枠線色のスラッグを <code>line</code> にしているのはそのためです（表示名は「Border」のままです）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">文字サイズ</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>typescale.com と同じ考え方のモジュラースケールです。基準サイズ（既定 16px）に比率（既定 1.25）を掛け続けて 8 段を生成します。段はエディターのフォントサイズ選択肢としてそのまま使えます。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>変数</th><th>エディターでの名前</th><th>既定の見出し割り当て</th></tr></thead><tbody><tr><td><code>--st-text-xxxl</code></td><td>Display</td><td>h1</td></tr><tr><td><code>--st-text-xxl</code></td><td>Huge</td><td>h2</td></tr><tr><td><code>--st-text-xl</code></td><td>Extra Large</td><td>h3</td></tr><tr><td><code>--st-text-l</code></td><td>Large</td><td>h4</td></tr><tr><td><code>--st-text-m</code></td><td>Medium</td><td>h5・本文（基準）</td></tr><tr><td><code>--st-text-s</code></td><td>Small</td><td>h6・メタ情報</td></tr><tr><td><code>--st-text-xs</code></td><td>X-Small</td><td>—</td></tr><tr><td><code>--st-text-xxs</code></td><td>XX-Small</td><td>—</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>本文の行間は 1.75、見出しは 1.3・太さ 700 です。フォントは日本語環境を優先した OS 標準スタックで、Sans-serif（既定）・Serif（明朝）・Monospace の 3 種を用意しています。Web フォントは同梱していません。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">余白</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>余白は文字サイズとまったく同じ規則で作られた <strong>15 段のモジュラースケール</strong>です。<code>--st-space-1</code> から <code>--st-space-15</code> まであり、1 段ごとにスケール比率が掛かります。基準は 7 段目で、これが本文サイズと一致します。つまり<strong>カスタマイザーで比率や本文サイズを変えると、余白も同時に追従します</strong>。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>既定の比率 1.25 では、およそ 4.2 / 5.2 / 6.6 / 8.2 / 10.2 / 12.8 / 16 / 20 / 25 / 31 / 39 / 49 / 61 / 76 / 95px という並びになります。比率を小さくすると余白全体が締まり、大きくすると開きます。これは等比スケールの正しい挙動で、仕様です。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>8 段目以上は<strong>流体</strong>です。狭い画面では「(1 + 比率) ÷ 2」から導かれる控えめな比率まで自動的に縮み、広い画面で選択した比率いっぱいまで開きます。メディアクエリを一切書かずにモバイルの余白過大を防ぐ仕組みです。1〜6 段目は差が数ピクセルで知覚できないため固定値のままにしています。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>エディターの余白ピッカーには、15 段のうち<strong>使いやすい 8 段だけ</strong>を公開しています（15 個並ぶと選べなくなるため）。中間の段も CSS 変数としては利用できます。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>ピッカーの表示</th><th>ラダーの段</th><th>既定比率での実寸</th></tr></thead><tbody><tr><td>XXS</td><td>1</td><td>約 4px</td></tr><tr><td>XS</td><td>4</td><td>約 8px</td></tr><tr><td>S</td><td>6</td><td>約 13px</td></tr><tr><td>M</td><td>7（基準）</td><td>16px</td></tr><tr><td>L</td><td>9</td><td>約 25px</td></tr><tr><td>XL</td><td>11</td><td>約 39px</td></tr><tr><td>XXL</td><td>13</td><td>約 61px</td></tr><tr><td>XXXL</td><td>15</td><td>約 95px</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>旧来の T シャツ名（<code>--st-space-xxs</code> 〜 <code>--st-space-xxxl</code>）も、上表の段へのエイリアスとして引き続き使えます。保存済みのコンテンツやユーティリティクラスとの互換のためです。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">縦のリズム</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ブロック同士の基本の間隔は WordPress の blockGap（既定で L＝約 25px）が担当し、上マージンとして適用されます。見出しの前だけは、階層が読み取れるように広めの余白が入ります。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>h1・h2 の前 … その場所の基本間隔 × 1.75</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>h3・h4 の前 … その場所の基本間隔 × 1.25</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>固定値ではなく<strong>その場所の間隔に対する倍率</strong>なので、間隔を詰めたカードやボックスの中では見出し前の余白も自動的に詰まります。ブロックの先頭要素には上マージンが付きません。ユーティリティクラスなどで明示指定した値は、従来どおりそちらが優先されます。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>この方針を保つため、<strong>すべてのコアブロックの余白設定は「上マージンのみ」に制限</strong>されています。ブロックのサイドバーに下マージンの入力欄が出ないのは仕様です。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">幅・角丸・影</h3>
+<!-- /wp:heading -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>項目</th><th>値</th><th>変数</th></tr></thead><tbody><tr><td>コンテンツ幅</td><td>64rem（既定 1024px）</td><td><code>--st-width-text</code></td></tr><tr><td>幅広</td><td>78.75rem（既定 1260px）</td><td><code>--st-width-max</code></td></tr><tr><td>角丸 小（ボタン・チップ）</td><td>0.375rem</td><td><code>--st-radius-s</code></td></tr><tr><td>角丸 中（カード・画像）</td><td>0.625rem</td><td><code>--st-radius-m</code></td></tr><tr><td>角丸 大（フィーチャーカード）</td><td>0.75rem</td><td><code>--st-radius-l</code></td></tr><tr><td>影</td><td>Soft / Card の 2 種</td><td>エディターの影プリセット</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>幅を rem で指定しているため、閲覧者がブラウザの文字サイズを大きくすると 1 行の長さもそれに合わせて調整されます。角丸は 3 語彙だけに統一しており、px の直書きは行いません。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">カスタマイザー「Typography Scale」</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>「外観 → カスタマイズ → Typography Scale」に、サイト全体の見た目を決める 3 つの設定があります。比率と基準サイズはライブプレビューで即座に反映されます。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>設定</th><th>内容</th><th>既定</th></tr></thead><tbody><tr><td>Scale ratio</td><td>スケール比率。Minor Second 1.067 / Major Second 1.125 / Minor Third 1.2 / Major Third 1.25 / Perfect Fourth 1.333 / Augmented Fourth 1.414 / Perfect Fifth 1.5 / Golden Ratio 1.618 から選択。大きいほど見出しと本文の差が強くなります。</td><td>1.25</td></tr><tr><td>Base size (px)</td><td>本文サイズ。12〜24px。文字も余白も、すべてここから組み立てられます。</td><td>16</td></tr><tr><td>Apply rounding to font sizes</td><td>各段を偶数ピクセルにスナップし、見出しを流体化（モバイルで自動的に控えめに）します。</td><td>オン</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>比率を変えると<strong>文字と余白が同時に</strong>変わります。「もう少し全体を締めたい」ときは比率を 1.2 に、「見出しを大きく見せたい」ときは 1.333 以上に、といった調整が 1 か所で完結します。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">スタイルバリエーション</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>「外観 → エディター → スタイル」から 4 種類のバリエーションを選べます。いずれもパレットを差し替えるだけで、レイアウトや余白の設計には手を入れていません。ブランドカラー（primary #2952cc）はどのバリエーションでも共通です。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>名前</th><th>性格</th><th>背景 / 文字 / 差し色</th></tr></thead><tbody><tr><td>（既定）</td><td>青みのある明るいコーポレート</td><td>#ffffff / #171f33 / #0fae8e</td></tr><tr><td>Dark</td><td>ダークモード</td><td>#14171c / #f2f4f8 / #37c8a4</td></tr><tr><td>Cream</td><td>暖色系の落ち着いた印象</td><td>#fbf8f1 / #2c2517 / #c07a2e</td></tr><tr><td>Mist</td><td>緑みのある柔らかい印象</td><td>#ffffff / #1d2523 / #2f8f68</td></tr><tr><td>Mono</td><td>無彩色でストイック</td><td>#ffffff / #1a1a1a / #1a1a1a</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">テンプレート</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>テンプレート</th><th>内容</th></tr></thead><tbody><tr><td>フロントページ</td><td>同梱パターンを並べたトップページ（ヒーロー → コンセプト → 製品紹介 → パターン紹介 → 料金表 → CTA → FAQ → 最新記事）</td></tr><tr><td>インデックス</td><td>ブログ一覧。アイキャッチ 16:9、日付とカテゴリー、抜粋、ページネーション</td></tr><tr><td>個別投稿</td><td>カテゴリー → タイトル → 著者と日付 → 本文</td></tr><tr><td>アーカイブ</td><td>アーカイブタイトルとターム説明つきの一覧</td></tr><tr><td>検索結果</td><td>検索キーワード見出しと検索フォーム</td></tr><tr><td>固定ページ</td><td>アイキャッチ 21:9（角丸つき）＋タイトル＋本文</td></tr><tr><td>Full Width</td><td>固定ページ用のカスタムテンプレート。全幅レイアウト向け</td></tr><tr><td>404</td><td>大きな 404 表示・検索フォーム・ホームへのボタン</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>テンプレートパーツはヘッダーとフッターの 2 つです。ヘッダーはロゴ＋サイトタイトルを左、ナビゲーションを右に配置。フッターは濃色背景で、サイトタイトル・キャッチフレーズ・縦並びナビ・著作権表示という構成です。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">同梱パターン</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ブロック挿入ツールの「パターン → shitate」から挿入できます。いずれもコアブロックだけで作られているので、プラグインを入れなくてもそのまま使えます。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>パターン</th><th>内容</th></tr></thead><tbody><tr><td>Hero</td><td>中央寄せのヒーロー。見出し＋説明文＋CTA ボタン 2 つ</td></tr><tr><td>Concept</td><td>2 カラム。左に見出し、右に本文</td></tr><tr><td>Services</td><td>3 カラムのサービス／機能カード</td></tr><tr><td>Product</td><td>製品紹介。機能リストと CTA</td></tr><tr><td>Pattern showcase</td><td>同梱パターンをグリッドで紹介</td></tr><tr><td>Pricing</td><td>3 プラン＋買い切りの料金表。推奨プランを強調</td></tr><tr><td>CTA</td><td>ブランドカラーの全幅バナー</td></tr><tr><td>FAQ</td><td>詳細ブロックによる開閉式のよくある質問</td></tr><tr><td>Recent posts</td><td>最新 3 件と一覧へのボタン</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>各セクションは <code>section</code> 要素・全幅・上下パディング XXL（ヒーローのみ XXXL）で統一されています。文言はすべて差し替え前提のサンプルです。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">余白ユーティリティ</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ブロックのサイドバーで細かく数値を触らずに済むよう、余白用のクラスを用意しています。クラス名は「プロパティ＋方向＋段」という組み立てです。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>プロパティ … <code>m</code>＝マージン、<code>p</code>＝パディング</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>方向 … <code>t</code> 上 / <code>r</code> 右 / <code>b</code> 下 / <code>l</code> 左 / <code>x</code> 左右 / <code>y</code> 上下 / 省略で全方向</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>段 … <code>0</code> / <code>xxs</code> / <code>xs</code> / <code>s</code> / <code>m</code> / <code>l</code> / <code>xl</code> / <code>xxl</code> / <code>xxxl</code></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>例: <code>mt-0</code>（上マージンを消す）、<code>mb-l</code>、<code>px-m</code>、<code>py-xxl</code>、<code>p-s</code>。左右中央寄せの <code>mx-auto</code> もあります。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>クラスを手入力しなくても、<strong>ブロックのツールバーに追加される「余白」ドロップダウン</strong>から、上下マージン・上下パディング・左右パディング・中央寄せを選ぶだけで付け外しできます。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">カスタム CSS を書くときのルール</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>追加 CSS や子テーマでスタイルを足すときは、次のトークンを参照してください。数値を直接書かずに変数を使えば、カスタマイザーの設定変更やスタイルバリエーションの切り替えに自動で追従します。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>/* 色 */
+--st-color-brand         ブランドカラー
+--st-color-brand-hover   ブランドカラー（ホバー）
+--st-color-accent        差し色
+--st-color-base          背景
+--st-color-base-2        背景（塗り分け）
+--st-color-contrast      本文の文字色
+--st-color-contrast-2    補足テキスト
+--st-color-neutral       メタ情報
+--st-color-border        罫線
+
+/* 文字 */
+--st-text-xxs / xs / s / m / l / xl / xxl / xxxl
+--st-ratio               スケール比率
+
+/* 余白 */
+--st-space-1 〜 --st-space-15        （7 が基準＝本文サイズ）
+--st-space-xxs / xs / s / m / l / xl / xxl / xxxl   （旧名エイリアス）
+
+/* レイアウト・装飾 */
+--st-width-text          コンテンツ幅
+--st-width-max           幅広
+--st-radius-s / m / l    角丸
+--st-border-card         カードの枠線</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>テーマ本体のスタイルでは <code>!important</code> とメディアクエリを使わない方針です。可変幅は clamp と自動折り返しグリッドで解決してください。<code>!important</code> が許されるのは余白ユーティリティの層だけです。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">拡張プラグイン shitate pro blocks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>テーマにはブロックを同梱していません。FAQ、吹き出し、モーダル、条件分岐表示、アクションフック、レイアウト、アコーディオン、スライダーなどのブロックは、有料プラグイン shitate pro blocks が提供します。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>プラグイン側のブロックは、テーマがある環境ではテーマのトークン（<code>--st-*</code>）を自動的に使い、テーマがない環境では組み込みの初期値で動作します。どちらの組み合わせでも見た目が破綻しない設計です。デバイス出し分けの境界（768px / 1024px）もテーマ側の設定と揃えてあります。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">よくある質問</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">ブロックに下マージンの設定が出てきません</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>仕様です。このテーマは縦の余白を上マージンだけで組み立てているため、コアブロックの余白設定を上方向に限定しています。要素の下に余白を足したい場合は、<strong>次の要素の上マージン</strong>を調整するか、ユーティリティクラス（<code>mb-l</code> など）を使ってください。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">余白ピッカーの選択肢が 8 つしかありません</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>これも仕様です。内部的には 15 段ありますが、選びやすさのために代表的な 8 段だけを公開しています。中間の段が必要な場合は、カスタム CSS から <code>--st-space-2</code> のように直接参照してください。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">アイキャッチ画像がぼやけます</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>以前のテーマが定義していた小さい画像サイズが残っている可能性があります。shitate はアイキャッチを幅 1568px（等比・切り抜きなし）で扱いますが、既存のアップロード画像にはこのサイズがまだ生成されていません。サムネイル再生成のプラグイン、または <code>wp media regenerate</code> を実行してください。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">枠線を設定したら文字の色まで変わりました</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>パレットに <code>border</code> というスラッグの色を自分で追加していないか確認してください。WordPress はそのスラッグから <code>.has-border-color</code> という<em>文字色</em>用のクラスを生成し、枠線用の構造クラスと名前が衝突します。スラッグを別名に変更すれば解消します。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">比率を上げたら余白が大きくなりすぎました</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>文字と余白が同じ比率を共有しているため、比率を上げると余白も等比で開きます。全体の間隔だけを抑えたい場合は、サイトエディターの「スタイル → レイアウト」でブロック間の間隔（blockGap）を 1 段下げてください。見出し前の余白はそれに連動して自動的に締まります。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">開発者向けリファレンス</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">ファイル構成</h3>
+<!-- /wp:heading -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>shitate/
+├ style.css              テーマヘッダーのみ（スタイルは theme.json と tokens.css）
+├ theme.json             v3。パレット・タイポ・余白・影・レイアウトの正本
+├ functions.php          セットアップ・余白フィルタ・カスタマイザー・enqueue
+├ readme.txt             WordPress.org 用
+├ screenshot.png         1200×900
+├ CHANGELOG.md           Keep a Changelog / Semantic Versioning
+├ assets/css/tokens.css      --st-* トークンと縦リズム規則
+├ assets/css/utilities.css   余白ユーティリティ（唯一 !important を使う層）
+├ assets/css/editor.css      エディター専用（意図的に最小限）
+├ assets/js/customize-preview.js   カスタマイザーのライブプレビュー
+├ assets/js/utilities-toolbar.js   ツールバーの「余白」ドロップダウン
+├ templates/  404 archive front-page index page page-full-width search single
+├ parts/      header footer
+├ patterns/   concept cta faq hero pattern-showcase pricing product recent-posts services
+├ styles/     cream dark mist mono
+├ languages/  pot / po / mo / JS 翻訳 JSON
+└ bin/        build-zip.sh  release.sh</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">命名規則</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><code>st</code> ＝ shitate theme。PHP 関数 <code>st_</code>、定数 <code>ST_</code>、ハンドル <code>st-</code>、CSS 変数 <code>--st-*</code>、パターン <code>st/*</code>（カテゴリー <code>st</code>）</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><code>sb</code> ＝ shitate block（プラグイン側）。テーマは <code>--sb-*</code> を定義しません</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>例外: テキストドメインは <code>shitate</code>。WordPress.org がテーマスラッグとの一致を要求するためです</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">functions.php が行っていること</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>テーマサポートの登録、アイキャッチサイズ 1568×9999 の定義、エディタースタイルの読み込み、翻訳の読み込み</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>パターンカテゴリー <code>st</code> の登録</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>「外観 → パターン」メニューの追加（サイトエディターのパターン画面への直リンク）</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><code>register_block_type_args</code> フィルタで、すべてのコアブロックの余白サポートを上マージンのみに制限</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>カスタマイザーのスケール設定と、そこから生成する CSS の出力。フロントは tokens.css の直後にインラインで、エディターは <code>block_editor_settings_all</code> 経由で iframe 内に注入します</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>スタイルの読み込み順は <code>st-tokens</code> →（スケール上書き）→ <code>st-utilities</code> → <code>st-style</code>。この順序が前提になっています</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">翻訳の更新</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>翻訳辞書と抽出スクリプトはプラグイン側にまとめて置いてあります（テーマとプラグインを横断管理するため）。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>cd ../../plugins/shitate-pro-blocks &amp;&amp; node bin/make-i18n.mjs
+cd - &amp;&amp; msgfmt languages/shitate-ja.po -o languages/ja.mo</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>JavaScript の翻訳 JSON は <code>shitate-ja-st-utilities-toolbar.json</code> のように<strong>ハンドル名で命名</strong>します（WordPress はハッシュではなくハンドル名で探します）。なお、テンプレート HTML 内に直接書かれた英文（フッターの著作権表示、404 の文言など）は翻訳できない既知の制約です。</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">ビルドとリリース</h3>
+<!-- /wp:heading -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>bin/build-zip.sh          配布用 dist/shitate.zip を生成
+bin/release.sh X.Y.Z      バージョン一括更新 → commit → tag → zip → push → Release</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li>CHANGELOG.md の [Unreleased] にたまった項目を「## [X.Y.Z] - YYYY-MM-DD」セクションに移す</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><code>bin/release.sh X.Y.Z</code> を実行する。style.css の Version、readme.txt の Stable tag、functions.php の ST_VERSION がまとめて更新されます</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>readme.txt の Changelog セクション（WordPress.org の審査対象）に、同じ内容をユーザー向けの表現で手動反映する</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">WordPress.org 掲載にあたっての制約</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>自動アップデート機構を再導入しない。</strong> 公式ディレクトリ掲載中は <code>Update URI</code> ヘッダも外部通信も禁止です。GitHub 経由の配信機構は 0.3.0 で削除済みで、実装履歴は Git の 0.2.0 に残っています</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>フォント・画像・外部ライブラリを同梱しない（すべて自作物のみ）</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>配布 zip で Theme Check がパスすることを確認してからアップロードする</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>タグは公式の許可リストに準拠させる</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">ライセンス</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>shitate WordPress Theme, (C) 2026 weblley inc. GNU General Public License v2 以降の条件のもとで配布されています。テーマにはサードパーティのリソースを一切含んでおらず、CSS・JavaScript・パターンはすべて weblley inc のオリジナルです。</p>
+<!-- /wp:paragraph -->

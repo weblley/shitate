@@ -15,10 +15,11 @@ shitate is a clean, versatile block theme for corporate and business websites.
 shitate is a block theme for the Site Editor with a token-driven design system:
 
 * A modular type scale (typescale.com style) driven by a single base size and ratio.
-* DADS-based spacing, anchored to the same base, with margin-top rhythm and heading hierarchy.
-* Brand-derived colors via color-mix() — change one color, the palette follows.
-* Spacing utility classes (mt-0 … p-xxxl).
-* Media-query-free layout (clamp, grid, intrinsic sizing).
+* A modular spacing ladder built on the same base and ratio, with margin-top rhythm and heading hierarchy.
+* Fluid spacing and headings without media queries, so the rhythm tightens itself on small screens.
+* A palette-driven color system: edit the palette in the Site Editor and every token follows.
+* Spacing utility classes (mt-0 … p-xxxl) plus a Spacing dropdown in the block toolbar.
+* Four style variations (Dark, Cream, Mist, Mono).
 
 Extend it with the shitate pro blocks plugin for FAQ, modal, conditional display, layout and more.
 
@@ -42,6 +43,18 @@ patterns are original work by weblley inc, and no fonts or images
 are included.
 
 == Changelog ==
+
+= 0.3.0 =
+* Rebuilt the spacing scale as a 15-step modular ladder that follows the type-scale ratio and base size.
+* Made the larger spacing steps and the headings fluid, so the rhythm tightens on small screens without media queries.
+* Added the radius tokens and switched the content widths to rem, so line length follows the browser font size.
+* Declared responsive viewports (768px / 1024px) for the editor's responsive styles.
+* Fixed the spacing picker showing numbers and core's default steps instead of the theme's named steps.
+* Fixed a palette slug clashing with core's border color class, which could override text color on bordered blocks.
+
+= 0.2.0 =
+* Added an Appearance > Patterns shortcut to the Site Editor's pattern screen.
+* Fixed blurry featured images by defining the post-thumbnail size (regenerate thumbnails on existing sites).
 
 = 0.1.0 =
 * Initial release.

@@ -6,13 +6,24 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
-## [0.3.0] - 2026-08-28
+## [0.3.0] - 2026-09-01
 
 WordPress.org 提出準備リリース（GitHub経由の自動配信はこの版で終了）。
 
+### Fixed
+
+- `ST_VERSION`（CSS/JSのキャッシュバスター）が 0.1.0 のまま取り残されていた問題: `bin/release.sh` が style.css と readme.txt しか更新していなかったため、リリースのたびにズレが広がりアセットが古いキャッシュのまま配信されうる状態だった。release.sh に functions.php の書き換え（＋書き換え失敗時の中断）を追加し、値を style.css と同じバージョンに揃えた
+- readme.txt の Description が実装と食い違っていた問題: 「Brand-derived colors via color-mix()」（color-mix はコード内に不在。実際はパレットのエイリアス方式）、「DADS-based spacing」（現在は純モジュラー15段）。現行の設計に合わせて書き直し、流体余白・スタイルバリエーションの記述を追加。あわせて 0.2.0 / 0.3.0 の Changelog 節を追記（.org 審査対象のため）
+- theme.json の `settings.spacing.defaultSpacingSizes` が重複定義されていた（同値のため実害なし）。1つに整理
+- style.css の Description の製品名表記「shitate Pro Blocks」を、命名規則どおりの全小文字「shitate pro blocks」に修正
+
 ### Added
 
-- 余白を純モジュラースケール15段に全面刷新: `--st-space-1〜15`（1段＝タイプスケール比率、基準は7＝本文サイズ）。font-sizeと完全に同じ規則で、カスタマイザーの比率・基準サイズに全段が追従する。既定比率1.25ではDADS近似値（4.2〜95px）。旧トークン名（xxs〜xxxl）は近似段へのエイリアスとして維持し、スペーシングピッカーは15段（既存スラッグ10〜70は据え置き＋中間スラッグ追加）で後方互換
+- `docs/manual.html`: WordPress ブロックマークアップ形式のテーマ公式マニュアル（そのままブロックエディターに貼り付け可能）。配布zipには含めない
+
+### Added
+
+- 余白を純モジュラースケール15段に全面刷新: `--st-space-1〜15`（1段＝タイプスケール比率、基準は7＝本文サイズ）。font-sizeと完全に同じ規則で、カスタマイザーの比率・基準サイズに全段が追従する。既定比率1.25ではDADS近似値（4.2〜95px）。旧トークン名（xxs〜xxxl）は近似段へのエイリアスとして維持。エディタの余白ピッカーには代表8段（XXS〜XXXL）を公開し、スラッグ（10〜70）据え置きで後方互換
 
 ### Fixed
 

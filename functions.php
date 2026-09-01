@@ -15,8 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// Cache buster for the theme's CSS/JS. Kept in sync with the style.css header
+// by bin/release.sh — do not edit by hand.
 if ( ! defined( 'ST_VERSION' ) ) {
-	define( 'ST_VERSION', '0.1.0' );
+	define( 'ST_VERSION', '0.2.0' );
 }
 
 /**
