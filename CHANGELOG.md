@@ -22,8 +22,16 @@ WordPress.org 提出準備リリース（GitHub経由の自動配信はこの版
 
 - GitHub経由の自動アップデート一式を削除（inc/github-updater.php・functions.phpのrequire・style.cssのUpdate URIヘッダ・build-zip.shの inc）。.org審査要件（Update URI不可・外部通信不可）への対応。以後の更新はWordPress.org公式ディレクトリから配信
 
+### Added
+
+- 余白の上位段（8〜15）を流体化: 各段が「派生モバイル比率（(1+比率)÷2）〜選択比率」の間をclampで伸縮。狭い画面ではリズム全体が自動で締まり、等比スケールの「モバイルで余白過大」問題をメディアクエリなしで解消（例: 比率1.333・375px幅で step15 159.5→69.9px）
+- theme.json に `settings.viewport`（mobile 768px / tablet 1024px、WP 7.1新機能）を宣言: エディタのレスポンシブスタイルの境界が、プラグインのデバイス出し分け（[br_sp]・details・sb/if）と同じ768/1024pxに揃う
+- 角丸トークン `--st-radius-s/m/l`（0.375/0.625/0.75rem）を新設し、散在していた直書き（6/8/10/12px）を3語彙に集約。パターン・テンプレートの border-radius もvar()参照に置換
+
 ### Changed
 
+- コンテンツ幅・幅広をrem化（1024px→64rem / 1260px→78.75rem）: ブラウザの文字サイズ設定・ズームに行長が追従
+- 文字の丸め/流体モード（Typography Scale の「Apply rounding」）を既定ONに変更: インストール直後から見出しがモバイルで自動的に控えめになる
 - 見出し前の余白を「ラダーの固定段」から「ローカルの基本リズム連動」に変更: h1/h2 = blockGap×1.75、h3/h4 = ×1.25（`--wp--style--block-gap` 参照）。モジュラー化で見出し前だけ過大になっていた問題の解消（例: 比率1.333で h3前 50.5→35.5px）。gapが狭いカード内では見出し前も自動で狭まり、ユーティリティ等の明示指定は従来どおり優先
 - Tested up to を 7.1 に更新（style.css / readme.txt。7.1は2026-08-19正式リリース、beta3でスモークテスト済み）
 

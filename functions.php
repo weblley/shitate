@@ -175,7 +175,7 @@ function st_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'st_round_scale',
 		array(
-			'default'           => false,
+			'default'           => true,
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'st_sanitize_checkbox',
 		)
@@ -220,7 +220,7 @@ function st_scale_inline_css() {
 	// headings fluid between a mobile ratio derived from --st-ratio (never
 	// inverts: always 1 < min < ratio) and the chosen ratio itself. Raw chains
 	// are kept un-rounded so rounding errors do not compound across steps.
-	if ( get_theme_mod( 'st_round_scale', false ) ) {
+	if ( get_theme_mod( 'st_round_scale', true ) ) {
 		$css .= ':root{'
 			. '--st-ratio-min:calc((1 + var(--st-ratio)) / 2);'
 			// Down-scale (fixed, rounded).

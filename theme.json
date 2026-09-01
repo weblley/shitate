@@ -4,9 +4,13 @@
 	"settings": {
 		"appearanceTools": true,
 		"useRootPaddingAwareAlignments": true,
+		"viewport": {
+			"mobile": "768px",
+			"tablet": "1024px"
+		},
 		"layout": {
-			"contentSize": "1024px",
-			"wideSize": "1260px"
+			"contentSize": "64rem",
+			"wideSize": "78.75rem"
 		},
 		"color": {
 			"defaultPalette": false,
@@ -136,7 +140,7 @@
 					"text": "var(--wp--preset--color--base)"
 				},
 				"typography": { "fontWeight": "600" },
-				"border": { "radius": "6px" },
+				"border": { "radius": "var(--st-radius-s)" },
 				"spacing": {
 					"padding": {
 						"top": "0.75rem", "bottom": "0.75rem",

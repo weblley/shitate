@@ -61,14 +61,38 @@
 	--st-space-3: calc(var(--st-space-4) / var(--st-ratio, 1.25));
 	--st-space-2: calc(var(--st-space-3) / var(--st-ratio, 1.25));
 	--st-space-1: calc(var(--st-space-2) / var(--st-ratio, 1.25));
-	--st-space-8: calc(var(--st-space-7) * var(--st-ratio, 1.25));
-	--st-space-9: calc(var(--st-space-8) * var(--st-ratio, 1.25));
-	--st-space-10: calc(var(--st-space-9) * var(--st-ratio, 1.25));
-	--st-space-11: calc(var(--st-space-10) * var(--st-ratio, 1.25));
-	--st-space-12: calc(var(--st-space-11) * var(--st-ratio, 1.25));
-	--st-space-13: calc(var(--st-space-12) * var(--st-ratio, 1.25));
-	--st-space-14: calc(var(--st-space-13) * var(--st-ratio, 1.25));
-	--st-space-15: calc(var(--st-space-14) * var(--st-ratio, 1.25));
+	/*
+	 * Steps above the anchor are FLUID, media-query free: on narrow viewports
+	 * they follow a gentler ratio derived from the chosen one (never inverts:
+	 * 1 < min-ratio < ratio, same derivation the fluid type scale uses), and
+	 * open up to the full ratio on wide screens. Steps below the anchor stay
+	 * static — their fluid delta would be 1–3px, below perception.
+	 */
+	--st-ratio-min: calc((1 + var(--st-ratio, 1.25)) / 2);
+	--st-space-8-max: calc(var(--st-space-7) * var(--st-ratio, 1.25));
+	--st-space-9-max: calc(var(--st-space-8-max) * var(--st-ratio, 1.25));
+	--st-space-10-max: calc(var(--st-space-9-max) * var(--st-ratio, 1.25));
+	--st-space-11-max: calc(var(--st-space-10-max) * var(--st-ratio, 1.25));
+	--st-space-12-max: calc(var(--st-space-11-max) * var(--st-ratio, 1.25));
+	--st-space-13-max: calc(var(--st-space-12-max) * var(--st-ratio, 1.25));
+	--st-space-14-max: calc(var(--st-space-13-max) * var(--st-ratio, 1.25));
+	--st-space-15-max: calc(var(--st-space-14-max) * var(--st-ratio, 1.25));
+	--st-space-8-min: calc(var(--st-space-7) * var(--st-ratio-min));
+	--st-space-9-min: calc(var(--st-space-8-min) * var(--st-ratio-min));
+	--st-space-10-min: calc(var(--st-space-9-min) * var(--st-ratio-min));
+	--st-space-11-min: calc(var(--st-space-10-min) * var(--st-ratio-min));
+	--st-space-12-min: calc(var(--st-space-11-min) * var(--st-ratio-min));
+	--st-space-13-min: calc(var(--st-space-12-min) * var(--st-ratio-min));
+	--st-space-14-min: calc(var(--st-space-13-min) * var(--st-ratio-min));
+	--st-space-15-min: calc(var(--st-space-14-min) * var(--st-ratio-min));
+	--st-space-8: clamp(var(--st-space-8-min), calc(var(--st-space-8-min) + 0.5vw), var(--st-space-8-max));
+	--st-space-9: clamp(var(--st-space-9-min), calc(var(--st-space-9-min) + 1vw), var(--st-space-9-max));
+	--st-space-10: clamp(var(--st-space-10-min), calc(var(--st-space-10-min) + 1.5vw), var(--st-space-10-max));
+	--st-space-11: clamp(var(--st-space-11-min), calc(var(--st-space-11-min) + 2vw), var(--st-space-11-max));
+	--st-space-12: clamp(var(--st-space-12-min), calc(var(--st-space-12-min) + 2.5vw), var(--st-space-12-max));
+	--st-space-13: clamp(var(--st-space-13-min), calc(var(--st-space-13-min) + 3vw), var(--st-space-13-max));
+	--st-space-14: clamp(var(--st-space-14-min), calc(var(--st-space-14-min) + 3.5vw), var(--st-space-14-max));
+	--st-space-15: clamp(var(--st-space-15-min), calc(var(--st-space-15-min) + 4vw), var(--st-space-15-max));
 
 	/*
 	 * Legacy t-shirt names (pre-0.3.0), aliased to the nearest ladder step so
@@ -85,15 +109,18 @@
 	--st-space-xxl: var(--st-space-13);
 	--st-space-xxxl: var(--st-space-15);
 
-	/* Layout */
-	--st-width-max: 1260px; /* = wideSize */
-	--st-width-text: 1024px; /* = contentSize */
+	/* Layout — rem so line length tracks the user's browser font size. */
+	--st-width-max: 78.75rem; /* = wideSize, 1260px at 16px root */
+	--st-width-text: 64rem; /* = contentSize, 1024px at 16px root */
 
 	/* Section rhythm (absolute, DADS) */
 	--st-space-section: var(--st-space-xxl);
 
-	/* Surfaces */
-	--st-radius-card: 10px;
+	/* Surfaces — one small radius vocabulary instead of scattered px values. */
+	--st-radius-s: 0.375rem; /* buttons, small chips (6px) */
+	--st-radius-m: 0.625rem; /* cards, images (10px) */
+	--st-radius-l: 0.75rem; /* feature cards (12px) */
+	--st-radius-card: var(--st-radius-m);
 	--st-border-card: 1px solid var(--st-color-border);
 }
 
