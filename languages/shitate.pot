@@ -11,16 +11,28 @@ msgstr ""
 msgid "1 site · updates & support"
 msgstr ""
 
-msgid "12+ premium blocks"
+msgid "404 Not Found"
 msgstr ""
 
-msgid "A clean, flexible foundation for corporate websites. Tell your story, showcase your services and convert visitors into customers."
+msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
 msgstr ""
 
-msgid "A growing library of pro patterns"
+msgid "A landing-page feel built from large elements, each one given room to breathe."
 msgstr ""
 
 msgid "A short summary of the services your company offers. Edit this text to match your business."
+msgstr ""
+
+msgid "A simple structure"
+msgstr ""
+
+msgid "A simple structure that both builders and their clients can handle, with room to customise where it matters. Because the foundation stays simple, updates stay minimal and the site stays comfortable to run for years."
+msgstr ""
+
+msgid "A standard company site that balances a sense of trust with easy reading."
+msgstr ""
+
+msgid "Accessibility"
 msgstr ""
 
 msgid "Agency"
@@ -35,6 +47,9 @@ msgstr ""
 msgid "Augmented Fourth — 1.414"
 msgstr ""
 
+msgid "Back to home"
+msgstr ""
+
 msgid "Base size (px)"
 msgstr ""
 
@@ -44,16 +59,22 @@ msgstr ""
 msgid "Body text size. The whole scale is built from this."
 msgstr ""
 
-msgid "Build a site that works as hard as you do"
+msgid "Branding"
 msgstr ""
 
-msgid "Built with the WordPress Interactivity API for fast, accessible interactions."
+msgid "Build"
 msgstr ""
 
 msgid "Business"
 msgstr ""
 
 msgid "Buy Lifetime"
+msgstr ""
+
+msgid "CMS setup"
+msgstr ""
+
+msgid "Can I change the type scale after the site is live?"
 msgstr ""
 
 msgid "Center horizontally (mx-auto)"
@@ -71,16 +92,19 @@ msgstr ""
 msgid "Clear spacing classes"
 msgstr ""
 
-msgid "Communicate plans and answer questions with structured, accessible sections."
-msgstr ""
-
-msgid "Concept"
-msgstr ""
-
 msgid "Consulting"
 msgstr ""
 
-msgid "Contact us"
+msgid "Copywriting"
+msgstr ""
+
+msgid "Corporate"
+msgstr ""
+
+msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
+msgstr ""
+
+msgid "Decoration kept to a minimum and a gentle jump ratio, in the spirit of a plain writing app."
 msgstr ""
 
 msgid "Default"
@@ -89,10 +113,37 @@ msgstr ""
 msgid "Describe this service in a sentence or two. Explain the value it brings to your customers."
 msgstr ""
 
-msgid "Design that gets out of your way"
+msgid "Design"
 msgstr ""
 
 msgid "Development"
+msgstr ""
+
+msgid "Do I need to write CSS to change the design?"
+msgstr ""
+
+msgid "Does the theme depend on any plugin?"
+msgstr ""
+
+msgid "E-commerce"
+msgstr ""
+
+msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
+msgstr ""
+
+msgid "Eight type scales"
+msgstr ""
+
+msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
+msgstr ""
+
+msgid "Everything we do, at a glance"
+msgstr ""
+
+msgid "For people with"
+msgstr ""
+
+msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
 msgstr ""
 
 msgid "Frequently asked questions"
@@ -101,28 +152,25 @@ msgstr ""
 msgid "Get started"
 msgstr ""
 
-msgid "Go further with premium blocks"
-msgstr ""
-
 msgid "Golden Ratio — 1.618"
 msgstr ""
 
-msgid "Hero & banners"
+msgid "Group what you offer and let a plain icon grid carry the overview."
 msgstr ""
 
-msgid "How many sites can I use one license on?"
+msgid "Illustration"
 msgstr ""
 
-msgid "Is the shitate theme free?"
+msgid "Integrations"
 msgstr ""
 
 msgid "Latest posts"
 msgstr ""
 
-msgid "Learn more"
+msgid "Lifetime — pay once"
 msgstr ""
 
-msgid "Lifetime — pay once"
+msgid "Maintenance"
 msgstr ""
 
 msgid "Major Second — 1.125"
@@ -131,16 +179,16 @@ msgstr ""
 msgid "Major Third — 1.25"
 msgstr ""
 
-msgid "Make a strong first impression with flexible hero and call-to-action sections."
-msgstr ""
-
 msgid "Margin bottom"
 msgstr ""
 
 msgid "Margin top"
 msgstr ""
 
-msgid "Mega menu, project slider and contact form"
+msgid "Minimal"
+msgstr ""
+
+msgid "Minimal updates,"
 msgstr ""
 
 msgid "Minor Second — 1.067"
@@ -149,16 +197,22 @@ msgstr ""
 msgid "Minor Third — 1.2"
 msgstr ""
 
-msgid "Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the shitate category."
-msgstr ""
-
 msgid "Most popular"
 msgstr ""
 
-msgid "No page builder lock-in, no heavy dependencies. Just clean, fast, standards-based output that you fully own."
+msgid "Most themes settle font sizes and spacing for you in fine detail, so matching your own taste means piling up CSS overrides. shitate works the other way around: pick the type scale closest to the site you have in mind, and the type, the spacing and the rest of the groundwork fall into place together. That leaves you free to concentrate on the content and the design itself."
+msgstr ""
+
+msgid "Name things after what they are, not after how they happen to look today. Labels that describe the role survive a redesign; labels that describe the decoration do not."
 msgstr ""
 
 msgid "No posts yet."
+msgstr ""
+
+msgid "No. Colors, type sizes and spacing are all set from the Site Editor and the Customizer. The type scale drives the whole ladder, so changing one ratio restyles the site consistently."
+msgstr ""
+
+msgid "No. shitate uses standard WordPress features only, so your content stays yours if you ever switch themes."
 msgstr ""
 
 msgid "Padding bottom"
@@ -173,9 +227,6 @@ msgstr ""
 msgid "Patterns"
 msgstr ""
 
-msgid "Patterns for every page"
-msgstr ""
-
 msgid "Perfect Fifth — 1.5"
 msgstr ""
 
@@ -185,25 +236,22 @@ msgstr ""
 msgid "Personal"
 msgstr ""
 
-msgid "Personal covers 1 site, Business up to 5 sites and Agency unlimited sites. The one-time Lifetime license covers a single site."
+msgid "Photography"
 msgstr ""
 
-msgid "Present what you offer with clean, responsive multi-column layouts."
-msgstr ""
-
-msgid "Pricing & FAQ"
-msgstr ""
-
-msgid "Pricing tables, testimonial carousels and animated counters"
-msgstr ""
-
-msgid "Ready to get started?"
+msgid "Rich"
 msgstr ""
 
 msgid "Scale ratio"
 msgstr ""
 
-msgid "Services & features"
+msgid "See all services"
+msgstr ""
+
+msgid "See it in action"
+msgstr ""
+
+msgid "See the demo"
 msgstr ""
 
 msgid "Simple, transparent pricing"
@@ -218,13 +266,34 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-msgid "Tell us about your project and we will get back to you within one business day."
+msgid "Tailored with a type scale"
 msgstr ""
 
-msgid "The shitate pro blocks plugin adds advanced, business-ready blocks that integrate seamlessly with the theme, all editable right inside the Site Editor."
+msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
+msgstr ""
+
+msgid "The questions we are asked most often. If yours is not here, ask away on the support forum."
+msgstr ""
+
+msgid "The work that decides how a site looks and reads before a single line is built."
+msgstr ""
+
+msgid "These pages are built with the type scale and the theme styles alone, without a single line of extra CSS. Everything uses standard editor features, so you can rebuild them yourself."
+msgstr ""
+
+msgid "This page could not be found."
+msgstr ""
+
+msgid "Training"
+msgstr ""
+
+msgid "Turning the design into something maintainable, fast and standards-based."
 msgstr ""
 
 msgid "Typography Scale"
+msgstr ""
+
+msgid "UI design"
 msgstr ""
 
 msgid "Unlimited sites · priority support"
@@ -233,34 +302,46 @@ msgstr ""
 msgid "Up to 5 sites · updates & support"
 msgstr ""
 
-msgid "View Pro Blocks"
-msgstr ""
-
 msgid "View all"
 msgstr ""
 
-msgid "Welcome to your business"
+msgid "View the demos"
 msgstr ""
 
-msgid "What happens when my subscription ends?"
+msgid "We tailor it. You decide how to wear it."
+msgstr ""
+
+msgid "Web design"
+msgstr ""
+
+msgid "What keeps a site healthy after launch, in your hands or in theirs."
+msgstr ""
+
+msgid "What shitate gives you"
 msgstr ""
 
 msgid "What we do"
 msgstr ""
 
-msgid "Yes. The shitate theme is free and open source under the GPL. shitate pro blocks is a paid plugin that extends it."
+msgid "Yes. Pick another ratio at any time and every heading, body size and spacing step follows it, so the design keeps its proportions."
 msgstr ""
 
-msgid "Your site keeps working. You simply stop receiving new updates and support until you renew."
+msgid "a block theme from a web studio"
+msgstr ""
+
+msgid "and without know-how"
+msgstr ""
+
+msgid "endless possibilities"
+msgstr ""
+
+msgid "made for builders"
 msgstr ""
 
 msgid "shitate"
 msgstr ""
 
-msgid "shitate is built on the WordPress Site Editor with a carefully tuned theme.json. Every color, font size and spacing value is a design token, so your site stays consistent as it grows."
-msgstr ""
-
-msgid "shitate pro blocks"
+msgid "to choose from"
 msgstr ""
 
 msgid "¥29,800"

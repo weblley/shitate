@@ -11,17 +11,29 @@ msgstr " / 年"
 msgid "1 site · updates & support"
 msgstr "1サイト · 更新＆サポート"
 
-msgid "12+ premium blocks"
-msgstr "12以上のプレミアムブロック"
+msgid "404 Not Found"
+msgstr "404 Not Found"
 
-msgid "A clean, flexible foundation for corporate websites. Tell your story, showcase your services and convert visitors into customers."
-msgstr "コーポレートサイトのためのクリーンで柔軟な土台。ストーリーを伝え、サービスを見せ、訪問者を顧客に変えましょう。"
+msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
+msgstr "無駄な機能を持たないシンプルな設計だから、頻繁なアップデート対応に追われません。作ったあと、長く静かに運営できるテーマです。"
 
-msgid "A growing library of pro patterns"
-msgstr "拡充され続けるProパターン集"
+msgid "A landing-page feel built from large elements, each one given room to breathe."
+msgstr "大きな要素で構成したLP風のページ。1つの要素に余白と余裕を持たせたサイト。"
 
 msgid "A short summary of the services your company offers. Edit this text to match your business."
 msgstr "御社が提供するサービスの概要です。ビジネスに合わせてこのテキストを編集してください。"
+
+msgid "A simple structure"
+msgstr "シンプル設計"
+
+msgid "A simple structure that both builders and their clients can handle, with room to customise where it matters. Because the foundation stays simple, updates stay minimal and the site stays comfortable to run for years."
+msgstr "制作者・クライアントの両方にとって扱いやすいシンプルな設計と、必要なところは柔軟にカスタマイズできる機能を備えています。基本設計がシンプルだからこそ、アップデートは最低限、長く快適に運営できます。"
+
+msgid "A standard company site that balances a sense of trust with easy reading."
+msgstr "一般的な企業サイトを意識して作られた、信頼感と見やすさを兼ね備えた標準的なサイト。"
+
+msgid "Accessibility"
+msgstr "アクセシビリティ"
 
 msgid "Agency"
 msgstr "Agency"
@@ -35,6 +47,9 @@ msgstr "フォントサイズにラウンドを適用"
 msgid "Augmented Fourth — 1.414"
 msgstr "増4度 — 1.414"
 
+msgid "Back to home"
+msgstr "トップページへ戻る"
+
 msgid "Base size (px)"
 msgstr "基準サイズ（px）"
 
@@ -44,17 +59,23 @@ msgstr "比率が大きいほど見出しの強弱が大きくなります（typ
 msgid "Body text size. The whole scale is built from this."
 msgstr "本文の文字サイズ。これを基準に全スケールが算出されます。"
 
-msgid "Build a site that works as hard as you do"
-msgstr "あなたと同じくらい働くサイトをつくろう"
+msgid "Branding"
+msgstr "ブランディング"
 
-msgid "Built with the WordPress Interactivity API for fast, accessible interactions."
-msgstr "高速でアクセシブルな操作性を、WordPress標準の技術で実現。"
+msgid "Build"
+msgstr "実装"
 
 msgid "Business"
 msgstr "Business"
 
 msgid "Buy Lifetime"
 msgstr "Lifetimeを購入"
+
+msgid "CMS setup"
+msgstr "CMS構築"
+
+msgid "Can I change the type scale after the site is live?"
+msgstr "公開後にタイプスケールを変更できますか？"
 
 msgid "Center horizontally (mx-auto)"
 msgstr "左右中央寄せ（mx-auto）"
@@ -71,17 +92,20 @@ msgstr "Personalを選ぶ"
 msgid "Clear spacing classes"
 msgstr "余白クラスをクリア"
 
-msgid "Communicate plans and answer questions with structured, accessible sections."
-msgstr "構造化されたアクセシブルなセクションで、プランと疑問に答えます。"
-
-msgid "Concept"
-msgstr "コンセプト"
-
 msgid "Consulting"
 msgstr "コンサルティング"
 
-msgid "Contact us"
-msgstr "お問い合わせ"
+msgid "Copywriting"
+msgstr "コピーライティング"
+
+msgid "Corporate"
+msgstr "コーポレート"
+
+msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
+msgstr "コーポレートサイトやビジネスサイト、あらゆる制作を自由に、楽しく。"
+
+msgid "Decoration kept to a minimum and a gentle jump ratio, in the spirit of a plain writing app."
+msgstr "装飾は最小限、文字のジャンプ率もタイプスケールで抑えたシンプルなサイト。"
 
 msgid "Default"
 msgstr "既定"
@@ -89,11 +113,38 @@ msgstr "既定"
 msgid "Describe this service in a sentence or two. Explain the value it brings to your customers."
 msgstr "このサービスを1〜2文で説明し、お客様にもたらす価値を伝えましょう。"
 
-msgid "Design that gets out of your way"
-msgstr "邪魔をしないデザイン"
+msgid "Design"
+msgstr "デザイン"
 
 msgid "Development"
 msgstr "開発"
+
+msgid "Do I need to write CSS to change the design?"
+msgstr "デザインを変えるにはCSSを書く必要がありますか？"
+
+msgid "Does the theme depend on any plugin?"
+msgstr "テーマの利用にプラグインは必要ですか？"
+
+msgid "E-commerce"
+msgstr "EC"
+
+msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
+msgstr "音楽の度数になぞらえた8つのスケール——短2度から、黄金比まで。控えめな階調から大胆なジャンプまで、サイトの性格に合わせて選べます。"
+
+msgid "Eight type scales"
+msgstr "選べる8つの"
+
+msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
+msgstr "テーマ全体の設定はCSS変数に集約。スケールを選んだあとも、変数を上書きするだけで自由に微調整・切り替えができます。「テーマの都合」に縛られません。"
+
+msgid "Everything we do, at a glance"
+msgstr "私たちができること"
+
+msgid "For people with"
+msgstr "知識がある人"
+
+msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
+msgstr "制作会社・フリーランスの現場でも、引き渡し後のクライアント自身の運用でも。どちらの手にもなじむよう設計しています。"
 
 msgid "Frequently asked questions"
 msgstr "よくある質問"
@@ -101,29 +152,26 @@ msgstr "よくある質問"
 msgid "Get started"
 msgstr "はじめる"
 
-msgid "Go further with premium blocks"
-msgstr "プレミアムブロックでさらに先へ"
-
 msgid "Golden Ratio — 1.618"
 msgstr "黄金比 — 1.618"
 
-msgid "Hero & banners"
-msgstr "ヒーローとバナー"
+msgid "Group what you offer and let a plain icon grid carry the overview."
+msgstr "提供できることをグループにまとめ、シンプルなアイコングリッドで一覧にします。"
 
-msgid "How many sites can I use one license on?"
-msgstr "1ライセンスで何サイト使えますか？"
+msgid "Illustration"
+msgstr "イラスト"
 
-msgid "Is the shitate theme free?"
-msgstr "shitateテーマは無料ですか？"
+msgid "Integrations"
+msgstr "外部連携"
 
 msgid "Latest posts"
 msgstr "最新の投稿"
 
-msgid "Learn more"
-msgstr "詳しく見る"
-
 msgid "Lifetime — pay once"
 msgstr "Lifetime — 買い切り"
+
+msgid "Maintenance"
+msgstr "保守"
 
 msgid "Major Second — 1.125"
 msgstr "長2度 — 1.125"
@@ -131,17 +179,17 @@ msgstr "長2度 — 1.125"
 msgid "Major Third — 1.25"
 msgstr "長3度 — 1.25"
 
-msgid "Make a strong first impression with flexible hero and call-to-action sections."
-msgstr "柔軟なヒーローとCTAセクションで、力強い第一印象を。"
-
 msgid "Margin bottom"
 msgstr "下マージン"
 
 msgid "Margin top"
 msgstr "上マージン"
 
-msgid "Mega menu, project slider and contact form"
-msgstr "メガメニュー・実績スライダー・お問い合わせフォーム"
+msgid "Minimal"
+msgstr "ミニマル"
+
+msgid "Minimal updates,"
+msgstr "更新は最低限、"
 
 msgid "Minor Second — 1.067"
 msgstr "短2度 — 1.067"
@@ -149,17 +197,23 @@ msgstr "短2度 — 1.067"
 msgid "Minor Third — 1.2"
 msgstr "短3度 — 1.2"
 
-msgid "Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the shitate category."
-msgstr "出来合いのセクションを組み合わせて、数分でページを作成。ブロック挿入ツールの「shitate」カテゴリから挿入できます。"
-
 msgid "Most popular"
 msgstr "一番人気"
 
-msgid "No page builder lock-in, no heavy dependencies. Just clean, fast, standards-based output that you fully own."
-msgstr "ページビルダーへのロックインも重い依存もなし。クリーンで速い、標準準拠の出力だけがあなたのものになります。"
+msgid "Most themes settle font sizes and spacing for you in fine detail, so matching your own taste means piling up CSS overrides. shitate works the other way around: pick the type scale closest to the site you have in mind, and the type, the spacing and the rest of the groundwork fall into place together. That leaves you free to concentrate on the content and the design itself."
+msgstr "多くのテーマは、文字サイズや余白があらかじめ細かく決められていて、好みに合わせるにはCSSでの上書きが積み重なっていきます。shitateは逆の発想です。作りたいサイトのイメージに近いタイプスケールを最初に選べば、文字も余白も、デザインに関わる土台がまとめて整う。だからあなたは、コンテンツとデザインそのものに集中できます。"
+
+msgid "Name things after what they are, not after how they happen to look today. Labels that describe the role survive a redesign; labels that describe the decoration do not."
+msgstr "いまの見た目ではなく、それが何であるかで名前を付ける。役割を表す名前はリニューアルを越えて残りますが、装飾を表す名前は残りません。"
 
 msgid "No posts yet."
 msgstr "まだ投稿がありません。"
+
+msgid "No. Colors, type sizes and spacing are all set from the Site Editor and the Customizer. The type scale drives the whole ladder, so changing one ratio restyles the site consistently."
+msgstr "いいえ。色・文字サイズ・余白はすべてサイトエディターとカスタマイザーから設定できます。タイプスケールが全体を動かすので、比率を1つ変えるだけでサイト全体の印象が整います。"
+
+msgid "No. shitate uses standard WordPress features only, so your content stays yours if you ever switch themes."
+msgstr "いいえ。shitateはWordPressの標準機能だけで動作します。将来テーマを変えても、コンテンツはそのまま残ります。"
 
 msgid "Padding bottom"
 msgstr "下パディング"
@@ -173,9 +227,6 @@ msgstr "上パディング"
 msgid "Patterns"
 msgstr "パターン"
 
-msgid "Patterns for every page"
-msgstr "あらゆるページに使えるパターン"
-
 msgid "Perfect Fifth — 1.5"
 msgstr "完全5度 — 1.5"
 
@@ -185,26 +236,23 @@ msgstr "完全4度 — 1.333"
 msgid "Personal"
 msgstr "Personal"
 
-msgid "Personal covers 1 site, Business up to 5 sites and Agency unlimited sites. The one-time Lifetime license covers a single site."
-msgstr "Personalは1サイト、Businessは最大5サイト、Agencyは無制限です。買い切りのLifetimeは1サイトのみです。"
+msgid "Photography"
+msgstr "写真"
 
-msgid "Present what you offer with clean, responsive multi-column layouts."
-msgstr "クリーンでレスポンシブなマルチカラムで提供内容を紹介。"
-
-msgid "Pricing & FAQ"
-msgstr "料金とFAQ"
-
-msgid "Pricing tables, testimonial carousels and animated counters"
-msgstr "料金表・お客様の声カルーセル・アニメーション数値"
-
-msgid "Ready to get started?"
-msgstr "さあ、はじめましょう"
+msgid "Rich"
+msgstr "リッチ"
 
 msgid "Scale ratio"
 msgstr "スケール比率"
 
-msgid "Services & features"
-msgstr "サービスと特長"
+msgid "See all services"
+msgstr "サービス一覧を見る"
+
+msgid "See it in action"
+msgstr "デモページを見る"
+
+msgid "See the demo"
+msgstr "デモページを見てみる"
 
 msgid "Simple, transparent pricing"
 msgstr "シンプルで明快な料金"
@@ -218,14 +266,35 @@ msgstr "余白"
 msgid "Support"
 msgstr "サポート"
 
-msgid "Tell us about your project and we will get back to you within one business day."
-msgstr "プロジェクトについてお聞かせください。1営業日以内にご返信します。"
+msgid "Tailored with a type scale"
+msgstr "タイプスケールで仕立てる"
 
-msgid "The shitate pro blocks plugin adds advanced, business-ready blocks that integrate seamlessly with the theme, all editable right inside the Site Editor."
-msgstr "shitate pro blocksプラグインは、テーマとシームレスに統合されたビジネス向けの高度なブロックを追加します。すべてサイトエディター内で編集できます。"
+msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
+msgstr "お探しのページは、移動または削除されたか、一時的にご利用いただけない可能性があります。トップページから再度お試しください。"
+
+msgid "The questions we are asked most often. If yours is not here, ask away on the support forum."
+msgstr "よくいただく質問をまとめました。ここにない場合はサポートフォーラムからお気軽にどうぞ。"
+
+msgid "The work that decides how a site looks and reads before a single line is built."
+msgstr "実装に入る前に、サイトの見え方と読みやすさを決める工程です。"
+
+msgid "These pages are built with the type scale and the theme styles alone, without a single line of extra CSS. Everything uses standard editor features, so you can rebuild them yourself."
+msgstr "ここで紹介するデモページは、追加CSSなどは一切使わずに、タイプスケールと装飾だけで作り上げています。すべてWordPressの標準機能だけで作っているので簡単に再現できます。"
+
+msgid "This page could not be found."
+msgstr "ページが見つかりません"
+
+msgid "Training"
+msgstr "操作レクチャー"
+
+msgid "Turning the design into something maintainable, fast and standards-based."
+msgstr "デザインを、保守しやすく速い、標準準拠のかたちにしていきます。"
 
 msgid "Typography Scale"
 msgstr "タイポグラフィスケール"
+
+msgid "UI design"
+msgstr "UIデザイン"
 
 msgid "Unlimited sites · priority support"
 msgstr "サイト数無制限 · 優先サポート"
@@ -233,35 +302,47 @@ msgstr "サイト数無制限 · 優先サポート"
 msgid "Up to 5 sites · updates & support"
 msgstr "最大5サイト · 更新＆サポート"
 
-msgid "View Pro Blocks"
-msgstr "Pro Blocksを見る"
-
 msgid "View all"
 msgstr "すべて見る"
 
-msgid "Welcome to your business"
-msgstr "ようこそ、あなたのビジネスへ"
+msgid "View the demos"
+msgstr "デモを見てみる"
 
-msgid "What happens when my subscription ends?"
-msgstr "サブスクリプションが終了するとどうなりますか？"
+msgid "We tailor it. You decide how to wear it."
+msgstr "仕立ては私たちが。着こなしは、あなたが。"
+
+msgid "Web design"
+msgstr "ウェブデザイン"
+
+msgid "What keeps a site healthy after launch, in your hands or in theirs."
+msgstr "公開後もサイトを健全に保つための取り組みです。"
+
+msgid "What shitate gives you"
+msgstr "shitateの特徴"
 
 msgid "What we do"
 msgstr "私たちにできること"
 
-msgid "Yes. The shitate theme is free and open source under the GPL. shitate pro blocks is a paid plugin that extends it."
-msgstr "はい。shitateテーマはGPLのもと無料・オープンソースです。shitate pro blocksはそれを拡張する有料プラグインです。"
+msgid "Yes. Pick another ratio at any time and every heading, body size and spacing step follows it, so the design keeps its proportions."
+msgstr "はい。いつでも別の比率を選べます。見出し・本文サイズ・余白の各段がそれに追従するので、デザインの比率は保たれたままです。"
 
-msgid "Your site keeps working. You simply stop receiving new updates and support until you renew."
-msgstr "サイトはそのまま動き続けます。更新するまで新しいアップデートとサポートが受けられなくなるだけです。"
+msgid "a block theme from a web studio"
+msgstr "制作会社発のブロックテーマ"
+
+msgid "and without know-how"
+msgstr "ない人にも"
+
+msgid "endless possibilities"
+msgstr "可能性は無限大"
+
+msgid "made for builders"
+msgstr "制作向けの構造"
 
 msgid "shitate"
 msgstr "shitate"
 
-msgid "shitate is built on the WordPress Site Editor with a carefully tuned theme.json. Every color, font size and spacing value is a design token, so your site stays consistent as it grows."
-msgstr "shitateは丁寧に調整されたtheme.jsonとサイトエディターを土台に作られています。色・文字サイズ・余白はすべてデザイントークンなので、サイトが成長しても一貫性が保たれます。"
-
-msgid "shitate pro blocks"
-msgstr "shitate pro blocks"
+msgid "to choose from"
+msgstr "タイプスケール"
 
 msgid "¥29,800"
 msgstr "¥29,800"

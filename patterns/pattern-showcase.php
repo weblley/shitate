@@ -1,54 +1,136 @@
 <?php
 /**
- * Title: Block pattern showcase
+ * Title: Icon grid in three groups
  * Slug: st/pattern-showcase
  * Categories: st, gallery, featured
- * Description: A grid that highlights the block patterns included with the theme.
- * Keywords: patterns, showcase, blocks, library, gallery
- * Block Types: core/columns
+ * Description: A centered heading followed by three labelled groups, each showing a responsive grid of icons with captions.
+ * Keywords: icons, grid, services, showcase, gallery
+ * Block Types: core/group
  * Viewport Width: 1400
  */
 ?>
 <!-- wp:group {"tagName":"section","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-<section class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20","margin":{"bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","contentSize":"680px"}} -->
-<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--50)"><!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Patterns for every page', 'shitate' ); ?></h2>
+<section class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}}} -->
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Everything we do, at a glance', 'shitate' ); ?></h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"neutral"} -->
-<p class="has-text-align-center has-neutral-color has-text-color"><?php esc_html_e( 'Mix and match ready-made sections to build pages in minutes. Insert them from the block inserter under the shitate category.', 'shitate' ); ?></p>
-<!-- /wp:paragraph --></div>
+<!-- wp:paragraph {"style":{"typography":{"textAlign":"center"}},"textColor":"neutral"} -->
+<p class="has-text-align-center has-neutral-color has-text-color"><?php esc_html_e( 'Group what you offer and let a plain icon grid carry the overview.', 'shitate' ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><?php esc_html_e( 'Design', 'shitate' ); ?></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><?php esc_html_e( 'The work that decides how a site looks and reads before a single line is built.', 'shitate' ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"layout":{"type":"grid","columnCount":6,"minimumColumnWidth":"140px"}} -->
+<div class="wp-block-group">
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Branding', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Web design', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'UI design', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Illustration', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Photography', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Copywriting', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+</div>
 <!-- /wp:group -->
 
-<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40","top":"var:preset|spacing|40"}}}} -->
-<div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"var(--st-radius-m)","width":"1px"}},"borderColor":"line"} -->
-<div class="wp-block-column has-border-color has-line-border-color" style="border-width:1px;border-radius:var(--st-radius-m);padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
-<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Hero & banners', 'shitate' ); ?></h3>
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><?php esc_html_e( 'Build', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Make a strong first impression with flexible hero and call-to-action sections.', 'shitate' ); ?></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
+<!-- wp:paragraph -->
+<p><?php esc_html_e( 'Turning the design into something maintainable, fast and standards-based.', 'shitate' ); ?></p>
+<!-- /wp:paragraph -->
 
-<!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"var(--st-radius-m)","width":"1px"}},"borderColor":"line"} -->
-<div class="wp-block-column has-border-color has-line-border-color" style="border-width:1px;border-radius:var(--st-radius-m);padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
-<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Services & features', 'shitate' ); ?></h3>
+<!-- wp:group {"layout":{"type":"grid","columnCount":6,"minimumColumnWidth":"140px"}} -->
+<div class="wp-block-group">
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Development', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'CMS setup', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'E-commerce', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Integrations', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Accessibility', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p><?php esc_html_e( 'Name things after what they are, not after how they happen to look today. Labels that describe the role survive a redesign; labels that describe the decoration do not.', 'shitate' ); ?></p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><?php esc_html_e( 'Support', 'shitate' ); ?></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Present what you offer with clean, responsive multi-column layouts.', 'shitate' ); ?></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
+<!-- wp:paragraph -->
+<p><?php esc_html_e( 'What keeps a site healthy after launch, in your hands or in theirs.', 'shitate' ); ?></p>
+<!-- /wp:paragraph -->
 
-<!-- wp:column {"style":{"spacing":{"padding":"var:preset|spacing|40"},"border":{"radius":"var(--st-radius-m)","width":"1px"}},"borderColor":"line"} -->
-<div class="wp-block-column has-border-color has-line-border-color" style="border-width:1px;border-radius:var(--st-radius-m);padding:var(--wp--preset--spacing--40)"><!-- wp:heading {"level":3,"fontSize":"large"} -->
-<h3 class="wp-block-heading has-large-font-size"><?php esc_html_e( 'Pricing & FAQ', 'shitate' ); ?></h3>
-<!-- /wp:heading -->
+<!-- wp:group {"layout":{"type":"grid","columnCount":6,"minimumColumnWidth":"140px"}} -->
+<div class="wp-block-group">
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Maintenance', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"width":"100px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img alt="" style="width:100px;height:auto"/><figcaption class="wp-element-caption"><?php esc_html_e( 'Training', 'shitate' ); ?></figcaption></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
 
-<!-- wp:paragraph {"textColor":"contrast-2"} -->
-<p class="has-contrast-2-color has-text-color"><?php esc_html_e( 'Communicate plans and answer questions with structured, accessible sections.', 'shitate' ); ?></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></section>
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'See all services', 'shitate' ); ?></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></section>
 <!-- /wp:group -->
