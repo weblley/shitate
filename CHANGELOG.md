@@ -6,16 +6,13 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
-### Changed
-
-- 開発者URL（Author URI）を https://weblley.co.jp/ に変更
-
 ### Fixed
 
 - 固定ページ・投稿テンプレートで「全幅」ブロックが画面端まで広がらなかった問題を修正（page.html / single.html の `main` グループと `post-content` に `align:full` を付与。WP標準テーマと同じ構造にし、入れ子の constrained レイアウトによる全幅の打ち消しを解消。通常ブロックはコンテンツ幅のまま）
 
 ### Changed
 
+- 開発者URL（Author URI）を https://weblley.co.jp/ に変更
 - パターンとテンプレートを、開発サイトで実際に組んだ内容に合わせて全面的に作り直し。テンプレート（archive / index / search / single / page）とヘッダー・フッターはサイトエディターの現行版をそのまま移植し、フロントページは実際の構成（hero → concept → product → pattern-showcase → cta → faq）に更新
 - 配布用の調整: テンプレートから `theme` 属性とナビゲーションメニューのID参照を除去、角丸の直書き（8px）をトークン参照に、投稿日ラベルの日本語直書きを英語ソース化、パレット外の灰色（#828282）を neutral に置換
 - パターンの文言を英語ソース＋日本語翻訳に統一（新規61文字列を辞書に追加、テーマ翻訳は117/117で100%維持）。画像はブロックを残したまま空にし、ユーザーが差し替える前提に
