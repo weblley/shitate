@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Changed
+
+- 開発者URL（Author URI）を https://weblley.co.jp/ に変更
+
 ### Fixed
 
 - 固定ページ・投稿テンプレートで「全幅」ブロックが画面端まで広がらなかった問題を修正（page.html / single.html の `main` グループと `post-content` に `align:full` を付与。WP標準テーマと同じ構造にし、入れ子の constrained レイアウトによる全幅の打ち消しを解消。通常ブロックはコンテンツ幅のまま）
