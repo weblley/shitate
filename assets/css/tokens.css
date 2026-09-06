@@ -44,70 +44,36 @@
 	--st-color-border: var(--wp--preset--color--line, #e4e9f7);
 
 	/*
-	 * Spacing scale — a pure modular ladder, built exactly like the type
-	 * scale: 15 steps, each one --st-ratio apart, anchored at step 7 =
-	 * --st-text-m. No hand-picked multipliers; change the ratio (or the base
-	 * size) in the Customizer and every step follows.
+	 * Spacing scale — the same modular rule as the type scale, in the same
+	 * eight names. m is the body size (--st-text-m); every other step is a
+	 * power of --st-ratio away from it, so changing the ratio or the base size
+	 * in the Customizer moves type and space together. Above m the steps are
+	 * two ratio powers apart (l = m·r², xl = m·r⁴, xxl = m·r⁶, xxxl = m·r⁸);
+	 * below m they tighten faster (s = m/r, xs = m/r³, xxs = m/r⁶). At the
+	 * default ratio 1.25 that is ≈ 4 / 8 / 13 / 16 / 25 / 39 / 61 / 95px.
 	 *
-	 * At the default ratio 1.25 the ladder approximates DADS
-	 * (4.2 / 5.2 / 6.6 / 8.2 / 10.2 / 12.8 / 16 / 20 / 25 / 31 / 39 / 49 /
-	 * 61 / 76 / 95px). Small ratios tighten the whole ladder, large ones
-	 * open it up — that is the intended behavior of a modular scale.
+	 * Steps above m are fluid without media queries: on narrow viewports they
+	 * follow a gentler ratio derived from the chosen one ((1 + r) / 2, never
+	 * inverting) and open up to the full ratio on wide screens. Steps below m
+	 * stay static — their fluid delta would be 1–3px, below perception.
 	 */
-	--st-space-7: var(--st-text-m);
-	--st-space-6: calc(var(--st-space-7) / var(--st-ratio, 1.25));
-	--st-space-5: calc(var(--st-space-6) / var(--st-ratio, 1.25));
-	--st-space-4: calc(var(--st-space-5) / var(--st-ratio, 1.25));
-	--st-space-3: calc(var(--st-space-4) / var(--st-ratio, 1.25));
-	--st-space-2: calc(var(--st-space-3) / var(--st-ratio, 1.25));
-	--st-space-1: calc(var(--st-space-2) / var(--st-ratio, 1.25));
-	/*
-	 * Steps above the anchor are FLUID, media-query free: on narrow viewports
-	 * they follow a gentler ratio derived from the chosen one (never inverts:
-	 * 1 < min-ratio < ratio, same derivation the fluid type scale uses), and
-	 * open up to the full ratio on wide screens. Steps below the anchor stay
-	 * static — their fluid delta would be 1–3px, below perception.
-	 */
+	--st-space-m: var(--st-text-m);
+	--st-space-s: calc(var(--st-space-m) / var(--st-ratio, 1.25));
+	--st-space-xs: calc(var(--st-space-s) / var(--st-ratio, 1.25) / var(--st-ratio, 1.25));
+	--st-space-xxs: calc(var(--st-space-xs) / var(--st-ratio, 1.25) / var(--st-ratio, 1.25) / var(--st-ratio, 1.25));
 	--st-ratio-min: calc((1 + var(--st-ratio, 1.25)) / 2);
-	--st-space-8-max: calc(var(--st-space-7) * var(--st-ratio, 1.25));
-	--st-space-9-max: calc(var(--st-space-8-max) * var(--st-ratio, 1.25));
-	--st-space-10-max: calc(var(--st-space-9-max) * var(--st-ratio, 1.25));
-	--st-space-11-max: calc(var(--st-space-10-max) * var(--st-ratio, 1.25));
-	--st-space-12-max: calc(var(--st-space-11-max) * var(--st-ratio, 1.25));
-	--st-space-13-max: calc(var(--st-space-12-max) * var(--st-ratio, 1.25));
-	--st-space-14-max: calc(var(--st-space-13-max) * var(--st-ratio, 1.25));
-	--st-space-15-max: calc(var(--st-space-14-max) * var(--st-ratio, 1.25));
-	--st-space-8-min: calc(var(--st-space-7) * var(--st-ratio-min));
-	--st-space-9-min: calc(var(--st-space-8-min) * var(--st-ratio-min));
-	--st-space-10-min: calc(var(--st-space-9-min) * var(--st-ratio-min));
-	--st-space-11-min: calc(var(--st-space-10-min) * var(--st-ratio-min));
-	--st-space-12-min: calc(var(--st-space-11-min) * var(--st-ratio-min));
-	--st-space-13-min: calc(var(--st-space-12-min) * var(--st-ratio-min));
-	--st-space-14-min: calc(var(--st-space-13-min) * var(--st-ratio-min));
-	--st-space-15-min: calc(var(--st-space-14-min) * var(--st-ratio-min));
-	--st-space-8: clamp(var(--st-space-8-min), calc(var(--st-space-8-min) + 0.5vw), var(--st-space-8-max));
-	--st-space-9: clamp(var(--st-space-9-min), calc(var(--st-space-9-min) + 1vw), var(--st-space-9-max));
-	--st-space-10: clamp(var(--st-space-10-min), calc(var(--st-space-10-min) + 1.5vw), var(--st-space-10-max));
-	--st-space-11: clamp(var(--st-space-11-min), calc(var(--st-space-11-min) + 2vw), var(--st-space-11-max));
-	--st-space-12: clamp(var(--st-space-12-min), calc(var(--st-space-12-min) + 2.5vw), var(--st-space-12-max));
-	--st-space-13: clamp(var(--st-space-13-min), calc(var(--st-space-13-min) + 3vw), var(--st-space-13-max));
-	--st-space-14: clamp(var(--st-space-14-min), calc(var(--st-space-14-min) + 3.5vw), var(--st-space-14-max));
-	--st-space-15: clamp(var(--st-space-15-min), calc(var(--st-space-15-min) + 4vw), var(--st-space-15-max));
-
-	/*
-	 * Legacy t-shirt names (pre-0.3.0), aliased to the nearest ladder step so
-	 * utilities.css classes, plugin fallbacks and saved content keep their
-	 * approximate sizes (xxs 4→4.2, xs 8→8.2, s 12→12.8, m 16, l 24→25,
-	 * xl 40→39, xxl 64→61, xxxl 104→95 at the default ratio).
-	 */
-	--st-space-xxs: var(--st-space-1);
-	--st-space-xs: var(--st-space-4);
-	--st-space-s: var(--st-space-6);
-	--st-space-m: var(--st-space-7);
-	--st-space-l: var(--st-space-9);
-	--st-space-xl: var(--st-space-11);
-	--st-space-xxl: var(--st-space-13);
-	--st-space-xxxl: var(--st-space-15);
+	--st-space-l-max: calc(var(--st-space-m) * var(--st-ratio, 1.25) * var(--st-ratio, 1.25));
+	--st-space-xl-max: calc(var(--st-space-l-max) * var(--st-ratio, 1.25) * var(--st-ratio, 1.25));
+	--st-space-xxl-max: calc(var(--st-space-xl-max) * var(--st-ratio, 1.25) * var(--st-ratio, 1.25));
+	--st-space-xxxl-max: calc(var(--st-space-xxl-max) * var(--st-ratio, 1.25) * var(--st-ratio, 1.25));
+	--st-space-l-min: calc(var(--st-space-m) * var(--st-ratio-min) * var(--st-ratio-min));
+	--st-space-xl-min: calc(var(--st-space-l-min) * var(--st-ratio-min) * var(--st-ratio-min));
+	--st-space-xxl-min: calc(var(--st-space-xl-min) * var(--st-ratio-min) * var(--st-ratio-min));
+	--st-space-xxxl-min: calc(var(--st-space-xxl-min) * var(--st-ratio-min) * var(--st-ratio-min));
+	--st-space-l: clamp(var(--st-space-l-min), calc(var(--st-space-l-min) + 1vw), var(--st-space-l-max));
+	--st-space-xl: clamp(var(--st-space-xl-min), calc(var(--st-space-xl-min) + 2vw), var(--st-space-xl-max));
+	--st-space-xxl: clamp(var(--st-space-xxl-min), calc(var(--st-space-xxl-min) + 3vw), var(--st-space-xxl-max));
+	--st-space-xxxl: clamp(var(--st-space-xxxl-min), calc(var(--st-space-xxxl-min) + 4vw), var(--st-space-xxxl-max));
 
 	/* Layout — rem so line length tracks the user's browser font size. */
 	--st-width-max: 78.75rem; /* = wideSize, 1260px at 16px root */

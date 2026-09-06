@@ -109,7 +109,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>余白は文字サイズとまったく同じ規則で作られた <strong>15 段のモジュラースケール</strong>です。<code>--st-space-1</code> から <code>--st-space-15</code> まであり、1 段ごとにスケール比率が掛かります。基準は 7 段目で、これが本文サイズと一致します。つまり<strong>カスタマイザーで比率や本文サイズを変えると、余白も同時に追従します</strong>。</p>
+<p>余白は文字サイズとまったく同じ規則で作られた <strong>8 段のモジュラースケール</strong>です。<code>--st-space-xxs</code> から <code>--st-space-xxxl</code> まで、文字サイズと同じ名前で並びます。基準は <code>m</code> で、これが本文サイズと一致し、そこから離れるほどスケール比率が掛かっていきます。つまり<strong>カスタマイザーで比率や本文サイズを変えると、余白も同時に追従します</strong>。</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -283,7 +283,7 @@
 --st-ratio               スケール比率
 
 /* 余白 */
---st-space-1 〜 --st-space-15        （7 が基準＝本文サイズ）
+--st-space-xxs 〜 --st-space-xxxl   （m が基準＝本文サイズ）
 --st-space-xxs / xs / s / m / l / xl / xxl / xxxl   （旧名エイリアス）
 
 /* レイアウト・装飾 */
@@ -326,7 +326,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>これも仕様です。内部的には 15 段ありますが、選びやすさのために代表的な 8 段だけを公開しています。中間の段が必要な場合は、カスタム CSS から <code>--st-space-2</code> のように直接参照してください。</p>
+<p>これも仕様です。余白の段は文字と同じ 8 つで、ピッカーにはその 8 段をそのまま公開しています。中間のサイズが必要な場合は、カスタム CSS で <code>calc(var(--st-space-m) * var(--st-ratio))</code> のように比率を掛けて作れます。</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->

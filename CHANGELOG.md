@@ -16,6 +16,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Changed
 
+- 余白トークンの数字名（`--st-space-1〜15`）を廃止し、文字サイズと同じ8名（`--st-space-xxs〜xxxl`）に統一。各名のサイズは従来の割り当て（旧段1/4/6/7/9/11/13/15）と同一で、見た目・ユーティリティ・プラグインのフォールバック・保存済みコンテンツはすべて不変。上位4段の流体化（clamp）も維持
 - 開発者URL（Author URI）を https://weblley.co.jp/ に変更
 - パターンとテンプレートを、開発サイトで実際に組んだ内容に合わせて全面的に作り直し。テンプレート（archive / index / search / single / page）とヘッダー・フッターはサイトエディターの現行版をそのまま移植し、フロントページは実際の構成（hero → concept → product → pattern-showcase → cta → faq）に更新
 - 配布用の調整: テンプレートから `theme` 属性とナビゲーションメニューのID参照を除去、角丸の直書き（8px）をトークン参照に、投稿日ラベルの日本語直書きを英語ソース化、パレット外の灰色（#828282）を neutral に置換
