@@ -16,7 +16,7 @@ echo "→ Staging files…"
 rm -rf "$STAGE" "$DIST/$SLUG.zip"
 mkdir -p "$STAGE"
 
-for item in style.css theme.json functions.php readme.txt screenshot.png templates parts patterns styles assets languages; do
+for item in style.css theme.json functions.php readme.txt screenshot.png templates parts patterns styles assets inc languages; do
 	if [ -e "$item" ]; then
 		cp -R "$item" "$STAGE/"
 	fi

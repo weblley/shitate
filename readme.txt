@@ -17,7 +17,7 @@ shitate is a block theme for the Site Editor with a token-driven design system:
 * A modular type scale (typescale.com style) driven by a single base size and ratio.
 * A modular spacing ladder built on the same base and ratio, with margin-top rhythm and heading hierarchy.
 * Fluid spacing and headings without media queries, so the rhythm tightens itself on small screens.
-* A palette-driven color system: edit the palette in the Site Editor and every token follows.
+* A palette-driven color system: change a source color in the Site Editor and the derived tones (hover, tinted surfaces, borders, muted text) follow.
 * Spacing utility classes (mt-0 … p-xxxl) plus a Spacing dropdown in the block toolbar.
 * Four style variations (Dark, Cream, Mist, Mono).
 

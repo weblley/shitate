@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Added
+
+- 派生色の自動追従（`inc/colors.php`）: サイトエディターで Base / Contrast / Primary を変更すると、Base / Two・Border・Contrast / Two・Neutral・Primary / Hover が自動で追従する（暗い配色では Hover を明るく）。派生色を手動で設定した場合はその値が優先され、スタイルバリエーションの手調整値も親色を変えるまで保持。読み取り時の計算のみで保存データは変更しない
+
 ### Fixed
 
 - 固定ページ・投稿テンプレートで「全幅」ブロックが画面端まで広がらなかった問題を修正（page.html / single.html の `main` グループと `post-content` に `align:full` を付与。WP標準テーマと同じ構造にし、入れ子の constrained レイアウトによる全幅の打ち消しを解消。通常ブロックはコンテンツ幅のまま）
