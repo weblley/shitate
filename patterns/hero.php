@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Hero with heading, text and buttons
- * Slug: st/hero
- * Categories: st, banner, call-to-action
+ * Slug: shitate/hero
+ * Categories: shitate, banner, call-to-action
  * Description: A full-width hero section with a large heading, supporting text and two call-to-action buttons.
  * Keywords: hero, header, banner, intro
  * Block Types: core/group

@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Card gallery with call to action
- * Slug: st/cta
- * Categories: st, gallery, call-to-action
+ * Slug: shitate/cta
+ * Categories: shitate, gallery, call-to-action
  * Description: A tinted section with a heading, a lead paragraph, three image cards and a closing button.
  * Keywords: gallery, cards, showcase, demo, call to action
  * Block Types: core/group

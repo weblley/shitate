@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Feature cards (four columns with images)
- * Slug: st/product
- * Categories: st, featured, columns
+ * Slug: shitate/product
+ * Categories: shitate, featured, columns
  * Description: A tinted section with a heading, a lead paragraph and four feature cards, each with an image, a heading and a short description.
  * Keywords: features, cards, columns, grid, product
  * Block Types: core/group

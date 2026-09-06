@@ -30,11 +30,11 @@ NOTES="$(awk -v ver="$VERSION" '
 echo "→ Bumping version to ${VERSION}"
 perl -pi -e "s/^(Version: ).*/\${1}$VERSION/" style.css
 perl -pi -e "s/^(Stable tag: ).*/\${1}$VERSION/" readme.txt
-# ST_VERSION is the cache buster for the theme's CSS/JS — keep it in lockstep
+# SHITATE_VERSION is the cache buster for the theme's CSS/JS — keep it in lockstep
 # with the style.css header, or updated assets keep serving from cache.
-perl -pi -e "s/^\tdefine\( 'ST_VERSION', '.*' \);\$/\tdefine( 'ST_VERSION', '$VERSION' );/" functions.php
-grep -q "define( 'ST_VERSION', '$VERSION' );" functions.php || {
-	echo "✗ functions.php の ST_VERSION を更新できませんでした（定義行の書式を確認してください）"
+perl -pi -e "s/^\tdefine\( 'SHITATE_VERSION', '.*' \);\$/\tdefine( 'SHITATE_VERSION', '$VERSION' );/" functions.php
+grep -q "define( 'SHITATE_VERSION', '$VERSION' );" functions.php || {
+	echo "✗ functions.php の SHITATE_VERSION を更新できませんでした（定義行の書式を確認してください）"
 	exit 1
 }
 

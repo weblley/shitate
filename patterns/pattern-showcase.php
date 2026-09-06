@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Icon grid in three groups
- * Slug: st/pattern-showcase
- * Categories: st, gallery, featured
+ * Slug: shitate/pattern-showcase
+ * Categories: shitate, gallery, featured
  * Description: A centered heading followed by three labelled groups, each showing a responsive grid of icons with captions.
  * Keywords: icons, grid, services, showcase, gallery
  * Block Types: core/group

@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: 404 content
- * Slug: st/404-content
+ * Slug: shitate/404-content
  * Inserter: no
  * Description: The body of the 404 page: a large code, a short explanation and a link home.
  */

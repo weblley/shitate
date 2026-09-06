@@ -6,7 +6,7 @@
 - 会社表記: weblley inc
 
 ## 命名規則
-- `st` = shitate theme。PHP関数 `st_`、定数 `ST_`、ハンドル `st-`、CSS変数 `--st-*`、パターン `st/*`（カテゴリ `st`）
+- **公開識別子の接頭辞は `shitate`**（2026-09-06、.org審査指摘: 接頭辞は4文字以上）: PHP関数・オプション(theme_mod)・カスタマイザーID `shitate_`、定数 `SHITATE_`、スクリプト/スタイルハンドル `shitate-`、パターン `shitate/*`（カテゴリ `shitate`）。**CSS変数だけは `--st-*` を維持**（CSSカスタムプロパティは接頭辞規則の対象外。プラグインの `var(--st-*, …)` フォールバックと保存済みコンテンツの互換のため。改名しない）。旧 `st_*` の theme_mod は `shitate_migrate_theme_mods()` で自動移行
 - 例外: テキストドメインは `shitate`（.org要件でフォルダ名と一致）
 - プラグイン側は `sb`（sb/ブロック名・`--sb-*`）。テーマは `--sb-*` を定義しない
 
@@ -23,7 +23,7 @@
 - **!important 禁止**。例外は utilities.css（ユーティリティ層）のみ
 - コンテンツ幅 64rem / 幅広 78.75rem（`--st-width-text` / `--st-width-max` 同期。2026-09-01にrem化＝ブラウザ文字サイズ設定に行長が追従）
 - **角丸は3語彙のみ**: `--st-radius-s/m/l`（0.375/0.625/0.75rem）。直書きpx禁止、パターン/テンプレートもvar()参照（旧8px→m、10px→m、12px→l に集約済み）
-- 文字の丸め/流体モード（st_round_scale）は**既定ON**（2026-09-01〜）
+- 文字の丸め/流体モード（shitate_round_scale）は**既定ON**（2026-09-01〜）
 
 ## ユーティリティ
 - `assets/css/utilities.css`: `mt|mb|ml|mr|mx|my|m|pt|pb|pl|pr|px|py|p`-`0|xxs..xxxl` ＋ `mx-auto`
@@ -39,7 +39,7 @@
 cd ../../plugins/shitate-pro-blocks && node bin/make-i18n.mjs
 cd - && msgfmt languages/shitate-ja.po -o languages/ja.mo
 ```
-JS翻訳（utilities-toolbar）は `languages/shitate-ja-st-utilities-toolbar.json`（ハンドル名命名）。
+JS翻訳（utilities-toolbar）は `languages/shitate-ja-shitate-utilities-toolbar.json`（ハンドル名命名）。
 
 ## GitHub自動アップデート（廃止済み・2026-08-28）
 - .org提出準備のため v0.3.0 で削除（inc/github-updater.php・functions.phpのrequire・style.cssのUpdate URIヘッダ・build-zip.shの inc）。v0.3.0 が最後のGitHub経由配信で、以後の更新は.org公式ディレクトリから
@@ -54,6 +54,6 @@ JS翻訳（utilities-toolbar）は `languages/shitate-ja-st-utilities-toolbar.js
 - 日常の変更は普通に commit / push してよい（Release はタグ時のみ作られる）
 
 ## その他
-- カスタマイザーのスケール上書きは `st_scale_inline_css()` → フロントは st-tokens 直後にインライン、エディタは `block_editor_settings_all` で注入
+- カスタマイザーのスケール上書きは `shitate_scale_inline_css()` → フロントは shitate-tokens 直後にインライン、エディタは `block_editor_settings_all` で注入
 - 配布zip: `bin/build-zip.sh` → dist/shitate.zip
-- templates/*.html 内の直書き英文（フッター©・404等）は翻訳不可の既知事項
+- フッターの©表記は `patterns/footer-credit.php`（年＋サイト名、サイト所有者の表記。テーマ作者の著作権をフロントに出さない＝.org要件）。404本文も `shitate/404-content` パターンで翻訳可

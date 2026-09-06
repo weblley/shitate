@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @return array<string, string[]>
  */
-function st_derived_color_sources() {
+function shitate_derived_color_sources() {
 	return array(
 		'primary-hover' => array( 'primary', 'base' ),
 		'base-2'        => array( 'base', 'primary' ),
@@ -49,10 +49,10 @@ function st_derived_color_sources() {
  * @param array  $sources Slug => hex of the current source colors.
  * @return string|null Hex color, or null when a source is missing.
  */
-function st_compute_derived_color( $slug, $sources ) {
-	$base     = isset( $sources['base'] ) ? st_hex_to_rgb( $sources['base'] ) : null;
-	$contrast = isset( $sources['contrast'] ) ? st_hex_to_rgb( $sources['contrast'] ) : null;
-	$primary  = isset( $sources['primary'] ) ? st_hex_to_rgb( $sources['primary'] ) : null;
+function shitate_compute_derived_color( $slug, $sources ) {
+	$base     = isset( $sources['base'] ) ? shitate_hex_to_rgb( $sources['base'] ) : null;
+	$contrast = isset( $sources['contrast'] ) ? shitate_hex_to_rgb( $sources['contrast'] ) : null;
+	$primary  = isset( $sources['primary'] ) ? shitate_hex_to_rgb( $sources['primary'] ) : null;
 
 	switch ( $slug ) {
 		case 'primary-hover':
@@ -60,24 +60,24 @@ function st_compute_derived_color( $slug, $sources ) {
 				return null;
 			}
 			// Darken on light backgrounds, lighten on dark ones.
-			return st_is_dark( $base )
-				? st_rgb_to_hex( st_mix( $primary, array( 255, 255, 255 ), 0.75 ) )
-				: st_rgb_to_hex( st_mix( $primary, array( 0, 0, 0 ), 0.78 ) );
+			return shitate_is_dark( $base )
+				? shitate_rgb_to_hex( shitate_mix( $primary, array( 255, 255, 255 ), 0.75 ) )
+				: shitate_rgb_to_hex( shitate_mix( $primary, array( 0, 0, 0 ), 0.78 ) );
 
 		case 'base-2':
-			return ( $base && $primary ) ? st_rgb_to_hex( st_mix( $base, $primary, 0.95 ) ) : null;
+			return ( $base && $primary ) ? shitate_rgb_to_hex( shitate_mix( $base, $primary, 0.95 ) ) : null;
 
 		case 'line':
-			return ( $base && $primary ) ? st_rgb_to_hex( st_mix( $base, $primary, 0.87 ) ) : null;
+			return ( $base && $primary ) ? shitate_rgb_to_hex( shitate_mix( $base, $primary, 0.87 ) ) : null;
 
 		case 'contrast-2':
-			return ( $contrast && $base ) ? st_rgb_to_hex( st_mix( $contrast, $base, 0.75 ) ) : null;
+			return ( $contrast && $base ) ? shitate_rgb_to_hex( shitate_mix( $contrast, $base, 0.75 ) ) : null;
 
 		case 'neutral':
 			if ( ! $contrast || ! $primary || ! $base ) {
 				return null;
 			}
-			return st_rgb_to_hex( st_mix( st_mix( $contrast, $primary, 0.714 ), $base, 0.7 ) );
+			return shitate_rgb_to_hex( shitate_mix( shitate_mix( $contrast, $primary, 0.714 ), $base, 0.7 ) );
 	}
 
 	return null;
@@ -89,13 +89,13 @@ function st_compute_derived_color( $slug, $sources ) {
  * @param WP_Theme_JSON_Data $theme_json User-origin theme.json data.
  * @return WP_Theme_JSON_Data
  */
-function st_derive_palette_colors( $theme_json ) {
+function shitate_derive_palette_colors( $theme_json ) {
 	$data = $theme_json->get_data();
 	if ( empty( $data['settings']['color']['palette']['theme'] ) || ! is_array( $data['settings']['color']['palette']['theme'] ) ) {
 		return $theme_json;
 	}
 
-	$defaults = st_shipped_palette_defaults();
+	$defaults = shitate_shipped_palette_defaults();
 	if ( empty( $defaults ) ) {
 		return $theme_json;
 	}
@@ -103,18 +103,18 @@ function st_derive_palette_colors( $theme_json ) {
 	// Current effective value per slug: the user's copy of the theme palette.
 	$current = array();
 	foreach ( $data['settings']['color']['palette']['theme'] as $entry ) {
-		if ( isset( $entry['slug'], $entry['color'] ) && st_hex_to_rgb( $entry['color'] ) ) {
+		if ( isset( $entry['slug'], $entry['color'] ) && shitate_hex_to_rgb( $entry['color'] ) ) {
 			$current[ $entry['slug'] ] = strtolower( $entry['color'] );
 		}
 	}
 
 	$changed = false;
-	foreach ( st_derived_color_sources() as $slug => $sources ) {
+	foreach ( shitate_derived_color_sources() as $slug => $sources ) {
 		if ( ! isset( $current[ $slug ] ) ) {
 			continue;
 		}
 		// Leave tones the user set by hand alone.
-		if ( ! st_is_shipped_default( $slug, $current[ $slug ], $defaults ) ) {
+		if ( ! shitate_is_shipped_default( $slug, $current[ $slug ], $defaults ) ) {
 			continue;
 		}
 		$source_changed = false;
@@ -124,14 +124,14 @@ function st_derive_palette_colors( $theme_json ) {
 				continue 2;
 			}
 			$values[ $source ] = $current[ $source ];
-			if ( ! st_is_shipped_default( $source, $current[ $source ], $defaults ) ) {
+			if ( ! shitate_is_shipped_default( $source, $current[ $source ], $defaults ) ) {
 				$source_changed = true;
 			}
 		}
 		if ( ! $source_changed ) {
 			continue;
 		}
-		$computed = st_compute_derived_color( $slug, $values );
+		$computed = shitate_compute_derived_color( $slug, $values );
 		if ( null === $computed || $computed === $current[ $slug ] ) {
 			continue;
 		}
@@ -151,14 +151,14 @@ function st_derive_palette_colors( $theme_json ) {
 
 	return new WP_Theme_JSON_Data( $data, 'custom' );
 }
-add_filter( 'wp_theme_json_data_user', 'st_derive_palette_colors' );
+add_filter( 'wp_theme_json_data_user', 'shitate_derive_palette_colors' );
 
 /**
  * Every shipped value per slug: theme.json plus each style variation.
  *
  * @return array<string, string[]> Slug => list of lowercase hex values.
  */
-function st_shipped_palette_defaults() {
+function shitate_shipped_palette_defaults() {
 	static $defaults = null;
 	if ( null !== $defaults ) {
 		return $defaults;
@@ -189,10 +189,10 @@ function st_shipped_palette_defaults() {
  *
  * @param string $slug     Palette slug.
  * @param string $value    Lowercase hex.
- * @param array  $defaults From st_shipped_palette_defaults().
+ * @param array  $defaults From shitate_shipped_palette_defaults().
  * @return bool
  */
-function st_is_shipped_default( $slug, $value, $defaults ) {
+function shitate_is_shipped_default( $slug, $value, $defaults ) {
 	return isset( $defaults[ $slug ] ) && in_array( $value, $defaults[ $slug ], true );
 }
 
@@ -202,7 +202,7 @@ function st_is_shipped_default( $slug, $value, $defaults ) {
  * @param string $hex Hex color.
  * @return int[]|null
  */
-function st_hex_to_rgb( $hex ) {
+function shitate_hex_to_rgb( $hex ) {
 	$hex = ltrim( trim( (string) $hex ), '#' );
 	if ( 3 === strlen( $hex ) ) {
 		$hex = $hex[0] . $hex[0] . $hex[1] . $hex[1] . $hex[2] . $hex[2];
@@ -219,7 +219,7 @@ function st_hex_to_rgb( $hex ) {
  * @param int[] $rgb Channels.
  * @return string
  */
-function st_rgb_to_hex( $rgb ) {
+function shitate_rgb_to_hex( $rgb ) {
 	return sprintf( '#%02x%02x%02x', max( 0, min( 255, (int) round( $rgb[0] ) ) ), max( 0, min( 255, (int) round( $rgb[1] ) ) ), max( 0, min( 255, (int) round( $rgb[2] ) ) ) );
 }
 
@@ -231,7 +231,7 @@ function st_rgb_to_hex( $rgb ) {
  * @param float $weight Share of $a (0..1).
  * @return float[]
  */
-function st_mix( $a, $b, $weight ) {
+function shitate_mix( $a, $b, $weight ) {
 	return array(
 		$a[0] * $weight + $b[0] * ( 1 - $weight ),
 		$a[1] * $weight + $b[1] * ( 1 - $weight ),
@@ -245,7 +245,7 @@ function st_mix( $a, $b, $weight ) {
  * @param int[] $rgb Channels.
  * @return bool True when the color reads as dark.
  */
-function st_is_dark( $rgb ) {
+function shitate_is_dark( $rgb ) {
 	$lin = array();
 	foreach ( $rgb as $c ) {
 		$c     = $c / 255;

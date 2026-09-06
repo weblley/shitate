@@ -3,8 +3,11 @@
  * shitate theme functions.
  *
  * Naming convention:
- *   st  = shitate theme  (this theme's PHP, constants, CSS vars, handles)
- *   sb  = shitate block  (the companion block plugins)
+ *   shitate_ / SHITATE_ / shitate-  = this theme's PHP functions, constants,
+ *                                    Customizer settings and script/style handles
+ *   --st-*                          = this theme's CSS custom properties (kept short
+ *                                    on purpose; the companion plugin reads them)
+ *   sb_ / sb/                       = the companion block plugin
  * The text domain stays "shitate" because WordPress.org requires it to match
  * the theme slug.
  *
@@ -17,8 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Cache buster for the theme's CSS/JS. Kept in sync with the style.css header
 // by bin/release.sh — do not edit by hand.
-if ( ! defined( 'ST_VERSION' ) ) {
-	define( 'ST_VERSION', '0.3.0' );
+if ( ! defined( 'SHITATE_VERSION' ) ) {
+	define( 'SHITATE_VERSION', '0.3.0' );
 }
 
 // Derived palette tones (Base / Two, Border, Contrast / Two, Neutral,
@@ -26,9 +29,26 @@ if ( ! defined( 'ST_VERSION' ) ) {
 require_once get_template_directory() . '/inc/colors.php';
 
 /**
+ * One-time migration of Customizer settings saved under the old "st_" prefix.
+ */
+function shitate_migrate_theme_mods() {
+	$mods = get_theme_mods();
+	if ( ! is_array( $mods ) ) {
+		return;
+	}
+	foreach ( array( 'ratio', 'text_m', 'round_scale' ) as $key ) {
+		if ( array_key_exists( 'st_' . $key, $mods ) && ! array_key_exists( 'shitate_' . $key, $mods ) ) {
+			set_theme_mod( 'shitate_' . $key, $mods[ 'st_' . $key ] );
+			remove_theme_mod( 'st_' . $key );
+		}
+	}
+}
+add_action( 'after_setup_theme', 'shitate_migrate_theme_mods', 5 );
+
+/**
  * Theme setup.
  */
-function st_setup() {
+function shitate_setup() {
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'editor-styles' );
 	add_theme_support( 'responsive-embeds' );
@@ -42,18 +62,18 @@ function st_setup() {
 	add_editor_style( array( 'assets/css/tokens.css', 'assets/css/utilities.css', 'assets/css/editor.css' ) );
 	load_theme_textdomain( 'shitate', get_template_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'st_setup' );
+add_action( 'after_setup_theme', 'shitate_setup' );
 
 /**
  * Register custom block pattern categories.
  */
-function st_register_pattern_categories() {
+function shitate_register_pattern_categories() {
 	register_block_pattern_category(
-		'st',
+		'shitate',
 		array( 'label' => __( 'shitate', 'shitate' ) )
 	);
 }
-add_action( 'init', 'st_register_pattern_categories' );
+add_action( 'init', 'shitate_register_pattern_categories' );
 
 /**
  * Appearance → Patterns shortcut.
@@ -62,7 +82,7 @@ add_action( 'init', 'st_register_pattern_categories' );
  * management inside the Site Editor. Link straight to its patterns view,
  * using the same URL core shows classic themes (wp-admin/menu.php).
  */
-function st_patterns_admin_menu() {
+function shitate_patterns_admin_menu() {
 	add_theme_page(
 		__( 'Patterns', 'shitate' ),
 		__( 'Patterns', 'shitate' ),
@@ -70,7 +90,7 @@ function st_patterns_admin_menu() {
 		'site-editor.php?p=/pattern'
 	);
 }
-add_action( 'admin_menu', 'st_patterns_admin_menu' );
+add_action( 'admin_menu', 'shitate_patterns_admin_menu' );
 
 /**
  * Drive vertical layout with margin-top only.
@@ -84,7 +104,7 @@ add_action( 'admin_menu', 'st_patterns_admin_menu' );
  * @param string $block_name Block name (e.g. "core/paragraph").
  * @return array Filtered arguments.
  */
-function st_top_margin_only_supports( $args, $block_name ) {
+function shitate_top_margin_only_supports( $args, $block_name ) {
 	if ( 0 !== strpos( (string) $block_name, 'core/' ) ) {
 		return $args;
 	}
@@ -100,7 +120,7 @@ function st_top_margin_only_supports( $args, $block_name ) {
 
 	return $args;
 }
-add_filter( 'register_block_type_args', 'st_top_margin_only_supports', 10, 2 );
+add_filter( 'register_block_type_args', 'shitate_top_margin_only_supports', 10, 2 );
 
 /**
  * Sanitize the type-scale ratio against the allowed list.
@@ -108,7 +128,7 @@ add_filter( 'register_block_type_args', 'st_top_margin_only_supports', 10, 2 );
  * @param string $value Submitted value.
  * @return string
  */
-function st_sanitize_ratio( $value ) {
+function shitate_sanitize_ratio( $value ) {
 	$allowed = array( '1.067', '1.125', '1.2', '1.25', '1.333', '1.414', '1.5', '1.618' );
 	return in_array( (string) $value, $allowed, true ) ? (string) $value : '1.25';
 }
@@ -118,9 +138,9 @@ function st_sanitize_ratio( $value ) {
  *
  * @param WP_Customize_Manager $wp_customize Customizer instance.
  */
-function st_customize_register( $wp_customize ) {
+function shitate_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
-		'st_typography',
+		'shitate_typography',
 		array(
 			'title'    => __( 'Typography Scale', 'shitate' ),
 			'priority' => 40,
@@ -128,18 +148,18 @@ function st_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'st_ratio',
+		'shitate_ratio',
 		array(
 			'default'           => '1.25',
 			'transport'         => 'postMessage',
-			'sanitize_callback' => 'st_sanitize_ratio',
+			'sanitize_callback' => 'shitate_sanitize_ratio',
 		)
 	);
 	$wp_customize->add_control(
-		'st_ratio',
+		'shitate_ratio',
 		array(
 			'type'        => 'select',
-			'section'     => 'st_typography',
+			'section'     => 'shitate_typography',
 			'label'       => __( 'Scale ratio', 'shitate' ),
 			'description' => __( 'Bigger ratio = more contrast between headings (like typescale.com).', 'shitate' ),
 			'choices'     => array(
@@ -156,7 +176,7 @@ function st_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'st_text_m',
+		'shitate_text_m',
 		array(
 			'default'           => 16,
 			'transport'         => 'postMessage',
@@ -164,10 +184,10 @@ function st_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		'st_text_m',
+		'shitate_text_m',
 		array(
 			'type'        => 'number',
-			'section'     => 'st_typography',
+			'section'     => 'shitate_typography',
 			'label'       => __( 'Base size (px)', 'shitate' ),
 			'description' => __( 'Body text size. The whole scale is built from this.', 'shitate' ),
 			'input_attrs' => array(
@@ -179,24 +199,24 @@ function st_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'st_round_scale',
+		'shitate_round_scale',
 		array(
 			'default'           => true,
 			'transport'         => 'refresh',
-			'sanitize_callback' => 'st_sanitize_checkbox',
+			'sanitize_callback' => 'shitate_sanitize_checkbox',
 		)
 	);
 	$wp_customize->add_control(
-		'st_round_scale',
+		'shitate_round_scale',
 		array(
 			'type'        => 'checkbox',
-			'section'     => 'st_typography',
+			'section'     => 'shitate_typography',
 			'label'       => __( 'Apply rounding to font sizes', 'shitate' ),
 			'description' => __( 'Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio.', 'shitate' ),
 		)
 	);
 }
-add_action( 'customize_register', 'st_customize_register' );
+add_action( 'customize_register', 'shitate_customize_register' );
 
 /**
  * Sanitize a Customizer checkbox.
@@ -204,7 +224,7 @@ add_action( 'customize_register', 'st_customize_register' );
  * @param mixed $value Submitted value.
  * @return bool
  */
-function st_sanitize_checkbox( $value ) {
+function shitate_sanitize_checkbox( $value ) {
 	return (bool) $value;
 }
 
@@ -213,9 +233,9 @@ function st_sanitize_checkbox( $value ) {
  *
  * @return string
  */
-function st_scale_inline_css() {
-	$ratio = st_sanitize_ratio( get_theme_mod( 'st_ratio', '1.25' ) );
-	$base  = absint( get_theme_mod( 'st_text_m', 16 ) );
+function shitate_scale_inline_css() {
+	$ratio = shitate_sanitize_ratio( get_theme_mod( 'shitate_ratio', '1.25' ) );
+	$base  = absint( get_theme_mod( 'shitate_text_m', 16 ) );
 	if ( $base < 12 || $base > 24 ) {
 		$base = 16;
 	}
@@ -226,7 +246,7 @@ function st_scale_inline_css() {
 	// headings fluid between a mobile ratio derived from --st-ratio (never
 	// inverts: always 1 < min < ratio) and the chosen ratio itself. Raw chains
 	// are kept un-rounded so rounding errors do not compound across steps.
-	if ( get_theme_mod( 'st_round_scale', true ) ) {
+	if ( get_theme_mod( 'shitate_round_scale', true ) ) {
 		$css .= ':root{'
 			. '--st-ratio-min:calc((1 + var(--st-ratio)) / 2);'
 			// Down-scale (fixed, rounded).
@@ -261,73 +281,73 @@ function st_scale_inline_css() {
  *
  * Appending to the editor "styles" array injects the CSS into the editor iframe
  * after the theme's editor styles, so it reliably overrides tokens.css there.
- * The front end is handled in st_enqueue_styles().
+ * The front end is handled in shitate_enqueue_styles().
  *
  * @param array $settings Block editor settings.
  * @return array
  */
-function st_scale_editor_settings( $settings ) {
+function shitate_scale_editor_settings( $settings ) {
 	if ( ! isset( $settings['styles'] ) || ! is_array( $settings['styles'] ) ) {
 		$settings['styles'] = array();
 	}
-	$settings['styles'][] = array( 'css' => st_scale_inline_css() );
+	$settings['styles'][] = array( 'css' => shitate_scale_inline_css() );
 	return $settings;
 }
-add_filter( 'block_editor_settings_all', 'st_scale_editor_settings' );
+add_filter( 'block_editor_settings_all', 'shitate_scale_editor_settings' );
 
 /**
  * Live preview script for the Customizer.
  */
-function st_customize_preview_js() {
+function shitate_customize_preview_js() {
 	wp_enqueue_script(
-		'st-customize-preview',
+		'shitate-customize-preview',
 		get_theme_file_uri( 'assets/js/customize-preview.js' ),
 		array( 'customize-preview' ),
-		ST_VERSION,
+		SHITATE_VERSION,
 		true
 	);
 }
-add_action( 'customize_preview_init', 'st_customize_preview_js' );
+add_action( 'customize_preview_init', 'shitate_customize_preview_js' );
 
 /**
  * Block toolbar "Spacing" dropdown that toggles the utility classes
  * (mt-0 … p-xxxl) on any block, so they can be adjusted without typing.
  */
-function st_utilities_toolbar_script() {
+function shitate_utilities_toolbar_script() {
 	wp_enqueue_script(
-		'st-utilities-toolbar',
+		'shitate-utilities-toolbar',
 		get_theme_file_uri( 'assets/js/utilities-toolbar.js' ),
 		array( 'wp-hooks', 'wp-compose', 'wp-element', 'wp-blocks', 'wp-block-editor', 'wp-components', 'wp-i18n' ),
-		ST_VERSION,
+		SHITATE_VERSION,
 		true
 	);
-	wp_set_script_translations( 'st-utilities-toolbar', 'shitate', get_template_directory() . '/languages' );
+	wp_set_script_translations( 'shitate-utilities-toolbar', 'shitate', get_template_directory() . '/languages' );
 }
-add_action( 'enqueue_block_editor_assets', 'st_utilities_toolbar_script' );
+add_action( 'enqueue_block_editor_assets', 'shitate_utilities_toolbar_script' );
 
 /**
  * Enqueue front-end styles.
  */
-function st_enqueue_styles() {
+function shitate_enqueue_styles() {
 	wp_enqueue_style(
-		'st-tokens',
+		'shitate-tokens',
 		get_theme_file_uri( 'assets/css/tokens.css' ),
 		array(),
-		ST_VERSION
+		SHITATE_VERSION
 	);
 	// Customizer type-scale override, right after tokens.css so it always wins.
-	wp_add_inline_style( 'st-tokens', st_scale_inline_css() );
+	wp_add_inline_style( 'shitate-tokens', shitate_scale_inline_css() );
 	wp_enqueue_style(
-		'st-utilities',
+		'shitate-utilities',
 		get_theme_file_uri( 'assets/css/utilities.css' ),
-		array( 'st-tokens' ),
-		ST_VERSION
+		array( 'shitate-tokens' ),
+		SHITATE_VERSION
 	);
 	wp_enqueue_style(
-		'st-style',
+		'shitate-style',
 		get_stylesheet_uri(),
-		array( 'st-tokens', 'st-utilities' ),
-		ST_VERSION
+		array( 'shitate-tokens', 'shitate-utilities' ),
+		SHITATE_VERSION
 	);
 }
-add_action( 'wp_enqueue_scripts', 'st_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'shitate_enqueue_styles' );

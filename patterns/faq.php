@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: FAQ (collapsible details)
- * Slug: st/faq
- * Categories: st, text, faq
+ * Slug: shitate/faq
+ * Categories: shitate, text
  * Description: A frequently asked questions section built from collapsible details blocks with a bordered card look.
  * Keywords: faq, questions, accordion, details, support
  * Block Types: core/group

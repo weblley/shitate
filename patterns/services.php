@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Services / features grid (3 columns)
- * Slug: st/services
- * Categories: st, columns, services
+ * Slug: shitate/services
+ * Categories: shitate, columns, services
  * Description: A three-column grid of service or feature cards, each with a heading and description.
  * Keywords: services, features, columns, grid, cards
  * Block Types: core/columns

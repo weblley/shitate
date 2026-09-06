@@ -5,10 +5,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
 
-msgid " / year"
-msgstr ""
-
-msgid "1 site · updates & support"
+msgid " / month"
 msgstr ""
 
 msgid "404 Not Found"
@@ -35,12 +32,6 @@ msgstr ""
 msgid "Accessibility"
 msgstr ""
 
-msgid "Agency"
-msgstr ""
-
-msgid "Annual plans include updates and support. Need more than one site? Choose Business or Agency."
-msgstr ""
-
 msgid "Apply rounding to font sizes"
 msgstr ""
 
@@ -51,6 +42,9 @@ msgid "Back to home"
 msgstr ""
 
 msgid "Base size (px)"
+msgstr ""
+
+msgid "Basic"
 msgstr ""
 
 msgid "Bigger ratio = more contrast between headings (like typescale.com)."
@@ -65,12 +59,6 @@ msgstr ""
 msgid "Build"
 msgstr ""
 
-msgid "Business"
-msgstr ""
-
-msgid "Buy Lifetime"
-msgstr ""
-
 msgid "CMS setup"
 msgstr ""
 
@@ -80,19 +68,22 @@ msgstr ""
 msgid "Center horizontally (mx-auto)"
 msgstr ""
 
-msgid "Choose Agency"
+msgid "Choose Basic"
 msgstr ""
 
-msgid "Choose Business"
+msgid "Choose Premium"
 msgstr ""
 
-msgid "Choose Personal"
+msgid "Choose Standard"
 msgstr ""
 
 msgid "Clear spacing classes"
 msgstr ""
 
 msgid "Consulting"
+msgstr ""
+
+msgid "Contact us"
 msgstr ""
 
 msgid "Copywriting"
@@ -140,10 +131,19 @@ msgstr ""
 msgid "Everything we do, at a glance"
 msgstr ""
 
+msgid "For a growing business that needs more room."
+msgstr ""
+
+msgid "For a personal site or a small project."
+msgstr ""
+
 msgid "For people with"
 msgstr ""
 
 msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
+msgstr ""
+
+msgid "For teams that want everything, with priority help."
 msgstr ""
 
 msgid "Frequently asked questions"
@@ -165,9 +165,6 @@ msgid "Integrations"
 msgstr ""
 
 msgid "Latest posts"
-msgstr ""
-
-msgid "Lifetime — pay once"
 msgstr ""
 
 msgid "Maintenance"
@@ -206,6 +203,9 @@ msgstr ""
 msgid "Name things after what they are, not after how they happen to look today. Labels that describe the role survive a redesign; labels that describe the decoration do not."
 msgstr ""
 
+msgid "Need something custom?"
+msgstr ""
+
 msgid "No posts yet."
 msgstr ""
 
@@ -233,10 +233,13 @@ msgstr ""
 msgid "Perfect Fourth — 1.333"
 msgstr ""
 
-msgid "Personal"
+msgid "Photography"
 msgstr ""
 
-msgid "Photography"
+msgid "Pick the plan that fits today, and change it whenever your needs grow."
+msgstr ""
+
+msgid "Premium"
 msgstr ""
 
 msgid "Rich"
@@ -263,10 +266,16 @@ msgstr ""
 msgid "Spacing"
 msgstr ""
 
+msgid "Standard"
+msgstr ""
+
 msgid "Support"
 msgstr ""
 
 msgid "Tailored with a type scale"
+msgstr ""
+
+msgid "Tell us about your project and we will put together a plan that fits."
 msgstr ""
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
@@ -294,12 +303,6 @@ msgid "Typography Scale"
 msgstr ""
 
 msgid "UI design"
-msgstr ""
-
-msgid "Unlimited sites · priority support"
-msgstr ""
-
-msgid "Up to 5 sites · updates & support"
 msgstr ""
 
 msgid "View all"
@@ -342,16 +345,4 @@ msgid "shitate"
 msgstr ""
 
 msgid "to choose from"
-msgstr ""
-
-msgid "¥29,800"
-msgstr ""
-
-msgid "¥49,800 one-time · 1 site · lifetime updates"
-msgstr ""
-
-msgid "¥69,800"
-msgstr ""
-
-msgid "¥9,800"
 msgstr ""

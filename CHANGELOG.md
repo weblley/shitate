@@ -6,6 +6,27 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-09-06
+
+WordPress.org 審査（#288998）の指摘対応リリース。
+
+### Changed
+
+- **.org審査指摘対応（#288998）**: 公開識別子の接頭辞を `st` から `shitate` に統一（PHP関数/定数/カスタマイザーID/theme_mod は `shitate_`・`SHITATE_`、ハンドルは `shitate-`、パターンカテゴリ `shitate`・スラッグ `shitate/*`）。テンプレート/パーツの参照も更新。旧 `st_*` のカスタマイザー値は初回ロード時に自動移行。CSS変数 `--st-*` は接頭辞規則の対象外のため据え置き（プラグイン互換）
+- フッターの固定文言「© 2026 shitate. All rights reserved.」（テーマ作者の著作権）を、サイト所有者用のパターン `shitate/footer-credit`（年＋サイト名、編集可）に置換
+- pricing パターンを有料プラグインの価格表から汎用的な料金表（Basic/Standard/Premium＋カスタム相談バナー）に書き換え。デフォルトのフロントページから宣伝要素を排除（product/faq は汎用化済み）
+- readme.txt に `== Resources ==` を追加（screenshot.png を含む同梱リソースの出典・著作権・ライセンスを明記）し、「画像は含まない」との矛盾記述を修正
+
+### Fixed
+
+- パターンヘッダの未登録カテゴリ `faq` / `pricing`（接頭辞なし・WPが無視していた）を除去
+- `bin/build-zip.sh` がステージング後に `.DS_Store` を削除するようにし、配布zipへの混入を防止
+- `Requires at least` を 6.6 → 7.0 に修正（single.html の core/breadcrumbs は WP7.0 以降。6.6 では「未対応ブロック」になっていた）
+
+### Added
+
+- 固定ページテンプレート（page.html）と投稿テンプレート（single.html）にコメント一覧・ページネーション・返信・コメントフォームを追加（推奨指摘への対応。single.html はサイトエディター版移植時に欠落していたものを復元）
+
 ### Added
 
 - 派生色の自動追従（`inc/colors.php`）: サイトエディターで Base / Contrast / Primary を変更すると、Base / Two・Border・Contrast / Two・Neutral・Primary / Hover が自動で追従する（暗い配色では Hover を明るく）。派生色を手動で設定した場合はその値が優先され、スタイルバリエーションの手調整値も親色を変えるまで保持。読み取り時の計算のみで保存データは変更しない

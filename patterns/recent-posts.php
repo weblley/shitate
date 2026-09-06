@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Recent posts (3 with link to all)
- * Slug: st/recent-posts
- * Categories: st, posts, query
+ * Slug: shitate/recent-posts
+ * Categories: shitate, posts, query
  * Description: A three-column grid of the latest posts with a button linking to the full blog archive.
  * Keywords: posts, blog, news, recent, query, latest
  * Block Types: core/query

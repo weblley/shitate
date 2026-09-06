@@ -1,6 +1,6 @@
 === shitate ===
 Contributors: weblley
-Requires at least: 6.6
+Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 7.2
 Stable tag: 0.3.0
@@ -38,11 +38,32 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-shitate bundles no third-party resources: all CSS, JavaScript and
-patterns are original work by weblley inc, and no fonts or images
-are included.
+shitate bundles no third-party resources. All CSS, JavaScript,
+patterns and the screenshot are original work by weblley inc and are
+released under the same GPL v2 or later license; see Resources below.
+
+== Resources ==
+
+screenshot.png
+Copyright (C) 2026 weblley inc. A screenshot of the theme's own front page, rendered with the bundled patterns and no third-party content.
+License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gpl-2.0.html
+Source: created by weblley inc for this theme.
+
+assets/css/*.css, assets/js/*.js, patterns/*.php, templates, parts, theme.json and style variations
+Copyright (C) 2026 weblley inc. Original work created for this theme.
+License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gpl-2.0.html
+
+No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
+
+= 0.4.0 =
+* Renamed every public identifier to the shitate_ / shitate- / shitate/ prefix (functions, constants, Customizer settings, script and style handles, pattern category and slugs). Existing Customizer values migrate automatically.
+* Replaced the fixed footer copyright with an editable site-owner credit (current year and site title).
+* Removed promotional content from the default front page and patterns; the pricing pattern is now a generic table.
+* Added comments to the page template and made the 404 home link portable.
+* Added a Resources section to this readme.
+* Raised the minimum WordPress version to 7.0 (the single template uses the core Breadcrumbs block).
 
 = 0.3.0 =
 * Rebuilt the spacing scale as a 15-step modular ladder that follows the type-scale ratio and base size.

@@ -5,11 +5,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 
-msgid " / year"
-msgstr " / 年"
-
-msgid "1 site · updates & support"
-msgstr "1サイト · 更新＆サポート"
+msgid " / month"
+msgstr " / 月"
 
 msgid "404 Not Found"
 msgstr "404 Not Found"
@@ -35,12 +32,6 @@ msgstr "一般的な企業サイトを意識して作られた、信頼感と見
 msgid "Accessibility"
 msgstr "アクセシビリティ"
 
-msgid "Agency"
-msgstr "Agency"
-
-msgid "Annual plans include updates and support. Need more than one site? Choose Business or Agency."
-msgstr "年間プランには更新とサポートが含まれます。複数サイトならBusinessまたはAgencyを。"
-
 msgid "Apply rounding to font sizes"
 msgstr "フォントサイズにラウンドを適用"
 
@@ -52,6 +43,9 @@ msgstr "トップページへ戻る"
 
 msgid "Base size (px)"
 msgstr "基準サイズ（px）"
+
+msgid "Basic"
+msgstr "ベーシック"
 
 msgid "Bigger ratio = more contrast between headings (like typescale.com)."
 msgstr "比率が大きいほど見出しの強弱が大きくなります（typescale.com と同様）。"
@@ -65,12 +59,6 @@ msgstr "ブランディング"
 msgid "Build"
 msgstr "実装"
 
-msgid "Business"
-msgstr "Business"
-
-msgid "Buy Lifetime"
-msgstr "Lifetimeを購入"
-
 msgid "CMS setup"
 msgstr "CMS構築"
 
@@ -80,20 +68,23 @@ msgstr "公開後にタイプスケールを変更できますか？"
 msgid "Center horizontally (mx-auto)"
 msgstr "左右中央寄せ（mx-auto）"
 
-msgid "Choose Agency"
-msgstr "Agencyを選ぶ"
+msgid "Choose Basic"
+msgstr "ベーシックを選ぶ"
 
-msgid "Choose Business"
-msgstr "Businessを選ぶ"
+msgid "Choose Premium"
+msgstr "プレミアムを選ぶ"
 
-msgid "Choose Personal"
-msgstr "Personalを選ぶ"
+msgid "Choose Standard"
+msgstr "スタンダードを選ぶ"
 
 msgid "Clear spacing classes"
 msgstr "余白クラスをクリア"
 
 msgid "Consulting"
 msgstr "コンサルティング"
+
+msgid "Contact us"
+msgstr "お問い合わせ"
 
 msgid "Copywriting"
 msgstr "コピーライティング"
@@ -140,11 +131,20 @@ msgstr "テーマ全体の設定はCSS変数に集約。スケールを選んだ
 msgid "Everything we do, at a glance"
 msgstr "私たちができること"
 
+msgid "For a growing business that needs more room."
+msgstr "成長中のビジネスに、余裕のある構成で。"
+
+msgid "For a personal site or a small project."
+msgstr "個人サイトや小さなプロジェクトに。"
+
 msgid "For people with"
 msgstr "知識がある人"
 
 msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
 msgstr "制作会社・フリーランスの現場でも、引き渡し後のクライアント自身の運用でも。どちらの手にもなじむよう設計しています。"
+
+msgid "For teams that want everything, with priority help."
+msgstr "すべての機能と優先サポートが必要なチームに。"
 
 msgid "Frequently asked questions"
 msgstr "よくある質問"
@@ -166,9 +166,6 @@ msgstr "外部連携"
 
 msgid "Latest posts"
 msgstr "最新の投稿"
-
-msgid "Lifetime — pay once"
-msgstr "Lifetime — 買い切り"
 
 msgid "Maintenance"
 msgstr "保守"
@@ -206,6 +203,9 @@ msgstr "多くのテーマは、文字サイズや余白があらかじめ細か
 msgid "Name things after what they are, not after how they happen to look today. Labels that describe the role survive a redesign; labels that describe the decoration do not."
 msgstr "いまの見た目ではなく、それが何であるかで名前を付ける。役割を表す名前はリニューアルを越えて残りますが、装飾を表す名前は残りません。"
 
+msgid "Need something custom?"
+msgstr "カスタムのご相談も歓迎です"
+
 msgid "No posts yet."
 msgstr "まだ投稿がありません。"
 
@@ -233,11 +233,14 @@ msgstr "完全5度 — 1.5"
 msgid "Perfect Fourth — 1.333"
 msgstr "完全4度 — 1.333"
 
-msgid "Personal"
-msgstr "Personal"
-
 msgid "Photography"
 msgstr "写真"
+
+msgid "Pick the plan that fits today, and change it whenever your needs grow."
+msgstr "いまに合うプランを選び、必要になったらいつでも変更できます。"
+
+msgid "Premium"
+msgstr "プレミアム"
 
 msgid "Rich"
 msgstr "リッチ"
@@ -263,11 +266,17 @@ msgstr "各サイズを偶数px（2px単位）に丸め、見出しは選択し�
 msgid "Spacing"
 msgstr "余白"
 
+msgid "Standard"
+msgstr "スタンダード"
+
 msgid "Support"
 msgstr "サポート"
 
 msgid "Tailored with a type scale"
 msgstr "タイプスケールで仕立てる"
+
+msgid "Tell us about your project and we will put together a plan that fits."
+msgstr "プロジェクトの内容をお聞かせください。最適なプランをご提案します。"
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "お探しのページは、移動または削除されたか、一時的にご利用いただけない可能性があります。トップページから再度お試しください。"
@@ -295,12 +304,6 @@ msgstr "タイポグラフィスケール"
 
 msgid "UI design"
 msgstr "UIデザイン"
-
-msgid "Unlimited sites · priority support"
-msgstr "サイト数無制限 · 優先サポート"
-
-msgid "Up to 5 sites · updates & support"
-msgstr "最大5サイト · 更新＆サポート"
 
 msgid "View all"
 msgstr "すべて見る"
@@ -343,15 +346,3 @@ msgstr "shitate"
 
 msgid "to choose from"
 msgstr "タイプスケール"
-
-msgid "¥29,800"
-msgstr "¥29,800"
-
-msgid "¥49,800 one-time · 1 site · lifetime updates"
-msgstr "¥49,800（一括） · 1サイト · 永久アップデート"
-
-msgid "¥69,800"
-msgstr "¥69,800"
-
-msgid "¥9,800"
-msgstr "¥9,800"

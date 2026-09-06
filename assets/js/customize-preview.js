@@ -7,13 +7,13 @@
 		return;
 	}
 
-	wp.customize( 'st_ratio', function ( setting ) {
+	wp.customize( 'shitate_ratio', function ( setting ) {
 		setting.bind( function ( value ) {
 			document.documentElement.style.setProperty( '--st-ratio', value );
 		} );
 	} );
 
-	wp.customize( 'st_text_m', function ( setting ) {
+	wp.customize( 'shitate_text_m', function ( setting ) {
 		setting.bind( function ( value ) {
 			document.documentElement.style.setProperty(
 				'--st-text-m',

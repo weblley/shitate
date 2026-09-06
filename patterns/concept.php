@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Concept (heading and lead paragraph)
- * Slug: st/concept
- * Categories: st, text, about
+ * Slug: shitate/concept
+ * Categories: shitate, text, about
  * Description: A full-width concept section with a heading and one longer paragraph of supporting copy.
  * Keywords: concept, about, intro, text
  * Block Types: core/group

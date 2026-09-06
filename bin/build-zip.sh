@@ -22,6 +22,8 @@ for item in style.css theme.json functions.php readme.txt screenshot.png templat
 	fi
 done
 
+find "$STAGE" -name ".DS_Store" -delete
+
 echo "→ Zipping…"
 ( cd "$DIST" && zip -rqX "$SLUG.zip" "$SLUG" )
 rm -rf "$STAGE"
