@@ -5,32 +5,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ja\n"
 
-msgid " / month"
-msgstr " / 月"
-
 msgid "404 Not Found"
 msgstr "404 Not Found"
-
-msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
-msgstr "無駄な機能を持たないシンプルな設計だから、頻繁なアップデート対応に追われません。作ったあと、長く静かに運営できるテーマです。"
-
-msgid "A landing-page feel built from large elements, each one given room to breathe."
-msgstr "大きな要素で構成したLP風のページ。1つの要素に余白と余裕を持たせたサイト。"
-
-msgid "A short summary of the services your company offers. Edit this text to match your business."
-msgstr "御社が提供するサービスの概要です。ビジネスに合わせてこのテキストを編集してください。"
-
-msgid "A simple structure"
-msgstr "シンプル設計"
-
-msgid "A simple structure that both builders and their clients can handle, with room to customise where it matters. Because the foundation stays simple, updates stay minimal and the site stays comfortable to run for years."
-msgstr "制作者・クライアントの両方にとって扱いやすいシンプルな設計と、必要なところは柔軟にカスタマイズできる機能を備えています。基本設計がシンプルだからこそ、アップデートは最低限、長く快適に運営できます。"
-
-msgid "A standard company site that balances a sense of trust with easy reading."
-msgstr "一般的な企業サイトを意識して作られた、信頼感と見やすさを兼ね備えた標準的なサイト。"
-
-msgid "Accessibility"
-msgstr "アクセシビリティ"
 
 msgid "Apply rounding to font sizes"
 msgstr "フォントサイズにラウンドを適用"
@@ -44,131 +20,23 @@ msgstr "トップページへ戻る"
 msgid "Base size (px)"
 msgstr "基準サイズ（px）"
 
-msgid "Basic"
-msgstr "ベーシック"
-
 msgid "Bigger ratio = more contrast between headings (like typescale.com)."
 msgstr "比率が大きいほど見出しの強弱が大きくなります（typescale.com と同様）。"
 
 msgid "Body text size. The whole scale is built from this."
 msgstr "本文の文字サイズ。これを基準に全スケールが算出されます。"
 
-msgid "Branding"
-msgstr "ブランディング"
-
-msgid "Build"
-msgstr "実装"
-
-msgid "CMS setup"
-msgstr "CMS構築"
-
-msgid "Can I change the type scale after the site is live?"
-msgstr "公開後にタイプスケールを変更できますか？"
-
 msgid "Center horizontally (mx-auto)"
 msgstr "左右中央寄せ（mx-auto）"
-
-msgid "Choose Basic"
-msgstr "ベーシックを選ぶ"
-
-msgid "Choose Premium"
-msgstr "プレミアムを選ぶ"
-
-msgid "Choose Standard"
-msgstr "スタンダードを選ぶ"
 
 msgid "Clear spacing classes"
 msgstr "余白クラスをクリア"
 
-msgid "Consulting"
-msgstr "コンサルティング"
-
-msgid "Contact us"
-msgstr "お問い合わせ"
-
-msgid "Copywriting"
-msgstr "コピーライティング"
-
-msgid "Corporate"
-msgstr "コーポレート"
-
-msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
-msgstr "コーポレートサイトやビジネスサイト、あらゆる制作を自由に、楽しく。"
-
-msgid "Decoration kept to a minimum and a gentle jump ratio, in the spirit of a plain writing app."
-msgstr "装飾は最小限、文字のジャンプ率もタイプスケールで抑えたシンプルなサイト。"
-
 msgid "Default"
 msgstr "既定"
 
-msgid "Describe this service in a sentence or two. Explain the value it brings to your customers."
-msgstr "このサービスを1〜2文で説明し、お客様にもたらす価値を伝えましょう。"
-
-msgid "Design"
-msgstr "デザイン"
-
-msgid "Development"
-msgstr "開発"
-
-msgid "Do I need to write CSS to change the design?"
-msgstr "デザインを変えるにはCSSを書く必要がありますか？"
-
-msgid "Does the theme depend on any plugin?"
-msgstr "テーマの利用にプラグインは必要ですか？"
-
-msgid "E-commerce"
-msgstr "EC"
-
-msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
-msgstr "音楽の度数になぞらえた8つのスケール——短2度から、黄金比まで。控えめな階調から大胆なジャンプまで、サイトの性格に合わせて選べます。"
-
-msgid "Eight type scales"
-msgstr "選べる8つの"
-
-msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
-msgstr "テーマ全体の設定はCSS変数に集約。スケールを選んだあとも、変数を上書きするだけで自由に微調整・切り替えができます。「テーマの都合」に縛られません。"
-
-msgid "Everything we do, at a glance"
-msgstr "私たちができること"
-
-msgid "For a growing business that needs more room."
-msgstr "成長中のビジネスに、余裕のある構成で。"
-
-msgid "For a personal site or a small project."
-msgstr "個人サイトや小さなプロジェクトに。"
-
-msgid "For people with"
-msgstr "知識がある人"
-
-msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
-msgstr "制作会社・フリーランスの現場でも、引き渡し後のクライアント自身の運用でも。どちらの手にもなじむよう設計しています。"
-
-msgid "For teams that want everything, with priority help."
-msgstr "すべての機能と優先サポートが必要なチームに。"
-
-msgid "Frequently asked questions"
-msgstr "よくある質問"
-
-msgid "Get started"
-msgstr "はじめる"
-
 msgid "Golden Ratio — 1.618"
 msgstr "黄金比 — 1.618"
-
-msgid "Group what you offer and let a plain icon grid carry the overview."
-msgstr "提供できることをグループにまとめ、シンプルなアイコングリッドで一覧にします。"
-
-msgid "Illustration"
-msgstr "イラスト"
-
-msgid "Integrations"
-msgstr "外部連携"
-
-msgid "Latest posts"
-msgstr "最新の投稿"
-
-msgid "Maintenance"
-msgstr "保守"
 
 msgid "Major Second — 1.125"
 msgstr "長2度 — 1.125"
@@ -182,38 +50,11 @@ msgstr "下マージン"
 msgid "Margin top"
 msgstr "上マージン"
 
-msgid "Minimal"
-msgstr "ミニマル"
-
-msgid "Minimal updates,"
-msgstr "更新は最低限、"
-
 msgid "Minor Second — 1.067"
 msgstr "短2度 — 1.067"
 
 msgid "Minor Third — 1.2"
 msgstr "短3度 — 1.2"
-
-msgid "Most popular"
-msgstr "一番人気"
-
-msgid "Most themes settle font sizes and spacing for you in fine detail, so matching your own taste means piling up CSS overrides. shitate works the other way around: pick the type scale closest to the site you have in mind, and the type, the spacing and the rest of the groundwork fall into place together. That leaves you free to concentrate on the content and the design itself."
-msgstr "多くのテーマは、文字サイズや余白があらかじめ細かく決められていて、好みに合わせるにはCSSでの上書きが積み重なっていきます。shitateは逆の発想です。作りたいサイトのイメージに近いタイプスケールを最初に選べば、文字も余白も、デザインに関わる土台がまとめて整う。だからあなたは、コンテンツとデザインそのものに集中できます。"
-
-msgid "Name things after what they are, not after how they happen to look today. Labels that describe the role survive a redesign; labels that describe the decoration do not."
-msgstr "いまの見た目ではなく、それが何であるかで名前を付ける。役割を表す名前はリニューアルを越えて残りますが、装飾を表す名前は残りません。"
-
-msgid "Need something custom?"
-msgstr "カスタムのご相談も歓迎です"
-
-msgid "No posts yet."
-msgstr "まだ投稿がありません。"
-
-msgid "No. Colors, type sizes and spacing are all set from the Site Editor and the Customizer. The type scale drives the whole ladder, so changing one ratio restyles the site consistently."
-msgstr "いいえ。色・文字サイズ・余白はすべてサイトエディターとカスタマイザーから設定できます。タイプスケールが全体を動かすので、比率を1つ変えるだけでサイト全体の印象が整います。"
-
-msgid "No. shitate uses standard WordPress features only, so your content stays yours if you ever switch themes."
-msgstr "いいえ。shitateはWordPressの標準機能だけで動作します。将来テーマを変えても、コンテンツはそのまま残ります。"
 
 msgid "Padding bottom"
 msgstr "下パディング"
@@ -233,32 +74,8 @@ msgstr "完全5度 — 1.5"
 msgid "Perfect Fourth — 1.333"
 msgstr "完全4度 — 1.333"
 
-msgid "Photography"
-msgstr "写真"
-
-msgid "Pick the plan that fits today, and change it whenever your needs grow."
-msgstr "いまに合うプランを選び、必要になったらいつでも変更できます。"
-
-msgid "Premium"
-msgstr "プレミアム"
-
-msgid "Rich"
-msgstr "リッチ"
-
 msgid "Scale ratio"
 msgstr "スケール比率"
-
-msgid "See all services"
-msgstr "サービス一覧を見る"
-
-msgid "See it in action"
-msgstr "デモページを見る"
-
-msgid "See the demo"
-msgstr "デモページを見てみる"
-
-msgid "Simple, transparent pricing"
-msgstr "シンプルで明快な料金"
 
 msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
 msgstr "各サイズを偶数px（2px単位）に丸め、見出しは選択した比率と自動算出されたスマホ用比率の間で流体的に変化します。"
@@ -266,83 +83,14 @@ msgstr "各サイズを偶数px（2px単位）に丸め、見出しは選択し�
 msgid "Spacing"
 msgstr "余白"
 
-msgid "Standard"
-msgstr "スタンダード"
-
-msgid "Support"
-msgstr "サポート"
-
-msgid "Tailored with a type scale"
-msgstr "タイプスケールで仕立てる"
-
-msgid "Tell us about your project and we will put together a plan that fits."
-msgstr "プロジェクトの内容をお聞かせください。最適なプランをご提案します。"
-
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "お探しのページは、移動または削除されたか、一時的にご利用いただけない可能性があります。トップページから再度お試しください。"
-
-msgid "The questions we are asked most often. If yours is not here, ask away on the support forum."
-msgstr "よくいただく質問をまとめました。ここにない場合はサポートフォーラムからお気軽にどうぞ。"
-
-msgid "The work that decides how a site looks and reads before a single line is built."
-msgstr "実装に入る前に、サイトの見え方と読みやすさを決める工程です。"
-
-msgid "These pages are built with the type scale and the theme styles alone, without a single line of extra CSS. Everything uses standard editor features, so you can rebuild them yourself."
-msgstr "ここで紹介するデモページは、追加CSSなどは一切使わずに、タイプスケールと装飾だけで作り上げています。すべてWordPressの標準機能だけで作っているので簡単に再現できます。"
 
 msgid "This page could not be found."
 msgstr "ページが見つかりません"
 
-msgid "Training"
-msgstr "操作レクチャー"
-
-msgid "Turning the design into something maintainable, fast and standards-based."
-msgstr "デザインを、保守しやすく速い、標準準拠のかたちにしていきます。"
-
 msgid "Typography Scale"
 msgstr "タイポグラフィスケール"
 
-msgid "UI design"
-msgstr "UIデザイン"
-
-msgid "View all"
-msgstr "すべて見る"
-
-msgid "View the demos"
-msgstr "デモを見てみる"
-
-msgid "We tailor it. You decide how to wear it."
-msgstr "仕立ては私たちが。着こなしは、あなたが。"
-
-msgid "Web design"
-msgstr "ウェブデザイン"
-
-msgid "What keeps a site healthy after launch, in your hands or in theirs."
-msgstr "公開後もサイトを健全に保つための取り組みです。"
-
-msgid "What shitate gives you"
-msgstr "shitateの特徴"
-
-msgid "What we do"
-msgstr "私たちにできること"
-
-msgid "Yes. Pick another ratio at any time and every heading, body size and spacing step follows it, so the design keeps its proportions."
-msgstr "はい。いつでも別の比率を選べます。見出し・本文サイズ・余白の各段がそれに追従するので、デザインの比率は保たれたままです。"
-
-msgid "a block theme from a web studio"
-msgstr "制作会社発のブロックテーマ"
-
-msgid "and without know-how"
-msgstr "ない人にも"
-
-msgid "endless possibilities"
-msgstr "可能性は無限大"
-
-msgid "made for builders"
-msgstr "制作向けの構造"
-
 msgid "shitate"
 msgstr "shitate"
-
-msgid "to choose from"
-msgstr "タイプスケール"

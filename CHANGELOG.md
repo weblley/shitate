@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Removed
+
+- 同梱パターンをリセット: インサーターに表示されるコンテンツパターン9種（hero / concept / product / pattern-showcase / cta / faq / pricing / services / recent-posts）と、それらを並べていた front-page テンプレートを削除。フロントページは page テンプレート（固定ページ本文）で表示される。404本文とフッター©の非表示パターン2つは維持
+
 ### Changed
 
 - 各テンプレートの main コンテナの margin-top を 0 に変更（ヘッダー直下の余白はパターン/ブロック側で持たせる）

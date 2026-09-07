@@ -31,7 +31,8 @@
 - フロント用JS `assets/js/navigation-toggle.js`（ハンドル `shitate-navigation-toggle`、defer）: モバイルメニューを開いた瞬間にハンバーガーの位置を `--shitate-nav-toggle-top/right/size` としてナビブロックに記録し、style.css が閉じるボタンをそこへ absolute 配置（オーバーレイはコアが transform でフェードインするため fixed ではなく absolute）。ヘッダー高さに依存しない
 
 ## パターン
-- `patterns/*.php`、Slug `st/*`、文言は `esc_html_e( '…', 'shitate' )`（日本語訳は languages/ で提供済み、サイト言語に自動追従）
+- `patterns/*.php`、Slug `shitate/*`、文言は `esc_html_e( '…', 'shitate' )`（日本語訳は languages/ で提供済み、サイト言語に自動追従）
+- **2026-09-08 リセット**: インサーターに出るコンテンツパターン9種（hero/concept/product/pattern-showcase/cta/faq/pricing/services/recent-posts）と templates/front-page.html を削除。ユーザーがサイトエディターで作り直す方針（DB側のパターン/テンプレートを後でファイルに書き出す）。残るのは `Inserter: no` の基盤パターン2つ（404-content・footer-credit）だけ。front-page.html が無い間、フロントページは page.html（固定ページの本文）で表示
 - sb/* ブロックを使うパターンはテーマに置かない（プラグイン側で register_block_pattern）
 
 ## i18n（翻訳の更新手順）

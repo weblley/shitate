@@ -5,31 +5,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
 
-msgid " / month"
-msgstr ""
-
 msgid "404 Not Found"
-msgstr ""
-
-msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
-msgstr ""
-
-msgid "A landing-page feel built from large elements, each one given room to breathe."
-msgstr ""
-
-msgid "A short summary of the services your company offers. Edit this text to match your business."
-msgstr ""
-
-msgid "A simple structure"
-msgstr ""
-
-msgid "A simple structure that both builders and their clients can handle, with room to customise where it matters. Because the foundation stays simple, updates stay minimal and the site stays comfortable to run for years."
-msgstr ""
-
-msgid "A standard company site that balances a sense of trust with easy reading."
-msgstr ""
-
-msgid "Accessibility"
 msgstr ""
 
 msgid "Apply rounding to font sizes"
@@ -44,130 +20,22 @@ msgstr ""
 msgid "Base size (px)"
 msgstr ""
 
-msgid "Basic"
-msgstr ""
-
 msgid "Bigger ratio = more contrast between headings (like typescale.com)."
 msgstr ""
 
 msgid "Body text size. The whole scale is built from this."
 msgstr ""
 
-msgid "Branding"
-msgstr ""
-
-msgid "Build"
-msgstr ""
-
-msgid "CMS setup"
-msgstr ""
-
-msgid "Can I change the type scale after the site is live?"
-msgstr ""
-
 msgid "Center horizontally (mx-auto)"
-msgstr ""
-
-msgid "Choose Basic"
-msgstr ""
-
-msgid "Choose Premium"
-msgstr ""
-
-msgid "Choose Standard"
 msgstr ""
 
 msgid "Clear spacing classes"
 msgstr ""
 
-msgid "Consulting"
-msgstr ""
-
-msgid "Contact us"
-msgstr ""
-
-msgid "Copywriting"
-msgstr ""
-
-msgid "Corporate"
-msgstr ""
-
-msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
-msgstr ""
-
-msgid "Decoration kept to a minimum and a gentle jump ratio, in the spirit of a plain writing app."
-msgstr ""
-
 msgid "Default"
 msgstr ""
 
-msgid "Describe this service in a sentence or two. Explain the value it brings to your customers."
-msgstr ""
-
-msgid "Design"
-msgstr ""
-
-msgid "Development"
-msgstr ""
-
-msgid "Do I need to write CSS to change the design?"
-msgstr ""
-
-msgid "Does the theme depend on any plugin?"
-msgstr ""
-
-msgid "E-commerce"
-msgstr ""
-
-msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
-msgstr ""
-
-msgid "Eight type scales"
-msgstr ""
-
-msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
-msgstr ""
-
-msgid "Everything we do, at a glance"
-msgstr ""
-
-msgid "For a growing business that needs more room."
-msgstr ""
-
-msgid "For a personal site or a small project."
-msgstr ""
-
-msgid "For people with"
-msgstr ""
-
-msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
-msgstr ""
-
-msgid "For teams that want everything, with priority help."
-msgstr ""
-
-msgid "Frequently asked questions"
-msgstr ""
-
-msgid "Get started"
-msgstr ""
-
 msgid "Golden Ratio — 1.618"
-msgstr ""
-
-msgid "Group what you offer and let a plain icon grid carry the overview."
-msgstr ""
-
-msgid "Illustration"
-msgstr ""
-
-msgid "Integrations"
-msgstr ""
-
-msgid "Latest posts"
-msgstr ""
-
-msgid "Maintenance"
 msgstr ""
 
 msgid "Major Second — 1.125"
@@ -182,37 +50,10 @@ msgstr ""
 msgid "Margin top"
 msgstr ""
 
-msgid "Minimal"
-msgstr ""
-
-msgid "Minimal updates,"
-msgstr ""
-
 msgid "Minor Second — 1.067"
 msgstr ""
 
 msgid "Minor Third — 1.2"
-msgstr ""
-
-msgid "Most popular"
-msgstr ""
-
-msgid "Most themes settle font sizes and spacing for you in fine detail, so matching your own taste means piling up CSS overrides. shitate works the other way around: pick the type scale closest to the site you have in mind, and the type, the spacing and the rest of the groundwork fall into place together. That leaves you free to concentrate on the content and the design itself."
-msgstr ""
-
-msgid "Name things after what they are, not after how they happen to look today. Labels that describe the role survive a redesign; labels that describe the decoration do not."
-msgstr ""
-
-msgid "Need something custom?"
-msgstr ""
-
-msgid "No posts yet."
-msgstr ""
-
-msgid "No. Colors, type sizes and spacing are all set from the Site Editor and the Customizer. The type scale drives the whole ladder, so changing one ratio restyles the site consistently."
-msgstr ""
-
-msgid "No. shitate uses standard WordPress features only, so your content stays yours if you ever switch themes."
 msgstr ""
 
 msgid "Padding bottom"
@@ -233,31 +74,7 @@ msgstr ""
 msgid "Perfect Fourth — 1.333"
 msgstr ""
 
-msgid "Photography"
-msgstr ""
-
-msgid "Pick the plan that fits today, and change it whenever your needs grow."
-msgstr ""
-
-msgid "Premium"
-msgstr ""
-
-msgid "Rich"
-msgstr ""
-
 msgid "Scale ratio"
-msgstr ""
-
-msgid "See all services"
-msgstr ""
-
-msgid "See it in action"
-msgstr ""
-
-msgid "See the demo"
-msgstr ""
-
-msgid "Simple, transparent pricing"
 msgstr ""
 
 msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
@@ -266,83 +83,14 @@ msgstr ""
 msgid "Spacing"
 msgstr ""
 
-msgid "Standard"
-msgstr ""
-
-msgid "Support"
-msgstr ""
-
-msgid "Tailored with a type scale"
-msgstr ""
-
-msgid "Tell us about your project and we will put together a plan that fits."
-msgstr ""
-
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
-msgstr ""
-
-msgid "The questions we are asked most often. If yours is not here, ask away on the support forum."
-msgstr ""
-
-msgid "The work that decides how a site looks and reads before a single line is built."
-msgstr ""
-
-msgid "These pages are built with the type scale and the theme styles alone, without a single line of extra CSS. Everything uses standard editor features, so you can rebuild them yourself."
 msgstr ""
 
 msgid "This page could not be found."
 msgstr ""
 
-msgid "Training"
-msgstr ""
-
-msgid "Turning the design into something maintainable, fast and standards-based."
-msgstr ""
-
 msgid "Typography Scale"
 msgstr ""
 
-msgid "UI design"
-msgstr ""
-
-msgid "View all"
-msgstr ""
-
-msgid "View the demos"
-msgstr ""
-
-msgid "We tailor it. You decide how to wear it."
-msgstr ""
-
-msgid "Web design"
-msgstr ""
-
-msgid "What keeps a site healthy after launch, in your hands or in theirs."
-msgstr ""
-
-msgid "What shitate gives you"
-msgstr ""
-
-msgid "What we do"
-msgstr ""
-
-msgid "Yes. Pick another ratio at any time and every heading, body size and spacing step follows it, so the design keeps its proportions."
-msgstr ""
-
-msgid "a block theme from a web studio"
-msgstr ""
-
-msgid "and without know-how"
-msgstr ""
-
-msgid "endless possibilities"
-msgstr ""
-
-msgid "made for builders"
-msgstr ""
-
 msgid "shitate"
-msgstr ""
-
-msgid "to choose from"
 msgstr ""
