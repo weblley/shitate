@@ -21,8 +21,6 @@ shitate is a block theme for the Site Editor with a token-driven design system:
 * Spacing utility classes (mt-0 … p-xxxl) plus a Spacing dropdown in the block toolbar.
 * Four style variations (Dark, Cream, Mist, Mono).
 
-Extend it with the shitate pro blocks plugin for FAQ, modal, conditional display, layout and more.
-
 == Copyright ==
 
 shitate WordPress Theme, (C) 2026 weblley inc.

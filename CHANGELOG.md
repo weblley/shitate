@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Changed
+
+- style.css / readme.txt の説明文から「shitate pro blocks」プラグインへの言及を削除（.org審査の推奨事項。アップセルと見なされる余地をなくす）
+
 ### Added
 
 - モバイルメニューの閉じるボタンをヘッダーのハンバーガーボタンと同じ位置に自動で合わせる（`assets/js/navigation-toggle.js`＋style.css）。ロゴの高さなどでヘッダーの高さが変わっても、開いた瞬間のボタン位置を計測して追従する。JS無効時はコアの既定位置
