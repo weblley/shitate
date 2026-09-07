@@ -8,7 +8,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Changed
 
-- 各テンプレートの main コンテナの margin-top を 0 に変更（ヘッダー直下の余白はパターン/ブロック側で持たせる）。page-full-width は margin-bottom を 0 に
+- 各テンプレートの main コンテナの margin-top を 0 に変更（ヘッダー直下の余白はパターン/ブロック側で持たせる）
 - style.css / readme.txt の説明文から「shitate pro blocks」プラグインへの言及を削除（.org審査の推奨事項。アップセルと見なされる余地をなくす）
 
 ### Added
