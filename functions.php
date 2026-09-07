@@ -351,3 +351,18 @@ function shitate_enqueue_styles() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'shitate_enqueue_styles' );
+
+/**
+ * Front-end script that keeps the mobile menu's close button aligned with the
+ * hamburger (see assets/js/navigation-toggle.js and style.css).
+ */
+function shitate_enqueue_navigation_toggle() {
+	wp_enqueue_script(
+		'shitate-navigation-toggle',
+		get_theme_file_uri( 'assets/js/navigation-toggle.js' ),
+		array(),
+		SHITATE_VERSION,
+		array( 'in_footer' => true, 'strategy' => 'defer' )
+	);
+}
+add_action( 'wp_enqueue_scripts', 'shitate_enqueue_navigation_toggle' );
