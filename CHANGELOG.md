@@ -6,13 +6,12 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-09-08
+
 ### Added
 
 - サイトエディターで作り直した4パターンを同梱: `shitate/hero`（見出し＋本文＋ボタン2つ）、`shitate/columns-3`（画像カード3列）、`shitate/columns-4`（画像＋見出し＋本文の4列グリッド）、`shitate/cta-two-buttons`（メッセージ＋ボタン2つ）。英語ソース＋日本語訳、画像ブロックは空
-
-### Removed
-
-- 同梱パターンをリセット: インサーターに表示されるコンテンツパターン9種（hero / concept / product / pattern-showcase / cta / faq / pricing / services / recent-posts）と、それらを並べていた front-page テンプレートを削除。フロントページは page テンプレート（固定ページ本文）で表示される。404本文とフッター©の非表示パターン2つは維持
+- モバイルメニューの閉じるボタンをヘッダーのハンバーガーボタンと同じ位置に自動で合わせる（`assets/js/navigation-toggle.js`＋style.css）。ロゴの高さなどでヘッダーの高さが変わっても、開いた瞬間のボタン位置を計測して追従する。JS無効時はコアの既定位置
 
 ### Changed
 
@@ -20,9 +19,9 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 - 各テンプレートの main コンテナの margin-top を 0 に変更（ヘッダー直下の余白はパターン/ブロック側で持たせる）
 - style.css / readme.txt の説明文から「shitate pro blocks」プラグインへの言及を削除（.org審査の推奨事項。アップセルと見なされる余地をなくす）
 
-### Added
+### Removed
 
-- モバイルメニューの閉じるボタンをヘッダーのハンバーガーボタンと同じ位置に自動で合わせる（`assets/js/navigation-toggle.js`＋style.css）。ロゴの高さなどでヘッダーの高さが変わっても、開いた瞬間のボタン位置を計測して追従する。JS無効時はコアの既定位置
+- 同梱パターンをリセット: インサーターに表示されるコンテンツパターン9種（hero / concept / product / pattern-showcase / cta / faq / pricing / services / recent-posts）と、それらを並べていた front-page テンプレートを削除。フロントページは page テンプレート（固定ページ本文）で表示される。404本文とフッター©の非表示パターン2つは維持
 
 ## [0.4.0] - 2026-09-06
 

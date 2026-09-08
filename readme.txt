@@ -55,6 +55,13 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 0.4.1 =
+* Replaced the bundled patterns with four rebuilt ones: hero, three columns with image cards, four columns with images and text, and a call to action with two buttons. The front-page template was removed; the front page is now composed from the page template.
+* The mobile menu's close button now sits exactly where the header's hamburger button is, whatever the header height.
+* Small, X-Small and XX-Small font sizes are now fixed at 0.95rem, 0.8rem and 0.75rem instead of following the type-scale ratio, which made them too small to read.
+* Removed the top margin of the main container in every template.
+* Removed the plugin mention from the theme description.
+
 = 0.4.0 =
 * Renamed every public identifier to the shitate_ / shitate- / shitate/ prefix (functions, constants, Customizer settings, script and style handles, pattern category and slugs). Existing Customizer values migrate automatically.
 * Replaced the fixed footer copyright with an editable site-owner credit (current year and site title).
