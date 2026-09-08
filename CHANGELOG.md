@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Added
+
+- サイトエディターで作り直した4パターンを同梱: `shitate/hero`（見出し＋本文＋ボタン2つ）、`shitate/columns-3`（画像カード3列）、`shitate/columns-4`（画像＋見出し＋本文の4列グリッド）、`shitate/cta-two-buttons`（メッセージ＋ボタン2つ）。英語ソース＋日本語訳、画像ブロックは空
+
 ### Removed
 
 - 同梱パターンをリセット: インサーターに表示されるコンテンツパターン9種（hero / concept / product / pattern-showcase / cta / faq / pricing / services / recent-posts）と、それらを並べていた front-page テンプレートを削除。フロントページは page テンプレート（固定ページ本文）で表示される。404本文とフッター©の非表示パターン2つは維持

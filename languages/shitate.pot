@@ -8,6 +8,18 @@ msgstr ""
 msgid "404 Not Found"
 msgstr ""
 
+msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
+msgstr ""
+
+msgid "A landing-page style built from large elements."
+msgstr ""
+
+msgid "A simple structure"
+msgstr ""
+
+msgid "A standard site modelled on a typical company website, combining trust and readability."
+msgstr ""
+
 msgid "Apply rounding to font sizes"
 msgstr ""
 
@@ -26,16 +38,49 @@ msgstr ""
 msgid "Body text size. The whole scale is built from this."
 msgstr ""
 
+msgid "Call us"
+msgstr ""
+
 msgid "Center horizontally (mx-auto)"
 msgstr ""
 
 msgid "Clear spacing classes"
 msgstr ""
 
+msgid "Contact us"
+msgstr ""
+
+msgid "Corporate"
+msgstr ""
+
+msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
+msgstr ""
+
 msgid "Default"
 msgstr ""
 
+msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
+msgstr ""
+
+msgid "Eight type scales"
+msgstr ""
+
+msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
+msgstr ""
+
+msgid "For people with"
+msgstr ""
+
+msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
+msgstr ""
+
+msgid "Generous space and breathing room around every element, the way Apple does it."
+msgstr ""
+
 msgid "Golden Ratio — 1.618"
+msgstr ""
+
+msgid "Just tell us the challenge you are facing today."
 msgstr ""
 
 msgid "Major Second — 1.125"
@@ -50,10 +95,22 @@ msgstr ""
 msgid "Margin top"
 msgstr ""
 
+msgid "Minimal"
+msgstr ""
+
+msgid "Minimal updates,"
+msgstr ""
+
 msgid "Minor Second — 1.067"
 msgstr ""
 
 msgid "Minor Third — 1.2"
+msgstr ""
+
+msgid "Not sure what to build yet? That is fine."
+msgstr ""
+
+msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
 msgstr ""
 
 msgid "Padding bottom"
@@ -74,7 +131,13 @@ msgstr ""
 msgid "Perfect Fourth — 1.333"
 msgstr ""
 
+msgid "Rich"
+msgstr ""
+
 msgid "Scale ratio"
+msgstr ""
+
+msgid "See the demo"
 msgstr ""
 
 msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
@@ -83,14 +146,38 @@ msgstr ""
 msgid "Spacing"
 msgstr ""
 
+msgid "Tailored with a type scale"
+msgstr ""
+
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr ""
 
 msgid "This page could not be found."
 msgstr ""
 
+msgid "Try it now"
+msgstr ""
+
 msgid "Typography Scale"
 msgstr ""
 
+msgid "View this demo site"
+msgstr ""
+
+msgid "a block theme from a web studio"
+msgstr ""
+
+msgid "and without know-how"
+msgstr ""
+
+msgid "endless possibilities"
+msgstr ""
+
+msgid "made for builders"
+msgstr ""
+
 msgid "shitate"
+msgstr ""
+
+msgid "to choose from"
 msgstr ""

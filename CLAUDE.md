@@ -32,7 +32,7 @@
 
 ## パターン
 - `patterns/*.php`、Slug `shitate/*`、文言は `esc_html_e( '…', 'shitate' )`（日本語訳は languages/ で提供済み、サイト言語に自動追従）
-- **2026-09-08 リセット**: インサーターに出るコンテンツパターン9種（hero/concept/product/pattern-showcase/cta/faq/pricing/services/recent-posts）と templates/front-page.html を削除。ユーザーがサイトエディターで作り直す方針（DB側のパターン/テンプレートを後でファイルに書き出す）。残るのは `Inserter: no` の基盤パターン2つ（404-content・footer-credit）だけ。front-page.html が無い間、フロントページは page.html（固定ページの本文）で表示
+- **2026-09-08 リセット**: インサーターに出るコンテンツパターン9種（hero/concept/product/pattern-showcase/cta/faq/pricing/services/recent-posts）と templates/front-page.html を削除。ユーザーがサイトエディターで作り直す方針（DB側のパターン/テンプレートを後でファイルに書き出す）。同日、サイトエディター上の「マイパターン」4つ（wp_block 5670/5674/5672/5684）を英語ソース＋JA辞書で `hero` / `columns-3` / `columns-4` / `cta-two-buttons` として書き出し済み（DB側の wp_block はそのまま＝インサーターでは同名が2つ見える）。基盤パターン2つ（404-content・footer-credit、`Inserter: no`）は維持。front-page.html が無い間、フロントページは page.html（固定ページの本文）で表示
 - sb/* ブロックを使うパターンはテーマに置かない（プラグイン側で register_block_pattern）
 
 ## i18n（翻訳の更新手順）
