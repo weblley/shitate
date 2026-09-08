@@ -12,6 +12,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Changed
 
+- 文字サイズの Small / X-Small / XX-Small をタイプスケール（比率で割る）から固定値 0.95rem / 0.8rem / 0.75rem に変更。比率で割ると小さくなりすぎるため。Medium 以上と余白は従来どおり比率連動
 - 各テンプレートの main コンテナの margin-top を 0 に変更（ヘッダー直下の余白はパターン/ブロック側で持たせる）
 - style.css / readme.txt の説明文から「shitate pro blocks」プラグインへの言及を削除（.org審査の推奨事項。アップセルと見なされる余地をなくす）
 

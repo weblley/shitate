@@ -242,20 +242,15 @@ function shitate_scale_inline_css() {
 
 	$css = ':root{--st-ratio:' . $ratio . ';--st-text-m:' . $base . 'px;}';
 
-	// Optional rounded/fluid scale: every step snapped to even pixels (2px),
-	// headings fluid between a mobile ratio derived from --st-ratio (never
+	// Optional rounded/fluid scale: every heading step snapped to even pixels
+	// (2px), fluid between a mobile ratio derived from --st-ratio (never
 	// inverts: always 1 < min < ratio) and the chosen ratio itself. Raw chains
 	// are kept un-rounded so rounding errors do not compound across steps.
+	// The sizes below the base (s/xs/xxs) are fixed rem values in tokens.css
+	// and are not touched here.
 	if ( get_theme_mod( 'shitate_round_scale', true ) ) {
 		$css .= ':root{'
 			. '--st-ratio-min:calc((1 + var(--st-ratio)) / 2);'
-			// Down-scale (fixed, rounded).
-			. '--st-s-raw:calc(var(--st-text-m) / var(--st-ratio));'
-			. '--st-xs-raw:calc(var(--st-s-raw) / var(--st-ratio));'
-			. '--st-xxs-raw:calc(var(--st-xs-raw) / var(--st-ratio));'
-			. '--st-text-s:round(nearest, var(--st-s-raw), 2px);'
-			. '--st-text-xs:round(nearest, var(--st-xs-raw), 2px);'
-			. '--st-text-xxs:round(nearest, var(--st-xxs-raw), 2px);'
 			// Up-scale bounds (desktop = ratio, mobile = derived ratio-min).
 			. '--st-l-max:calc(var(--st-text-m) * var(--st-ratio));'
 			. '--st-xl-max:calc(var(--st-l-max) * var(--st-ratio));'
