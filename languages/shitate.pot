@@ -68,6 +68,9 @@ msgstr ""
 msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
 msgstr ""
 
+msgid "Fixed sizes for small text"
+msgstr ""
+
 msgid "For people with"
 msgstr ""
 
@@ -138,6 +141,9 @@ msgid "Scale ratio"
 msgstr ""
 
 msgid "See the demo"
+msgstr ""
+
+msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr ""
 
 msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."

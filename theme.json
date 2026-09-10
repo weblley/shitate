@@ -35,17 +35,17 @@
 				{
 					"slug": "sans",
 					"name": "Sans-serif",
-					"fontFamily": "-apple-system, BlinkMacSystemFont, \"Hiragino Sans\", \"Hiragino Kaku Gothic ProN\", \"Noto Sans JP\", Meiryo, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\""
+					"fontFamily": "var(--st-font-sans)"
 				},
 				{
 					"slug": "serif",
 					"name": "Serif",
-					"fontFamily": "\"Hiragino Mincho ProN\", \"Yu Mincho\", \"Noto Serif JP\", Georgia, \"Times New Roman\", serif"
+					"fontFamily": "var(--st-font-serif)"
 				},
 				{
 					"slug": "mono",
 					"name": "Monospace",
-					"fontFamily": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, monospace"
+					"fontFamily": "var(--st-font-mono)"
 				}
 			],
 			"fontSizes": [

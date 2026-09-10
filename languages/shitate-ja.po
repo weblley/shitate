@@ -68,6 +68,9 @@ msgstr "選べる8つの"
 msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
 msgstr "テーマ全体の設定はCSS変数に集約。スケールを選んだあとも、変数を上書きするだけで自由に微調整・切り替えができます。「テーマの都合」に縛られません。"
 
+msgid "Fixed sizes for small text"
+msgstr "小さな文字の数値指定"
+
 msgid "For people with"
 msgstr "知識がある人"
 
@@ -139,6 +142,9 @@ msgstr "スケール比率"
 
 msgid "See the demo"
 msgstr "デモページを見てみる"
+
+msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
+msgstr "Small / X-Small / XX-Small を比率で割らず 0.95rem / 0.8rem / 0.75rem に固定します（比率で割ると小さすぎて読みにくくなる場合の対策）。"
 
 msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
 msgstr "各サイズを偶数px（2px単位）に丸め、見出しは選択した比率と自動算出されたスマホ用比率の間で流体的に変化します。"

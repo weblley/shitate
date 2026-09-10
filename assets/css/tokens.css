@@ -10,18 +10,30 @@
  */
 :root {
 	/*
+	 * Font stacks. System fonts only — nothing is downloaded. The default
+	 * stack names no CJK font on purpose: the browser picks the right
+	 * Japanese / Chinese / Korean fallback from the page language, so
+	 * ideographs are never drawn with another language's glyph forms.
+	 * functions.php overrides the stacks for Japanese sites (see
+	 * shitate_font_inline_css) so Japanese pages get a Japanese-first stack.
+	 */
+	--st-font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	--st-font-serif: Georgia, "Times New Roman", "Noto Serif", serif;
+	--st-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+	/*
 	 * Modular type scale (typescale.com style).
-	 * Every step above the base derives from it via calc(prev * ratio)
+	 * Every step derives from a single base size and ratio via calc(prev * ratio)
 	 * — no pow() needed. Fixed at every screen width (no shrinking on mobile);
-	 * change --st-ratio or --st-text-m to rescale the headings.
-	 * The three steps below the base are fixed rem values: dividing by the
-	 * ratio makes them too small to read (xxs would be 8px at 1.25).
+	 * change --st-ratio or --st-text-m to rescale the whole set.
+	 * The Customizer can pin the three steps below the base to fixed rem
+	 * values instead ("Fixed sizes for small text").
 	 */
 	--st-ratio: 1.25;
 	--st-text-m: 1rem; /* base / body = 16px */
-	--st-text-s: 0.95rem;
-	--st-text-xs: 0.8rem;
-	--st-text-xxs: 0.75rem;
+	--st-text-s: calc(var(--st-text-m) / var(--st-ratio));
+	--st-text-xs: calc(var(--st-text-s) / var(--st-ratio));
+	--st-text-xxs: calc(var(--st-text-xs) / var(--st-ratio));
 	--st-text-l: calc(var(--st-text-m) * var(--st-ratio));
 	--st-text-xl: calc(var(--st-text-l) * var(--st-ratio));
 	--st-text-xxl: calc(var(--st-text-xl) * var(--st-ratio));

@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "404 Not Found"
+msgstr "404 – Page introuvable"
+
+msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
+msgstr "Un design sans fonctions superflues, c’est ne plus courir après les mises à jour. Construisez une fois, puis faites tourner le site tranquillement pendant longtemps."
+
+msgid "A landing-page style built from large elements."
+msgstr "Un style de page d’atterrissage composé de grands éléments."
+
+msgid "A simple structure"
+msgstr "Une structure simple"
+
+msgid "A standard site modelled on a typical company website, combining trust and readability."
+msgstr "Un site classique inspiré des sites d’entreprise typiques, alliant confiance et lisibilité."
+
+msgid "Apply rounding to font sizes"
+msgstr "Arrondir les tailles de police"
+
+msgid "Augmented Fourth — 1.414"
+msgstr "Quarte augmentée — 1,414"
+
+msgid "Back to home"
+msgstr "Retour à l’accueil"
+
+msgid "Base size (px)"
+msgstr "Taille de base (px)"
+
+msgid "Bigger ratio = more contrast between headings (like typescale.com)."
+msgstr "Ratio plus grand = plus de contraste entre les titres (comme sur typescale.com)."
+
+msgid "Body text size. The whole scale is built from this."
+msgstr "Taille du texte courant. Toute l’échelle se construit à partir d’elle."
+
+msgid "Call us"
+msgstr "Nous appeler"
+
+msgid "Center horizontally (mx-auto)"
+msgstr "Centrer horizontalement (mx-auto)"
+
+msgid "Clear spacing classes"
+msgstr "Retirer les classes d’espacement"
+
+msgid "Contact us"
+msgstr "Nous contacter"
+
+msgid "Corporate"
+msgstr "Corporate"
+
+msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
+msgstr "Sites d’entreprise, sites professionnels, tout ce que vous créez — librement, et avec un peu de plaisir."
+
+msgid "Default"
+msgstr "Par défaut"
+
+msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
+msgstr "Huit échelles nommées d’après les intervalles musicaux, de la seconde mineure au nombre d’or. Pas discrets ou sauts audacieux : choisissez celle qui correspond au caractère de votre site."
+
+msgid "Eight type scales"
+msgstr "Huit échelles typographiques"
+
+msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
+msgstr "Chaque réglage vit dans des variables CSS. Une fois l’échelle choisie, vous pouvez encore l’ajuster ou en changer en surchargeant une variable, au lieu de contourner le thème."
+
+msgid "Fixed sizes for small text"
+msgstr "Tailles fixes pour les petits textes"
+
+msgid "For people with"
+msgstr "Pour celles et ceux qui ont"
+
+msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
+msgstr "Pour les studios et les indépendants au travail, comme pour le client qui fait vivre le site après la livraison. Conçu pour être à l’aise entre toutes les mains."
+
+msgid "Generous space and breathing room around every element, the way Apple does it."
+msgstr "De l’espace et de l’air autour de chaque élément, à la manière d’Apple."
+
+msgid "Golden Ratio — 1.618"
+msgstr "Nombre d’or — 1,618"
+
+msgid "Just tell us the challenge you are facing today."
+msgstr "Parlez-nous simplement du défi que vous rencontrez aujourd’hui."
+
+msgid "Major Second — 1.125"
+msgstr "Seconde majeure — 1,125"
+
+msgid "Major Third — 1.25"
+msgstr "Tierce majeure — 1,25"
+
+msgid "Margin bottom"
+msgstr "Marge basse"
+
+msgid "Margin top"
+msgstr "Marge haute"
+
+msgid "Minimal"
+msgstr "Minimal"
+
+msgid "Minimal updates,"
+msgstr "Mises à jour minimales,"
+
+msgid "Minor Second — 1.067"
+msgstr "Seconde mineure — 1,067"
+
+msgid "Minor Third — 1.2"
+msgstr "Tierce mineure — 1,2"
+
+msgid "Not sure what to build yet? That is fine."
+msgstr "Vous ne savez pas encore quoi créer ? Aucun problème."
+
+msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
+msgstr "Dans l’esprit de Notion : décoration minimale et contraste typographique retenu, gardé simple grâce à l’échelle typographique."
+
+msgid "Padding bottom"
+msgstr "Marge interne basse"
+
+msgid "Padding left/right"
+msgstr "Marge interne gauche/droite"
+
+msgid "Padding top"
+msgstr "Marge interne haute"
+
+msgid "Patterns"
+msgstr "Compositions"
+
+msgid "Perfect Fifth — 1.5"
+msgstr "Quinte juste — 1,5"
+
+msgid "Perfect Fourth — 1.333"
+msgstr "Quarte juste — 1,333"
+
+msgid "Rich"
+msgstr "Riche"
+
+msgid "Scale ratio"
+msgstr "Ratio de l’échelle"
+
+msgid "See the demo"
+msgstr "Voir la démo"
+
+msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
+msgstr "Fixe Petit / Très petit / Minuscule à 0,95rem / 0,8rem / 0,75rem au lieu de diviser par le ratio, ce qui peut rendre le texte trop petit pour être lu."
+
+msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
+msgstr "Aligne chaque palier sur des pixels pairs (2px) et rend les titres fluides entre un ratio mobile dérivé et le ratio choisi."
+
+msgid "Spacing"
+msgstr "Espacement"
+
+msgid "Tailored with a type scale"
+msgstr "Taillé sur mesure avec une échelle typographique"
+
+msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
+msgstr "La page que vous cherchez a peut-être été déplacée ou supprimée, ou elle est temporairement indisponible. Veuillez réessayer depuis la page d’accueil."
+
+msgid "This page could not be found."
+msgstr "Cette page est introuvable."
+
+msgid "Try it now"
+msgstr "Essayer maintenant"
+
+msgid "Typography Scale"
+msgstr "Échelle typographique"
+
+msgid "View this demo site"
+msgstr "Voir ce site de démonstration"
+
+msgid "a block theme from a web studio"
+msgstr "un thème de blocs conçu par un studio web"
+
+msgid "and without know-how"
+msgstr "ou non des connaissances techniques"
+
+msgid "endless possibilities"
+msgstr "possibilités infinies"
+
+msgid "made for builders"
+msgstr "pensée pour les créateurs"
+
+msgid "shitate"
+msgstr "shitate"
+
+msgid "to choose from"
+msgstr "au choix"

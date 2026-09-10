@@ -215,6 +215,24 @@ function shitate_customize_register( $wp_customize ) {
 			'description' => __( 'Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio.', 'shitate' ),
 		)
 	);
+
+	$wp_customize->add_setting(
+		'shitate_fixed_small_text',
+		array(
+			'default'           => false,
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'shitate_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'shitate_fixed_small_text',
+		array(
+			'type'        => 'checkbox',
+			'section'     => 'shitate_typography',
+			'label'       => __( 'Fixed sizes for small text', 'shitate' ),
+			'description' => __( 'Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read.', 'shitate' ),
+		)
+	);
 }
 add_action( 'customize_register', 'shitate_customize_register' );
 
@@ -240,17 +258,28 @@ function shitate_scale_inline_css() {
 		$base = 16;
 	}
 
-	$css = ':root{--st-ratio:' . $ratio . ';--st-text-m:' . $base . 'px;}';
+	$css = shitate_font_inline_css();
+	$css .= ':root{--st-ratio:' . $ratio . ';--st-text-m:' . $base . 'px;}';
 
-	// Optional rounded/fluid scale: every heading step snapped to even pixels
-	// (2px), fluid between a mobile ratio derived from --st-ratio (never
+	$fixed_small = (bool) get_theme_mod( 'shitate_fixed_small_text', false );
+
+	// Optional rounded/fluid scale: every step snapped to even pixels (2px),
+	// headings fluid between a mobile ratio derived from --st-ratio (never
 	// inverts: always 1 < min < ratio) and the chosen ratio itself. Raw chains
 	// are kept un-rounded so rounding errors do not compound across steps.
-	// The sizes below the base (s/xs/xxs) are fixed rem values in tokens.css
-	// and are not touched here.
 	if ( get_theme_mod( 'shitate_round_scale', true ) ) {
 		$css .= ':root{'
-			. '--st-ratio-min:calc((1 + var(--st-ratio)) / 2);'
+			. '--st-ratio-min:calc((1 + var(--st-ratio)) / 2);';
+		if ( ! $fixed_small ) {
+			// Down-scale (fixed, rounded).
+			$css .= '--st-s-raw:calc(var(--st-text-m) / var(--st-ratio));'
+				. '--st-xs-raw:calc(var(--st-s-raw) / var(--st-ratio));'
+				. '--st-xxs-raw:calc(var(--st-xs-raw) / var(--st-ratio));'
+				. '--st-text-s:round(nearest, var(--st-s-raw), 2px);'
+				. '--st-text-xs:round(nearest, var(--st-xs-raw), 2px);'
+				. '--st-text-xxs:round(nearest, var(--st-xxs-raw), 2px);';
+		}
+		$css .= ''
 			// Up-scale bounds (desktop = ratio, mobile = derived ratio-min).
 			. '--st-l-max:calc(var(--st-text-m) * var(--st-ratio));'
 			. '--st-xl-max:calc(var(--st-l-max) * var(--st-ratio));'
@@ -268,7 +297,36 @@ function shitate_scale_inline_css() {
 			. '}';
 	}
 
+	// "Fixed sizes for small text": pin the three steps below the base to
+	// readable rem values instead of dividing by the ratio (xx-small would be
+	// 8px at 1.25). Emitted last so it wins over the rounded chain above.
+	if ( $fixed_small ) {
+		$css .= ':root{--st-text-s:0.95rem;--st-text-xs:0.8rem;--st-text-xxs:0.75rem;}';
+	}
+
 	return $css;
+}
+
+/**
+ * Font stack override for Japanese sites.
+ *
+ * tokens.css ships a system-font stack with no CJK font in it, so every
+ * language gets its OS's native fonts and ideographs fall back by page
+ * language. Japanese sites get a Japanese-first stack instead (Hiragino on
+ * macOS, Yu Gothic Medium then Meiryo on Windows). Decided from the request
+ * locale, so multilingual plugins that switch the locale per page are
+ * honoured, and it reaches the editor canvas through the same inline CSS.
+ *
+ * @return string
+ */
+function shitate_font_inline_css() {
+	if ( 'ja' !== substr( determine_locale(), 0, 2 ) ) {
+		return '';
+	}
+	return ':root{'
+		. '--st-font-sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,"Segoe UI",sans-serif,"Apple Color Emoji","Segoe UI Emoji";'
+		. '--st-font-serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",Georgia,"Times New Roman",serif;'
+		. '}';
 }
 
 /**

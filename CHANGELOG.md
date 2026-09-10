@@ -6,6 +6,16 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Added
+
+- 欧州6言語の翻訳を同梱: ドイツ語 / フランス語 / スペイン語 / イタリア語 / オランダ語 / ポルトガル語（pt_PT）。辞書は `bin/locales.mjs`、生成はプラグイン側 `bin/make-i18n.mjs`（.po / .mo / JS翻訳JSON を一括生成）
+- カスタマイザー「Typography Scale」に「小さな文字の数値指定」チェックボックスを追加（既定OFF）。ONにすると Small / X-Small / XX-Small が比率ではなく 0.95rem / 0.8rem / 0.75rem になる
+
+### Changed
+
+- フォントスタックを言語で切り替える方式に変更。既定は OS のシステムフォントのみ（CJK フォントを含めず、漢字の字形はページ言語からブラウザが選ぶ）。日本語サイトでは Hiragino Sans → Yu Gothic Medium → Meiryo の日本語優先スタックを functions.php が上書きする。Webフォントの追加は無し
+- 0.4.1 で固定値にした Small / X-Small / XX-Small を、既定ではタイプスケール（比率で割る）に戻した。固定値は上記チェックボックスで選択制に
+
 ## [0.4.1] - 2026-09-08
 
 ### Added

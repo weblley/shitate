@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "404 Not Found"
+msgstr "404 – Pagina niet gevonden"
+
+msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
+msgstr "Een ontwerp zonder overbodige functies betekent dat je niet achter voortdurende updates aan hoeft. Eén keer bouwen, daarna lang en rustig laten draaien."
+
+msgid "A landing-page style built from large elements."
+msgstr "Een landingspagina-stijl opgebouwd uit grote elementen."
+
+msgid "A simple structure"
+msgstr "Een eenvoudige structuur"
+
+msgid "A standard site modelled on a typical company website, combining trust and readability."
+msgstr "Een klassieke site naar het voorbeeld van een typische bedrijfswebsite, die vertrouwen en leesbaarheid combineert."
+
+msgid "Apply rounding to font sizes"
+msgstr "Lettergroottes afronden"
+
+msgid "Augmented Fourth — 1.414"
+msgstr "Overmatige kwart — 1,414"
+
+msgid "Back to home"
+msgstr "Terug naar home"
+
+msgid "Base size (px)"
+msgstr "Basisgrootte (px)"
+
+msgid "Bigger ratio = more contrast between headings (like typescale.com)."
+msgstr "Grotere verhouding = meer contrast tussen koppen (zoals op typescale.com)."
+
+msgid "Body text size. The whole scale is built from this."
+msgstr "Grootte van de broodtekst. De hele schaal wordt hierop gebouwd."
+
+msgid "Call us"
+msgstr "Bel ons"
+
+msgid "Center horizontally (mx-auto)"
+msgstr "Horizontaal centreren (mx-auto)"
+
+msgid "Clear spacing classes"
+msgstr "Ruimteklassen verwijderen"
+
+msgid "Contact us"
+msgstr "Neem contact op"
+
+msgid "Corporate"
+msgstr "Zakelijk"
+
+msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
+msgstr "Bedrijfssites, zakelijke sites, alles wat je bouwt — vrij, en met een beetje plezier."
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
+msgstr "Acht schalen vernoemd naar muzikale intervallen, van de kleine secunde tot de gulden snede. Ingetogen stappen of gedurfde sprongen: kies de schaal die bij het karakter van je site past."
+
+msgid "Eight type scales"
+msgstr "Acht typografische schalen"
+
+msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
+msgstr "Elke instelling zit in CSS-variabelen. Ook na het kiezen van een schaal kun je die verfijnen of wisselen door een variabele te overschrijven, in plaats van om het thema heen te werken."
+
+msgid "Fixed sizes for small text"
+msgstr "Vaste groottes voor kleine tekst"
+
+msgid "For people with"
+msgstr "Voor mensen met"
+
+msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
+msgstr "Voor studio’s en freelancers tijdens het werk, en voor de klant die de site na oplevering beheert. Gebouwd om in beide handen goed te liggen."
+
+msgid "Generous space and breathing room around every element, the way Apple does it."
+msgstr "Ruime witruimte en lucht rond elk element, zoals Apple dat doet."
+
+msgid "Golden Ratio — 1.618"
+msgstr "Gulden snede — 1,618"
+
+msgid "Just tell us the challenge you are facing today."
+msgstr "Vertel ons gewoon voor welke uitdaging je nu staat."
+
+msgid "Major Second — 1.125"
+msgstr "Grote secunde — 1,125"
+
+msgid "Major Third — 1.25"
+msgstr "Grote terts — 1,25"
+
+msgid "Margin bottom"
+msgstr "Marge onder"
+
+msgid "Margin top"
+msgstr "Marge boven"
+
+msgid "Minimal"
+msgstr "Minimaal"
+
+msgid "Minimal updates,"
+msgstr "Minimale updates,"
+
+msgid "Minor Second — 1.067"
+msgstr "Kleine secunde — 1,067"
+
+msgid "Minor Third — 1.2"
+msgstr "Kleine terts — 1,2"
+
+msgid "Not sure what to build yet? That is fine."
+msgstr "Nog geen idee wat je wilt bouwen? Geen probleem."
+
+msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
+msgstr "In Notion-stijl: minimale opmaak en ingetogen typografisch contrast, eenvoudig gehouden via de typografische schaal."
+
+msgid "Padding bottom"
+msgstr "Padding onder"
+
+msgid "Padding left/right"
+msgstr "Padding links/rechts"
+
+msgid "Padding top"
+msgstr "Padding boven"
+
+msgid "Patterns"
+msgstr "Patronen"
+
+msgid "Perfect Fifth — 1.5"
+msgstr "Reine kwint — 1,5"
+
+msgid "Perfect Fourth — 1.333"
+msgstr "Reine kwart — 1,333"
+
+msgid "Rich"
+msgstr "Rijk"
+
+msgid "Scale ratio"
+msgstr "Schaalverhouding"
+
+msgid "See the demo"
+msgstr "Bekijk de demo"
+
+msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
+msgstr "Zet Klein / Extra klein / Heel klein op 0,95rem / 0,8rem / 0,75rem in plaats van te delen door de verhouding, waardoor tekst te klein kan worden om te lezen."
+
+msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
+msgstr "Rondt elke stap af op even pixels (2px) en maakt koppen vloeiend tussen een afgeleide mobiele verhouding en de gekozen verhouding."
+
+msgid "Spacing"
+msgstr "Ruimte"
+
+msgid "Tailored with a type scale"
+msgstr "Op maat gemaakt met een typografische schaal"
+
+msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
+msgstr "De pagina die je zoekt is mogelijk verplaatst of verwijderd, of tijdelijk niet beschikbaar. Probeer het opnieuw vanaf de homepage."
+
+msgid "This page could not be found."
+msgstr "Deze pagina is niet gevonden."
+
+msgid "Try it now"
+msgstr "Probeer het nu"
+
+msgid "Typography Scale"
+msgstr "Typografische schaal"
+
+msgid "View this demo site"
+msgstr "Bekijk deze demosite"
+
+msgid "a block theme from a web studio"
+msgstr "een blokthema van een webstudio"
+
+msgid "and without know-how"
+msgstr "en zonder technische kennis"
+
+msgid "endless possibilities"
+msgstr "eindeloze mogelijkheden"
+
+msgid "made for builders"
+msgstr "gemaakt voor bouwers"
+
+msgid "shitate"
+msgstr "shitate"
+
+msgid "to choose from"
+msgstr "om uit te kiezen"
