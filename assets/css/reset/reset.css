@@ -1,0 +1,82 @@
+/*
+ * shitate base reset.
+ *
+ * Not a full reset. WordPress already normalises the things a classic reset
+ * handles (body margin, box-sizing, heading and paragraph rhythm, lists,
+ * quotes, buttons) through global styles and each block's own CSS, so a
+ * Normalize / Meyer style sheet would only fight core. This file adds the
+ * handful of rules core does not cover and that cause real problems when
+ * missing. Every selector is wrapped in :where() so it has zero specificity
+ * and never outranks core, a plugin, or the site owner's custom CSS.
+ *
+ * Original work for this theme, informed by the practices shared across
+ * modern resets (text-size-adjust, scrollbar-gutter, media sizing, form
+ * font inheritance, text-wrap, focus-visible, reduced motion). No
+ * third-party code is copied.
+ *
+ * Loaded first on the front end (handle shitate-reset) and in the editor.
+ */
+
+/* Keep the layout steady: no iOS landscape text inflation, and reserve the
+   scrollbar gutter so content does not shift when a scrollbar appears. */
+:where(html) {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	scrollbar-gutter: stable;
+}
+
+/* Media never overflows its container and sits on the baseline without the
+   phantom gap. display is left alone so inline images (emoji, icons inside
+   buttons) keep flowing with text. */
+:where(img, picture, video, canvas, svg) {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+/* Form controls inherit the site's typography instead of the browser's. */
+:where(button, input, select, textarea) {
+	font: inherit;
+	color: inherit;
+}
+
+/* Headings avoid a lone word on the last line; running text avoids orphans.
+   Both are ignored by browsers that do not support them. */
+:where(h1, h2, h3, h4, h5, h6) {
+	text-wrap: balance;
+}
+
+:where(p, li, dd, figcaption, blockquote) {
+	text-wrap: pretty;
+}
+
+/* Anchor targets (table of contents, "back to top" links) stop clear of the
+   viewport edge instead of hugging it. */
+:where(:target) {
+	scroll-margin-block-start: var(--st-space-l, 1.5rem);
+}
+
+/* One consistent, visible keyboard focus ring in the brand colour. Mouse
+   clicks do not trigger it. */
+:where(:focus-visible) {
+	outline: 2px solid var(--st-color-brand, #2952cc);
+	outline-offset: 2px;
+}
+
+/*
+ * Reduced motion. This is the theme's one sanctioned media query outside
+ * device-specific display rules: it responds to a user preference, not to
+ * viewport width, and it exists for accessibility (vestibular disorders).
+ * The theme itself does not animate; this covers block, plugin and custom
+ * animations on the site. !important is required to beat their own rules.
+ */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

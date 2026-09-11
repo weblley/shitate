@@ -8,6 +8,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Added
 
+- 最小限のベースリセット `assets/css/reset/reset.css` を追加（ハンドル `shitate-reset`、最初に読み込み・エディタにも適用）。コアが扱わない項目だけを `:where()`（特異度0）で補完: text-size-adjust / scrollbar-gutter / メディアの max-width と baseline gap / フォーム部品の font 継承 / 見出しの text-wrap: balance と本文の pretty / :target の scroll-margin / :focus-visible のブランド色リング / prefers-reduced-motion。Normalize 等のライブラリは同梱しない
 - 欧州6言語の翻訳を同梱: ドイツ語 / フランス語 / スペイン語 / イタリア語 / オランダ語 / ポルトガル語（pt_PT）。辞書は `bin/locales.mjs`、生成はプラグイン側 `bin/make-i18n.mjs`（.po / .mo / JS翻訳JSON を一括生成）
 - カスタマイザー「Typography Scale」に「小さな文字の数値指定」チェックボックスを追加（既定OFF）。ONにすると Small / X-Small / XX-Small が比率ではなく 0.95rem / 0.8rem / 0.75rem になる
 

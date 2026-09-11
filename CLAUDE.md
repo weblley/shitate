@@ -21,7 +21,8 @@
 - **縦リズム**: margin-top方式。基本= blockGap。見出しは前を広く＝**ローカルgap連動**（2026-09-01変更: h1/h2 = `--wp--style--block-gap`×1.75、h3/h4 = ×1.25。tokens.css内の `:root :where(...)` ルール。狭いgapの文脈では見出し前も自動で狭まる。ユーティリティ等の明示指定が優先）。全コアブロックは `register_block_type_args` フィルタで**上マージンのみ**
 - **フォントは言語切替**（2026-09-10）: theme.json の fontFamily は `var(--st-font-sans/serif/mono)` 参照。tokens.css の既定はシステムフォントのみで **CJK フォントを含めない**（中国語・韓国語で日本語字形にならないよう、漢字のフォールバックはブラウザに任せる）。日本語サイト（`determine_locale()` が ja*）だけ `shitate_font_inline_css()` が Hiragino Sans → Hiragino Kaku Gothic ProN → Yu Gothic Medium → Yu Gothic → Meiryo の順で上書き（フロント・エディタ両方に注入）。Webフォント同梱は禁止
 - **翻訳ロケール**: 日本語はプラグイン側 make-i18n.mjs の JA 辞書、**欧州6言語（de_DE / fr_FR / es_ES / it_IT / nl_NL / pt_PT）は `bin/locales.mjs`**。文字列を追加したら両方に訳を足して `node bin/make-i18n.mjs` を実行（欧州分は .mo と JSON も自動生成、日本語の .mo だけ msgfmt を手動実行）。MISSING/UNUSED が出たら辞書を直す
-- **メディアクエリ禁止**（clamp/grid/auto-fitで解決）。例外はデバイス出し分けのみ。ただし theme.json `settings.viewport`（mobile 768px / tablet 1024px、WP7.1）は宣言済み＝**ユーザーがエディタのレスポンシブスタイルを使うときの境界**（プラグインの[br_sp]・details・sb/ifと同じ768/1024に統一）
+- **メディアクエリ禁止**（clamp/grid/auto-fitで解決）。例外は2種のみ: ①デバイス出し分け ②**ユーザー設定に応答する `prefers-*`（reduced-motion / contrast / color-scheme）**。基準は「ビューポート幅で分岐しない」。幅による分岐は常に禁止
+- **ベースリセット `assets/css/reset/reset.css`**（2026-09-11）: Normalize/Meyer 等のライブラリは入れない（コアの global-styles とブロックCSSがその役割を担う）。コアが触らない項目だけを `:where()` で補完。`!important` は reduced-motion ブロックのみ許可（utilities.css に次ぐ2つ目の例外）。読み込み順は reset → tokens → utilities → styleただし theme.json `settings.viewport`（mobile 768px / tablet 1024px、WP7.1）は宣言済み＝**ユーザーがエディタのレスポンシブスタイルを使うときの境界**（プラグインの[br_sp]・details・sb/ifと同じ768/1024に統一）
 - **!important 禁止**。例外は utilities.css（ユーティリティ層）のみ
 - コンテンツ幅 64rem / 幅広 78.75rem（`--st-width-text` / `--st-width-max` 同期。2026-09-01にrem化＝ブラウザ文字サイズ設定に行長が追従）
 - **角丸は3語彙のみ**: `--st-radius-s/m/l`（0.375/0.625/0.75rem）。直書きpx禁止、パターン/テンプレートもvar()参照（旧8px→m、10px→m、12px→l に集約済み）

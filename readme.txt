@@ -51,6 +51,10 @@ assets/css/*.css, assets/js/*.js, patterns/*.php, templates, parts, theme.json a
 Copyright (C) 2026 weblley inc. Original work created for this theme.
 License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gpl-2.0.html
 
+assets/css/reset/reset.css
+Copyright (C) 2026 weblley inc. A small base reset written for this theme, informed by widely shared modern reset practices; no third-party code is included.
+License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gpl-2.0.html
+
 No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==

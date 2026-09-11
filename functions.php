@@ -59,7 +59,7 @@ function shitate_setup() {
 	// and get stretched blurry. Proportional, not cropped: templates shape the
 	// image with aspectRatio + object-fit. Existing uploads need a regenerate.
 	set_post_thumbnail_size( 1568, 9999 );
-	add_editor_style( array( 'assets/css/tokens.css', 'assets/css/utilities.css', 'assets/css/editor.css' ) );
+	add_editor_style( array( 'assets/css/reset/reset.css', 'assets/css/tokens.css', 'assets/css/utilities.css', 'assets/css/editor.css' ) );
 	load_theme_textdomain( 'shitate', get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'shitate_setup' );
@@ -382,10 +382,17 @@ add_action( 'enqueue_block_editor_assets', 'shitate_utilities_toolbar_script' );
  * Enqueue front-end styles.
  */
 function shitate_enqueue_styles() {
+	// Base reset first: zero-specificity rules core does not cover.
+	wp_enqueue_style(
+		'shitate-reset',
+		get_theme_file_uri( 'assets/css/reset/reset.css' ),
+		array(),
+		SHITATE_VERSION
+	);
 	wp_enqueue_style(
 		'shitate-tokens',
 		get_theme_file_uri( 'assets/css/tokens.css' ),
-		array(),
+		array( 'shitate-reset' ),
 		SHITATE_VERSION
 	);
 	// Customizer type-scale override, right after tokens.css so it always wins.
@@ -399,7 +406,7 @@ function shitate_enqueue_styles() {
 	wp_enqueue_style(
 		'shitate-style',
 		get_stylesheet_uri(),
-		array( 'shitate-tokens', 'shitate-utilities' ),
+		array( 'shitate-reset', 'shitate-tokens', 'shitate-utilities' ),
 		SHITATE_VERSION
 	);
 }
