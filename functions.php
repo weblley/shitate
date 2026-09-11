@@ -46,6 +46,20 @@ function shitate_migrate_theme_mods() {
 add_action( 'after_setup_theme', 'shitate_migrate_theme_mods', 5 );
 
 /**
+ * Whether the theme's base reset (assets/css/reset/reset.css) is loaded.
+ *
+ * Disable it from a child theme or plugin, on both the front end and the
+ * editor canvas:
+ *
+ *     add_filter( 'shitate_use_reset', '__return_false' );
+ *
+ * @return bool
+ */
+function shitate_use_reset() {
+	return (bool) apply_filters( 'shitate_use_reset', true );
+}
+
+/**
  * Theme setup.
  */
 function shitate_setup() {
@@ -59,7 +73,11 @@ function shitate_setup() {
 	// and get stretched blurry. Proportional, not cropped: templates shape the
 	// image with aspectRatio + object-fit. Existing uploads need a regenerate.
 	set_post_thumbnail_size( 1568, 9999 );
-	add_editor_style( array( 'assets/css/reset/reset.css', 'assets/css/tokens.css', 'assets/css/utilities.css', 'assets/css/editor.css' ) );
+	$editor_styles = array( 'assets/css/tokens.css', 'assets/css/utilities.css', 'assets/css/editor.css' );
+	if ( shitate_use_reset() ) {
+		array_unshift( $editor_styles, 'assets/css/reset/reset.css' );
+	}
+	add_editor_style( $editor_styles );
 	load_theme_textdomain( 'shitate', get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'shitate_setup' );
@@ -382,17 +400,21 @@ add_action( 'enqueue_block_editor_assets', 'shitate_utilities_toolbar_script' );
  * Enqueue front-end styles.
  */
 function shitate_enqueue_styles() {
-	// Base reset first: zero-specificity rules core does not cover.
-	wp_enqueue_style(
-		'shitate-reset',
-		get_theme_file_uri( 'assets/css/reset/reset.css' ),
-		array(),
-		SHITATE_VERSION
-	);
+	$deps = array();
+	if ( shitate_use_reset() ) {
+		// Base reset first: zero-specificity rules core does not cover.
+		wp_enqueue_style(
+			'shitate-reset',
+			get_theme_file_uri( 'assets/css/reset/reset.css' ),
+			array(),
+			SHITATE_VERSION
+		);
+		$deps[] = 'shitate-reset';
+	}
 	wp_enqueue_style(
 		'shitate-tokens',
 		get_theme_file_uri( 'assets/css/tokens.css' ),
-		array( 'shitate-reset' ),
+		$deps,
 		SHITATE_VERSION
 	);
 	// Customizer type-scale override, right after tokens.css so it always wins.
@@ -406,7 +428,7 @@ function shitate_enqueue_styles() {
 	wp_enqueue_style(
 		'shitate-style',
 		get_stylesheet_uri(),
-		array( 'shitate-reset', 'shitate-tokens', 'shitate-utilities' ),
+		array( 'shitate-tokens', 'shitate-utilities' ),
 		SHITATE_VERSION
 	);
 }
