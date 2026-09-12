@@ -34,6 +34,19 @@
 	vertical-align: middle;
 }
 
+/* Embedded frames never overflow their container either. A Custom HTML
+   block that holds nothing but an iframe (a Google Map, a YouTube player, a
+   form) stretches it to the block's width; the frame's own height attribute
+   is kept, so fixed-height embeds are not squashed. */
+:where(iframe, embed, object) {
+	max-width: 100%;
+}
+
+:where(.wp-block-html) > :where(iframe:only-child) {
+	display: block;
+	width: 100%;
+}
+
 /* Form controls inherit the site's typography instead of the browser's. */
 :where(button, input, select, textarea) {
 	font: inherit;
