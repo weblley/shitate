@@ -59,6 +59,10 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 0.4.3 =
+* Fixed the mobile menu when the WordPress 7.1 Navigation Overlay template part is used: the overlay no longer inherits the theme's top padding, and its Close block is aligned with the header's menu button.
+* Added an opt-in image loading optimization (Customizer > Performance): marks the first large template image as high priority and lazy-loads the images after the first three. Off by default so performance plugins are never interfered with.
+
 = 0.4.2 =
 * Added a minimal base reset (assets/css/reset/reset.css): zero-specificity rules for what core does not cover, such as text-size-adjust, scrollbar-gutter, media sizing, form font inheritance, text-wrap, a visible focus ring and reduced-motion support. Disable it with the shitate_use_reset filter.
 * Bundled translations for German, French, Spanish, Italian, Dutch and Portuguese (Portugal).
