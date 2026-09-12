@@ -59,6 +59,12 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 0.4.2 =
+* Added a minimal base reset (assets/css/reset/reset.css): zero-specificity rules for what core does not cover, such as text-size-adjust, scrollbar-gutter, media sizing, form font inheritance, text-wrap, a visible focus ring and reduced-motion support. Disable it with the shitate_use_reset filter.
+* Bundled translations for German, French, Spanish, Italian, Dutch and Portuguese (Portugal).
+* Font stacks now depend on the site language: system fonts by default, with a Japanese-first stack on Japanese sites. No web fonts are loaded.
+* Added a "Fixed sizes for small text" option to the Typography Scale Customizer section. Small, X-Small and XX-Small follow the type scale again by default.
+
 = 0.4.1 =
 * Replaced the bundled patterns with four rebuilt ones: hero, three columns with image cards, four columns with images and text, and a call to action with two buttons. The front-page template was removed; the front page is now composed from the page template.
 * The mobile menu's close button now sits exactly where the header's hamburger button is, whatever the header height.

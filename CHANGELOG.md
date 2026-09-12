@@ -6,6 +6,8 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [0.4.2] - 2026-09-12
+
 ### Added
 
 - 最小限のベースリセット `assets/css/reset/reset.css` を追加（ハンドル `shitate-reset`、最初に読み込み・エディタにも適用）。コアが扱わない項目だけを `:where()`（特異度0）で補完: text-size-adjust / scrollbar-gutter / メディアの max-width と baseline gap / フォーム部品の font 継承 / 見出しの text-wrap: balance と本文の pretty / :target の scroll-margin / :focus-visible のブランド色リング / prefers-reduced-motion。Normalize 等のライブラリは同梱しない。フィルター `shitate_use_reset` を false にすると無効化できる（フロント・エディタ両方）
