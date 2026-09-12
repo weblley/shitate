@@ -7,193 +7,193 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "404 Not Found"
-msgstr "404 Not Found"
+msgstr ""
 
 msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
-msgstr "無駄な機能を持たないシンプルな設計だから、頻繁なアップデート対応に追われません。作ったあと、長く静かに運営できるテーマです。"
+msgstr ""
 
 msgid "A landing-page style built from large elements."
-msgstr "大きな要素で構成したLP風のページ。"
+msgstr ""
 
 msgid "A simple structure"
-msgstr "シンプル設計"
+msgstr ""
 
 msgid "A standard site modelled on a typical company website, combining trust and readability."
-msgstr "一般的な企業サイトを意識して作られた、信頼感と見やすさを兼ね備えた標準的なサイト"
+msgstr ""
 
 msgid "Apply rounding to font sizes"
-msgstr "フォントサイズにラウンドを適用"
+msgstr ""
 
 msgid "Augmented Fourth — 1.414"
-msgstr "増4度 — 1.414"
+msgstr ""
 
 msgid "Back to home"
-msgstr "トップページへ戻る"
+msgstr ""
 
 msgid "Base size (px)"
-msgstr "基準サイズ（px）"
+msgstr ""
 
 msgid "Bigger ratio = more contrast between headings (like typescale.com)."
-msgstr "比率が大きいほど見出しの強弱が大きくなります（typescale.com と同様）。"
+msgstr ""
 
 msgid "Body text size. The whole scale is built from this."
-msgstr "本文の文字サイズ。これを基準に全スケールが算出されます。"
+msgstr ""
 
 msgid "Call us"
-msgstr "電話"
+msgstr ""
 
 msgid "Center horizontally (mx-auto)"
-msgstr "左右中央寄せ（mx-auto）"
+msgstr ""
 
 msgid "Clear spacing classes"
-msgstr "余白クラスをクリア"
+msgstr ""
 
 msgid "Contact us"
-msgstr "お問い合わせ"
+msgstr ""
 
 msgid "Corporate"
-msgstr "コーポレート"
+msgstr ""
 
 msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
-msgstr "コーポレートサイトやビジネスサイト、あらゆる制作を自由に、楽しく。"
+msgstr ""
 
 msgid "Default"
 msgstr "既定"
 
 msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
-msgstr "音楽の度数になぞらえた8つのスケール——短2度から、黄金比まで。控えめな階調から大胆なジャンプまで、サイトの性格に合わせて選べます。"
+msgstr ""
 
 msgid "Eight type scales"
-msgstr "選べる8つの"
+msgstr ""
 
 msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
-msgstr "テーマ全体の設定はCSS変数に集約。スケールを選んだあとも、変数を上書きするだけで自由に微調整・切り替えができます。「テーマの都合」に縛られません。"
+msgstr ""
 
 msgid "Fixed sizes for small text"
-msgstr "小さな文字の数値指定"
+msgstr ""
 
 msgid "For people with"
-msgstr "知識がある人"
+msgstr ""
 
 msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
-msgstr "制作会社・フリーランスの現場でも、引き渡し後のクライアント自身の運用でも。どちらの手にもなじむよう設計しています。"
+msgstr ""
 
 msgid "Generous space and breathing room around every element, the way Apple does it."
-msgstr "Appleのように1つの要素に余白と余裕を持たせたサイト"
+msgstr ""
 
 msgid "Golden Ratio — 1.618"
-msgstr "黄金比 — 1.618"
+msgstr ""
 
 msgid "Just tell us the challenge you are facing today."
-msgstr "まずは今の課題だけ、お聞かせください。"
+msgstr ""
 
 msgid "Major Second — 1.125"
-msgstr "長2度 — 1.125"
+msgstr ""
 
 msgid "Major Third — 1.25"
-msgstr "長3度 — 1.25"
+msgstr ""
 
 msgid "Margin bottom"
-msgstr "下マージン"
+msgstr ""
 
 msgid "Margin top"
-msgstr "上マージン"
+msgstr ""
 
 msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
-msgstr "テンプレート内の最初の大きな画像を優先読み込み（fetchpriority=\"high\"）にし、それ以降の画像を遅延読み込み（loading=\"lazy\"）にします。WP Rocket や Perfmatters などの高速化プラグインで画像の読み込みを制御している場合は、干渉を避けるためにオフにしてください。"
+msgstr ""
 
 msgid "Minimal"
-msgstr "ミニマル"
+msgstr ""
 
 msgid "Minimal updates,"
-msgstr "更新は最低限、"
+msgstr ""
 
 msgid "Minor Second — 1.067"
-msgstr "短2度 — 1.067"
+msgstr ""
 
 msgid "Minor Third — 1.2"
-msgstr "短3度 — 1.2"
+msgstr ""
 
 msgid "Not sure what to build yet? That is fine."
-msgstr "「何を作ればいいか分からない」段階でもOK。"
+msgstr ""
 
 msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
-msgstr "Notion風に装飾は最小限、文字のジャンプ率もタイプスケールで抑えたシンプルなサイト"
+msgstr ""
 
 msgid "Optimize image loading"
-msgstr "画像の読み込みを最適化"
+msgstr ""
 
 msgid "Padding bottom"
-msgstr "下パディング"
+msgstr ""
 
 msgid "Padding left/right"
-msgstr "左右パディング"
+msgstr ""
 
 msgid "Padding top"
-msgstr "上パディング"
+msgstr ""
 
 msgid "Patterns"
-msgstr "パターン"
+msgstr ""
 
 msgid "Perfect Fifth — 1.5"
-msgstr "完全5度 — 1.5"
+msgstr ""
 
 msgid "Perfect Fourth — 1.333"
-msgstr "完全4度 — 1.333"
+msgstr ""
 
 msgid "Performance"
-msgstr "パフォーマンス"
+msgstr ""
 
 msgid "Rich"
-msgstr "リッチ"
+msgstr ""
 
 msgid "Scale ratio"
-msgstr "スケール比率"
+msgstr ""
 
 msgid "See the demo"
-msgstr "デモページを見てみる"
+msgstr ""
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
-msgstr "Small / X-Small / XX-Small を比率で割らず 0.95rem / 0.8rem / 0.75rem に固定します（比率で割ると小さすぎて読みにくくなる場合の対策）。"
+msgstr ""
 
 msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
-msgstr "各サイズを偶数px（2px単位）に丸め、見出しは選択した比率と自動算出されたスマホ用比率の間で流体的に変化します。"
+msgstr ""
 
 msgid "Spacing"
-msgstr "余白"
+msgstr ""
 
 msgid "Tailored with a type scale"
-msgstr "タイプスケールで仕立てる"
+msgstr ""
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
-msgstr "お探しのページは、移動または削除されたか、一時的にご利用いただけない可能性があります。トップページから再度お試しください。"
+msgstr ""
 
 msgid "This page could not be found."
-msgstr "ページが見つかりません"
+msgstr ""
 
 msgid "Try it now"
-msgstr "今すぐ使ってみる"
+msgstr ""
 
 msgid "Typography Scale"
-msgstr "タイポグラフィスケール"
+msgstr ""
 
 msgid "View this demo site"
-msgstr "このデモサイトを見る"
+msgstr ""
 
 msgid "a block theme from a web studio"
-msgstr "制作会社発のブロックテーマ"
+msgstr ""
 
 msgid "and without know-how"
-msgstr "ない人にも"
+msgstr ""
 
 msgid "endless possibilities"
-msgstr "可能性は無限大"
+msgstr ""
 
 msgid "made for builders"
-msgstr "制作向けの構造"
+msgstr ""
 
 msgid "shitate"
-msgstr "shitate"
+msgstr ""
 
 msgid "to choose from"
-msgstr "タイプスケール"
+msgstr ""

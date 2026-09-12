@@ -8,7 +8,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Added
 
-- 画像読み込みの最適化（`inc/performance.php`）: ブロックテンプレート内の画像にコアが付けない読み込みヒントを補う。最初の大きな画像に `fetchpriority="high"`、先頭3枚（コアの本文画像と同じ基準）は即時読み込み、それ以降の幅・高さ付き画像に `loading="lazy"`。寸法の無い画像（SVG ロゴ等）と、既に属性を持つ画像は触らない。カスタマイザー「パフォーマンス → 画像の読み込みを最適化」（既定ON）またはフィルター `shitate_optimize_image_loading` で無効化でき、WP Rocket 等の高速化プラグインと干渉しない
+- 画像読み込みの最適化（`inc/performance.php`）: ブロックテンプレート内の画像にコアが付けない読み込みヒントを補う。最初の大きな画像に `fetchpriority="high"`、先頭3枚（コアの本文画像と同じ基準）は即時読み込み、それ以降の幅・高さ付き画像に `loading="lazy"`。寸法の無い画像（SVG ロゴ等）と、既に属性を持つ画像は触らない。**既定はOFF**。カスタマイザー「パフォーマンス → 画像の読み込みを最適化」をONにするか、フィルター `shitate_optimize_image_loading` で有効化する。既定OFFなので WP Rocket 等の高速化プラグインと干渉しない
 
 ### Fixed
 

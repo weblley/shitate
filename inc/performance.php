@@ -21,9 +21,9 @@
  * - an image that already carries loading or fetchpriority (set by a block
  *   attribute, a plugin or the site owner) is respected and only counted.
  *
- * The whole behaviour is a Customizer switch (Performance → Optimize image
- * loading, on by default) and a filter, so a performance plugin such as
- * WP Rocket can take over without the two fighting:
+ * The whole behaviour is opt-in: a Customizer switch (Performance → Optimize
+ * image loading, off by default) or a filter. Off by default so a
+ * performance plugin such as WP Rocket never has to fight the theme:
  *
  *     add_filter( 'shitate_optimize_image_loading', '__return_false' );
  *
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return bool
  */
 function shitate_optimize_image_loading() {
-	$enabled = (bool) get_theme_mod( 'shitate_image_loading', true );
+	$enabled = (bool) get_theme_mod( 'shitate_image_loading', false );
 	return (bool) apply_filters( 'shitate_optimize_image_loading', $enabled );
 }
 
@@ -131,7 +131,7 @@ function shitate_performance_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'shitate_image_loading',
 		array(
-			'default'           => true,
+			'default'           => false,
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'shitate_sanitize_checkbox',
 		)
