@@ -27,6 +27,9 @@ msgstr "Redondear los tamaños de fuente"
 msgid "Augmented Fourth — 1.414"
 msgstr "Cuarta aumentada — 1,414"
 
+msgid "Auto — halfway between 1 and the main ratio"
+msgstr "Automática — a medio camino entre 1 y la proporción principal"
+
 msgid "Back to home"
 msgstr "Volver al inicio"
 
@@ -150,14 +153,17 @@ msgstr "Rico"
 msgid "Scale ratio"
 msgstr "Proporción de la escala"
 
+msgid "Scale ratio on small screens"
+msgstr "Proporción de la escala en pantallas pequeñas"
+
 msgid "See the demo"
 msgstr "Ver la demo"
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Fija Pequeño / Muy pequeño / Diminuto en 0,95rem / 0,8rem / 0,75rem en lugar de dividir por la proporción, que puede dejarlos demasiado pequeños para leer."
 
-msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
-msgstr "Ajusta cada paso a píxeles pares (2px) y hace fluidos los encabezados entre una proporción móvil derivada y la proporción elegida."
+msgid "Snaps every text step to even pixels (2px)."
+msgstr "Ajusta cada paso de texto a píxeles pares (2px)."
 
 msgid "Spacing"
 msgstr "Espaciado"
@@ -167,6 +173,9 @@ msgstr "A medida con una escala tipográfica"
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "Es posible que la página que buscas se haya movido o eliminado, o que no esté disponible temporalmente. Inténtalo de nuevo desde la página de inicio."
+
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
+msgstr "La proporción usada a 375px de ancho. La escala pasa gradualmente a la proporción principal hasta los 1260px, de modo que el texto y el espaciado se ajustan en el móvil sin media queries."
 
 msgid "This page could not be found."
 msgstr "No se ha podido encontrar esta página."

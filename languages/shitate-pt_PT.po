@@ -27,6 +27,9 @@ msgstr "Arredondar os tamanhos de letra"
 msgid "Augmented Fourth — 1.414"
 msgstr "Quarta aumentada — 1,414"
 
+msgid "Auto — halfway between 1 and the main ratio"
+msgstr "Automático — a meio caminho entre 1 e a proporção principal"
+
 msgid "Back to home"
 msgstr "Voltar à página inicial"
 
@@ -150,14 +153,17 @@ msgstr "Rico"
 msgid "Scale ratio"
 msgstr "Proporção da escala"
 
+msgid "Scale ratio on small screens"
+msgstr "Proporção da escala em ecrãs pequenos"
+
 msgid "See the demo"
 msgstr "Ver a demonstração"
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Fixa Pequeno / Muito pequeno / Minúsculo em 0,95rem / 0,8rem / 0,75rem em vez de dividir pela proporção, o que pode torná-los demasiado pequenos para ler."
 
-msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
-msgstr "Ajusta cada passo a píxeis pares (2px) e torna os títulos fluidos entre uma proporção móvel derivada e a proporção escolhida."
+msgid "Snaps every text step to even pixels (2px)."
+msgstr "Ajusta cada passo de texto a píxeis pares (2px)."
 
 msgid "Spacing"
 msgstr "Espaçamento"
@@ -167,6 +173,9 @@ msgstr "Feito à medida com uma escala tipográfica"
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "A página que procura pode ter sido movida ou eliminada, ou estar temporariamente indisponível. Tente novamente a partir da página inicial."
+
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
+msgstr "A proporção usada a 375px de largura. A escala transita gradualmente para a proporção principal até aos 1260px, para que texto e espaçamento fiquem mais compactos no telemóvel sem media queries."
 
 msgid "This page could not be found."
 msgstr "Esta página não foi encontrada."

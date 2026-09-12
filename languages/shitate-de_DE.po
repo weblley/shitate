@@ -27,6 +27,9 @@ msgstr "Schriftgrößen runden"
 msgid "Augmented Fourth — 1.414"
 msgstr "Übermäßige Quarte — 1,414"
 
+msgid "Auto — halfway between 1 and the main ratio"
+msgstr "Automatisch — Mitte zwischen 1 und dem Hauptverhältnis"
+
 msgid "Back to home"
 msgstr "Zur Startseite"
 
@@ -150,14 +153,17 @@ msgstr "Rich"
 msgid "Scale ratio"
 msgstr "Skalenverhältnis"
 
+msgid "Scale ratio on small screens"
+msgstr "Skalenverhältnis auf kleinen Bildschirmen"
+
 msgid "See the demo"
 msgstr "Demo ansehen"
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Setzt Klein / Sehr klein / Winzig auf 0,95rem / 0,8rem / 0,75rem, statt durch das Verhältnis zu teilen, was den Text zu klein zum Lesen machen kann."
 
-msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
-msgstr "Rastet jede Stufe auf gerade Pixel (2px) ein und macht Überschriften fließend zwischen einem abgeleiteten Mobil-Verhältnis und dem gewählten Verhältnis."
+msgid "Snaps every text step to even pixels (2px)."
+msgstr "Rastet jede Textstufe auf gerade Pixel (2px) ein."
 
 msgid "Spacing"
 msgstr "Abstände"
@@ -167,6 +173,9 @@ msgstr "Maßgeschneidert mit einer Schriftskala"
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "Die gesuchte Seite wurde möglicherweise verschoben oder gelöscht oder ist vorübergehend nicht erreichbar. Bitte versuchen Sie es von der Startseite aus erneut."
+
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
+msgstr "Das Verhältnis bei 375px Breite. Die Skala geht bis 1260px fließend in das Hauptverhältnis über, sodass Schrift und Abstände auf Smartphones ohne Media Queries enger werden."
 
 msgid "This page could not be found."
 msgstr "Diese Seite wurde nicht gefunden."

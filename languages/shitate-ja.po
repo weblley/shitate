@@ -27,6 +27,9 @@ msgstr "フォントサイズにラウンドを適用"
 msgid "Augmented Fourth — 1.414"
 msgstr "増4度 — 1.414"
 
+msgid "Auto — halfway between 1 and the main ratio"
+msgstr "自動（1 とメイン比率の中間）"
+
 msgid "Back to home"
 msgstr "トップページへ戻る"
 
@@ -150,14 +153,17 @@ msgstr "リッチ"
 msgid "Scale ratio"
 msgstr "スケール比率"
 
+msgid "Scale ratio on small screens"
+msgstr "小さな画面での比率"
+
 msgid "See the demo"
 msgstr "デモページを見てみる"
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Small / X-Small / XX-Small を比率で割らず 0.95rem / 0.8rem / 0.75rem に固定します（比率で割ると小さすぎて読みにくくなる場合の対策）。"
 
-msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
-msgstr "各サイズを偶数px（2px単位）に丸め、見出しは選択した比率と自動算出されたスマホ用比率の間で流体的に変化します。"
+msgid "Snaps every text step to even pixels (2px)."
+msgstr "各段の文字サイズを偶数ピクセル（2px）に丸めます。"
 
 msgid "Spacing"
 msgstr "余白"
@@ -167,6 +173,9 @@ msgstr "タイプスケールで仕立てる"
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "お探しのページは、移動または削除されたか、一時的にご利用いただけない可能性があります。トップページから再度お試しください。"
+
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
+msgstr "画面幅 375px で使う比率です。1260px までの間でメインの比率へ滑らかに変化するため、メディアクエリなしでスマートフォンでは文字と余白が引き締まります。"
 
 msgid "This page could not be found."
 msgstr "ページが見つかりません"

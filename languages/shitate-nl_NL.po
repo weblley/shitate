@@ -27,6 +27,9 @@ msgstr "Lettergroottes afronden"
 msgid "Augmented Fourth — 1.414"
 msgstr "Overmatige kwart — 1,414"
 
+msgid "Auto — halfway between 1 and the main ratio"
+msgstr "Automatisch — halverwege tussen 1 en de hoofdverhouding"
+
 msgid "Back to home"
 msgstr "Terug naar home"
 
@@ -150,14 +153,17 @@ msgstr "Rijk"
 msgid "Scale ratio"
 msgstr "Schaalverhouding"
 
+msgid "Scale ratio on small screens"
+msgstr "Schaalverhouding op kleine schermen"
+
 msgid "See the demo"
 msgstr "Bekijk de demo"
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Zet Klein / Extra klein / Heel klein op 0,95rem / 0,8rem / 0,75rem in plaats van te delen door de verhouding, waardoor tekst te klein kan worden om te lezen."
 
-msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
-msgstr "Rondt elke stap af op even pixels (2px) en maakt koppen vloeiend tussen een afgeleide mobiele verhouding en de gekozen verhouding."
+msgid "Snaps every text step to even pixels (2px)."
+msgstr "Rondt elke tekststap af op even pixels (2px)."
 
 msgid "Spacing"
 msgstr "Ruimte"
@@ -167,6 +173,9 @@ msgstr "Op maat gemaakt met een typografische schaal"
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "De pagina die je zoekt is mogelijk verplaatst of verwijderd, of tijdelijk niet beschikbaar. Probeer het opnieuw vanaf de homepage."
+
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
+msgstr "De verhouding bij 375px breed. De schaal loopt geleidelijk over naar de hoofdverhouding tot 1260px, zodat tekst en ruimte op telefoons strakker worden zonder media queries."
 
 msgid "This page could not be found."
 msgstr "Deze pagina is niet gevonden."

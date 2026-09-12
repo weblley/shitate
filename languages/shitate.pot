@@ -27,6 +27,9 @@ msgstr ""
 msgid "Augmented Fourth — 1.414"
 msgstr ""
 
+msgid "Auto — halfway between 1 and the main ratio"
+msgstr ""
+
 msgid "Back to home"
 msgstr ""
 
@@ -150,13 +153,16 @@ msgstr ""
 msgid "Scale ratio"
 msgstr ""
 
+msgid "Scale ratio on small screens"
+msgstr ""
+
 msgid "See the demo"
 msgstr ""
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr ""
 
-msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
+msgid "Snaps every text step to even pixels (2px)."
 msgstr ""
 
 msgid "Spacing"
@@ -166,6 +172,9 @@ msgid "Tailored with a type scale"
 msgstr ""
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
+msgstr ""
+
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
 msgstr ""
 
 msgid "This page could not be found."

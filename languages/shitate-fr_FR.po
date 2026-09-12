@@ -27,6 +27,9 @@ msgstr "Arrondir les tailles de police"
 msgid "Augmented Fourth — 1.414"
 msgstr "Quarte augmentée — 1,414"
 
+msgid "Auto — halfway between 1 and the main ratio"
+msgstr "Automatique — à mi-chemin entre 1 et le ratio principal"
+
 msgid "Back to home"
 msgstr "Retour à l’accueil"
 
@@ -150,14 +153,17 @@ msgstr "Riche"
 msgid "Scale ratio"
 msgstr "Ratio de l’échelle"
 
+msgid "Scale ratio on small screens"
+msgstr "Ratio de l’échelle sur petits écrans"
+
 msgid "See the demo"
 msgstr "Voir la démo"
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Fixe Petit / Très petit / Minuscule à 0,95rem / 0,8rem / 0,75rem au lieu de diviser par le ratio, ce qui peut rendre le texte trop petit pour être lu."
 
-msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
-msgstr "Aligne chaque palier sur des pixels pairs (2px) et rend les titres fluides entre un ratio mobile dérivé et le ratio choisi."
+msgid "Snaps every text step to even pixels (2px)."
+msgstr "Aligne chaque palier de texte sur des pixels pairs (2px)."
 
 msgid "Spacing"
 msgstr "Espacement"
@@ -167,6 +173,9 @@ msgstr "Taillé sur mesure avec une échelle typographique"
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "La page que vous cherchez a peut-être été déplacée ou supprimée, ou elle est temporairement indisponible. Veuillez réessayer depuis la page d’accueil."
+
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
+msgstr "Le ratio utilisé à 375px de large. L’échelle évolue progressivement vers le ratio principal jusqu’à 1260px, ce qui resserre le texte et les espacements sur mobile sans media queries."
 
 msgid "This page could not be found."
 msgstr "Cette page est introuvable."

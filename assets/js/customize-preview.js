@@ -13,6 +13,16 @@
 		} );
 	} );
 
+	wp.customize( 'shitate_ratio_mobile', function ( setting ) {
+		setting.bind( function ( value ) {
+			if ( 'auto' === value ) {
+				document.documentElement.style.removeProperty( '--st-ratio-min' );
+			} else {
+				document.documentElement.style.setProperty( '--st-ratio-min', value );
+			}
+		} );
+	} );
+
 	wp.customize( 'shitate_text_m', function ( setting ) {
 		setting.bind( function ( value ) {
 			document.documentElement.style.setProperty(

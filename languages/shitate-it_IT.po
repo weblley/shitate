@@ -27,6 +27,9 @@ msgstr "Arrotonda le dimensioni dei caratteri"
 msgid "Augmented Fourth — 1.414"
 msgstr "Quarta aumentata — 1,414"
 
+msgid "Auto — halfway between 1 and the main ratio"
+msgstr "Automatico — a metà tra 1 e il rapporto principale"
+
 msgid "Back to home"
 msgstr "Torna alla home"
 
@@ -150,14 +153,17 @@ msgstr "Ricco"
 msgid "Scale ratio"
 msgstr "Rapporto della scala"
 
+msgid "Scale ratio on small screens"
+msgstr "Rapporto della scala su schermi piccoli"
+
 msgid "See the demo"
 msgstr "Guarda la demo"
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Imposta Piccolo / Molto piccolo / Minuscolo a 0,95rem / 0,8rem / 0,75rem invece di dividere per il rapporto, che può renderli troppo piccoli da leggere."
 
-msgid "Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio."
-msgstr "Allinea ogni passo a pixel pari (2px) e rende i titoli fluidi tra un rapporto mobile derivato e il rapporto scelto."
+msgid "Snaps every text step to even pixels (2px)."
+msgstr "Allinea ogni passo del testo a pixel pari (2px)."
 
 msgid "Spacing"
 msgstr "Spaziatura"
@@ -167,6 +173,9 @@ msgstr "Su misura con una scala tipografica"
 
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "La pagina che cerchi potrebbe essere stata spostata o eliminata, oppure è temporaneamente non disponibile. Riprova dalla home page."
+
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
+msgstr "Il rapporto usato a 375px di larghezza. La scala passa gradualmente al rapporto principale entro i 1260px, così testo e spaziature si stringono sugli smartphone senza media query."
 
 msgid "This page could not be found."
 msgstr "Questa pagina non è stata trovata."

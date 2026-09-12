@@ -22,22 +22,36 @@
 	--st-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
 	/*
-	 * Modular type scale (typescale.com style).
-	 * Every step derives from a single base size and ratio via calc(prev * ratio)
-	 * — no pow() needed. Fixed at every screen width (no shrinking on mobile);
-	 * change --st-ratio or --st-text-m to rescale the whole set.
-	 * The Customizer can pin the three steps below the base to fixed rem
+	 * Modular scale — one ratio drives both type and spacing.
+	 * Every step is a power of the ratio away from the base size (--st-text-m),
+	 * computed as chained multiplications, so no pow() is needed.
+	 *
+	 * The ratio is fluid: on narrow viewports it eases to the small-screen
+	 * ratio (--st-ratio-min: the Customizer's "Scale ratio on small screens",
+	 * or (1 + r) / 2 when that is "auto") and opens up to the chosen r on wide
+	 * screens (375px → 1260px, the wide size).
+	 * Because every step is derived from that single fluid ratio, the scale is
+	 * an exact geometric progression at every viewport width — not only at the
+	 * two ends. The interpolation needs the viewport width as a plain number,
+	 * which tan(atan2(100vw, 1px)) provides; browsers without trigonometric
+	 * functions keep the fixed ratio (see the @supports block below).
+	 * --st-r is the ratio to use for every derived value.
+	 *
+	 * The Customizer can pin the three text steps below the base to fixed rem
 	 * values instead ("Fixed sizes for small text").
 	 */
 	--st-ratio: 1.25;
 	--st-text-m: 1rem; /* base / body = 16px */
-	--st-text-s: calc(var(--st-text-m) / var(--st-ratio));
-	--st-text-xs: calc(var(--st-text-s) / var(--st-ratio));
-	--st-text-xxs: calc(var(--st-text-xs) / var(--st-ratio));
-	--st-text-l: calc(var(--st-text-m) * var(--st-ratio));
-	--st-text-xl: calc(var(--st-text-l) * var(--st-ratio));
-	--st-text-xxl: calc(var(--st-text-xl) * var(--st-ratio));
-	--st-text-xxxl: calc(var(--st-text-xxl) * var(--st-ratio));
+	--st-ratio-min: calc((1 + var(--st-ratio, 1.25)) / 2);
+	--st-ratio-fluid: var(--st-ratio, 1.25);
+	--st-r: var(--st-ratio-fluid);
+	--st-text-s: calc(var(--st-text-m) / var(--st-r));
+	--st-text-xs: calc(var(--st-text-m) / var(--st-r) / var(--st-r));
+	--st-text-xxs: calc(var(--st-text-m) / var(--st-r) / var(--st-r) / var(--st-r));
+	--st-text-l: calc(var(--st-text-m) * var(--st-r));
+	--st-text-xl: calc(var(--st-text-m) * var(--st-r) * var(--st-r));
+	--st-text-xxl: calc(var(--st-text-m) * var(--st-r) * var(--st-r) * var(--st-r));
+	--st-text-xxxl: calc(var(--st-text-m) * var(--st-r) * var(--st-r) * var(--st-r) * var(--st-r));
 
 	/*
 	 * Colors — short aliases of the theme.json palette presets.
@@ -58,36 +72,22 @@
 	--st-color-border: var(--wp--preset--color--line, #e4e9f7);
 
 	/*
-	 * Spacing scale — the same modular rule as the type scale, in the same
-	 * eight names. m is the body size (--st-text-m); every other step is a
-	 * power of --st-ratio away from it, so changing the ratio or the base size
-	 * in the Customizer moves type and space together. Above m the steps are
-	 * two ratio powers apart (l = m·r², xl = m·r⁴, xxl = m·r⁶, xxxl = m·r⁸);
-	 * below m they tighten faster (s = m/r, xs = m/r³, xxs = m/r⁶). At the
-	 * default ratio 1.25 that is ≈ 4 / 8 / 13 / 16 / 25 / 39 / 61 / 95px.
-	 *
-	 * Steps above m are fluid without media queries: on narrow viewports they
-	 * follow a gentler ratio derived from the chosen one ((1 + r) / 2, never
-	 * inverting) and open up to the full ratio on wide screens. Steps below m
-	 * stay static — their fluid delta would be 1–3px, below perception.
+	 * Spacing scale — the same ratio as the type scale, in the same eight
+	 * names. m is the body size (--st-text-m); above m the steps are two ratio
+	 * powers apart (l = m·r², xl = m·r⁴, xxl = m·r⁶, xxxl = m·r⁸); below m they
+	 * tighten faster (s = m/r, xs = m/r³, xxs = m/r⁶). At the default ratio
+	 * 1.25 that is ≈ 4 / 8 / 13 / 16 / 25 / 39 / 61 / 95px on wide screens.
+	 * All steps use the fluid ratio --st-r, so the whole ladder tightens on
+	 * narrow viewports while staying a true geometric progression.
 	 */
 	--st-space-m: var(--st-text-m);
-	--st-space-s: calc(var(--st-space-m) / var(--st-ratio, 1.25));
-	--st-space-xs: calc(var(--st-space-s) / var(--st-ratio, 1.25) / var(--st-ratio, 1.25));
-	--st-space-xxs: calc(var(--st-space-xs) / var(--st-ratio, 1.25) / var(--st-ratio, 1.25) / var(--st-ratio, 1.25));
-	--st-ratio-min: calc((1 + var(--st-ratio, 1.25)) / 2);
-	--st-space-l-max: calc(var(--st-space-m) * var(--st-ratio, 1.25) * var(--st-ratio, 1.25));
-	--st-space-xl-max: calc(var(--st-space-l-max) * var(--st-ratio, 1.25) * var(--st-ratio, 1.25));
-	--st-space-xxl-max: calc(var(--st-space-xl-max) * var(--st-ratio, 1.25) * var(--st-ratio, 1.25));
-	--st-space-xxxl-max: calc(var(--st-space-xxl-max) * var(--st-ratio, 1.25) * var(--st-ratio, 1.25));
-	--st-space-l-min: calc(var(--st-space-m) * var(--st-ratio-min) * var(--st-ratio-min));
-	--st-space-xl-min: calc(var(--st-space-l-min) * var(--st-ratio-min) * var(--st-ratio-min));
-	--st-space-xxl-min: calc(var(--st-space-xl-min) * var(--st-ratio-min) * var(--st-ratio-min));
-	--st-space-xxxl-min: calc(var(--st-space-xxl-min) * var(--st-ratio-min) * var(--st-ratio-min));
-	--st-space-l: clamp(var(--st-space-l-min), calc(var(--st-space-l-min) + 1vw), var(--st-space-l-max));
-	--st-space-xl: clamp(var(--st-space-xl-min), calc(var(--st-space-xl-min) + 2vw), var(--st-space-xl-max));
-	--st-space-xxl: clamp(var(--st-space-xxl-min), calc(var(--st-space-xxl-min) + 3vw), var(--st-space-xxl-max));
-	--st-space-xxxl: clamp(var(--st-space-xxxl-min), calc(var(--st-space-xxxl-min) + 4vw), var(--st-space-xxxl-max));
+	--st-space-s: calc(var(--st-space-m) / var(--st-r));
+	--st-space-xs: calc(var(--st-space-m) / var(--st-r) / var(--st-r) / var(--st-r));
+	--st-space-xxs: calc(var(--st-space-xs) / var(--st-r) / var(--st-r) / var(--st-r));
+	--st-space-l: calc(var(--st-space-m) * var(--st-r) * var(--st-r));
+	--st-space-xl: calc(var(--st-space-l) * var(--st-r) * var(--st-r));
+	--st-space-xxl: calc(var(--st-space-xl) * var(--st-r) * var(--st-r));
+	--st-space-xxxl: calc(var(--st-space-xxl) * var(--st-r) * var(--st-r));
 
 	/* Layout — rem so line length tracks the user's browser font size. */
 	--st-width-max: 78.75rem; /* = wideSize, 1260px at 16px root */
@@ -102,6 +102,19 @@
 	--st-radius-l: 0.75rem; /* feature cards (12px) */
 	--st-radius-card: var(--st-radius-m);
 	--st-border-card: 1px solid var(--st-color-border);
+}
+
+/*
+ * Fluid ratio. The viewport width becomes a unitless number via
+ * tan(atan2(100vw, 1px)); 0 at 375px, 1 at 1260px (wide size), clamped.
+ * This is a feature query, not a media query: nothing branches on width,
+ * the ratio simply eases between its two ends.
+ */
+@supports (width: calc(tan(atan2(1vw, 1px)) * 1px)) {
+	:root {
+		--st-fluid-t: clamp(0, calc((tan(atan2(100vw, 1px)) - 375) / 885), 1);
+		--st-ratio-fluid: calc(var(--st-ratio-min) + (var(--st-ratio, 1.25) - var(--st-ratio-min)) * var(--st-fluid-t));
+	}
 }
 
 /*

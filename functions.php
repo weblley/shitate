@@ -153,6 +153,20 @@ function shitate_sanitize_ratio( $value ) {
 }
 
 /**
+ * Sanitize the small-screen ratio: a whitelisted ratio or "auto".
+ *
+ * @param mixed $value Submitted value.
+ * @return string
+ */
+function shitate_sanitize_ratio_mobile( $value ) {
+	if ( 'auto' === $value ) {
+		return 'auto';
+	}
+	$allowed = array( '1.067', '1.125', '1.2', '1.25', '1.333', '1.414', '1.5', '1.618' );
+	return in_array( (string) $value, $allowed, true ) ? (string) $value : 'auto';
+}
+
+/**
  * Customizer: typography scale (ratio + base) with live preview.
  *
  * @param WP_Customize_Manager $wp_customize Customizer instance.
@@ -182,6 +196,35 @@ function shitate_customize_register( $wp_customize ) {
 			'label'       => __( 'Scale ratio', 'shitate' ),
 			'description' => __( 'Bigger ratio = more contrast between headings (like typescale.com).', 'shitate' ),
 			'choices'     => array(
+				'1.067' => __( 'Minor Second — 1.067', 'shitate' ),
+				'1.125' => __( 'Major Second — 1.125', 'shitate' ),
+				'1.2'   => __( 'Minor Third — 1.2', 'shitate' ),
+				'1.25'  => __( 'Major Third — 1.25', 'shitate' ),
+				'1.333' => __( 'Perfect Fourth — 1.333', 'shitate' ),
+				'1.414' => __( 'Augmented Fourth — 1.414', 'shitate' ),
+				'1.5'   => __( 'Perfect Fifth — 1.5', 'shitate' ),
+				'1.618' => __( 'Golden Ratio — 1.618', 'shitate' ),
+			),
+		)
+	);
+
+	$wp_customize->add_setting(
+		'shitate_ratio_mobile',
+		array(
+			'default'           => 'auto',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'shitate_sanitize_ratio_mobile',
+		)
+	);
+	$wp_customize->add_control(
+		'shitate_ratio_mobile',
+		array(
+			'type'        => 'select',
+			'section'     => 'shitate_typography',
+			'label'       => __( 'Scale ratio on small screens', 'shitate' ),
+			'description' => __( 'The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries.', 'shitate' ),
+			'choices'     => array(
+				'auto'  => __( 'Auto — halfway between 1 and the main ratio', 'shitate' ),
 				'1.067' => __( 'Minor Second — 1.067', 'shitate' ),
 				'1.125' => __( 'Major Second — 1.125', 'shitate' ),
 				'1.2'   => __( 'Minor Third — 1.2', 'shitate' ),
@@ -231,7 +274,7 @@ function shitate_customize_register( $wp_customize ) {
 			'type'        => 'checkbox',
 			'section'     => 'shitate_typography',
 			'label'       => __( 'Apply rounding to font sizes', 'shitate' ),
-			'description' => __( 'Snaps every step to even pixels (2px) and makes headings fluid between a derived mobile ratio and the chosen ratio.', 'shitate' ),
+			'description' => __( 'Snaps every text step to even pixels (2px).', 'shitate' ),
 		)
 	);
 
@@ -278,41 +321,32 @@ function shitate_scale_inline_css() {
 	}
 
 	$css = shitate_font_inline_css();
-	$css .= ':root{--st-ratio:' . $ratio . ';--st-text-m:' . $base . 'px;}';
+	$css .= ':root{--st-ratio:' . $ratio . ';--st-text-m:' . $base . 'px;';
+	// Small-screen ratio: the low end of the fluid ratio (tokens.css derives
+	// (1 + ratio) / 2 when this is "auto").
+	$mobile = shitate_sanitize_ratio_mobile( get_theme_mod( 'shitate_ratio_mobile', 'auto' ) );
+	if ( 'auto' !== $mobile ) {
+		$css .= '--st-ratio-min:' . $mobile . ';';
+	}
+	$css .= '}';
 
 	$fixed_small = (bool) get_theme_mod( 'shitate_fixed_small_text', false );
 
-	// Optional rounded/fluid scale: every step snapped to even pixels (2px),
-	// headings fluid between a mobile ratio derived from --st-ratio (never
-	// inverts: always 1 < min < ratio) and the chosen ratio itself. Raw chains
-	// are kept un-rounded so rounding errors do not compound across steps.
+	// Optional rounding: every text step snapped to even pixels (2px). The
+	// steps are recomputed from the base with the fluid ratio (--st-r, see
+	// tokens.css) rather than chained from each other, so rounding errors do
+	// not compound. Fluidity itself lives in the ratio and is always on.
 	if ( get_theme_mod( 'shitate_round_scale', true ) ) {
-		$css .= ':root{'
-			. '--st-ratio-min:calc((1 + var(--st-ratio)) / 2);';
+		$css .= ':root{';
 		if ( ! $fixed_small ) {
-			// Down-scale (fixed, rounded).
-			$css .= '--st-s-raw:calc(var(--st-text-m) / var(--st-ratio));'
-				. '--st-xs-raw:calc(var(--st-s-raw) / var(--st-ratio));'
-				. '--st-xxs-raw:calc(var(--st-xs-raw) / var(--st-ratio));'
-				. '--st-text-s:round(nearest, var(--st-s-raw), 2px);'
-				. '--st-text-xs:round(nearest, var(--st-xs-raw), 2px);'
-				. '--st-text-xxs:round(nearest, var(--st-xxs-raw), 2px);';
+			$css .= '--st-text-s:round(nearest, calc(var(--st-text-m) / var(--st-r)), 2px);'
+				. '--st-text-xs:round(nearest, calc(var(--st-text-m) / var(--st-r) / var(--st-r)), 2px);'
+				. '--st-text-xxs:round(nearest, calc(var(--st-text-m) / var(--st-r) / var(--st-r) / var(--st-r)), 2px);';
 		}
-		$css .= ''
-			// Up-scale bounds (desktop = ratio, mobile = derived ratio-min).
-			. '--st-l-max:calc(var(--st-text-m) * var(--st-ratio));'
-			. '--st-xl-max:calc(var(--st-l-max) * var(--st-ratio));'
-			. '--st-xxl-max:calc(var(--st-xl-max) * var(--st-ratio));'
-			. '--st-xxxl-max:calc(var(--st-xxl-max) * var(--st-ratio));'
-			. '--st-l-min:calc(var(--st-text-m) * var(--st-ratio-min));'
-			. '--st-xl-min:calc(var(--st-l-min) * var(--st-ratio-min));'
-			. '--st-xxl-min:calc(var(--st-xl-min) * var(--st-ratio-min));'
-			. '--st-xxxl-min:calc(var(--st-xxl-min) * var(--st-ratio-min));'
-			// Fluid between the bounds, snapped to even pixels.
-			. '--st-text-l:round(nearest, clamp(var(--st-l-min), calc(var(--st-l-min) + 0.3vw), var(--st-l-max)), 2px);'
-			. '--st-text-xl:round(nearest, clamp(var(--st-xl-min), calc(var(--st-xl-min) + 0.7vw), var(--st-xl-max)), 2px);'
-			. '--st-text-xxl:round(nearest, clamp(var(--st-xxl-min), calc(var(--st-xxl-min) + 1.1vw), var(--st-xxl-max)), 2px);'
-			. '--st-text-xxxl:round(nearest, clamp(var(--st-xxxl-min), calc(var(--st-xxxl-min) + 1.6vw), var(--st-xxxl-max)), 2px);'
+		$css .= '--st-text-l:round(nearest, calc(var(--st-text-m) * var(--st-r)), 2px);'
+			. '--st-text-xl:round(nearest, calc(var(--st-text-m) * var(--st-r) * var(--st-r)), 2px);'
+			. '--st-text-xxl:round(nearest, calc(var(--st-text-m) * var(--st-r) * var(--st-r) * var(--st-r)), 2px);'
+			. '--st-text-xxxl:round(nearest, calc(var(--st-text-m) * var(--st-r) * var(--st-r) * var(--st-r) * var(--st-r)), 2px);'
 			. '}';
 	}
 
