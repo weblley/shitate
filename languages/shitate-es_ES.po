@@ -99,6 +99,9 @@ msgstr "Margen inferior"
 msgid "Margin top"
 msgstr "Margen superior"
 
+msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
+msgstr "Marca la primera imagen grande de la plantilla como de alta prioridad y carga las siguientes de forma diferida. Desactívalo si un plugin de rendimiento (WP Rocket, Perfmatters, etc.) gestiona la carga de imágenes, para que no interfieran entre sí."
+
 msgid "Minimal"
 msgstr "Minimalista"
 
@@ -117,6 +120,9 @@ msgstr "¿Aún no sabes qué construir? No pasa nada."
 msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
 msgstr "Al estilo de Notion: decoración mínima y contraste tipográfico contenido, mantenido simple gracias a la escala tipográfica."
 
+msgid "Optimize image loading"
+msgstr "Optimizar la carga de imágenes"
+
 msgid "Padding bottom"
 msgstr "Relleno inferior"
 
@@ -134,6 +140,9 @@ msgstr "Quinta justa — 1,5"
 
 msgid "Perfect Fourth — 1.333"
 msgstr "Cuarta justa — 1,333"
+
+msgid "Performance"
+msgstr "Rendimiento"
 
 msgid "Rich"
 msgstr "Rico"

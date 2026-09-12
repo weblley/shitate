@@ -99,6 +99,9 @@ msgstr "Marge onder"
 msgid "Margin top"
 msgstr "Marge boven"
 
+msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
+msgstr "Markeert de eerste grote afbeelding in de template als hoge prioriteit en laadt de afbeeldingen daarna vertraagd. Zet dit uit als een prestatieplugin (WP Rocket, Perfmatters, enz.) het laden van afbeeldingen regelt, zodat ze elkaar niet in de weg zitten."
+
 msgid "Minimal"
 msgstr "Minimaal"
 
@@ -117,6 +120,9 @@ msgstr "Nog geen idee wat je wilt bouwen? Geen probleem."
 msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
 msgstr "In Notion-stijl: minimale opmaak en ingetogen typografisch contrast, eenvoudig gehouden via de typografische schaal."
 
+msgid "Optimize image loading"
+msgstr "Laden van afbeeldingen optimaliseren"
+
 msgid "Padding bottom"
 msgstr "Padding onder"
 
@@ -134,6 +140,9 @@ msgstr "Reine kwint — 1,5"
 
 msgid "Perfect Fourth — 1.333"
 msgstr "Reine kwart — 1,333"
+
+msgid "Performance"
+msgstr "Prestaties"
 
 msgid "Rich"
 msgstr "Rijk"

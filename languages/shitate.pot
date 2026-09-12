@@ -99,6 +99,9 @@ msgstr ""
 msgid "Margin top"
 msgstr ""
 
+msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
+msgstr ""
+
 msgid "Minimal"
 msgstr ""
 
@@ -117,6 +120,9 @@ msgstr ""
 msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
 msgstr ""
 
+msgid "Optimize image loading"
+msgstr ""
+
 msgid "Padding bottom"
 msgstr ""
 
@@ -133,6 +139,9 @@ msgid "Perfect Fifth — 1.5"
 msgstr ""
 
 msgid "Perfect Fourth — 1.333"
+msgstr ""
+
+msgid "Performance"
 msgstr ""
 
 msgid "Rich"

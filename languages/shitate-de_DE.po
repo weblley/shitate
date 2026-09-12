@@ -99,6 +99,9 @@ msgstr "Außenabstand unten"
 msgid "Margin top"
 msgstr "Außenabstand oben"
 
+msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
+msgstr "Markiert das erste große Bild im Template als hohe Priorität und lädt die folgenden Bilder verzögert. Schalten Sie dies aus, wenn ein Performance-Plugin (WP Rocket, Perfmatters usw.) das Laden der Bilder steuert, damit sich beide nicht in die Quere kommen."
+
 msgid "Minimal"
 msgstr "Minimal"
 
@@ -117,6 +120,9 @@ msgstr "Noch unklar, was entstehen soll? Kein Problem."
 msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
 msgstr "Im Stil von Notion: minimale Verzierung und zurückhaltender Schriftkontrast, durch die Schriftskala einfach gehalten."
 
+msgid "Optimize image loading"
+msgstr "Bildladen optimieren"
+
 msgid "Padding bottom"
 msgstr "Innenabstand unten"
 
@@ -134,6 +140,9 @@ msgstr "Reine Quinte — 1,5"
 
 msgid "Perfect Fourth — 1.333"
 msgstr "Reine Quarte — 1,333"
+
+msgid "Performance"
+msgstr "Leistung"
 
 msgid "Rich"
 msgstr "Rich"

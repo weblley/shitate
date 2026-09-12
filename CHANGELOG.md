@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Added
+
+- 画像読み込みの最適化（`inc/performance.php`）: ブロックテンプレート内の画像にコアが付けない読み込みヒントを補う。最初の大きな画像に `fetchpriority="high"`、先頭3枚（コアの本文画像と同じ基準）は即時読み込み、それ以降の幅・高さ付き画像に `loading="lazy"`。寸法の無い画像（SVG ロゴ等）と、既に属性を持つ画像は触らない。カスタマイザー「パフォーマンス → 画像の読み込みを最適化」（既定ON）またはフィルター `shitate_optimize_image_loading` で無効化でき、WP Rocket 等の高速化プラグインと干渉しない
+
 ### Fixed
 
 - WP 7.1 の「ナビゲーションオーバーレイ」テンプレートパーツ（`.disable-default-overlay`）を使うと、旧オーバーレイ向けの上パディングが効いてメニュー全体と閉じるボタンが下にずれていた。旧オーバーレイ向けの規則を `:not(.disable-default-overlay)` に限定し、新オーバーレイの「閉じる」ブロックは開いた瞬間にハンバーガーとの差分を計測して translate で重ねる（レイアウトは触らない。`--shitate-nav-close-dx/dy`）

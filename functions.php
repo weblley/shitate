@@ -27,6 +27,7 @@ if ( ! defined( 'SHITATE_VERSION' ) ) {
 // Derived palette tones (Base / Two, Border, Contrast / Two, Neutral,
 // Primary / Hover) follow their source colors when those are edited.
 require_once get_template_directory() . '/inc/colors.php';
+require_once get_template_directory() . '/inc/performance.php';
 
 /**
  * One-time migration of Customizer settings saved under the old "st_" prefix.
