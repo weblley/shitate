@@ -21,20 +21,30 @@ shitate is distributed under the terms of the GNU GPL.
  * Mobile menu: the overlay's close button sits exactly where the hamburger
  * is, whatever the header's height. assets/js/navigation-toggle.js records
  * the hamburger's viewport position as --shitate-nav-toggle-* on the
- * navigation block when the menu opens (and on resize). The overlay is
- * position: fixed at the viewport origin, and core's fade-in animates its
- * transform, so the button is positioned absolutely against the overlay
- * rather than fixed against the viewport: it rides along with the fade-in
- * and lands on the hamburger. The fallbacks mirror core's default overlay
- * padding for the no-JS case. The extra .wp-block-navigation ancestor
- * outranks core's inline block CSS.
+ * navigation block when the menu opens (and on resize).
+ *
+ * Two overlays exist in core:
+ * 1. The default overlay (no .disable-default-overlay): core renders its own
+ *    close button. The overlay is position: fixed at the viewport origin and
+ *    core animates it in with a transform, so the button is positioned
+ *    absolutely against the overlay (not fixed against the viewport): it
+ *    rides along with the fade-in and lands on the hamburger. The overlay
+ *    gets padding-top so the menu starts below the button.
+ * 2. The custom Navigation Overlay template part (WP 7.1+, marked with
+ *    .disable-default-overlay): the site owner designs the overlay and
+ *    places the Close block themselves, so the theme leaves the layout alone
+ *    and only nudges that Close block onto the hamburger with a translate
+ *    (--shitate-nav-close-dx/dy, measured by the same script). A transform
+ *    does not affect layout, so the owner's spacing is preserved.
+ * The fallbacks mirror core's default overlay padding for the no-JS case.
+ * The extra .wp-block-navigation ancestor outranks core's inline block CSS.
  */
-.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog,
-.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-close {
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-dialog,
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-close {
 	position: static;
 }
 
-.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-close {
 	position: absolute;
 	top: var(--shitate-nav-toggle-top, 1rem);
 	right: var(--shitate-nav-toggle-right, 1rem);
@@ -42,7 +52,12 @@ shitate is distributed under the terms of the GNU GPL.
 	padding: 0;
 }
 
-/* Start the menu content below the close button so the two never overlap. */
-.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+/* Default overlay: start the menu content below the close button. */
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
 	padding-top: calc(var(--shitate-nav-toggle-top, 1rem) + var(--shitate-nav-toggle-size, 1.5rem) + var(--st-space-m, 1rem));
+}
+
+/* Custom overlay template part: move its Close block onto the hamburger. */
+.wp-block-navigation .wp-block-navigation__responsive-container.disable-default-overlay.is-menu-open .wp-block-navigation-overlay-close {
+	translate: var(--shitate-nav-close-dx, 0px) var(--shitate-nav-close-dy, 0px);
 }

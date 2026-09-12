@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Fixed
+
+- WP 7.1 の「ナビゲーションオーバーレイ」テンプレートパーツ（`.disable-default-overlay`）を使うと、旧オーバーレイ向けの上パディングが効いてメニュー全体と閉じるボタンが下にずれていた。旧オーバーレイ向けの規則を `:not(.disable-default-overlay)` に限定し、新オーバーレイの「閉じる」ブロックは開いた瞬間にハンバーガーとの差分を計測して translate で重ねる（レイアウトは触らない。`--shitate-nav-close-dx/dy`）
+
 ## [0.4.2] - 2026-09-12
 
 ### Added

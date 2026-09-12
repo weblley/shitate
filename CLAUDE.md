@@ -31,7 +31,7 @@
 ## ユーティリティ
 - `assets/css/utilities.css`: `mt|mb|ml|mr|mx|my|m|pt|pb|pl|pr|px|py|p`-`0|xxs..xxxl` ＋ `mx-auto`
 - エディタツールバー「余白」ドロップダウン: `assets/js/utilities-toolbar.js`（全ブロックにmt/mb/pt/pb/px＋mx-autoを付け外し）
-- フロント用JS `assets/js/navigation-toggle.js`（ハンドル `shitate-navigation-toggle`、defer）: モバイルメニューを開いた瞬間にハンバーガーの位置を `--shitate-nav-toggle-top/right/size` としてナビブロックに記録し、style.css が閉じるボタンをそこへ absolute 配置（オーバーレイはコアが transform でフェードインするため fixed ではなく absolute）。ヘッダー高さに依存しない
+- フロント用JS `assets/js/navigation-toggle.js`（ハンドル `shitate-navigation-toggle`、defer）: モバイルメニューを開いた瞬間にハンバーガーの位置を `--shitate-nav-toggle-top/right/size` としてナビブロックに記録し、style.css が閉じるボタンをそこへ absolute 配置（オーバーレイはコアが transform でフェードインするため fixed ではなく absolute）。ヘッダー高さに依存しない。**WP 7.1 のカスタム「ナビゲーションオーバーレイ」（コンテナに `.disable-default-overlay`）では** 旧規則を効かせず（`:not(.disable-default-overlay)`）、`.wp-block-navigation-overlay-close` を MutationObserver で `is-menu-open` 付与後に計測 → `--shitate-nav-close-dx/dy` の translate で重ねる（サイト所有者のオーバーレイ設計を崩さない）。rAF は非表示タブで止まるので使わない
 
 ## パターン
 - `patterns/*.php`、Slug `shitate/*`、文言は `esc_html_e( '…', 'shitate' )`（日本語訳は languages/ で提供済み、サイト言語に自動追従）
