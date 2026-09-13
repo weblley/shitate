@@ -27,6 +27,7 @@
 - **ベースリセット `assets/css/reset/reset.css`**（2026-09-11）: Normalize/Meyer 等のライブラリは入れない（コアの global-styles とブロックCSSがその役割を担う）。コアが触らない項目だけを `:where()` で補完。`!important` は reduced-motion ブロックのみ許可（utilities.css に次ぐ2つ目の例外）。読み込み順は reset → tokens → utilities → style。**フィルター `shitate_use_reset`（既定 true）を false にするとフロント・エディタ両方で読み込まない**（`add_filter( 'shitate_use_reset', '__return_false' )`）ただし theme.json `settings.viewport`（mobile 768px / tablet 1024px、WP7.1）は宣言済み＝**ユーザーがエディタのレスポンシブスタイルを使うときの境界**（プラグインの[br_sp]・details・sb/ifと同じ768/1024に統一）
 - **!important 禁止**。例外は utilities.css（ユーティリティ層）のみ
 - コンテンツ幅 64rem / 幅広 78.75rem（`--st-width-text` / `--st-width-max` 同期。2026-09-01にrem化＝ブラウザ文字サイズ設定に行長が追従）
+- **ホバー遷移は `--st-transition`（tokens.css、既定 0.2s）一本**（2026-09-13）: style.css の `:where(a, button, summary, .wp-element-button, …)` に `transition: var(--st-transition)`。個別の transition を直書きしない。プラグイン側は `var(--st-transition, .2s)` で参照
 - **角丸は3語彙のみ**: `--st-radius-s/m/l`（0.375/0.625/0.75rem）。直書きpx禁止、パターン/テンプレートもvar()参照（旧8px→m、10px→m、12px→l に集約済み）
 - 文字の丸め/流体モード（shitate_round_scale）は**既定ON**（2026-09-01〜）
 

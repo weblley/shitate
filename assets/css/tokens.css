@@ -102,6 +102,10 @@
 	--st-radius-l: 0.75rem; /* feature cards (12px) */
 	--st-radius-card: var(--st-radius-m);
 	--st-border-card: 1px solid var(--st-color-border);
+
+	/* Hover / focus transition for interactive elements (see style.css).
+	   One duration for the whole site; override it to retune every hover. */
+	--st-transition: 0.2s;
 }
 
 /*

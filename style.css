@@ -61,3 +61,13 @@ shitate is distributed under the terms of the GNU GPL.
 .wp-block-navigation .wp-block-navigation__responsive-container.disable-default-overlay.is-menu-open .wp-block-navigation-overlay-close {
 	translate: var(--shitate-nav-close-dx, 0px) var(--shitate-nav-close-dy, 0px);
 }
+
+/*
+ * Interaction: everything with a hover state eases with the same
+ * --st-transition (tokens.css, 0.2s). Zero specificity, so a block's own
+ * transition or the owner's CSS wins; reduced-motion users get none (see
+ * assets/css/reset/reset.css).
+ */
+:where(a, button, summary, .wp-element-button, .wp-block-button__link, input[type="submit"], input[type="button"], input[type="reset"]) {
+	transition: var(--st-transition, 0.2s);
+}

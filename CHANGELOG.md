@@ -12,6 +12,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Added
 
+- トークン `--st-transition`（既定 0.2s）を追加し、ホバー状態を持つ要素（リンク・ボタン・summary・送信ボタン）に `transition: var(--st-transition)` を適用。特異度ゼロなので個別指定が優先。prefers-reduced-motion では無効
 - カスタマイザー「Typography Scale」に「小さな画面での比率」を追加（既定「自動」＝1 とメイン比率の中間）。画面幅 375px での比率を PC 用とは別に選べ、1260px までの間で clamp によりメインの比率へ滑らかに補間される。ライブプレビュー対応
 - 画像読み込みの最適化（`inc/performance.php`）: ブロックテンプレート内の画像にコアが付けない読み込みヒントを補う。最初の大きな画像に `fetchpriority="high"`、先頭3枚（コアの本文画像と同じ基準）は即時読み込み、それ以降の幅・高さ付き画像に `loading="lazy"`。寸法の無い画像（SVG ロゴ等）と、既に属性を持つ画像は触らない。**既定はOFF**。カスタマイザー「パフォーマンス → 画像の読み込みを最適化」をONにするか、フィルター `shitate_optimize_image_loading` で有効化する。既定OFFなので WP Rocket 等の高速化プラグインと干渉しない
 
