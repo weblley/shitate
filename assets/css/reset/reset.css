@@ -1,13 +1,21 @@
 /*
  * shitate base reset.
  *
- * Not a full reset. WordPress already normalises the things a classic reset
- * handles (body margin, box-sizing, heading and paragraph rhythm, lists,
- * quotes, buttons) through global styles and each block's own CSS, so a
- * Normalize / Meyer style sheet would only fight core. This file adds the
- * handful of rules core does not cover and that cause real problems when
- * missing. Every selector is wrapped in :where() so it has zero specificity
- * and never outranks core, a plugin, or the site owner's custom CSS.
+ * Two layers, both at zero specificity (every selector is wrapped in
+ * :where(), so nothing here outranks core, a plugin, or the site owner's
+ * custom CSS):
+ *
+ * 1. UA normalisation — evens out the browser defaults that differ between
+ *    engines or get in the way of a block layout (box-sizing, default
+ *    margins, form-control fonts, sub/sup, code fonts, tables). WordPress
+ *    already handles most of this for block markup; this layer makes plugin
+ *    output, Custom HTML and comment forms behave the same way.
+ * 2. The handful of modern-reset rules core does not cover (text-size-adjust,
+ *    scrollbar-gutter, media sizing, text-wrap, focus ring, reduced motion).
+ *
+ * Deliberately not reset: list padding and bullets (core lists rely on the
+ * UA defaults), heading sizes and weights (global styles own them), link
+ * colours and button appearance.
  *
  * Original work for this theme, informed by the practices shared across
  * modern resets (text-size-adjust, scrollbar-gutter, media sizing, form
@@ -16,6 +24,80 @@
  *
  * Loaded first on the front end (handle shitate-reset) and in the editor.
  */
+
+/* ---- 1. UA normalisation ---- */
+
+/* Border-box everywhere, including generated content. */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+/* Default margins off the elements whose spacing the layout (block gap) or
+   the theme's rhythm rules provide. Inside block layouts core already zeroes
+   these; this covers plugin markup, Custom HTML and the comment form. */
+:where(body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, pre) {
+	margin: 0;
+}
+
+/* Text-level semantics render the same in every engine. */
+:where(b, strong) {
+	font-weight: bolder;
+}
+
+:where(abbr[title]) {
+	text-decoration: underline dotted;
+}
+
+:where(sub, sup) {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+:where(sub) {
+	bottom: -0.25em;
+}
+
+:where(sup) {
+	top: -0.5em;
+}
+
+:where(code, kbd, samp, pre) {
+	font-family: var(--st-font-mono, ui-monospace, monospace);
+	font-size: 1em;
+}
+
+:where(table) {
+	border-collapse: collapse;
+	border-color: inherit;
+	text-indent: 0;
+}
+
+:where(fieldset) {
+	min-width: 0;
+}
+
+:where(legend) {
+	padding: 0;
+}
+
+:where(textarea) {
+	resize: vertical;
+}
+
+:where(button, [type="button"], [type="submit"], [type="reset"]) {
+	-webkit-appearance: button;
+	appearance: button;
+}
+
+:where(progress) {
+	vertical-align: baseline;
+}
+
+/* ---- 2. Modern-reset rules core does not cover ---- */
 
 /* Keep the layout steady: no iOS landscape text inflation, and reserve the
    scrollbar gutter so content does not shift when a scrollbar appears. */
@@ -47,8 +129,10 @@
 	width: 100%;
 }
 
-/* Form controls inherit the site's typography instead of the browser's. */
-:where(button, input, select, textarea) {
+/* Form controls inherit the site's typography instead of the browser's, and
+   drop the engine-specific default margins. */
+:where(button, input, optgroup, select, textarea) {
+	margin: 0;
 	font: inherit;
 	color: inherit;
 }
