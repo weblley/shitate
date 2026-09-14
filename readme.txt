@@ -16,7 +16,7 @@ shitate is a block theme for the Site Editor with a token-driven design system:
 
 * A modular type scale (typescale.com style) driven by a single base size and ratio.
 * A modular spacing ladder built on the same base and ratio, with margin-top rhythm and heading hierarchy.
-* Fluid spacing and headings without media queries, so the rhythm tightens itself on small screens.
+* One fluid ratio for the whole scale: the steps tighten on phones and open up on wide screens, with no media queries.
 * A palette-driven color system: change a source color in the Site Editor and the derived tones (hover, tinted surfaces, borders, muted text) follow.
 * Spacing utility classes (mt-0 … p-xxxl) plus a Spacing dropdown in the block toolbar.
 * Four style variations (Dark, Cream, Mist, Mono).
@@ -59,9 +59,14 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
-= 0.4.3 =
-* Fixed the mobile menu when the WordPress 7.1 Navigation Overlay template part is used: the overlay no longer inherits the theme's top padding, and its Close block is aligned with the header's menu button.
-* Added an opt-in image loading optimization (Customizer > Performance): marks the first large template image as high priority and lazy-loads the images after the first three. Off by default so performance plugins are never interfered with.
+= 1.0.0 =
+* The scale now rests on a single fluid ratio: it eases to a gentler ratio on phones and opens up to the chosen ratio on wide screens, so type and spacing stay an exact geometric progression at every viewport width. Previously each step interpolated on its own, which broke the progression at intermediate widths.
+* Added "Scale ratio on small screens" to the Typography Scale section of the Customizer (defaults to automatic), so the phone end of the scale can be chosen independently of the desktop one.
+* The base reset now also evens out the browser defaults: box-sizing, default margins, text-level semantics, monospace fonts, tables and form controls. Lists, heading sizes, link colours and button appearance are still left to WordPress.
+* Added the --st-transition token (0.2s) and applied it to links, buttons and other elements with a hover state.
+* Added an opt-in image loading optimization (Customizer > Performance): marks the first large template image as high priority and lazy-loads the images after the first three. Off by default, so a performance plugin is never interfered with.
+* Fixed the mobile menu when the WordPress 7.1 Navigation Overlay template part is used: the overlay no longer inherits the old overlay's top padding, and its Close block sits where the header's menu button is.
+* Fixed an iframe pasted into a Custom HTML block (a map, a video, a form) keeping its fixed width and hugging the left edge.
 
 = 0.4.2 =
 * Added a minimal base reset (assets/css/reset/reset.css): zero-specificity rules for what core does not cover, such as text-size-adjust, scrollbar-gutter, media sizing, form font inheritance, text-wrap, a visible focus ring and reduced-motion support. Disable it with the shitate_use_reset filter.
