@@ -47,7 +47,7 @@ function shitate_migrate_theme_mods() {
 add_action( 'after_setup_theme', 'shitate_migrate_theme_mods', 5 );
 
 /**
- * Whether the theme's base reset (assets/css/reset/reset.css) is loaded.
+ * Whether the theme's base reset (assets/css/reset.css) is loaded.
  *
  * Disable it from a child theme or plugin, on both the front end and the
  * editor canvas:
@@ -76,7 +76,7 @@ function shitate_setup() {
 	set_post_thumbnail_size( 1568, 9999 );
 	$editor_styles = array( 'assets/css/tokens.css', 'assets/css/utilities.css', 'assets/css/editor.css' );
 	if ( shitate_use_reset() ) {
-		array_unshift( $editor_styles, 'assets/css/reset/reset.css' );
+		array_unshift( $editor_styles, 'assets/css/reset.css' );
 	}
 	add_editor_style( $editor_styles );
 	load_theme_textdomain( 'shitate', get_template_directory() . '/languages' );
@@ -440,7 +440,7 @@ function shitate_enqueue_styles() {
 		// Base reset first: zero-specificity rules core does not cover.
 		wp_enqueue_style(
 			'shitate-reset',
-			get_theme_file_uri( 'assets/css/reset/reset.css' ),
+			get_theme_file_uri( 'assets/css/reset.css' ),
 			array(),
 			SHITATE_VERSION
 		);

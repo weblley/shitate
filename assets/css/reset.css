@@ -11,7 +11,7 @@
  *    already handles most of this for block markup; this layer makes plugin
  *    output, Custom HTML and comment forms behave the same way.
  * 2. The handful of modern-reset rules core does not cover (text-size-adjust,
- *    scrollbar-gutter, media sizing, text-wrap, focus ring, reduced motion).
+ *    scrollbar-gutter, media sizing, focus ring, reduced motion).
  *
  * Deliberately not reset: list padding and bullets (core lists rely on the
  * UA defaults), heading sizes and weights (global styles own them), link
@@ -19,8 +19,8 @@
  *
  * Original work for this theme, informed by the practices shared across
  * modern resets (text-size-adjust, scrollbar-gutter, media sizing, form
- * font inheritance, text-wrap, focus-visible, reduced motion). No
- * third-party code is copied.
+ * font inheritance, focus-visible, reduced motion). No third-party code is
+ * copied.
  *
  * Loaded first on the front end (handle shitate-reset) and in the editor.
  */
@@ -135,16 +135,6 @@
 	margin: 0;
 	font: inherit;
 	color: inherit;
-}
-
-/* Headings avoid a lone word on the last line; running text avoids orphans.
-   Both are ignored by browsers that do not support them. */
-:where(h1, h2, h3, h4, h5, h6) {
-	text-wrap: balance;
-}
-
-:where(p, li, dd, figcaption, blockquote) {
-	text-wrap: pretty;
 }
 
 /* Anchor targets (table of contents, "back to top" links) stop clear of the
