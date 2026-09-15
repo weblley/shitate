@@ -6,15 +6,13 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
-### Fixed
-- Safari: the fluid ratio evaluated `tan(atan2(100vw, 1px))` as 0, pinning type and spacing to the small-screen ratio at every width. The viewport width now goes through a registered `<length>` property (`@property --st-vw`) so atan2() receives absolute px in every engine.
-
 ## [1.0.1] - 2026-09-15
 
 ### Fixed
 
 - スタイルバリエーションで Primary（ブランド色）が常に #2952cc に固定されていた不具合。Mono を選んでもボタンとリンクだけ青いまま残り、Dark ではボタン文字（base 色）と Primary のコントラストが 2.4:1 まで落ちていた。各バリエーションが自分の Primary / Primary hover を持つように変更: Dark #7f9cea / #a3b8f0、Mono #1a1a1a / #444444、Cream #8a4f14 / #6f3f10、Mist #257556 / #1f6449（すべて本文・ボタン文字とのコントラスト 4.5:1 以上）。既定の theme.json は据え置き
 - 派生色の自動追従（inc/colors.php）が、バリエーション適用直後にそのバリエーションが定めた派生色（Primary hover など）を上書きしていた。源 4 色が同梱パレットのいずれかと完全一致する場合はそのファイルの派生色を正とし、再計算は所有者が源色を編集したときだけ行うように変更
+- Safari で流体比率が効かず、全画面幅で「小さな画面での比率」に固定されていた不具合（Safari 26.5 は `tan(atan2(100vw, 1px))` を 0 と評価する）。画面幅を `@property --st-vw`（`<length>` 登録）経由で絶対 px に解決してから atan2() に渡すように変更。Chrome / Firefox の結果は不変
 
 ## [1.0.0] - 2026-09-14
 

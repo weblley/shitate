@@ -62,6 +62,7 @@ No fonts are bundled; the typography relies on system font stacks.
 = 1.0.1 =
 * Style variations now define their own primary and hover colors (Dark, Mono, Cream, Mist). Previously the primary color stayed blue in every variation, so Mono still had blue buttons and links and Dark's button text fell below the recommended contrast. All new pairs meet a 4.5:1 contrast against body and button text.
 * The derived-color logic no longer overrides the tones a style variation defines; it recomputes them only after you edit one of the source colors.
+* Fixed the fluid type scale in Safari: it stayed at the small-screen ratio at every width because Safari evaluates tan(atan2(100vw, 1px)) as 0. The viewport width is now passed through a registered custom property, so the scale opens up on wide screens in every browser.
 
 = 1.0.0 =
 * The scale now rests on a single fluid ratio: it eases to a gentler ratio on phones and opens up to the chosen ratio on wide screens, so type and spacing stay an exact geometric progression at every viewport width. Previously each step interpolated on its own, which broke the progression at intermediate widths.
