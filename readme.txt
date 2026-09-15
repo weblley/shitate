@@ -59,6 +59,10 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.1 =
+* Style variations now define their own primary and hover colors (Dark, Mono, Cream, Mist). Previously the primary color stayed blue in every variation, so Mono still had blue buttons and links and Dark's button text fell below the recommended contrast. All new pairs meet a 4.5:1 contrast against body and button text.
+* The derived-color logic no longer overrides the tones a style variation defines; it recomputes them only after you edit one of the source colors.
+
 = 1.0.0 =
 * The scale now rests on a single fluid ratio: it eases to a gentler ratio on phones and opens up to the chosen ratio on wide screens, so type and spacing stay an exact geometric progression at every viewport width. Previously each step interpolated on its own, which broke the progression at intermediate widths.
 * Added "Scale ratio on small screens" to the Typography Scale section of the Customizer (defaults to automatic), so the phone end of the scale can be chosen independently of the desktop one.
