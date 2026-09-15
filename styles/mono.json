@@ -11,8 +11,8 @@
 				{ "slug": "contrast-2", "color": "#444444", "name": "Contrast / Two" },
 				{ "slug": "neutral", "color": "#757575", "name": "Neutral" },
 				{ "slug": "line", "color": "#e5e5e5", "name": "Border" },
-				{ "slug": "primary", "color": "#2952cc", "name": "Primary" },
-				{ "slug": "primary-hover", "color": "#20409f", "name": "Primary / Hover" },
+				{ "slug": "primary", "color": "#1a1a1a", "name": "Primary" },
+				{ "slug": "primary-hover", "color": "#444444", "name": "Primary / Hover" },
 				{ "slug": "accent", "color": "#1a1a1a", "name": "Accent" }
 			]
 		}

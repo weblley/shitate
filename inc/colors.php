@@ -108,9 +108,18 @@ function shitate_derive_palette_colors( $theme_json ) {
 		}
 	}
 
+	// If the four source colors match a shipped palette exactly (theme.json or
+	// a style variation just applied), that file's derived tones are authored
+	// values: keep them as they are. Only when the owner has edited a source
+	// do the derived tones need recomputing.
+	$baseline = shitate_matching_shipped_palette( $current );
+
 	$changed = false;
 	foreach ( shitate_derived_color_sources() as $slug => $sources ) {
 		if ( ! isset( $current[ $slug ] ) ) {
+			continue;
+		}
+		if ( $baseline && isset( $baseline[ $slug ] ) && $baseline[ $slug ] === $current[ $slug ] ) {
 			continue;
 		}
 		// Leave tones the user set by hand alone.
@@ -182,6 +191,58 @@ function shitate_shipped_palette_defaults() {
 	}
 
 	return $defaults;
+}
+
+/**
+ * Every shipped palette as slug => lowercase hex, one per file.
+ *
+ * @return array<int, array<string, string>>
+ */
+function shitate_shipped_palettes() {
+	static $palettes = null;
+	if ( null !== $palettes ) {
+		return $palettes;
+	}
+
+	$palettes = array();
+	$files    = array_merge(
+		array( get_template_directory() . '/theme.json' ),
+		glob( get_template_directory() . '/styles/*.json' ) ?: array()
+	);
+	foreach ( $files as $file ) {
+		$json = wp_json_file_decode( $file, array( 'associative' => true ) );
+		if ( empty( $json['settings']['color']['palette'] ) || ! is_array( $json['settings']['color']['palette'] ) ) {
+			continue;
+		}
+		$palette = array();
+		foreach ( $json['settings']['color']['palette'] as $entry ) {
+			if ( isset( $entry['slug'], $entry['color'] ) ) {
+				$palette[ $entry['slug'] ] = strtolower( $entry['color'] );
+			}
+		}
+		$palettes[] = $palette;
+	}
+
+	return $palettes;
+}
+
+/**
+ * The shipped palette whose source colors equal the current ones, if any.
+ *
+ * @param array $current Slug => lowercase hex of the current palette.
+ * @return array|null Slug => hex of the matching shipped palette.
+ */
+function shitate_matching_shipped_palette( $current ) {
+	$sources = array( 'base', 'contrast', 'primary', 'accent' );
+	foreach ( shitate_shipped_palettes() as $palette ) {
+		foreach ( $sources as $slug ) {
+			if ( ! isset( $current[ $slug ], $palette[ $slug ] ) || $current[ $slug ] !== $palette[ $slug ] ) {
+				continue 2;
+			}
+		}
+		return $palette;
+	}
+	return null;
 }
 
 /**
