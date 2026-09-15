@@ -110,13 +110,26 @@
 
 /*
  * Fluid ratio. The viewport width becomes a unitless number via
- * tan(atan2(100vw, 1px)); 0 at 375px, 1 at 1260px (wide size), clamped.
+ * tan(atan2(<width>, 1px)); 0 at 375px, 1 at 1260px (wide size), clamped.
  * This is a feature query, not a media query: nothing branches on width,
  * the ratio simply eases between its two ends.
+ *
+ * The width is passed through a registered <length> property (--st-vw)
+ * rather than written as 100vw inside atan2(): Safari (checked on 26.5)
+ * evaluates tan(atan2(100vw, 1px)) as 0, which pinned the whole scale to the
+ * small-screen ratio at every width. Registration resolves 100vw to absolute
+ * px at computed-value time, which every engine's atan2() handles.
  */
+@property --st-vw {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 0px;
+}
+
 @supports (width: calc(tan(atan2(1vw, 1px)) * 1px)) {
 	:root {
-		--st-fluid-t: clamp(0, calc((tan(atan2(100vw, 1px)) - 375) / 885), 1);
+		--st-vw: 100vw;
+		--st-fluid-t: clamp(0, calc((tan(atan2(var(--st-vw), 1px)) - 375) / 885), 1);
 		--st-ratio-fluid: calc(var(--st-ratio-min) + (var(--st-ratio, 1.25) - var(--st-ratio-min)) * var(--st-fluid-t));
 	}
 }

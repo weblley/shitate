@@ -6,6 +6,9 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Fixed
+- Safari: the fluid ratio evaluated `tan(atan2(100vw, 1px))` as 0, pinning type and spacing to the small-screen ratio at every width. The viewport width now goes through a registered `<length>` property (`@property --st-vw`) so atan2() receives absolute px in every engine.
+
 ## [1.0.1] - 2026-09-15
 
 ### Fixed
