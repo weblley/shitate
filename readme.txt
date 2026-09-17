@@ -2,7 +2,7 @@
 Contributors: weblley
 Requires at least: 7.0
 Tested up to: 7.1
-Requires PHP: 7.2
+Requires PHP: 7.4
 Stable tag: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -58,6 +58,9 @@ License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gp
 No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
+
+= 1.0.2 =
+* Requires PHP is now 7.4 (was 7.2), matching WordPress 7.0's own minimum. Verified on PHP 8.5.
 
 = 1.0.1 =
 * Style variations now define their own primary and hover colors (Dark, Mono, Cream, Mist). Previously the primary color stayed blue in every variation, so Mono still had blue buttons and links and Dark's button text fell below the recommended contrast. All new pairs meet a 4.5:1 contrast against body and button text.
