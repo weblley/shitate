@@ -174,8 +174,8 @@ msgstr "Feito à medida com uma escala tipográfica"
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "A página que procura pode ter sido movida ou eliminada, ou estar temporariamente indisponível. Tente novamente a partir da página inicial."
 
-msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
-msgstr "A proporção usada a 375px de largura. A escala transita gradualmente para a proporção principal até aos 1260px, para que texto e espaçamento fiquem mais compactos no telemóvel sem media queries."
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
+msgstr "A proporção usada a 375px de largura. A escala transita gradualmente para a proporção principal até à largura do layout largo (1260px por predefinição), para que texto e espaçamento fiquem mais compactos no telemóvel sem media queries."
 
 msgid "This page could not be found."
 msgstr "Esta página não foi encontrada."

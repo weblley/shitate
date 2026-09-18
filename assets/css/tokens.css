@@ -29,7 +29,8 @@
 	 * The ratio is fluid: on narrow viewports it eases to the small-screen
 	 * ratio (--st-ratio-min: the Customizer's "Scale ratio on small screens",
 	 * or (1 + r) / 2 when that is "auto") and opens up to the chosen r on wide
-	 * screens (375px → 1260px, the wide size).
+	 * screens: from --st-width-min (375px) to --st-width-max (the wide layout
+	 * width from Global Styles, 1260px by default).
 	 * Because every step is derived from that single fluid ratio, the scale is
 	 * an exact geometric progression at every viewport width — not only at the
 	 * two ends. The interpolation needs the viewport width as a plain number,
@@ -89,9 +90,16 @@
 	--st-space-xxl: calc(var(--st-space-xl) * var(--st-r) * var(--st-r));
 	--st-space-xxxl: calc(var(--st-space-xxl) * var(--st-r) * var(--st-r));
 
-	/* Layout — rem so line length tracks the user's browser font size. */
-	--st-width-max: 78.75rem; /* = wideSize, 1260px at 16px root */
-	--st-width-text: 64rem; /* = contentSize, 1024px at 16px root */
+	/*
+	 * Layout — follows Global Styles. theme.json sets contentSize / wideSize
+	 * (64rem / 78.75rem = 1024px / 1260px at a 16px root) and core exposes them
+	 * as --wp--style--global--*; the owner can change them in the Site Editor
+	 * (Styles → Layout) and these tokens follow. The fallbacks equal theme.json.
+	 * --st-width-min is the narrow end of the fluid ratio (see below).
+	 */
+	--st-width-max: var(--wp--style--global--wide-size, 78.75rem);
+	--st-width-text: var(--wp--style--global--content-size, 64rem);
+	--st-width-min: 375px;
 
 	/* Section rhythm (absolute, DADS) */
 	--st-space-section: var(--st-space-xxl);
@@ -109,16 +117,20 @@
 }
 
 /*
- * Fluid ratio. The viewport width becomes a unitless number via
- * tan(atan2(<width>, 1px)); 0 at 375px, 1 at 1260px (wide size), clamped.
- * This is a feature query, not a media query: nothing branches on width,
- * the ratio simply eases between its two ends.
+ * Fluid ratio. Lengths become unitless numbers via tan(atan2(<length>, 1px));
+ * the progress --st-fluid-t is 0 at --st-width-min and 1 at --st-width-max
+ * (the wide layout width), clamped. This is a feature query, not a media
+ * query: nothing branches on width, the ratio simply eases between its ends.
  *
- * The width is passed through a registered <length> property (--st-vw)
- * rather than written as 100vw inside atan2(): Safari (checked on 26.5)
- * evaluates tan(atan2(100vw, 1px)) as 0, which pinned the whole scale to the
- * small-screen ratio at every width. Registration resolves 100vw to absolute
- * px at computed-value time, which every engine's atan2() handles.
+ * Every length goes through a registered <length> property rather than
+ * straight into atan2(): Safari (checked on 26.5) evaluates
+ * tan(atan2(100vw, 1px)) as 0, which pinned the whole scale to the
+ * small-screen ratio at every width. Registration resolves vw and rem to
+ * absolute px at computed-value time, which every engine's atan2() handles.
+ * It also guards the ends: if --st-width-max is not a plain length (a
+ * percentage, say) the registered property falls back to its initial value.
+ * The denominator is floored at 1px so a wide width at or below the narrow
+ * one cannot divide by zero.
  */
 @property --st-vw {
 	syntax: "<length>";
@@ -126,10 +138,24 @@
 	initial-value: 0px;
 }
 
+@property --st-width-min-px {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 375px;
+}
+
+@property --st-width-max-px {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 1260px;
+}
+
 @supports (width: calc(tan(atan2(1vw, 1px)) * 1px)) {
 	:root {
 		--st-vw: 100vw;
-		--st-fluid-t: clamp(0, calc((tan(atan2(var(--st-vw), 1px)) - 375) / 885), 1);
+		--st-width-min-px: var(--st-width-min);
+		--st-width-max-px: var(--st-width-max);
+		--st-fluid-t: clamp(0, calc(tan(atan2(calc(var(--st-vw) - var(--st-width-min-px)), 1px)) / tan(atan2(max(1px, calc(var(--st-width-max-px) - var(--st-width-min-px))), 1px))), 1);
 		--st-ratio-fluid: calc(var(--st-ratio-min) + (var(--st-ratio, 1.25) - var(--st-ratio-min)) * var(--st-fluid-t));
 	}
 }

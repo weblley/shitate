@@ -174,8 +174,8 @@ msgstr "Op maat gemaakt met een typografische schaal"
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "De pagina die je zoekt is mogelijk verplaatst of verwijderd, of tijdelijk niet beschikbaar. Probeer het opnieuw vanaf de homepage."
 
-msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
-msgstr "De verhouding bij 375px breed. De schaal loopt geleidelijk over naar de hoofdverhouding tot 1260px, zodat tekst en ruimte op telefoons strakker worden zonder media queries."
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
+msgstr "De verhouding bij 375px breed. De schaal loopt geleidelijk over naar de hoofdverhouding tot de brede lay-outbreedte (standaard 1260px), zodat tekst en ruimte op telefoons strakker worden zonder media queries."
 
 msgid "This page could not be found."
 msgstr "Deze pagina is niet gevonden."

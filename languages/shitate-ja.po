@@ -174,8 +174,8 @@ msgstr "タイプスケールで仕立てる"
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "お探しのページは、移動または削除されたか、一時的にご利用いただけない可能性があります。トップページから再度お試しください。"
 
-msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by 1260px, so type and spacing tighten on phones without media queries."
-msgstr "画面幅 375px で使う比率です。1260px までの間でメインの比率へ滑らかに変化するため、メディアクエリなしでスマートフォンでは文字と余白が引き締まります。"
+msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
+msgstr "画面幅 375px で使う比率です。幅広レイアウトの幅（既定 1260px）までの間でメインの比率へ滑らかに変化するため、メディアクエリなしでスマートフォンでは文字と余白が引き締まります。"
 
 msgid "This page could not be found."
 msgstr "ページが見つかりません"
