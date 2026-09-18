@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Changed
+
+- テーマ説明文（style.css の Description と readme.txt）を、タイプスケール・FSE・3 色のカラー設計・制作会社が納品後の運用を想定して作った経緯を伝える文面に差し替え
+
 ## [1.0.2] - 2026-09-17
 
 ### Changed

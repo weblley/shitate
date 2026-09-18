@@ -12,14 +12,7 @@ shitate is a clean, versatile block theme for corporate and business websites.
 
 == Description ==
 
-shitate is a block theme for the Site Editor with a token-driven design system:
-
-* A modular type scale (typescale.com style) driven by a single base size and ratio.
-* A modular spacing ladder built on the same base and ratio, with margin-top rhythm and heading hierarchy.
-* One fluid ratio for the whole scale: the steps tighten on phones and open up on wide screens, with no media queries.
-* A palette-driven color system: change a source color in the Site Editor and the derived tones (hover, tinted surfaces, borders, muted text) follow.
-* Spacing utility classes (mt-0 … p-xxxl) plus a Spacing dropdown in the block toolbar.
-* Four style variations (Dark, Cream, Mist, Mono).
+shitate is a WordPress block theme for corporate and business websites, built around a typographic scale. Choose one of 8 standard type scale ratios, and every size on the site, from headings and body text to spacing, follows that single ratio, so pages look consistent without writing additional CSS. The theme fully supports Full Site Editing: the header, footer, and every template can be edited in the Site Editor. Colors work the same way. Set three colors (accent, base, and contrast) and they are applied across the whole site. Style variations and block patterns for common business uses are included. shitate was developed by a web production agency in Japan for sites that are handed over to clients and updated by them afterward. The settings are intentionally few, so builders can put a site together quickly and the people who maintain it are unlikely to break the design. Available in English and Japanese. See the demo sites at https://shitate.weblley.co.jp
 
 == Copyright ==
 
