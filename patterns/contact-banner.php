@@ -9,8 +9,8 @@
  * Viewport Width: 1400
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"blockGap":"var:preset|spacing|30"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained"}} -->
-<section class="wp-block-group alignfull has-base-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:heading {"textAlign":"center","className":"mt-0","textColor":"base"} -->
+<!-- wp:group {"tagName":"section","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"blockGap":"var:preset|spacing|30","margin":{"top":"0"}}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull has-base-color has-primary-background-color has-text-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:heading {"textAlign":"center","className":"mt-0","textColor":"base"} -->
 <h2 class="wp-block-heading has-text-align-center mt-0 has-base-color has-text-color"><?php esc_html_e( 'Tell us what you are building', 'shitate' ); ?></h2>
 <!-- /wp:heading -->
 
