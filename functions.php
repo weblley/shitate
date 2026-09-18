@@ -37,9 +37,16 @@ function shitate_migrate_theme_mods() {
 	if ( ! is_array( $mods ) ) {
 		return;
 	}
-	foreach ( array( 'ratio', 'text_m', 'round_scale' ) as $key ) {
+	// Copy through the same sanitizers the Customizer uses, so a legacy value
+	// stored under the old name cannot bypass them.
+	$sanitizers = array(
+		'ratio'       => 'shitate_sanitize_ratio',
+		'text_m'      => 'shitate_sanitize_text_m',
+		'round_scale' => 'shitate_sanitize_checkbox',
+	);
+	foreach ( $sanitizers as $key => $sanitize ) {
 		if ( array_key_exists( 'st_' . $key, $mods ) && ! array_key_exists( 'shitate_' . $key, $mods ) ) {
-			set_theme_mod( 'shitate_' . $key, $mods[ 'st_' . $key ] );
+			set_theme_mod( 'shitate_' . $key, call_user_func( $sanitize, $mods[ 'st_' . $key ] ) );
 			remove_theme_mod( 'st_' . $key );
 		}
 	}
@@ -153,6 +160,18 @@ function shitate_sanitize_ratio( $value ) {
 }
 
 /**
+ * Sanitize the base text size: an integer in the 12–24px range the control
+ * offers (out-of-range or non-numeric input falls back to 16).
+ *
+ * @param mixed $value Submitted value.
+ * @return int
+ */
+function shitate_sanitize_text_m( $value ) {
+	$size = absint( $value );
+	return ( $size >= 12 && $size <= 24 ) ? $size : 16;
+}
+
+/**
  * Sanitize the small-screen ratio: a whitelisted ratio or "auto".
  *
  * @param mixed $value Submitted value.
@@ -242,7 +261,7 @@ function shitate_customize_register( $wp_customize ) {
 		array(
 			'default'           => 16,
 			'transport'         => 'postMessage',
-			'sanitize_callback' => 'absint',
+			'sanitize_callback' => 'shitate_sanitize_text_m',
 		)
 	);
 	$wp_customize->add_control(
@@ -315,10 +334,7 @@ function shitate_sanitize_checkbox( $value ) {
  */
 function shitate_scale_inline_css() {
 	$ratio = shitate_sanitize_ratio( get_theme_mod( 'shitate_ratio', '1.25' ) );
-	$base  = absint( get_theme_mod( 'shitate_text_m', 16 ) );
-	if ( $base < 12 || $base > 24 ) {
-		$base = 16;
-	}
+	$base  = shitate_sanitize_text_m( get_theme_mod( 'shitate_text_m', 16 ) );
 
 	$css = shitate_font_inline_css();
 	$css .= ':root{--st-ratio:' . $ratio . ';--st-text-m:' . $base . 'px;';

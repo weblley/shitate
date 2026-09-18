@@ -8,6 +8,10 @@
  * Block Types: core/group
  * Viewport Width: 1400
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
 <!-- wp:group {"layout":{"type":"grid","minimumColumnWidth":"30rem"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"fontSize":"large"} -->
