@@ -36,8 +36,8 @@ msgstr "Terug naar home"
 msgid "Base size (px)"
 msgstr "Basisgrootte (px)"
 
-msgid "Bigger ratio = more contrast between headings (like typescale.com)."
-msgstr "Grotere verhouding = meer contrast tussen koppen (zoals op typescale.com)."
+msgid "Bigger ratio = more contrast between headings."
+msgstr "Grotere verhouding = meer contrast tussen koppen."
 
 msgid "Body text size. The whole scale is built from this."
 msgstr "Grootte van de broodtekst. De hele schaal wordt hierop gebouwd."

@@ -36,8 +36,8 @@ msgstr "Volver al inicio"
 msgid "Base size (px)"
 msgstr "Tamaño base (px)"
 
-msgid "Bigger ratio = more contrast between headings (like typescale.com)."
-msgstr "Mayor proporción = más contraste entre los encabezados (como en typescale.com)."
+msgid "Bigger ratio = more contrast between headings."
+msgstr "Mayor proporción = más contraste entre los encabezados."
 
 msgid "Body text size. The whole scale is built from this."
 msgstr "Tamaño del texto del cuerpo. Toda la escala se construye a partir de él."

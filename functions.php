@@ -213,7 +213,7 @@ function shitate_customize_register( $wp_customize ) {
 			'type'        => 'select',
 			'section'     => 'shitate_typography',
 			'label'       => __( 'Scale ratio', 'shitate' ),
-			'description' => __( 'Bigger ratio = more contrast between headings (like typescale.com).', 'shitate' ),
+			'description' => __( 'Bigger ratio = more contrast between headings.', 'shitate' ),
 			'choices'     => array(
 				'1.067' => __( 'Minor Second — 1.067', 'shitate' ),
 				'1.125' => __( 'Major Second — 1.125', 'shitate' ),

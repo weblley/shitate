@@ -8,6 +8,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Changed
 
+- カスタマイザーの比率の説明文・マニュアル・開発メモから typescale.com への言及を削除
 - レイアウト幅のトークンを Global Styles に追従させた: `--st-width-text` / `--st-width-max` は `--wp--style--global--content-size` / `--wide-size` を参照（フォールバックは theme.json の 64rem / 78.75rem）。サイトエディター「スタイル → レイアウト」で幅を変えるとトークン側も追従する
 - 流体比率の両端を変数化: `--st-fluid-t` は `--st-width-min`（375px）で 0、`--st-width-max`（幅広レイアウトの幅）で 1。従来は 375 と 885（=1260−375）が直書きで、幅広サイズを変えても比率の切り替わり位置が動かなかった。両端は `@property` 登録の `<length>` を経由して px に解決（Safari 対策と同じ仕組み。幅が長さでない値のときは既定値に戻り、分母は 1px 以上に固定）
 - カスタマイザー「本文サイズ」の保存時サニタイズを `absint` から 12〜24px にクランプする `shitate_sanitize_text_m()` に変更（表示側の再検証と同じ範囲）。旧設定名 `st_*` からの移行時もカスタマイザーと同じサニタイザーを通す。パターンファイルに直接アクセス時の ABSPATH ガードを追加（いずれも 2026-09-18 の監査で挙がった低リスクの補強）

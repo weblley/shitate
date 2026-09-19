@@ -36,7 +36,7 @@ msgstr ""
 msgid "Base size (px)"
 msgstr ""
 
-msgid "Bigger ratio = more contrast between headings (like typescale.com)."
+msgid "Bigger ratio = more contrast between headings."
 msgstr ""
 
 msgid "Body text size. The whole scale is built from this."
