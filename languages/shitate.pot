@@ -39,6 +39,9 @@ msgstr ""
 msgid "Bigger ratio = more contrast between headings."
 msgstr ""
 
+msgid "Blog"
+msgstr ""
+
 msgid "Body text size. The whole scale is built from this."
 msgstr ""
 
@@ -117,6 +120,12 @@ msgstr ""
 msgid "Minor Third — 1.2"
 msgstr ""
 
+msgid "No posts were found."
+msgstr ""
+
+msgid "No results found. Try another search."
+msgstr ""
+
 msgid "Not sure what to build yet? That is fine."
 msgstr ""
 
@@ -156,6 +165,9 @@ msgstr ""
 msgid "Scale ratio on small screens"
 msgstr ""
 
+msgid "Search"
+msgstr ""
+
 msgid "See the demo"
 msgstr ""
 
@@ -166,6 +178,9 @@ msgid "Snaps every text step to even pixels (2px)."
 msgstr ""
 
 msgid "Spacing"
+msgstr ""
+
+msgid "Tags: "
 msgstr ""
 
 msgid "Tailored with a type scale"

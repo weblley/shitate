@@ -39,6 +39,9 @@ msgstr "基準サイズ（px）"
 msgid "Bigger ratio = more contrast between headings."
 msgstr "比率が大きいほど見出しの強弱が大きくなります。"
 
+msgid "Blog"
+msgstr "ブログ"
+
 msgid "Body text size. The whole scale is built from this."
 msgstr "本文の文字サイズ。これを基準に全スケールが算出されます。"
 
@@ -117,6 +120,12 @@ msgstr "短2度 — 1.067"
 msgid "Minor Third — 1.2"
 msgstr "短3度 — 1.2"
 
+msgid "No posts were found."
+msgstr "投稿が見つかりませんでした。"
+
+msgid "No results found. Try another search."
+msgstr "見つかりませんでした。別のキーワードでお試しください。"
+
 msgid "Not sure what to build yet? That is fine."
 msgstr "「何を作ればいいか分からない」段階でもOK。"
 
@@ -156,6 +165,9 @@ msgstr "スケール比率"
 msgid "Scale ratio on small screens"
 msgstr "小さな画面での比率"
 
+msgid "Search"
+msgstr "検索"
+
 msgid "See the demo"
 msgstr "デモページを見てみる"
 
@@ -167,6 +179,9 @@ msgstr "各段の文字サイズを偶数ピクセル（2px）に丸めます。
 
 msgid "Spacing"
 msgstr "余白"
+
+msgid "Tags: "
+msgstr "タグ: "
 
 msgid "Tailored with a type scale"
 msgstr "タイプスケールで仕立てる"

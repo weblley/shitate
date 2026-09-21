@@ -64,4 +64,4 @@ JS翻訳（utilities-toolbar）は `languages/shitate-ja-shitate-utilities-toolb
 ## その他
 - カスタマイザーのスケール上書きは `shitate_scale_inline_css()` → フロントは shitate-tokens 直後にインライン、エディタは `block_editor_settings_all` で注入
 - 配布zip: `bin/build-zip.sh` → dist/shitate.zip
-- フッターの©表記は `patterns/footer-credit.php`（年＋サイト名、サイト所有者の表記。テーマ作者の著作権をフロントに出さない＝.org要件）。404本文も `shitate/404-content` パターンで翻訳可
+- フッターの©表記は `patterns/hidden-footer-credit.php`（年＋サイト名、サイト所有者の表記。テーマ作者の著作権をフロントに出さない＝.org要件）。404本文も `shitate/404-content` パターンで翻訳可

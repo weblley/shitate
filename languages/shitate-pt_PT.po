@@ -39,6 +39,9 @@ msgstr "Tamanho base (px)"
 msgid "Bigger ratio = more contrast between headings."
 msgstr "Proporção maior = mais contraste entre os títulos."
 
+msgid "Blog"
+msgstr "Blog"
+
 msgid "Body text size. The whole scale is built from this."
 msgstr "Tamanho do texto do corpo. Toda a escala é construída a partir dele."
 
@@ -117,6 +120,12 @@ msgstr "Segunda menor — 1,067"
 msgid "Minor Third — 1.2"
 msgstr "Terceira menor — 1,2"
 
+msgid "No posts were found."
+msgstr "Não foram encontrados artigos."
+
+msgid "No results found. Try another search."
+msgstr "Sem resultados. Tente outra pesquisa."
+
 msgid "Not sure what to build yet? That is fine."
 msgstr "Ainda não sabe o que construir? Não há problema."
 
@@ -156,6 +165,9 @@ msgstr "Proporção da escala"
 msgid "Scale ratio on small screens"
 msgstr "Proporção da escala em ecrãs pequenos"
 
+msgid "Search"
+msgstr "Pesquisar"
+
 msgid "See the demo"
 msgstr "Ver a demonstração"
 
@@ -167,6 +179,9 @@ msgstr "Ajusta cada passo de texto a píxeis pares (2px)."
 
 msgid "Spacing"
 msgstr "Espaçamento"
+
+msgid "Tags: "
+msgstr "Etiquetas: "
 
 msgid "Tailored with a type scale"
 msgstr "Feito à medida com uma escala tipográfica"

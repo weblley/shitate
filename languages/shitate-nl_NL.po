@@ -39,6 +39,9 @@ msgstr "Basisgrootte (px)"
 msgid "Bigger ratio = more contrast between headings."
 msgstr "Grotere verhouding = meer contrast tussen koppen."
 
+msgid "Blog"
+msgstr "Blog"
+
 msgid "Body text size. The whole scale is built from this."
 msgstr "Grootte van de broodtekst. De hele schaal wordt hierop gebouwd."
 
@@ -117,6 +120,12 @@ msgstr "Kleine secunde — 1,067"
 msgid "Minor Third — 1.2"
 msgstr "Kleine terts — 1,2"
 
+msgid "No posts were found."
+msgstr "Er zijn geen berichten gevonden."
+
+msgid "No results found. Try another search."
+msgstr "Geen resultaten gevonden. Probeer een andere zoekopdracht."
+
 msgid "Not sure what to build yet? That is fine."
 msgstr "Nog geen idee wat je wilt bouwen? Geen probleem."
 
@@ -156,6 +165,9 @@ msgstr "Schaalverhouding"
 msgid "Scale ratio on small screens"
 msgstr "Schaalverhouding op kleine schermen"
 
+msgid "Search"
+msgstr "Zoeken"
+
 msgid "See the demo"
 msgstr "Bekijk de demo"
 
@@ -167,6 +179,9 @@ msgstr "Rondt elke tekststap af op even pixels (2px)."
 
 msgid "Spacing"
 msgstr "Ruimte"
+
+msgid "Tags: "
+msgstr "Tags: "
 
 msgid "Tailored with a type scale"
 msgstr "Op maat gemaakt met een typografische schaal"

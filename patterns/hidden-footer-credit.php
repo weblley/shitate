@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Footer credit
- * Slug: shitate/footer-credit
+ * Slug: shitate/hidden-footer-credit
  * Inserter: no
  * Description: The site owner's copyright line: the current year and the site title. Edit it freely in the Site Editor.
  */

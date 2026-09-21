@@ -3,7 +3,7 @@
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60)"><!-- wp:query-title {"type":"search","fontSize":"xx-large"} /-->
 
-<!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","style":{"spacing":{"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|40"}}}} /-->
+<!-- wp:pattern {"slug":"shitate/hidden-search"} /-->
 
 <!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true,"excludeCurrent":null},"layout":{"type":"default"}} -->
 <div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"grid","columnCount":3}} -->
@@ -21,9 +21,7 @@
 <!-- /wp:post-template -->
 
 <!-- wp:query-no-results -->
-<!-- wp:paragraph -->
-<p>No results found. Try another search.</p>
-<!-- /wp:paragraph -->
+<!-- wp:pattern {"slug":"shitate/hidden-no-results-search"} /-->
 <!-- /wp:query-no-results -->
 
 <!-- wp:query-pagination {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}},"layout":{"type":"flex","justifyContent":"space-between"}} -->
