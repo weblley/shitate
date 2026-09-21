@@ -6,12 +6,20 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-09-22
+
+### Added
+
+- 投稿一覧（index テンプレート）に h1 を追加（`patterns/hidden-posts-heading.php`）。「設定 → 表示設定」で投稿ページに選んだ固定ページのタイトルを使い、未設定なら「Blog」（翻訳あり）。サイトエディターでは通常の見出しブロックとして編集できる
+
 ### Fixed
 
 - ヘッダー／フッターのテンプレートパーツで、外側のグループブロックにも `header` / `footer` タグを付けていたため、テンプレート側の `<header>` / `<footer>`（template-part ブロックの tagName）と二重になっていた。パーツ内の外側グループを `div` にし、セマンティック要素はテンプレート側の 1 つだけに。サイトエディターで保存済みのヘッダー／フッター（DB 側）はテーマファイルより優先されるため、既存サイトはパーツを「リセット」するか同じ修正を手で入れる必要がある
 
 ### Changed
 
+- テンプレートに直書きしていた英語 5 か所を PHP パターンに移して翻訳可能にした: 「No posts were found.」（index / archive → `hidden-no-results`）、「No results found. Try another search.」（search → `hidden-no-results-search`）、検索ブロックのラベルとボタン「Search」（search → `hidden-search`）、タグの接頭辞「Tags: 」（single → `hidden-post-tags`）。日本語と欧州 6 言語の訳を同梱。デフォルトテーマ（Twenty Twenty-Three〜Five）と同じ作り
+- 内部用パターンの名前を `hidden-` 接頭辞に統一: `shitate/footer-credit` → `shitate/hidden-footer-credit`、`shitate/404-content` → `shitate/hidden-404`。**旧スラッグは残していない**ので、サイトエディターで保存済みのフッター／404 テンプレートに旧スラッグの参照が残っているサイトでは、その箇所が空になる。該当テンプレートを「カスタマイズをクリア」するか、スラッグを書き換えること
 - カスタマイザーの比率の説明文・マニュアル・開発メモから他社サイトについての記述を削除
 - レイアウト幅のトークンを Global Styles に追従させた: `--st-width-text` / `--st-width-max` は `--wp--style--global--content-size` / `--wide-size` を参照（フォールバックは theme.json の 64rem / 78.75rem）。サイトエディター「スタイル → レイアウト」で幅を変えるとトークン側も追従する
 - 流体比率の両端を変数化: `--st-fluid-t` は `--st-width-min`（375px）で 0、`--st-width-max`（幅広レイアウトの幅）で 1。従来は 375 と 885（=1260−375）が直書きで、幅広サイズを変えても比率の切り替わり位置が動かなかった。両端は `@property` 登録の `<length>` を経由して px に解決（Safari 対策と同じ仕組み。幅が長さでない値のときは既定値に戻り、分母は 1px 以上に固定）

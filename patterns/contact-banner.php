@@ -8,6 +8,10 @@
  * Block Types: core/group
  * Viewport Width: 1400
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
 <!-- wp:group {"tagName":"section","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"},"blockGap":"var:preset|spacing|30","margin":{"top":"0"}}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained"}} -->
 <section class="wp-block-group alignfull has-base-color has-primary-background-color has-text-color has-background" style="margin-top:0;padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:heading {"textAlign":"center","className":"mt-0","textColor":"base"} -->

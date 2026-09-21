@@ -52,6 +52,15 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.3 =
+* Posts page (index template) now has an H1: the title of the page set as "Posts page", or "Blog" when none is set.
+* The remaining hard-coded English in templates ("No posts were found.", "No results found. Try another search.", the search label/button and the "Tags:" prefix) moved into PHP patterns and is translatable; Japanese and six European translations included.
+* Internal patterns renamed with a hidden- prefix (footer-credit → hidden-footer-credit, 404-content → hidden-404). Templates saved in the Site Editor that still reference the old slugs need to be reset or updated.
+* Header/footer template parts no longer nest a second <header>/<footer> inside the template-part element.
+* Layout width tokens follow Global Styles (content/wide size), and the fluid type-scale ratio reaches its full value at the wide layout width instead of a fixed 1260px.
+* Base text size is clamped to 12–24px at save time; legacy settings are sanitized on migration; pattern files gained a direct-access guard.
+* Description rewritten; no more references to third-party sites in the Customizer text.
+
 = 1.0.2 =
 * Requires PHP is now 7.4 (was 7.2), matching WordPress 7.0's own minimum. Verified on PHP 8.5.
 
