@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Cache buster for the theme's CSS/JS. Kept in sync with the style.css header
 // by bin/release.sh — do not edit by hand.
 if ( ! defined( 'SHITATE_VERSION' ) ) {
-	define( 'SHITATE_VERSION', '1.0.2' );
+	define( 'SHITATE_VERSION', '1.0.3' );
 }
 
 // Derived palette tones (Base / Two, Border, Contrast / Two, Neutral,
