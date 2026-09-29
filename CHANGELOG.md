@@ -6,6 +6,12 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Changed
+
+- wordpress.org のタグを 14 個から 18 個に追加（`style.css` と `readme.txt` の `Tags:` を同一内容に）。追加したのは `full-width-template`（`templates/page-full-width.html`）、`template-editing`（テンプレート 7 種とテンプレートパーツをサイトエディターで編集できる）、`theme-options`（カスタマイザーの Typography Scale / パフォーマンス）、`one-column`（全テンプレートにサイドバー領域がない）。既存の 14 個は削除も並べ替えもしていない
+- `readme.txt` の Resources 節のパス誤りを修正（`assets/css/reset/reset.css` → `assets/css/reset.css`。0.4.2 でフラットにしたときの取りこぼし）
+- テーマ説明文（`style.css` の Description と `readme.txt` の Description、同一文面）を差し替え。訴求の軸を「比率で整う」から「8 つから選ぶだけで決まる／前提知識が要らない」に移した。あわせて事実誤りを 2 か所修正: 源となる色は 3 色ではなく 4 色（base / contrast / primary / accent）、同梱翻訳は「英語と日本語」ではなく日本語＋欧州 6 言語
+
 ## [1.0.3] - 2026-09-22
 
 ### Added
