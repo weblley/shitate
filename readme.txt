@@ -6,13 +6,13 @@ Requires PHP: 7.4
 Stable tag: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, portfolio, block-patterns, full-site-editing, block-styles, style-variations, wide-blocks, editor-style, custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: blog, portfolio, block-patterns, full-site-editing, block-styles, style-variations, wide-blocks, editor-style, custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, full-width-template, template-editing, theme-options, one-column
 
 shitate is a clean, versatile block theme for corporate and business websites.
 
 == Description ==
 
-shitate is a WordPress block theme for corporate and business websites, built around a typographic scale. Choose one of 8 standard type scale ratios, and every size on the site, from headings and body text to spacing, follows that single ratio, so pages look consistent without writing additional CSS. The theme fully supports Full Site Editing: the header, footer, and every template can be edited in the Site Editor. Colors work the same way. Set three colors (accent, base, and contrast) and they are applied across the whole site. Style variations and block patterns for common business uses are included. shitate was developed by a web production agency in Japan for sites that are handed over to clients and updated by them afterward. The settings are intentionally few, so builders can put a site together quickly and the people who maintain it are unlikely to break the design. Available in English and Japanese. See the demo sites at https://shitate.weblley.co.jp
+shitate is a block theme for corporate and business websites that asks you to make one decision instead of a hundred. Pick one of 8 standard type scale ratios in the Customizer and the whole site settles: heading sizes, body text and the spacing between every block are all derived from that single ratio, so pages stay consistent without writing a line of CSS. There are no breakpoints to manage and no layout theory to learn first. Colors work the same way: set the four source colors in the Site Editor and the derived tones (hover states, tinted surfaces, borders, muted text) follow on their own. Four style variations and block patterns for common business pages are included, and the header, footer and every template are editable in the Site Editor. shitate was built by a web production agency in Japan for sites that are handed over to clients and updated by them afterward. The settings are deliberately few, so a site can be put together quickly and the people who maintain it are unlikely to break the design. Translations for Japanese, German, French, Spanish, Italian, Dutch and Portuguese are bundled. See the demo sites at https://shitate.weblley.co.jp
 
 == Copyright ==
 
@@ -44,7 +44,7 @@ assets/css/*.css, assets/js/*.js, patterns/*.php, templates, parts, theme.json a
 Copyright (C) 2026 weblley inc. Original work created for this theme.
 License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gpl-2.0.html
 
-assets/css/reset/reset.css
+assets/css/reset.css
 Copyright (C) 2026 weblley inc. A small base reset written for this theme, informed by widely shared modern reset practices; no third-party code is included.
 License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gpl-2.0.html
 
