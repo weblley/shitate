@@ -52,6 +52,11 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.4 =
+* Added four more theme tags: full-width-template, template-editing, theme-options and one-column.
+* Expanded the theme description to say what the eight ready-made scales do and what the theme gives you without any prior knowledge of typographic scales. Corrected two details: the palette is derived from four source colours (base, contrast, primary, accent), and the bundled translations are Japanese plus six European languages.
+* Fixed a wrong path in the Resources section of this readme (assets/css/reset.css).
+
 = 1.0.3 =
 * Posts page (index template) now has an H1: the title of the page set as "Posts page", or "Blog" when none is set.
 * The remaining hard-coded English in templates ("No posts were found.", "No results found. Try another search.", the search label/button and the "Tags:" prefix) moved into PHP patterns and is translatable; Japanese and six European translations included.

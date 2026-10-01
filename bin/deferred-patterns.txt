@@ -1,0 +1,27 @@
+# パターンのうち、今回の配布物には含めないもの（1ファイル1行、patterns/ 以下のファイル名）。
+#
+# 「2026-09 batch 1」の12本は 1.0.4 では見送り（責任者決定 2026-09-30、Claw Empire
+# タスク 540e6f5b、選択肢 C「今回は翻訳もパターンも見送り、v1.0.4 は Tags と
+# Description だけで出す」）。ファイルはリポジトリに残したまま、配布zipからだけ
+# 除外する＝次のバージョンでそのまま出せるようにしておく。
+#
+# このリストを使う側は2つ:
+#   - bin/build-zip.sh      ステージング後に該当ファイルを落とす
+#   - bin/trim-deferred-i18n.mjs  languages/ のカタログを「出荷するファイルだけ」で作り直す
+#
+# 12本を出荷するバージョンでは、このファイルを空にしてから
+#   cd ../../plugins/shitate-pro-blocks && node bin/make-i18n.mjs
+# でカタログを作り直す（抽出が全ファイルに戻るので、trim は不要になる）。
+
+about-image-text.php
+contact-banner.php
+faq.php
+features-3.php
+hero-cover.php
+hero-split.php
+latest-posts.php
+pricing-3.php
+services-grid.php
+steps-3.php
+team-3.php
+testimonials-2.php
