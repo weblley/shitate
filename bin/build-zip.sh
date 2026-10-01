@@ -24,6 +24,7 @@ for mo in languages/*.mo; do
 done
 if [ "$(grep -c '^msgstr ""$' languages/shitate-ja.po)" -gt 3 ]; then
 	echo "✗ languages/shitate-ja.po has untranslated strings — regenerate the translations before building"
+	echo "  (if the strings belong to patterns listed in bin/deferred-patterns.txt, run bin/trim-deferred-i18n.mjs)"
 	exit 1
 fi
 
@@ -36,6 +37,23 @@ for item in style.css theme.json functions.php readme.txt screenshot.png templat
 		cp -R "$item" "$STAGE/"
 	fi
 done
+
+# Patterns held back from this release stay in the repo but must not reach the
+# zip: the translation catalogs are built for the shipped file set only, so a
+# pattern that ships without its strings would render untranslated.
+while IFS= read -r line || [ -n "$line" ]; do
+	name="${line%%#*}"
+	name="${name// /}"
+	name="${name//$'\t'/}"
+	[ -n "$name" ] || continue
+	if [ ! -e "$STAGE/patterns/$name" ]; then
+		echo "✗ bin/deferred-patterns.txt lists patterns/$name but the theme has no such file — update the list"
+		rm -rf "$STAGE"
+		exit 1
+	fi
+	rm "$STAGE/patterns/$name"
+	echo "  held back: patterns/$name"
+done < bin/deferred-patterns.txt
 
 find "$STAGE" -name ".DS_Store" -delete
 
