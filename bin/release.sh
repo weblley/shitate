@@ -51,4 +51,14 @@ git push origin HEAD "$TAG"
 echo "→ Creating GitHub release…"
 gh release create "$TAG" "dist/shitate.zip" --title "Shitate $VERSION" --notes "$NOTES"
 
+
+# 最新版の配布 zip を iCloud の「WordPress関連/shitate」にも置く（手元の保管場所。
+# 同じ製品の古い zip は置き換える）。フォルダが無い環境では何もしない。
+DELIVER_DIR="$HOME/Library/Mobile Documents/com~apple~CloudDocs/WordPress関連/shitate"
+if [ -d "$DELIVER_DIR" ]; then
+	rm -f "$DELIVER_DIR"/shitate-[0-9]*.zip
+	cp "dist/shitate.zip" "$DELIVER_DIR/shitate-$VERSION.zip"
+	echo "→ Copied to $DELIVER_DIR/shitate-$VERSION.zip"
+fi
+
 echo "✓ Released $VERSION → $(gh release view "$TAG" --json url -q .url)"

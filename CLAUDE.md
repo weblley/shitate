@@ -57,7 +57,7 @@ JS翻訳（utilities-toolbar）は `languages/shitate-ja-shitate-utilities-toolb
 - リポジトリ: `weblley/shitate`（private）。アップデート情報は **CHANGELOG.md** に記録していく（普段は [Unreleased] に追記）
 - リリース手順:
   1. CHANGELOG.md に「## [X.Y.Z] - YYYY-MM-DD」セクションを書く（[Unreleased] から移す）
-  2. `bin/release.sh X.Y.Z` — バージョン一括更新（style.css / readme.txt）→ commit → tag vX.Y.Z → zipビルド → push → GitHub Release にzip添付・CHANGELOG該当節をノートに転記、まで自動
+  2. `bin/release.sh X.Y.Z` — バージョン一括更新（style.css / readme.txt）→ commit → tag vX.Y.Z → zipビルド → push → GitHub Release にzip添付・CHANGELOG該当節をノートに転記・**iCloud「WordPress関連/shitate/shitate-X.Y.Z.zip」へコピー（旧版は置き換え。2026-10-05〜）**、まで自動
 - readme.txt の `== Changelog ==` はユーザー向け（.org審査対象）。リリース時に同内容を手動で反映する
 - 日常の変更は普通に commit / push してよい（Release はタグ時のみ作られる）
 
