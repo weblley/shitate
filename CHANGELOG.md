@@ -8,6 +8,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Added
 
+- カスタマイザー「Typography Scale」に「日本語組版の最適化」チェックボックス（既定オフ）。オンでサイト言語が日本語のときだけ、body に `line-break: strict`、`text-autospace: normal`、`font-feature-settings: "palt" 1` を出力（`code` / `pre` / `kbd` / `samp` は palt を解除）。フォントスタックと同じく `determine_locale()` で判定し、エディターにも同じ CSS を流す。`word-break: auto-phrase` は採用しない（pro blocks の `[wbr]` で手動制御する方針。Chromium のみ対応のため）
+
+### Added
+
 - 2026-09 のパターン 12 本（`patterns/about-image-text` / `contact-banner` / `faq` / `features-3` / `hero-cover` / `hero-split` / `latest-posts` / `pricing-3` / `services-grid` / `steps-3` / `team-3` / `testimonials-2`）。**1.0.4 では配布しない**（責任者決定 2026-09-30）。ファイルはリポジトリに残したまま `bin/deferred-patterns.txt` に列挙し、`bin/build-zip.sh` が配布zipから落としている。出荷する版ではこのリストを空にして、プラグイン側の `bin/make-i18n.mjs` で翻訳カタログを作り直す（12 本の文字列 109 件は未訳のまま）
 
 ## [1.0.4] - 2026-10-02

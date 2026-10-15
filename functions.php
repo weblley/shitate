@@ -314,6 +314,24 @@ function shitate_customize_register( $wp_customize ) {
 			'description' => __( 'Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read.', 'shitate' ),
 		)
 	);
+
+	$wp_customize->add_setting(
+		'shitate_ja_typography',
+		array(
+			'default'           => false,
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'shitate_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'shitate_ja_typography',
+		array(
+			'type'        => 'checkbox',
+			'section'     => 'shitate_typography',
+			'label'       => __( 'Japanese typography', 'shitate' ),
+			'description' => __( 'When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone.', 'shitate' ),
+		)
+	);
 }
 add_action( 'customize_register', 'shitate_customize_register' );
 
@@ -373,7 +391,42 @@ function shitate_scale_inline_css() {
 		$css .= ':root{--st-text-s:0.95rem;--st-text-xs:0.8rem;--st-text-xxs:0.75rem;}';
 	}
 
+	$css .= shitate_ja_typography_css();
+
 	return $css;
+}
+
+/**
+ * Japanese typesetting rules (Customizer "Japanese typography", off by default).
+ *
+ * Emitted only when the switch is on AND the request locale is Japanese, the
+ * same test the font stack uses, so the rules follow multilingual plugins
+ * that switch the locale per page and reach the editor canvas through the
+ * same inline CSS. Everything is `:where()` (specificity 0) so site CSS wins.
+ *
+ * - line-break: strict — print-style kinsoku: no small kana or long-vowel
+ *   marks at the start of a line. Supported everywhere.
+ * - text-autospace: normal — a quarter-em between Japanese and Latin text.
+ *   The initial value in browsers that implement it (Baseline 2025); stated
+ *   explicitly so a reset or plugin cannot switch it off.
+ * - font-feature-settings: "palt" — proportional kana/kanji widths, applied
+ *   site-wide (the owner's call: tighter running text is a common choice on
+ *   Japanese sites). Code elements keep full-width metrics. Fonts without the
+ *   feature (Meiryo) simply ignore it.
+ * word-break: auto-phrase is deliberately not used: shitate pro blocks has
+ * [wbr] for manual phrase breaks, and the automatic one is Chromium-only.
+ *
+ * @return string
+ */
+function shitate_ja_typography_css() {
+	if ( ! get_theme_mod( 'shitate_ja_typography', false ) ) {
+		return '';
+	}
+	if ( 'ja' !== substr( determine_locale(), 0, 2 ) ) {
+		return '';
+	}
+	return ':where(body){line-break:strict;text-autospace:normal;font-feature-settings:"palt" 1}'
+		. ':where(code,pre,kbd,samp){font-feature-settings:normal}';
 }
 
 /**
