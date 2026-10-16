@@ -149,6 +149,41 @@ function shitate_top_margin_only_supports( $args, $block_name ) {
 add_filter( 'register_block_type_args', 'shitate_top_margin_only_supports', 10, 2 );
 
 /**
+ * Show the font family and appearance (weight / style) controls by default
+ * on headings and paragraphs.
+ *
+ * Core hides them behind the Typography panel's "+" menu and shows only the
+ * size, so changing a single heading's face or weight takes three clicks
+ * most people never find. The site-wide values still live in Global Styles
+ * (Styles → Typography); this only affects which per-block controls are
+ * visible in the inspector.
+ *
+ * @param array  $args       Registered block type arguments.
+ * @param string $block_name Block name.
+ * @return array Filtered arguments.
+ */
+function shitate_default_typography_controls( $args, $block_name ) {
+	if ( ! in_array( $block_name, array( 'core/paragraph', 'core/heading', 'core/post-title', 'core/list', 'core/quote', 'core/button' ), true ) ) {
+		return $args;
+	}
+	if ( ! isset( $args['supports']['typography'] ) || ! is_array( $args['supports']['typography'] ) ) {
+		return $args;
+	}
+	$defaults = isset( $args['supports']['typography']['__experimentalDefaultControls'] ) && is_array( $args['supports']['typography']['__experimentalDefaultControls'] )
+		? $args['supports']['typography']['__experimentalDefaultControls']
+		: array();
+
+	$defaults['fontSize']       = true;
+	$defaults['fontFamily']     = true;
+	$defaults['fontAppearance'] = true;
+
+	$args['supports']['typography']['__experimentalDefaultControls'] = $defaults;
+
+	return $args;
+}
+add_filter( 'register_block_type_args', 'shitate_default_typography_controls', 10, 2 );
+
+/**
  * Sanitize the type-scale ratio against the allowed list.
  *
  * @param string $value Submitted value.

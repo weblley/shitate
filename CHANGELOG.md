@@ -16,6 +16,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Added
 
+- エディターの「タイポグラフィ」パネルで、段落・見出し・投稿タイトル・リスト・引用・ボタンに「フォント」と「外観（太さ・スタイル）」を最初から表示（`register_block_type_args` で既定コントロールに追加。従来は「+」メニューの中に隠れていた）。サイト全体の既定値はこれまでどおりサイトエディター「スタイル → タイポグラフィ」
 - カスタマイザー「Typography Scale」に「日本語組版の最適化」チェックボックス（既定オフ）。オンでサイト言語が日本語のときだけ、body に `line-break: strict`、`text-autospace: normal`、`font-feature-settings: "palt" 1` を出力（`code` / `pre` / `kbd` / `samp` は palt を解除）。フォントスタックと同じく `determine_locale()` で判定し、エディターにも同じ CSS を流す。`word-break: auto-phrase` は採用しない（pro blocks の `[wbr]` で手動制御する方針。Chromium のみ対応のため）
 
 ### Added
