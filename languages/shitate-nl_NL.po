@@ -6,23 +6,80 @@ msgstr ""
 "Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "$19"
+msgstr "$19"
+
+msgid "$49"
+msgstr "$49"
+
+msgid "$99"
+msgstr "$99"
+
+msgid "01"
+msgstr "01"
+
+msgid "02"
+msgstr "02"
+
+msgid "03"
+msgstr "03"
+
+msgid "03-0000-0000"
+msgstr "03-0000-0000"
+
 msgid "404 Not Found"
 msgstr "404 – Pagina niet gevonden"
+
+msgid "A block theme for everyday sites"
+msgstr "Een blokthema voor alledaagse websites"
 
 msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
 msgstr "Een ontwerp zonder overbodige functies betekent dat je niet achter voortdurende updates aan hoeft. Eén keer bouwen, daarna lang en rustig laten draaien."
 
+msgid "A few words from the people who build their sites with us."
+msgstr "Een paar woorden van de mensen die hun site met ons bouwen."
+
 msgid "A landing-page style built from large elements."
 msgstr "Een landingspagina-stijl opgebouwd uit grote elementen."
+
+msgid "A short session with your team on the editor, so updating the site stops being someone else's job."
+msgstr "Een korte sessie met uw team over de editor, zodat het bijwerken van de site niet langer iemand anders zijn taak is."
 
 msgid "A simple structure"
 msgstr "Een eenvoudige structuur"
 
+msgid "A single page built around one message, one offer and one clear next step."
+msgstr "Eén pagina rond één boodschap, één aanbod en één duidelijke volgende stap."
+
+msgid "A small studio that builds websites to last"
+msgstr "Een kleine studio die websites bouwt om lang mee te gaan"
+
+msgid "A small team that takes every project from the first sketch to the day it goes live."
+msgstr "Een klein team dat elk project begeleidt van de eerste schets tot de dag dat het live gaat."
+
 msgid "A standard site modelled on a typical company website, combining trust and readability."
 msgstr "Een klassieke site naar het voorbeeld van een typische bedrijfswebsite, die vertrouwen en leesbaarheid combineert."
 
+msgid "About us"
+msgstr "Over ons"
+
+msgid "Agency"
+msgstr "Agency"
+
+msgid "All four style variations"
+msgstr "Alle vier stijlvarianten"
+
+msgid "Any of them. Dark, Cream, Mist and Mono each carry their own colors, so you can switch between them at any point without redoing your pages."
+msgstr "Elke variant. Dark, Cream, Mist en Mono hebben elk hun eigen kleuren, dus u kunt op elk moment wisselen zonder uw pagina’s opnieuw te maken."
+
+msgid "Aoi Tanaka"
+msgstr "Aoi Tanaka"
+
 msgid "Apply rounding to font sizes"
 msgstr "Lettergroottes afronden"
+
+msgid "Art Director"
+msgstr "Art director"
 
 msgid "Augmented Fourth — 1.414"
 msgstr "Overmatige kwart — 1,414"
@@ -45,20 +102,59 @@ msgstr "Blog"
 msgid "Body text size. The whole scale is built from this."
 msgstr "Grootte van de broodtekst. De hele schaal wordt hierop gebouwd."
 
+msgid "Build the site you had in mind"
+msgstr "Bouw de site die u voor ogen had"
+
+msgid "Builds with the blocks the editor already ships, so the site stays easy to update."
+msgstr "Bouwt met de blokken die de editor al meelevert, zodat de site makkelijk te onderhouden blijft."
+
 msgid "Call us"
 msgstr "Bel ons"
+
+msgid "Can I change the colors and the type size?"
+msgstr "Kan ik de kleuren en de tekstgrootte aanpassen?"
 
 msgid "Center horizontally (mx-auto)"
 msgstr "Horizontaal centreren (mx-auto)"
 
+msgid "Change the four source colors in the editor and the softer tones around them are recalculated for you."
+msgstr "Pas de vier basiskleuren in de editor aan en de zachtere tinten eromheen worden automatisch herberekend."
+
+msgid "Change the scale once and the whole site follows: headings, body text and the space between them."
+msgstr "Verander de schaal één keer en de hele site volgt: koppen, lopende tekst en de ruimte ertussen."
+
+msgid "Choose Agency"
+msgstr "Kies Agency"
+
+msgid "Choose Starter"
+msgstr "Kies Starter"
+
+msgid "Choose Studio"
+msgstr "Kies Studio"
+
 msgid "Clear spacing classes"
 msgstr "Ruimteklassen verwijderen"
+
+msgid "Colors that follow along"
+msgstr "Kleuren die meebewegen"
+
+msgid "Company profiles, recruitment pages and news, laid out so your team can keep them current."
+msgstr "Bedrijfsprofielen, vacaturepagina’s en nieuws, zo opgezet dat uw team ze zelf actueel kan houden."
 
 msgid "Contact us"
 msgstr "Neem contact op"
 
+msgid "Content and writing"
+msgstr "Inhoud en tekst"
+
+msgid "Core blocks only, a type scale you can tune in one place, and nothing to unlearn later."
+msgstr "Alleen kernblokken, een typografische schaal die u op één plek afstelt, en niets om later weer af te leren."
+
 msgid "Corporate"
 msgstr "Zakelijk"
+
+msgid "Corporate sites"
+msgstr "Bedrijfswebsites"
 
 msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
 msgstr "Bedrijfssites, zakelijke sites, alles wat je bouwt — vrij, en met een beetje plezier."
@@ -66,14 +162,26 @@ msgstr "Bedrijfssites, zakelijke sites, alles wat je bouwt — vrij, en met een 
 msgid "Default"
 msgstr "Standaard"
 
+msgid "Do I need a page builder plugin to use this theme?"
+msgstr "Heb ik een pagebuilder-plugin nodig voor dit thema?"
+
+msgid "Editing pages is finally something our staff can do on their own. Spacing and colours come from the theme, so the result never falls apart."
+msgstr "Pagina’s bewerken kan ons team eindelijk zelf. Ruimte en kleuren komen uit het thema, dus het resultaat valt nooit uit elkaar."
+
 msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
 msgstr "Acht schalen vernoemd naar muzikale intervallen, van de kleine secunde tot de gulden snede. Ingetogen stappen of gedurfde sprongen: kies de schaal die bij het karakter van je site past."
 
 msgid "Eight type scales"
 msgstr "Acht typografische schalen"
 
+msgid "Email support"
+msgstr "Ondersteuning per e-mail"
+
 msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
 msgstr "Elke instelling zit in CSS-variabelen. Ook na het kiezen van een schaal kun je die verfijnen of wisselen door een variabele te overschrijven, in plaats van om het thema heen te werken."
+
+msgid "Every size on the page comes from one ratio"
+msgstr "Elke maat op de pagina komt uit één verhouding"
 
 msgid "Fixed sizes for small text"
 msgstr "Vaste groottes voor kleine tekst"
@@ -84,17 +192,71 @@ msgstr "Voor mensen met"
 msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
 msgstr "Voor studio’s en freelancers tijdens het werk, en voor de klant die de site na oplevering beheert. Gebouwd om in beide handen goed te liggen."
 
+msgid "Free, and built to stay that way"
+msgstr "Gratis, en zo gebouwd dat het zo blijft"
+
+msgid "Frequently asked questions"
+msgstr "Veelgestelde vragen"
+
+msgid "From your first message to the day the site goes live, in three steps."
+msgstr "Van uw eerste bericht tot de dag dat de site live gaat, in drie stappen."
+
+msgid "Front-end Engineer"
+msgstr "Front-end developer"
+
 msgid "Generous space and breathing room around every element, the way Apple does it."
 msgstr "Ruime witruimte en lucht rond elk element, zoals Apple dat doet."
 
+msgid "Get started"
+msgstr "Aan de slag"
+
+msgid "Go live"
+msgstr "Live gaan"
+
 msgid "Golden Ratio — 1.618"
 msgstr "Gulden snede — 1,618"
+
+msgid "Haru Kawakami"
+msgstr "Haru Kawakami"
+
+msgid "Headings, body text and spacing all come from a single ratio, so a page stays in proportion wherever you edit it."
+msgstr "Koppen, lopende tekst en ruimte komen allemaal uit één verhouding, dus een pagina blijft in verhouding waar u ook bewerkt."
+
+msgid "How it works"
+msgstr "Hoe het werkt"
+
+msgid "If something is still unclear, send us a message and we will answer it here."
+msgstr "Is er nog iets onduidelijk? Stuur ons een bericht en we beantwoorden het hier."
+
+msgid "Interviews, structure and copy, so the pages say what you actually want them to say."
+msgstr "Interviews, structuur en tekst, zodat de pagina’s zeggen wat u echt wilt zeggen."
+
+msgid "Is the theme ready for languages other than English?"
+msgstr "Is het thema geschikt voor andere talen dan Engels?"
+
+msgid "It is. The theme ships with translations, and the text in these patterns follows whichever language your site is set to."
+msgstr "Ja. Het thema bevat vertalingen en de tekst in deze patronen volgt de taal die voor uw site is ingesteld."
 
 msgid "Japanese typography"
 msgstr "Japanse typografie"
 
 msgid "Just tell us the challenge you are facing today."
 msgstr "Vertel ons gewoon voor welke uitdaging je nu staat."
+
+msgid "Keeps the schedule and the scope in one piece, and answers your questions the same day."
+msgstr "Houdt planning en omvang bij elkaar en beantwoordt uw vragen dezelfde dag."
+
+msgid "Kenji Sato"
+msgstr "Kenji Sato"
+
+msgid "Landing pages"
+msgstr "Landingspagina’s"
+
+msgid "Latest news"
+msgstr "Laatste nieuws"
+
+msgid "Maintenance"
+msgstr "Onderhoud"
 
 msgid "Major Second — 1.125"
 msgstr "Grote secunde — 1,125"
@@ -108,8 +270,14 @@ msgstr "Marge onder"
 msgid "Margin top"
 msgstr "Marge boven"
 
+msgid "Marketing Lead, Kitamura Foods"
+msgstr "Marketing lead, Kitamura Foods"
+
 msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
 msgstr "Markeert de eerste grote afbeelding in de template als hoge prioriteit en laadt de afbeeldingen daarna vertraagd. Zet dit uit als een prestatieplugin (WP Rocket, Perfmatters, enz.) het laden van afbeeldingen regelt, zodat ze elkaar niet in de weg zitten."
+
+msgid "Mika Fujita"
+msgstr "Mika Fujita"
 
 msgid "Minimal"
 msgstr "Minimaal"
@@ -123,17 +291,29 @@ msgstr "Kleine secunde — 1,067"
 msgid "Minor Third — 1.2"
 msgstr "Kleine terts — 1,2"
 
+msgid "No posts have been published yet."
+msgstr "Er zijn nog geen berichten gepubliceerd."
+
 msgid "No posts were found."
 msgstr "Er zijn geen berichten gevonden."
 
 msgid "No results found. Try another search."
 msgstr "Geen resultaten gevonden. Probeer een andere zoekopdracht."
 
+msgid "No. Everything here is built from the blocks that come with WordPress, and the layouts are edited in the site editor."
+msgstr "Nee. Alles hier is gebouwd met de blokken die WordPress meelevert, en de lay-outs bewerkt u in de site-editor."
+
 msgid "Not sure what to build yet? That is fine."
 msgstr "Nog geen idee wat je wilt bouwen? Geen probleem."
 
 msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
 msgstr "In Notion-stijl: minimale opmaak en ingetogen typografisch contrast, eenvoudig gehouden via de typografische schaal."
+
+msgid "One type scale"
+msgstr "Eén typografische schaal"
+
+msgid "One website"
+msgstr "Eén website"
 
 msgid "Optimize image loading"
 msgstr "Laden van afbeeldingen optimaliseren"
@@ -159,6 +339,30 @@ msgstr "Reine kwart — 1,333"
 msgid "Performance"
 msgstr "Prestaties"
 
+msgid "Priority support"
+msgstr "Prioriteitsondersteuning"
+
+msgid "Project Manager"
+msgstr "Projectmanager"
+
+msgid "Read more about us"
+msgstr "Lees meer over ons"
+
+msgid "Read the guide"
+msgstr "Lees de handleiding"
+
+msgid "Replace this image and text with your own story, and the layout will follow along on every screen size."
+msgstr "Vervang deze afbeelding en tekst door uw eigen verhaal; de lay-out volgt op elk schermformaat."
+
+msgid "Representative Director, Sato Design Office"
+msgstr "Directeur, Sato Design Office"
+
+msgid "Request a brochure"
+msgstr "Brochure aanvragen"
+
+msgid "Responsive without breakpoints"
+msgstr "Responsief zonder breekpunten"
+
 msgid "Rich"
 msgstr "Rijk"
 
@@ -171,17 +375,50 @@ msgstr "Schaalverhouding op kleine schermen"
 msgid "Search"
 msgstr "Zoeken"
 
+msgid "See all news"
+msgstr "Al het nieuws"
+
 msgid "See the demo"
 msgstr "Bekijk de demo"
+
+msgid "See the plan"
+msgstr "Bekijk het plan"
+
+msgid "See what it can do"
+msgstr "Zie wat het kan"
+
+msgid "Send us a message with what you have in mind. A rough idea is enough to get started."
+msgstr "Stuur ons een bericht met wat u in gedachten heeft. Een ruw idee is genoeg om te beginnen."
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Zet Klein / Extra klein / Heel klein op 0,95rem / 0,8rem / 0,75rem in plaats van te delen door de verhouding, waardoor tekst te klein kan worden om te lezen."
 
+msgid "Simple pricing"
+msgstr "Eenvoudige prijzen"
+
+msgid "Six things we are asked for most often. Rename them to match your own work."
+msgstr "De zes dingen waar we het vaakst om worden gevraagd. Hernoem ze naar uw eigen werk."
+
 msgid "Snaps every text step to even pixels (2px)."
 msgstr "Rondt elke tekststap af op even pixels (2px)."
 
+msgid "Sota Nishimura"
+msgstr "Sota Nishimura"
+
 msgid "Spacing"
 msgstr "Ruimte"
+
+msgid "Start building"
+msgstr "Begin met bouwen"
+
+msgid "Starter"
+msgstr "Starter"
+
+msgid "Studio"
+msgstr "Studio"
+
+msgid "Support within one business day"
+msgstr "Ondersteuning binnen één werkdag"
 
 msgid "Tags: "
 msgstr "Tags: "
@@ -189,8 +426,17 @@ msgstr "Tags: "
 msgid "Tailored with a type scale"
 msgstr "Op maat gemaakt met een typografische schaal"
 
+msgid "Tell us about it"
+msgstr "Vertel het ons"
+
+msgid "Tell us what you are building"
+msgstr "Vertel ons wat u bouwt"
+
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "De pagina die je zoekt is mogelijk verplaatst of verwijderd, of tijdelijk niet beschikbaar. Probeer het opnieuw vanaf de homepage."
+
+msgid "The people behind the work"
+msgstr "De mensen achter het werk"
 
 msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
 msgstr "De verhouding bij 375px breed. De schaal loopt geleidelijk over naar de hoofdverhouding tot de brede lay-outbreedte (standaard 1260px), zodat tekst en ruimte op telefoons strakker worden zonder media queries."
@@ -198,17 +444,95 @@ msgstr "De verhouding bij 375px breed. De schaal loopt geleidelijk over naar de 
 msgid "This page could not be found."
 msgstr "Deze pagina is niet gevonden."
 
+msgid "Three ideas that shape every page you build with it."
+msgstr "Drie ideeën die elke pagina vormen die u ermee bouwt."
+
+msgid "Three plans, no hidden extras. Change the numbers to your own."
+msgstr "Drie plannen, geen verborgen extra’s. Vervang de cijfers door uw eigen."
+
+msgid "Training"
+msgstr "Training"
+
 msgid "Try it now"
 msgstr "Probeer het nu"
+
+msgid "Turns a rough brief into a layout you can actually read, and keeps the grid honest."
+msgstr "Maakt van een ruwe briefing een lay-out die echt leesbaar is, en houdt het raster eerlijk."
+
+msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
+msgstr "Tekst en ruimte krimpen soepel mee als het scherm smaller wordt, zonder plotselinge sprong bij een vaste breedte."
 
 msgid "Typography Scale"
 msgstr "Typografische schaal"
 
+msgid "Unlimited websites"
+msgstr "Onbeperkt aantal websites"
+
+msgid "Up to five websites"
+msgstr "Tot vijf websites"
+
+msgid "Updates for as long as you subscribe"
+msgstr "Updates zolang u geabonneerd bent"
+
+msgid "Updates for one year"
+msgstr "Updates gedurende één jaar"
+
+msgid "Updates for three years"
+msgstr "Updates gedurende drie jaar"
+
+msgid "Updates from the studio, notes on the theme and the occasional case study."
+msgstr "Nieuws uit de studio, notities over het thema en af en toe een casestudy."
+
+msgid "Updates, backups and a monthly check that everything still loads the way it should."
+msgstr "Updates, back-ups en een maandelijkse controle of alles nog laadt zoals het hoort."
+
 msgid "View this demo site"
 msgstr "Bekijk deze demosite"
 
+msgid "We build it, hand over the site and show you how to keep it up to date yourself."
+msgstr "Wij bouwen het, dragen de site over en laten zien hoe u hem zelf actueel houdt."
+
+msgid "We come back with a structure, a schedule and a quote, so you know what happens next."
+msgstr "We komen terug met een structuur, een planning en een offerte, zodat u weet wat er volgt."
+
+msgid "We design and build sites that the people who own them can keep editing. No page builder to learn, no lock-in: everything here is made of the blocks the editor already gives you."
+msgstr "Wij ontwerpen en bouwen websites die de eigenaars zelf kunnen blijven bewerken. Geen pagebuilder om te leren, geen lock-in: alles hier bestaat uit de blokken die de editor al meelevert."
+
+msgid "We rebuilt our corporate site in a single week. The type scale keeps every page consistent, so nobody on the team has to argue about font sizes any more."
+msgstr "We hebben onze bedrijfswebsite in één week opnieuw gebouwd. De typografische schaal houdt elke pagina consistent, dus niemand in het team hoeft nog over lettergroottes te discussiëren."
+
+msgid "Website design"
+msgstr "Webdesign"
+
+msgid "Weekdays 10:00 to 18:00, closed on weekends and holidays"
+msgstr "Werkdagen 10:00 tot 18:00, gesloten in het weekend en op feestdagen"
+
+msgid "What happens to my pages if I stop using the theme?"
+msgstr "Wat gebeurt er met mijn pagina’s als ik het thema niet meer gebruik?"
+
+msgid "What our clients say"
+msgstr "Wat onze klanten zeggen"
+
+msgid "What the theme takes care of"
+msgstr "Waar het thema voor zorgt"
+
+msgid "What we do"
+msgstr "Wat we doen"
+
 msgid "When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone."
 msgstr "Past bij Japans als sitetaal een drukwerkachtige zetwijze toe: strikte afbreekregels (geen kleine kana of verlengingstekens aan het begin van een regel), automatische ruimte tussen Japanse en Latijnse tekst en proportionele kana-/kanji-spatiëring (palt). Codeblokken blijven ongewijzigd."
+
+msgid "Which style variation should I start from?"
+msgstr "Met welke stijlvariant kan ik het best beginnen?"
+
+msgid "Wireframes, type and color decided together, then built straight into the block editor."
+msgstr "Wireframes, typografie en kleur samen bepaald, daarna rechtstreeks in de blok-editor gebouwd."
+
+msgid "Yes. Colors come from the palette in Styles, and the type scale has its own panel in the customizer, so one change moves every heading and every gap with it."
+msgstr "Ja. Kleuren komen uit het palet onder Stijlen en de typografische schaal heeft een eigen paneel in de Customizer, dus één wijziging verschuift elke kop en elke ruimte."
+
+msgid "Your content stays where it is. Because these are standard blocks, the text and images remain readable and editable under any other block theme."
+msgstr "Uw inhoud blijft waar hij is. Omdat het standaardblokken zijn, blijven tekst en afbeeldingen leesbaar en bewerkbaar onder elk ander blokthema."
 
 msgid "a block theme from a web studio"
 msgstr "een blokthema van een webstudio"
@@ -221,6 +545,9 @@ msgstr "eindeloze mogelijkheden"
 
 msgid "made for builders"
 msgstr "gemaakt voor bouwers"
+
+msgid "per month, billed yearly"
+msgstr "per maand, jaarlijks gefactureerd"
 
 msgid "shitate"
 msgstr "shitate"

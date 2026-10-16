@@ -6,23 +6,80 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+msgid "$19"
+msgstr "$19"
+
+msgid "$49"
+msgstr "$49"
+
+msgid "$99"
+msgstr "$99"
+
+msgid "01"
+msgstr "01"
+
+msgid "02"
+msgstr "02"
+
+msgid "03"
+msgstr "03"
+
+msgid "03-0000-0000"
+msgstr "03-0000-0000"
+
 msgid "404 Not Found"
 msgstr "404 Not Found"
+
+msgid "A block theme for everyday sites"
+msgstr "日々のサイトのためのブロックテーマ"
 
 msgid "A design with no surplus features means you are not chasing frequent updates. Build it once, then run it quietly for a long time."
 msgstr "無駄な機能を持たないシンプルな設計だから、頻繁なアップデート対応に追われません。作ったあと、長く静かに運営できるテーマです。"
 
+msgid "A few words from the people who build their sites with us."
+msgstr "私たちとサイトを作った方々の声です。"
+
 msgid "A landing-page style built from large elements."
 msgstr "大きな要素で構成したLP風のページ。"
+
+msgid "A short session with your team on the editor, so updating the site stops being someone else's job."
+msgstr "エディターの使い方をチームに短時間でレクチャー。サイトの更新が「誰かの仕事」でなくなります。"
 
 msgid "A simple structure"
 msgstr "シンプル設計"
 
+msgid "A single page built around one message, one offer and one clear next step."
+msgstr "ひとつのメッセージ、ひとつの提案、ひとつの明確な次の一歩で組み立てる 1 ページ。"
+
+msgid "A small studio that builds websites to last"
+msgstr "長く使えるサイトを作る、小さなスタジオ"
+
+msgid "A small team that takes every project from the first sketch to the day it goes live."
+msgstr "最初のスケッチから公開の日まで、すべての案件を見届ける小さなチームです。"
+
 msgid "A standard site modelled on a typical company website, combining trust and readability."
 msgstr "一般的な企業サイトを意識して作られた、信頼感と見やすさを兼ね備えた標準的なサイト"
 
+msgid "About us"
+msgstr "私たちについて"
+
+msgid "Agency"
+msgstr "Agency"
+
+msgid "All four style variations"
+msgstr "4 つのスタイルバリエーションすべて"
+
+msgid "Any of them. Dark, Cream, Mist and Mono each carry their own colors, so you can switch between them at any point without redoing your pages."
+msgstr "どれからでも構いません。Dark・Cream・Mist・Mono はそれぞれ固有の配色を持っているので、ページを作り直さずにいつでも切り替えられます。"
+
+msgid "Aoi Tanaka"
+msgstr "田中 葵"
+
 msgid "Apply rounding to font sizes"
 msgstr "フォントサイズにラウンドを適用"
+
+msgid "Art Director"
+msgstr "アートディレクター"
 
 msgid "Augmented Fourth — 1.414"
 msgstr "増4度 — 1.414"
@@ -45,20 +102,59 @@ msgstr "ブログ"
 msgid "Body text size. The whole scale is built from this."
 msgstr "本文の文字サイズ。これを基準に全スケールが算出されます。"
 
+msgid "Build the site you had in mind"
+msgstr "思い描いたサイトを、そのまま形に"
+
+msgid "Builds with the blocks the editor already ships, so the site stays easy to update."
+msgstr "エディター標準のブロックだけで組むので、サイトは更新しやすいまま保たれます。"
+
 msgid "Call us"
 msgstr "電話"
+
+msgid "Can I change the colors and the type size?"
+msgstr "色や文字の大きさは変えられますか？"
 
 msgid "Center horizontally (mx-auto)"
 msgstr "左右中央寄せ（mx-auto）"
 
+msgid "Change the four source colors in the editor and the softer tones around them are recalculated for you."
+msgstr "エディターで元になる 4 色を変えると、周りの淡い色調は自動で計算し直されます。"
+
+msgid "Change the scale once and the whole site follows: headings, body text and the space between them."
+msgstr "スケールを一度変えれば、見出しも本文も、その間の余白もサイト全体が追従します。"
+
+msgid "Choose Agency"
+msgstr "Agency を選ぶ"
+
+msgid "Choose Starter"
+msgstr "Starter を選ぶ"
+
+msgid "Choose Studio"
+msgstr "Studio を選ぶ"
+
 msgid "Clear spacing classes"
 msgstr "余白クラスをクリア"
+
+msgid "Colors that follow along"
+msgstr "追従する配色"
+
+msgid "Company profiles, recruitment pages and news, laid out so your team can keep them current."
+msgstr "会社案内・採用ページ・お知らせを、チームが自分たちで更新し続けられる形で組み立てます。"
 
 msgid "Contact us"
 msgstr "お問い合わせ"
 
+msgid "Content and writing"
+msgstr "コンテンツと文章"
+
+msgid "Core blocks only, a type scale you can tune in one place, and nothing to unlearn later."
+msgstr "コアブロックだけ、1 か所で調整できるタイプスケール、あとで覚え直すものは何もありません。"
+
 msgid "Corporate"
 msgstr "コーポレート"
+
+msgid "Corporate sites"
+msgstr "コーポレートサイト"
 
 msgid "Corporate sites, business sites, anything you build — freely, and with a little joy."
 msgstr "コーポレートサイトやビジネスサイト、あらゆる制作を自由に、楽しく。"
@@ -66,14 +162,26 @@ msgstr "コーポレートサイトやビジネスサイト、あらゆる制作
 msgid "Default"
 msgstr "既定"
 
+msgid "Do I need a page builder plugin to use this theme?"
+msgstr "このテーマを使うのにページビルダープラグインは必要ですか？"
+
+msgid "Editing pages is finally something our staff can do on their own. Spacing and colours come from the theme, so the result never falls apart."
+msgstr "ページの編集を、ようやくスタッフが自分たちでできるようになりました。余白も色もテーマが決めてくれるので、仕上がりが崩れません。"
+
 msgid "Eight scales named after musical intervals, from a minor second up to the golden ratio. Restrained steps or bold jumps: pick the one that matches the character of your site."
 msgstr "音楽の度数になぞらえた8つのスケール——短2度から、黄金比まで。控えめな階調から大胆なジャンプまで、サイトの性格に合わせて選べます。"
 
 msgid "Eight type scales"
 msgstr "選べる8つの"
 
+msgid "Email support"
+msgstr "メールサポート"
+
 msgid "Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme."
 msgstr "テーマ全体の設定はCSS変数に集約。スケールを選んだあとも、変数を上書きするだけで自由に微調整・切り替えができます。「テーマの都合」に縛られません。"
+
+msgid "Every size on the page comes from one ratio"
+msgstr "ページ上のすべてのサイズは、ひとつの比率から"
 
 msgid "Fixed sizes for small text"
 msgstr "小さな文字の数値指定"
@@ -84,17 +192,71 @@ msgstr "知識がある人"
 msgid "For studios and freelancers at work, and for the client running the site after handover. It is built to sit comfortably in both pairs of hands."
 msgstr "制作会社・フリーランスの現場でも、引き渡し後のクライアント自身の運用でも。どちらの手にもなじむよう設計しています。"
 
+msgid "Free, and built to stay that way"
+msgstr "無料。これからもずっと"
+
+msgid "Frequently asked questions"
+msgstr "よくある質問"
+
+msgid "From your first message to the day the site goes live, in three steps."
+msgstr "最初のご連絡から公開の日まで、3 つのステップで進めます。"
+
+msgid "Front-end Engineer"
+msgstr "フロントエンドエンジニア"
+
 msgid "Generous space and breathing room around every element, the way Apple does it."
 msgstr "Appleのように1つの要素に余白と余裕を持たせたサイト"
 
+msgid "Get started"
+msgstr "はじめる"
+
+msgid "Go live"
+msgstr "公開"
+
 msgid "Golden Ratio — 1.618"
 msgstr "黄金比 — 1.618"
+
+msgid "Haru Kawakami"
+msgstr "川上 晴"
+
+msgid "Headings, body text and spacing all come from a single ratio, so a page stays in proportion wherever you edit it."
+msgstr "見出し・本文・余白はすべてひとつの比率から生まれるので、どこを編集してもページの釣り合いが保たれます。"
+
+msgid "How it works"
+msgstr "進め方"
+
+msgid "If something is still unclear, send us a message and we will answer it here."
+msgstr "分からないことがあれば、メッセージをお送りください。ここでお答えします。"
+
+msgid "Interviews, structure and copy, so the pages say what you actually want them to say."
+msgstr "取材・構成・文章づくりまで。ページが本当に伝えたいことを伝えられるようにします。"
+
+msgid "Is the theme ready for languages other than English?"
+msgstr "英語以外の言語にも対応していますか？"
+
+msgid "It is. The theme ships with translations, and the text in these patterns follows whichever language your site is set to."
+msgstr "はい。テーマには翻訳が同梱されていて、これらのパターンの文章もサイトの言語設定に従います。"
 
 msgid "Japanese typography"
 msgstr "日本語組版の最適化"
 
 msgid "Just tell us the challenge you are facing today."
 msgstr "まずは今の課題だけ、お聞かせください。"
+
+msgid "Keeps the schedule and the scope in one piece, and answers your questions the same day."
+msgstr "スケジュールと範囲を崩さず、質問にはその日のうちに答えます。"
+
+msgid "Kenji Sato"
+msgstr "佐藤 健二"
+
+msgid "Landing pages"
+msgstr "ランディングページ"
+
+msgid "Latest news"
+msgstr "最新のお知らせ"
+
+msgid "Maintenance"
+msgstr "保守"
 
 msgid "Major Second — 1.125"
 msgstr "長2度 — 1.125"
@@ -108,8 +270,14 @@ msgstr "下マージン"
 msgid "Margin top"
 msgstr "上マージン"
 
+msgid "Marketing Lead, Kitamura Foods"
+msgstr "マーケティング責任者、北村食品"
+
 msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
 msgstr "テンプレート内の最初の大きな画像を優先読み込み（fetchpriority=\"high\"）にし、それ以降の画像を遅延読み込み（loading=\"lazy\"）にします。WP Rocket や Perfmatters などの高速化プラグインで画像の読み込みを制御している場合は、干渉を避けるためにオフにしてください。"
+
+msgid "Mika Fujita"
+msgstr "藤田 美香"
 
 msgid "Minimal"
 msgstr "ミニマル"
@@ -123,17 +291,29 @@ msgstr "短2度 — 1.067"
 msgid "Minor Third — 1.2"
 msgstr "短3度 — 1.2"
 
+msgid "No posts have been published yet."
+msgstr "まだ投稿はありません。"
+
 msgid "No posts were found."
 msgstr "投稿が見つかりませんでした。"
 
 msgid "No results found. Try another search."
 msgstr "見つかりませんでした。別のキーワードでお試しください。"
 
+msgid "No. Everything here is built from the blocks that come with WordPress, and the layouts are edited in the site editor."
+msgstr "いいえ。ここにあるものはすべて WordPress 標準のブロックで作られていて、レイアウトはサイトエディターで編集します。"
+
 msgid "Not sure what to build yet? That is fine."
 msgstr "「何を作ればいいか分からない」段階でもOK。"
 
 msgid "Notion-style: minimal decoration and restrained type contrast, kept simple through the type scale."
 msgstr "Notion風に装飾は最小限、文字のジャンプ率もタイプスケールで抑えたシンプルなサイト"
+
+msgid "One type scale"
+msgstr "ひとつのタイプスケール"
+
+msgid "One website"
+msgstr "1 サイト"
 
 msgid "Optimize image loading"
 msgstr "画像の読み込みを最適化"
@@ -159,6 +339,30 @@ msgstr "完全4度 — 1.333"
 msgid "Performance"
 msgstr "パフォーマンス"
 
+msgid "Priority support"
+msgstr "優先サポート"
+
+msgid "Project Manager"
+msgstr "プロジェクトマネージャー"
+
+msgid "Read more about us"
+msgstr "私たちについて詳しく"
+
+msgid "Read the guide"
+msgstr "ガイドを読む"
+
+msgid "Replace this image and text with your own story, and the layout will follow along on every screen size."
+msgstr "この画像と文章を自分たちのストーリーに置き換えてください。レイアウトはどの画面サイズでも追従します。"
+
+msgid "Representative Director, Sato Design Office"
+msgstr "代表取締役、佐藤デザイン事務所"
+
+msgid "Request a brochure"
+msgstr "資料を請求する"
+
+msgid "Responsive without breakpoints"
+msgstr "ブレークポイントなしのレスポンシブ"
+
 msgid "Rich"
 msgstr "リッチ"
 
@@ -171,17 +375,50 @@ msgstr "小さな画面での比率"
 msgid "Search"
 msgstr "検索"
 
+msgid "See all news"
+msgstr "お知らせ一覧を見る"
+
 msgid "See the demo"
 msgstr "デモページを見てみる"
+
+msgid "See the plan"
+msgstr "プランを確認"
+
+msgid "See what it can do"
+msgstr "できることを見る"
+
+msgid "Send us a message with what you have in mind. A rough idea is enough to get started."
+msgstr "考えていることをメッセージでお送りください。ざっくりとしたアイデアで十分です。"
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Small / X-Small / XX-Small を比率で割らず 0.95rem / 0.8rem / 0.75rem に固定します（比率で割ると小さすぎて読みにくくなる場合の対策）。"
 
+msgid "Simple pricing"
+msgstr "シンプルな料金"
+
+msgid "Six things we are asked for most often. Rename them to match your own work."
+msgstr "よくご相談いただく 6 つの仕事です。ご自身の仕事に合わせて書き換えてください。"
+
 msgid "Snaps every text step to even pixels (2px)."
 msgstr "各段の文字サイズを偶数ピクセル（2px）に丸めます。"
 
+msgid "Sota Nishimura"
+msgstr "西村 颯太"
+
 msgid "Spacing"
 msgstr "余白"
+
+msgid "Start building"
+msgstr "作り始める"
+
+msgid "Starter"
+msgstr "Starter"
+
+msgid "Studio"
+msgstr "Studio"
+
+msgid "Support within one business day"
+msgstr "1 営業日以内のサポート"
 
 msgid "Tags: "
 msgstr "タグ: "
@@ -189,8 +426,17 @@ msgstr "タグ: "
 msgid "Tailored with a type scale"
 msgstr "タイプスケールで仕立てる"
 
+msgid "Tell us about it"
+msgstr "お聞かせください"
+
+msgid "Tell us what you are building"
+msgstr "作りたいものをお聞かせください"
+
 msgid "The page you are looking for may have been moved or deleted, or it may be temporarily unavailable. Please try again from the home page."
 msgstr "お探しのページは、移動または削除されたか、一時的にご利用いただけない可能性があります。トップページから再度お試しください。"
+
+msgid "The people behind the work"
+msgstr "仕事を支えるメンバー"
 
 msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
 msgstr "画面幅 375px で使う比率です。幅広レイアウトの幅（既定 1260px）までの間でメインの比率へ滑らかに変化するため、メディアクエリなしでスマートフォンでは文字と余白が引き締まります。"
@@ -198,17 +444,95 @@ msgstr "画面幅 375px で使う比率です。幅広レイアウトの幅（�
 msgid "This page could not be found."
 msgstr "ページが見つかりません"
 
+msgid "Three ideas that shape every page you build with it."
+msgstr "このテーマで作るすべてのページを形づくる、3 つの考え方。"
+
+msgid "Three plans, no hidden extras. Change the numbers to your own."
+msgstr "3 つのプラン、隠れた追加料金なし。数字はご自身のものに書き換えてください。"
+
+msgid "Training"
+msgstr "トレーニング"
+
 msgid "Try it now"
 msgstr "今すぐ使ってみる"
+
+msgid "Turns a rough brief into a layout you can actually read, and keeps the grid honest."
+msgstr "ざっくりした要望を、きちんと読めるレイアウトに。グリッドの筋を通します。"
+
+msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
+msgstr "画面が狭くなるにつれて文字も余白も滑らかに縮むので、特定の幅で急に変わることがありません。"
 
 msgid "Typography Scale"
 msgstr "タイポグラフィスケール"
 
+msgid "Unlimited websites"
+msgstr "サイト数無制限"
+
+msgid "Up to five websites"
+msgstr "5 サイトまで"
+
+msgid "Updates for as long as you subscribe"
+msgstr "契約中はずっと更新"
+
+msgid "Updates for one year"
+msgstr "1 年間の更新"
+
+msgid "Updates for three years"
+msgstr "3 年間の更新"
+
+msgid "Updates from the studio, notes on the theme and the occasional case study."
+msgstr "スタジオからのお知らせ、テーマについてのメモ、ときどき制作事例。"
+
+msgid "Updates, backups and a monthly check that everything still loads the way it should."
+msgstr "更新・バックアップ・月 1 回の表示チェックで、いつでも正しく表示される状態を保ちます。"
+
 msgid "View this demo site"
 msgstr "このデモサイトを見る"
 
+msgid "We build it, hand over the site and show you how to keep it up to date yourself."
+msgstr "制作し、サイトをお渡しし、ご自身で更新し続けられるようにお伝えします。"
+
+msgid "We come back with a structure, a schedule and a quote, so you know what happens next."
+msgstr "構成案・スケジュール・お見積もりをお戻しします。次に何が起きるかが分かります。"
+
+msgid "We design and build sites that the people who own them can keep editing. No page builder to learn, no lock-in: everything here is made of the blocks the editor already gives you."
+msgstr "持ち主が自分で編集し続けられるサイトを設計し、作ります。覚えるページビルダーも、囲い込みもありません。ここにあるものはすべて、エディターにもともと備わっているブロックでできています。"
+
+msgid "We rebuilt our corporate site in a single week. The type scale keeps every page consistent, so nobody on the team has to argue about font sizes any more."
+msgstr "コーポレートサイトを 1 週間で作り直しました。タイプスケールのおかげでどのページも揃い、文字サイズで揉めることがなくなりました。"
+
+msgid "Website design"
+msgstr "Web デザイン"
+
+msgid "Weekdays 10:00 to 18:00, closed on weekends and holidays"
+msgstr "平日 10:00〜18:00（土日祝休み）"
+
+msgid "What happens to my pages if I stop using the theme?"
+msgstr "テーマをやめたらページはどうなりますか？"
+
+msgid "What our clients say"
+msgstr "お客様の声"
+
+msgid "What the theme takes care of"
+msgstr "テーマが引き受けること"
+
+msgid "What we do"
+msgstr "私たちの仕事"
+
 msgid "When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone."
 msgstr "サイトの言語が日本語のとき、印刷物に近い組版を適用します。厳格な禁則処理（小書きの仮名や長音記号を行頭に置かない）、和文と英数字の間の自動アキ、仮名・漢字の詰め組み（palt）です。コードブロックには適用しません。"
+
+msgid "Which style variation should I start from?"
+msgstr "どのスタイルバリエーションから始めればいいですか？"
+
+msgid "Wireframes, type and color decided together, then built straight into the block editor."
+msgstr "ワイヤーフレーム・文字・色を一緒に決めて、そのままブロックエディターで組み上げます。"
+
+msgid "Yes. Colors come from the palette in Styles, and the type scale has its own panel in the customizer, so one change moves every heading and every gap with it."
+msgstr "はい。色は「スタイル」のパレットから、タイプスケールはカスタマイザーの専用パネルから変えられ、一度の変更ですべての見出しと余白が一緒に動きます。"
+
+msgid "Your content stays where it is. Because these are standard blocks, the text and images remain readable and editable under any other block theme."
+msgstr "コンテンツはそのまま残ります。標準のブロックなので、他のどのブロックテーマでも文章と画像は読めて、編集できます。"
 
 msgid "a block theme from a web studio"
 msgstr "制作会社発のブロックテーマ"
@@ -221,6 +545,9 @@ msgstr "可能性は無限大"
 
 msgid "made for builders"
 msgstr "制作向けの構造"
+
+msgid "per month, billed yearly"
+msgstr "月額、年払い"
 
 msgid "shitate"
 msgstr "shitate"

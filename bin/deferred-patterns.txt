@@ -9,19 +9,7 @@
 #   - bin/build-zip.sh      ステージング後に該当ファイルを落とす
 #   - bin/trim-deferred-i18n.mjs  languages/ のカタログを「出荷するファイルだけ」で作り直す
 #
-# 12本を出荷するバージョンでは、このファイルを空にしてから
+# 12本は 1.0.4 で出荷（2026-10-16 翻訳完了）。見送るものが無いので一覧は空。
+# 次に見送るパターンがあれば、このファイルにファイル名を書き、
 #   cd ../../plugins/shitate-pro-blocks && node bin/make-i18n.mjs
 # でカタログを作り直す（抽出が全ファイルに戻るので、trim は不要になる）。
-
-about-image-text.php
-contact-banner.php
-faq.php
-features-3.php
-hero-cover.php
-hero-split.php
-latest-posts.php
-pricing-3.php
-services-grid.php
-steps-3.php
-team-3.php
-testimonials-2.php
