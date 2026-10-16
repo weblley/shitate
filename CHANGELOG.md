@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Changed
+
+- 縦のリズムを比率の累乗で段階化（tokens.css、flow / constrained レイアウトのみ）: 積み重なるブロックの間隔を gap × r に 1 段上げ、画像・ギャラリー・表・引用・区切り・埋め込みの前後は gap × r²、見出し h3/h4 の前は gap × r³、h1/h2 の前は gap × r⁴（旧: 通常 gap、見出し前 1.75 倍 / 1.25 倍の固定倍率）。見出しの直後は通常の間隔のまま。theme.json の blockGap は変えない（blockGap はナビゲーションやボタン列の flex gap にも使われ、上げるとフッターメニューが折り返した）。比率 1.236（幅 1000px）での実測: 段落間 30px、h2 前 57px、h3 前 46px、画像前後 37px（旧: 24 / 43 / 31 / 24）。すべて比率に連動し、カード内など gap の小さい文脈では自動的に詰まる
+
 ### Added
 
 - カスタマイザー「Typography Scale」に「日本語組版の最適化」チェックボックス（既定オフ）。オンでサイト言語が日本語のときだけ、body に `line-break: strict`、`text-autospace: normal`、`font-feature-settings: "palt" 1` を出力（`code` / `pre` / `kbd` / `samp` は palt を解除）。フォントスタックと同じく `determine_locale()` で判定し、エディターにも同じ CSS を流す。`word-break: auto-phrase` は採用しない（pro blocks の `[wbr]` で手動制御する方針。Chromium のみ対応のため）
