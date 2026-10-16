@@ -53,6 +53,11 @@ No fonts are bundled; the typography relies on system font stacks.
 == Changelog ==
 
 = 1.0.4 =
+* Twelve new patterns built from core blocks only: about (image and text), contact banner, FAQ (details), three features, cover hero, split hero, latest posts, pricing (three plans), services grid, three steps, team (three members) and two testimonials. Sample copy ships in Japanese and six European languages.
+* Vertical rhythm now steps with the type-scale ratio: stacked blocks gap × r, media/tables/quotes gap × r², before h3/h4 gap × r³, before h1/h2 gap × r⁴. Navigation and button rows keep the plain blockGap.
+* Editor: the Typography panel on paragraphs, headings, post titles, lists, quotes and buttons shows Font and Appearance (weight/style) by default.
+* Customizer: "Japanese typography" switch (off by default) applies strict line breaking, auto spacing between Japanese and Latin text and proportional kana/kanji widths (palt) when the site language is Japanese.
+* Fixed: no space between the title and the first paragraph in the post editor when the template is hidden.
 * Added four more theme tags: full-width-template, template-editing, theme-options and one-column.
 * Expanded the theme description to say what the eight ready-made scales do and what the theme gives you without any prior knowledge of typographic scales. Corrected two details: the palette is derived from four source colours (base, contrast, primary, accent), and the bundled translations are Japanese plus six European languages.
 * Fixed a wrong path in the Resources section of this readme (assets/css/reset.css).

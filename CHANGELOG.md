@@ -6,32 +6,23 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
-### Fixed
+## [1.0.4] - 2026-10-16
 
-- 投稿・固定ページのエディター（テンプレート非表示時）でタイトルと本文の間に余白がなく、1 行目がタイトルに密着していた。タイトル枠の下に gap × r²（フロントの見出し前と同じ段）を確保（editor.css）
+### Added
+
+- コアブロックだけで組んだパターン 12 本を追加: `about-image-text`（会社紹介）/ `contact-banner`（お問い合わせ）/ `faq`（よくある質問、details）/ `features-3`（特長 3 つ）/ `hero-cover`（カバー型ヒーロー）/ `hero-split`（左右分割ヒーロー）/ `latest-posts`（最新のお知らせ）/ `pricing-3`（料金 3 プラン）/ `services-grid`（サービス 6 つ）/ `steps-3`（3 ステップ）/ `team-3`（メンバー 3 名）/ `testimonials-2`（お客様の声 2 件）。見本文 109 件は日本語と欧州 6 言語の訳を同梱。1.0.4 で一度見送りが決まっていたが（2026-09-30）、翻訳を済ませて同梱に変更（2026-10-16）。`bin/deferred-patterns.txt` は空にした
+- エディターの「タイポグラフィ」パネルで、段落・見出し・投稿タイトル・リスト・引用・ボタンに「フォント」と「外観（太さ・スタイル）」を最初から表示（`register_block_type_args` で既定コントロールに追加。従来は「+」メニューの中に隠れていた）。サイト全体の既定値はこれまでどおりサイトエディター「スタイル → タイポグラフィ」
+- カスタマイザー「Typography Scale」に「日本語組版の最適化」チェックボックス（既定オフ）。オンでサイト言語が日本語のときだけ、body に `line-break: strict`、`text-autospace: normal`、`font-feature-settings: "palt" 1` を出力（`code` / `pre` / `kbd` / `samp` は palt を解除）。フォントスタックと同じく `determine_locale()` で判定し、エディターにも同じ CSS を流す。`word-break: auto-phrase` は採用しない（pro blocks の `[wbr]` で手動制御する方針。Chromium のみ対応のため）
 
 ### Changed
 
 - 縦のリズムを比率の累乗で段階化（tokens.css、flow / constrained レイアウトのみ）: 積み重なるブロックの間隔を gap × r に 1 段上げ、画像・ギャラリー・表・引用・区切り・埋め込みの前後は gap × r²、見出し h3/h4 の前は gap × r³、h1/h2 の前は gap × r⁴（旧: 通常 gap、見出し前 1.75 倍 / 1.25 倍の固定倍率）。見出しの直後は通常の間隔のまま。theme.json の blockGap は変えない（blockGap はナビゲーションやボタン列の flex gap にも使われ、上げるとフッターメニューが折り返した）。比率 1.236（幅 1000px）での実測: 段落間 30px、h2 前 57px、h3 前 46px、画像前後 37px（旧: 24 / 43 / 31 / 24）。すべて比率に連動し、カード内など gap の小さい文脈では自動的に詰まる
-
-### Added
-
-- エディターの「タイポグラフィ」パネルで、段落・見出し・投稿タイトル・リスト・引用・ボタンに「フォント」と「外観（太さ・スタイル）」を最初から表示（`register_block_type_args` で既定コントロールに追加。従来は「+」メニューの中に隠れていた）。サイト全体の既定値はこれまでどおりサイトエディター「スタイル → タイポグラフィ」
-- カスタマイザー「Typography Scale」に「日本語組版の最適化」チェックボックス（既定オフ）。オンでサイト言語が日本語のときだけ、body に `line-break: strict`、`text-autospace: normal`、`font-feature-settings: "palt" 1` を出力（`code` / `pre` / `kbd` / `samp` は palt を解除）。フォントスタックと同じく `determine_locale()` で判定し、エディターにも同じ CSS を流す。`word-break: auto-phrase` は採用しない（pro blocks の `[wbr]` で手動制御する方針。Chromium のみ対応のため）
-
-### Added
-
-- 2026-09 のパターン 12 本（`patterns/about-image-text` / `contact-banner` / `faq` / `features-3` / `hero-cover` / `hero-split` / `latest-posts` / `pricing-3` / `services-grid` / `steps-3` / `team-3` / `testimonials-2`）。**1.0.4 では配布しない**（責任者決定 2026-09-30）。ファイルはリポジトリに残したまま `bin/deferred-patterns.txt` に列挙し、`bin/build-zip.sh` が配布zipから落としている。出荷する版ではこのリストを空にして、プラグイン側の `bin/make-i18n.mjs` で翻訳カタログを作り直す（12 本の文字列 109 件は未訳のまま）
-
-## [1.0.4] - 2026-10-02
-
-### Changed
-
 - wordpress.org のタグを 14 個から 18 個に追加（`style.css` と `readme.txt` の `Tags:` を同一内容に）。追加したのは `full-width-template`（`templates/page-full-width.html`）、`template-editing`（テンプレート 7 種とテンプレートパーツをサイトエディターで編集できる）、`theme-options`（カスタマイザーの Typography Scale / パフォーマンス）、`one-column`（全テンプレートにサイドバー領域がない）。既存の 14 個は削除も並べ替えもしていない
 - テーマ説明文（`style.css` の Description と `readme.txt` の Description、同一文面）を約 33 語から 197 語に拡充。訴求の軸を「比率で整う」から「8 つから選ぶだけで決まる／前提知識が要らない」に移した。あわせて事実誤りを 2 か所修正: 源となる色は 3 色ではなく 4 色（base / contrast / primary / accent）、同梱翻訳は「英語と日本語」ではなく日本語＋欧州 6 言語
 
 ### Fixed
 
+- 投稿・固定ページのエディター（テンプレート非表示時）でタイトルと本文の間に余白がなく、1 行目がタイトルに密着していた。タイトル枠の下に gap × r²（フロントの見出し前と同じ段）を確保（editor.css）
 - `readme.txt` の Resources 節のパス誤りを修正（`assets/css/reset/reset.css` → `assets/css/reset.css`。0.4.2 でフラットにしたときの取りこぼし）
 
 ## [1.0.3] - 2026-09-22
