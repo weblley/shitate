@@ -1,1 +1,12 @@
 /* shitate editor-only styles. Kept minimal; most styling lives in theme.json. */
+
+/*
+ * Post/page editor with the template hidden: the title block sits in its own
+ * wrapper above the content root, with no spacing of its own, so the first
+ * paragraph touched the title. Give it the same room a heading gets on the
+ * front end (gap × r², see tokens.css); the gap variable comes from Global
+ * Styles so it follows the ratio.
+ */
+.editor-styles-wrapper .editor-visual-editor__post-title-wrapper {
+	margin-block-end: calc( var( --wp--style--block-gap, 1.5rem ) * var( --st-r, 1.25 ) * var( --st-r, 1.25 ) );
+}
