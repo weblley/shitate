@@ -75,15 +75,20 @@
 	--st-color-contrast-2: var(--wp--preset--color--contrast-2, #515766);
 	--st-color-neutral: var(--wp--preset--color--neutral, #5c6b90);
 	--st-color-border: var(--wp--preset--color--line, #e4e9f7);
+	/*
+	 * Derived tones. --st-color-rule is the one colour for every rule in content
+	 * (the quote bar, table lines, separators, pullquote rules): a mid tone
+	 * between muted text and the background, so each palette and style
+	 * variation gets a matching rule without another preset. The underline is
+	 * the link colour at reduced strength; links show it in full on hover.
+	 */
+	--st-color-rule: color-mix(in srgb, var(--st-color-neutral) 35%, var(--st-color-base));
+	--st-color-underline: color-mix(in srgb, currentColor 45%, transparent);
 
 	/*
-	 * Spacing scale — the same ratio as the type scale, in the same eight
-	 * names. m is the body size (--st-text-m); above m the steps are two ratio
-	 * powers apart (l = m·r², xl = m·r⁴, xxl = m·r⁶, xxxl = m·r⁸); below m they
-	 * tighten faster (s = m/r, xs = m/r³, xxs = m/r⁶). At the default ratio
-	 * 1.25 that is ≈ 4 / 8 / 13 / 16 / 25 / 39 / 61 / 95px on wide screens.
-	 * All steps use the fluid ratio --st-r, so the whole ladder tightens on
-	 * narrow viewports while staying a true geometric progression.
+	 * Spacing scale — eight fixed rem steps (see the ladder below). They do not
+	 * follow the type-scale ratio or the viewport; --st-space-m is the body
+	 * size at the default base, the rest are listed after the line tokens.
 	 */
 	--st-space-m: 1rem;
 
@@ -195,8 +200,8 @@
  *   after a heading  gap × 0.5   (the heading groups with its paragraph)
  * The type-scale ratio therefore moves the type, not the rhythm: raising the
  * ratio makes headings larger but leaves paragraph spacing at one line, so
- * a 1.5 scale no longer doubles every gap. Section spacing in patterns still
- * uses the ratio-based --st-space-* presets.
+ * a 1.5 scale no longer doubles every gap. Section spacing in patterns uses
+ * the fixed --st-space-* presets.
  * Everything is a multiple of the LOCAL gap, so it tightens automatically
  * inside dense contexts (cards, boxes with their own blockGap). First
  * children keep no top margin. The `:root` prefix lifts specificity just
@@ -221,4 +226,113 @@
 /* After a heading: half a line, so the heading sits with what it introduces. */
 :root :where( .is-layout-flow, .is-layout-constrained ) > :where( h1, h2, h3, h4, h5, h6 ) + :not( h1, h2, h3, h4, h5, h6 ) {
 	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * 0.5 );
+}
+
+/*
+ * Details — the small conventions that make content look decided: link
+ * underlines, quotes, tables, captions, separators and code. Zero specificity
+ * where nothing competes; the `:root` prefix (0-1-0) or an added element
+ * (0-1-1) where a core block stylesheet sets the same property at that level.
+ * The theme's styles print after core's, so equal specificity is enough.
+ * Lengths are rem (hairlines 0.0625rem, bars 0.25rem) or spacing tokens; the
+ * few em values are the ones that must scale with the text they sit in
+ * (underline offset, inline code size).
+ */
+
+/* Links: a thin underline set clear of the glyphs (CJK glyphs sit on the
+   baseline, so the browser's default underline cuts through them), tinted so
+   it reads as a cue rather than a stroke; full colour on hover and focus. */
+:where(a:where(:not(.wp-element-button))) {
+	text-decoration-thickness: 0.0625rem;
+	text-underline-offset: 0.2em;
+	text-decoration-color: var(--st-color-underline);
+}
+
+:where(a:where(:not(.wp-element-button)):is(:hover, :focus-visible)) {
+	text-decoration-color: currentColor;
+}
+
+/* Quote: a 0.25rem rule in the rule colour instead of core's bar in the text
+   colour; the citation drops to small, muted text on its own line. */
+:root :where(.wp-block-quote:not(.has-text-align-right, .has-text-align-center, .is-style-plain, .is-style-large, .is-large)) {
+	border-inline-start: 0.25rem solid var(--st-color-rule);
+	padding-inline-start: var(--st-space-l);
+}
+
+:root :where(.wp-block-quote.has-text-align-right:not(.is-style-plain, .is-style-large, .is-large)) {
+	border-inline-end: 0.25rem solid var(--st-color-rule);
+	padding-inline-end: var(--st-space-l);
+}
+
+:root :where(.wp-block-quote) cite {
+	display: block;
+	margin-block-start: var(--st-space-xs);
+	color: var(--st-color-neutral);
+	font-size: var(--st-text-s);
+}
+
+/* Pullquote: the rules, size and padding come from theme.json; the citation
+   loses core's uppercase and drops to small, muted text. */
+:root :where(.wp-block-pullquote) :where(cite, footer) {
+	display: block;
+	margin-block-start: var(--st-space-s);
+	color: var(--st-color-neutral);
+	font-size: var(--st-text-s);
+	font-weight: 400;
+	text-transform: none;
+}
+
+/* Table: horizontal rules only, a firmer rule under the header, zebra rows in
+   the tinted surface, tabular figures so columns of numbers line up. The
+   Stripes block style keeps its own colours. */
+:root :where(.wp-block-table) table {
+	font-variant-numeric: tabular-nums;
+}
+
+:root :where(.wp-block-table) :is(td, th) {
+	padding: var(--st-space-xs) var(--st-space-s);
+	border-width: 0 0 0.0625rem;
+	border-color: var(--st-color-rule);
+	text-align: start;
+	vertical-align: top;
+}
+
+:root :where(.wp-block-table) :is(thead, tfoot) {
+	border-width: 0;
+}
+
+:root :where(.wp-block-table) thead th {
+	border-bottom-color: var(--st-color-neutral);
+	font-weight: 600;
+}
+
+:root :where(.wp-block-table) tfoot :is(td, th) {
+	border-width: 0.0625rem 0 0;
+	border-color: var(--st-color-neutral);
+}
+
+:root :where(.wp-block-table:not(.is-style-stripes)) tbody tr:nth-child(even) {
+	background-color: var(--st-color-base-2);
+}
+
+/* Captions: colour and size come from theme.json (elements.caption); the
+   bottom margin core adds would otherwise stack on the rhythm after media. */
+:root :where(.wp-block-image, .wp-block-embed, .wp-block-video, .wp-block-audio) figcaption {
+	margin-block: var(--st-space-xs) 0;
+}
+
+/* Separator: a hairline in the rule colour (core: 2px in the text colour).
+   Separators with a chosen background or the Dots style keep core's rules. */
+:root :where(.wp-block-separator:not(.has-background, .is-style-dots)) {
+	border-bottom-width: 0.0625rem;
+	color: var(--st-color-rule);
+}
+
+/* Inline code: a tinted chip, a touch smaller than the text around it. The
+   Code block itself is styled in theme.json. */
+:root :where(code:not(pre *)) {
+	padding: 0.125rem 0.375rem;
+	border-radius: 0.25rem;
+	background-color: var(--st-color-base-2);
+	font-size: 0.9em;
 }
