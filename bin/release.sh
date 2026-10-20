@@ -13,6 +13,11 @@ VERSION="${1:?Usage: bin/release.sh <version> (e.g. 0.2.0)}"
 [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "✗ Version must look like 1.2.3"; exit 1; }
 TAG="v$VERSION"
 
+# The front-end CSS bundle (assets/css/*.min.css) ships in the repo: rebuild
+# it and stop if the committed files are stale.
+[ -d node_modules/esbuild ] || { echo "✗ node_modules missing — run npm install (esbuild builds assets/css/*.min.css)"; exit 1; }
+node bin/build-css.mjs >/dev/null
+git diff --quiet -- assets/css/shitate.min.css assets/css/shitate-reset.min.css || { echo "✗ assets/css/*.min.css is stale — run npm run build:css and commit first"; exit 1; }
 [ -z "$(git status --porcelain)" ] || { echo "✗ Working tree is not clean — commit or stash first"; exit 1; }
 git rev-parse "$TAG" >/dev/null 2>&1 && { echo "✗ Tag $TAG already exists"; exit 1; }
 

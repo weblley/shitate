@@ -23,6 +23,8 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Changed
 
+- フロントの CSS を 1 ファイルに: reset / tokens / utilities / style.css を `bin/build-css.mjs`（esbuild）で結合・minify した `assets/css/shitate-reset.min.css`（約 36KB → 約 15KB、リクエストも 4 → 1）を読み込む。`SCRIPT_DEBUG` ではソースを個別読み込み、エディタは常にソース。ハンドル名は変更なし（バンドル＝`shitate-tokens`、他は空のエイリアス）。GTmetrix の「Minify CSS」対応
+- コア既定のプリセット（色 12・グラデーション 12・シャドウ 5）を global-styles の CSS からも除去（`wp_theme_json_data_default` フィルター。theme.json の `defaultPalette: false` 等は UI を隠すだけで CSS は出ていた）。新規インストールで global-styles が 17.8KB → 10.4KB
 - 本文の細部の様式を決めた（theme.json と tokens.css、全サイト共通）: 見出しの字間 -0.015em／リンクの下線は 0.0625rem・文字から 0.2em 下・リンク色の 45%（ホバーで 100%）／引用は 0.25rem の薄い罫＋引用元は小さく中間色／プルクオートは上下 0.0625rem の罫・太字・イタリックなし・上下 1.5 行の余白／表は横罫のみ・見出し行の下は中間色の罫・偶数行は base-2 の縞・数字は等幅（tabular-nums）／キャプションは small・neutral／区切り線は 0.0625rem の薄い罫／コードブロックは base-2 の面＋角丸・等幅フォント・small、インラインコードは base-2 のチップ。罫の色は新トークン `--st-color-rule`（neutral 35% と base の混色）、下線は `--st-color-underline`。長さは rem と余白トークンで指定（px 換算で偶数）、文字に追従する下線位置・字間・インラインコードの大きさだけ em
 - 投稿テンプレートの区切り線は色指定なしにし、テーマ既定の罫に従う
 - 余白のトークン `--st-space-xxs〜xxxl` を比率連動から固定値に変更: 0.25 / 0.5 / 0.75 / 1 / 1.5 / 2.5 / 4 / 6.5rem（4 / 8 / 12 / 16 / 24 / 40 / 64 / 104px）。比率・本文サイズ・画面幅のどれにも連動しない（流体の絞り込みも廃止）。タイプスケールは文字サイズだけを決め、余白は一定、という方針に（2026-10-20 決定）。既定 1.25 のサイトでは上 3 段がやや広がる（39 → 40、61 → 64、95 → 104px）、他の比率のサイトはこの値に揃う。説明文・readme・マニュアル・カスタマイザーの文言も「余白は比率に従う」から修正

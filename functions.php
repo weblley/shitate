@@ -91,6 +91,40 @@ function shitate_setup() {
 add_action( 'after_setup_theme', 'shitate_setup' );
 
 /**
+ * Drop core's default presets from the generated CSS.
+ *
+ * theme.json already hides them (defaultPalette / defaultGradients /
+ * defaultDuotone / shadow.defaultPresets = false), but core still prints
+ * the custom properties and .has-*-color / -background-color /
+ * -gradient-background classes for its 12 colours, 12 gradients and 5
+ * shadows on every page (about 5 KB of global-styles CSS). Emptying the
+ * default data removes them at the source; the theme palette, gradients
+ * and shadows are untouched. Aspect-ratio presets stay: the editor uses
+ * them and they are a few lines.
+ *
+ * @param WP_Theme_JSON_Data $theme_json Core's theme.json data.
+ * @return WP_Theme_JSON_Data
+ */
+function shitate_strip_core_presets( $theme_json ) {
+	return $theme_json->update_with(
+		array(
+			'version'  => 3,
+			'settings' => array(
+				'color'  => array(
+					'palette'   => array(),
+					'gradients' => array(),
+					'duotone'   => array(),
+				),
+				'shadow' => array(
+					'presets' => array(),
+				),
+			),
+		)
+	);
+}
+add_filter( 'wp_theme_json_data_default', 'shitate_strip_core_presets' );
+
+/**
  * Register custom block pattern categories.
  */
 function shitate_register_pattern_categories() {
@@ -943,26 +977,67 @@ add_action( 'enqueue_block_editor_assets', 'shitate_scale_panel_script' );
 
 /**
  * Enqueue front-end styles.
+ *
+ * Normally one request: assets/css/shitate-reset.min.css (or shitate.min.css
+ * when the reset layer is filtered off), built from reset → tokens →
+ * utilities → style.css by bin/build-css.mjs. With SCRIPT_DEBUG the four
+ * source files load separately. The bundle is registered under the
+ * `shitate-tokens` handle and the other handles become empty aliases, so
+ * inline styles and dependencies keyed to any of them keep working; a child
+ * theme's own style.css still loads as `shitate-style`.
  */
 function shitate_enqueue_styles() {
-	$deps = array();
-	if ( shitate_use_reset() ) {
-		// Base reset first: zero-specificity rules core does not cover.
+	$use_reset = shitate_use_reset();
+	$bundle    = $use_reset ? 'assets/css/shitate-reset.min.css' : 'assets/css/shitate.min.css';
+	$debug     = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG;
+	if ( ! $debug && file_exists( get_theme_file_path( $bundle ) ) ) {
 		wp_enqueue_style(
-			'shitate-reset',
-			get_theme_file_uri( 'assets/css/reset.css' ),
+			'shitate-tokens',
+			get_theme_file_uri( $bundle ),
 			array(),
 			SHITATE_VERSION
 		);
-		$deps[] = 'shitate-reset';
+		wp_register_style( 'shitate-reset', false, array( 'shitate-tokens' ), SHITATE_VERSION );
+		wp_register_style( 'shitate-utilities', false, array( 'shitate-tokens' ), SHITATE_VERSION );
+		wp_enqueue_style( 'shitate-utilities' );
+		wp_enqueue_style(
+			'shitate-style',
+			is_child_theme() ? get_stylesheet_uri() : false,
+			array( 'shitate-tokens', 'shitate-utilities' ),
+			SHITATE_VERSION
+		);
+	} else {
+		$deps = array();
+		if ( $use_reset ) {
+			// Base reset first: zero-specificity rules core does not cover.
+			wp_enqueue_style(
+				'shitate-reset',
+				get_theme_file_uri( 'assets/css/reset.css' ),
+				array(),
+				SHITATE_VERSION
+			);
+			$deps[] = 'shitate-reset';
+		}
+		wp_enqueue_style(
+			'shitate-tokens',
+			get_theme_file_uri( 'assets/css/tokens.css' ),
+			$deps,
+			SHITATE_VERSION
+		);
+		wp_enqueue_style(
+			'shitate-utilities',
+			get_theme_file_uri( 'assets/css/utilities.css' ),
+			array( 'shitate-tokens' ),
+			SHITATE_VERSION
+		);
+		wp_enqueue_style(
+			'shitate-style',
+			get_stylesheet_uri(),
+			array( 'shitate-tokens', 'shitate-utilities' ),
+			SHITATE_VERSION
+		);
 	}
-	wp_enqueue_style(
-		'shitate-tokens',
-		get_theme_file_uri( 'assets/css/tokens.css' ),
-		$deps,
-		SHITATE_VERSION
-	);
-	// Customizer type-scale override, right after tokens.css so it always wins.
+	// Customizer type-scale override, right after the tokens so it always wins.
 	$scale_type = '';
 	$scale_id   = 0;
 	if ( is_singular() ) {
@@ -972,18 +1047,6 @@ function shitate_enqueue_styles() {
 	wp_add_inline_style( 'shitate-tokens', shitate_scale_inline_css( $scale_type, $scale_id ) );
 	// Translated label for sticky posts in list cards (CSS generated content).
 	wp_add_inline_style( 'shitate-tokens', ':root{--st-label-pickup:"' . str_replace( array( '\\', '"' ), array( '\\\\', '\\"' ), __( 'PICKUP', 'shitate' ) ) . '"}' );
-	wp_enqueue_style(
-		'shitate-utilities',
-		get_theme_file_uri( 'assets/css/utilities.css' ),
-		array( 'shitate-tokens' ),
-		SHITATE_VERSION
-	);
-	wp_enqueue_style(
-		'shitate-style',
-		get_stylesheet_uri(),
-		array( 'shitate-tokens', 'shitate-utilities' ),
-		SHITATE_VERSION
-	);
 }
 add_action( 'wp_enqueue_scripts', 'shitate_enqueue_styles' );
 

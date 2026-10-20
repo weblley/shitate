@@ -1,0 +1,13 @@
+{
+	"name": "shitate-theme",
+	"version": "0.0.0",
+	"private": true,
+	"description": "Build tooling for the shitate block theme (CSS bundle). The theme itself needs none of this at runtime.",
+	"type": "module",
+	"scripts": {
+		"build:css": "node bin/build-css.mjs"
+	},
+	"devDependencies": {
+		"esbuild": "^0.25.0"
+	}
+}

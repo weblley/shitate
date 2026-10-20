@@ -61,6 +61,13 @@ JS翻訳（utilities-toolbar）は `languages/shitate-ja-shitate-utilities-toolb
 - readme.txt の `== Changelog ==` はユーザー向け（.org審査対象）。リリース時に同内容を手動で反映する
 - 日常の変更は普通に commit / push してよい（Release はタグ時のみ作られる）
 
+## CSS の配信（2026-10-20）
+
+- フロントは **1 リクエスト**: `assets/css/shitate-reset.min.css`（`shitate_use_reset` が false のサイトは `shitate.min.css`）。中身は reset → tokens → utilities → style.css を `bin/build-css.mjs`（esbuild）で結合・minify したもの。**ソースの 4 ファイルを編集したら `npm run build:css` を実行してビルド結果もコミットする**（`bin/release.sh` が再ビルドして差分があれば止まる）。初回は `npm install`（node_modules は .gitignore 済み、zip には入らない）
+- `SCRIPT_DEBUG` が true のサイトではソース 4 ファイルを個別に読み込む。エディタは常にソースを読む（`add_editor_style`）
+- ハンドル名は従来どおり: バンドルは `shitate-tokens`、`shitate-reset` / `shitate-utilities` / `shitate-style` は空のエイリアス（子テーマの style.css だけは `shitate-style` として実体を読む）。`wp_add_inline_style( 'shitate-tokens', … )` はそのまま使える
+- コアの既定プリセット（色 12・グラデーション 12・シャドウ 5）は `shitate_strip_core_presets()`（`wp_theme_json_data_default` フィルター）で CSS からも除去。theme.json の `defaultPalette: false` 等は UI を隠すだけで CSS は出続けるため
+
 ## その他
 - カスタマイザーのスケール上書きは `shitate_scale_inline_css()` → フロントは shitate-tokens 直後にインライン、エディタは `block_editor_settings_all` で注入
 - 配布zip: `bin/build-zip.sh` → dist/shitate.zip
