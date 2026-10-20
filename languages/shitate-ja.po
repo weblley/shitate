@@ -462,8 +462,8 @@ msgstr "お探しのページは、移動または削除されたか、一時的
 msgid "The people behind the work"
 msgstr "仕事を支えるメンバー"
 
-msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
-msgstr "画面幅 375px で使う比率です。幅広レイアウトの幅（既定 1260px）までの間でメインの比率へ滑らかに変化するため、メディアクエリなしでスマートフォンでは文字と余白が引き締まります。"
+msgid "The ratio used at 375px wide. The type scale eases from this to the main ratio by the wide layout width (1260px by default), so headings tighten on phones without media queries. Spacing is not affected."
+msgstr "画面幅 375px で使う比率です。幅広レイアウトの幅（既定 1260px）までの間でメインの比率へ滑らかに変化するため、メディアクエリなしでスマートフォンでは見出しが引き締まります。余白には影響しません。"
 
 msgid "This page could not be found."
 msgstr "ページが見つかりません"

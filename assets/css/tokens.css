@@ -22,9 +22,13 @@
 	--st-font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
 	/*
-	 * Modular scale — one ratio drives both type and spacing.
-	 * Every step is a power of the ratio away from the base size (--st-text-m),
-	 * computed as chained multiplications, so no pow() is needed.
+	 * Modular scale — one ratio drives the TYPE sizes.
+	 * Every text step is a power of the ratio away from the base size
+	 * (--st-text-m), computed as chained multiplications, so no pow() is needed.
+	 * Spacing does NOT follow the ratio (decided 2026-10-20): the --st-space-*
+	 * steps below are fixed rem values, and the rhythm inside content follows
+	 * the line height (see --st-line). Changing the ratio or the base size
+	 * therefore changes how big the type is, never how roomy the layout is.
 	 *
 	 * The ratio is fluid: on narrow viewports it eases to the small-screen
 	 * ratio (--st-ratio-min: the Customizer's "Scale ratio on small screens",
@@ -81,7 +85,7 @@
 	 * All steps use the fluid ratio --st-r, so the whole ladder tightens on
 	 * narrow viewports while staying a true geometric progression.
 	 */
-	--st-space-m: var(--st-text-m);
+	--st-space-m: 1rem;
 
 	/*
 	 * One line of body text. theme.json reads --st-line-height for the body
@@ -92,13 +96,20 @@
 	 */
 	--st-line-height: 1.75;
 	--st-line: calc(var(--st-text-m) * var(--st-line-height));
-	--st-space-s: calc(var(--st-space-m) / var(--st-r));
-	--st-space-xs: calc(var(--st-space-m) / var(--st-r) / var(--st-r) / var(--st-r));
-	--st-space-xxs: calc(var(--st-space-xs) / var(--st-r) / var(--st-r) / var(--st-r));
-	--st-space-l: calc(var(--st-space-m) * var(--st-r) * var(--st-r));
-	--st-space-xl: calc(var(--st-space-l) * var(--st-r) * var(--st-r));
-	--st-space-xxl: calc(var(--st-space-xl) * var(--st-r) * var(--st-r));
-	--st-space-xxxl: calc(var(--st-space-xxl) * var(--st-r) * var(--st-r));
+	/*
+	 * Spacing steps: fixed, in rem, on an 8px-friendly ladder that gets more
+	 * generous at the top (4 / 8 / 12 / 16 / 24 / 40 / 64 / 104px at a 16px
+	 * root). They are the same at every ratio, base size and viewport width;
+	 * section padding in patterns stays put when the owner changes the type
+	 * scale, and phones get the same breathing room as desktops.
+	 */
+	--st-space-xxs: 0.25rem;
+	--st-space-xs: 0.5rem;
+	--st-space-s: 0.75rem;
+	--st-space-l: 1.5rem;
+	--st-space-xl: 2.5rem;
+	--st-space-xxl: 4rem;
+	--st-space-xxxl: 6.5rem;
 
 	/*
 	 * Layout — follows Global Styles. theme.json sets contentSize / wideSize

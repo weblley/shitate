@@ -462,8 +462,8 @@ msgstr "La pagina che cerchi potrebbe essere stata spostata o eliminata, oppure 
 msgid "The people behind the work"
 msgstr "Le persone dietro il lavoro"
 
-msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
-msgstr "Il rapporto usato a 375px di larghezza. La scala passa gradualmente al rapporto principale entro la larghezza del layout ampio (1260px per impostazione predefinita), così testo e spaziature si stringono sugli smartphone senza media query."
+msgid "The ratio used at 375px wide. The type scale eases from this to the main ratio by the wide layout width (1260px by default), so headings tighten on phones without media queries. Spacing is not affected."
+msgstr "Il rapporto usato a 375px di larghezza. La scala tipografica passa gradualmente al rapporto principale entro la larghezza del layout ampio (1260px per impostazione predefinita), così i titoli si stringono sugli smartphone senza media query. Le spaziature non cambiano."
 
 msgid "This page could not be found."
 msgstr "Questa pagina non è stata trovata."

@@ -360,7 +360,7 @@ function shitate_customize_register( $wp_customize ) {
 			'type'        => 'select',
 			'section'     => 'shitate_typography',
 			'label'       => __( 'Scale ratio on small screens', 'shitate' ),
-			'description' => __( 'The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries.', 'shitate' ),
+			'description' => __( 'The ratio used at 375px wide. The type scale eases from this to the main ratio by the wide layout width (1260px by default), so headings tighten on phones without media queries. Spacing is not affected.', 'shitate' ),
 			'choices'     => array(
 				'auto'  => __( 'Auto — halfway between 1 and the main ratio', 'shitate' ),
 				'1.067' => __( 'Minor Second — 1.067', 'shitate' ),

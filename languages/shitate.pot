@@ -462,7 +462,7 @@ msgstr ""
 msgid "The people behind the work"
 msgstr ""
 
-msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
+msgid "The ratio used at 375px wide. The type scale eases from this to the main ratio by the wide layout width (1260px by default), so headings tighten on phones without media queries. Spacing is not affected."
 msgstr ""
 
 msgid "This page could not be found."

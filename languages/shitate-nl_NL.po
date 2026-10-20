@@ -462,8 +462,8 @@ msgstr "De pagina die je zoekt is mogelijk verplaatst of verwijderd, of tijdelij
 msgid "The people behind the work"
 msgstr "De mensen achter het werk"
 
-msgid "The ratio used at 375px wide. The scale eases from this to the main ratio by the wide layout width (1260px by default), so type and spacing tighten on phones without media queries."
-msgstr "De verhouding bij 375px breed. De schaal loopt geleidelijk over naar de hoofdverhouding tot de brede lay-outbreedte (standaard 1260px), zodat tekst en ruimte op telefoons strakker worden zonder media queries."
+msgid "The ratio used at 375px wide. The type scale eases from this to the main ratio by the wide layout width (1260px by default), so headings tighten on phones without media queries. Spacing is not affected."
+msgstr "De verhouding bij 375px breed. De typografische schaal loopt geleidelijk over naar de hoofdverhouding tot de brede lay-outbreedte (standaard 1260px), zodat koppen op telefoons strakker worden zonder media queries. De ruimte verandert niet."
 
 msgid "This page could not be found."
 msgstr "Deze pagina is niet gevonden."
