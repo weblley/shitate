@@ -205,8 +205,10 @@
  * Everything is a multiple of the LOCAL gap, so it tightens automatically
  * inside dense contexts (cards, boxes with their own blockGap). First
  * children keep no top margin. The `:root` prefix lifts specificity just
- * above the core block-gap rule without needing !important; later rules win
- * among equals, so the "after a heading" rule comes last.
+ * above the core block-gap rule without needing !important. The media and
+ * heading rules are all 0-2-0 (`:not( :first-child, … )` counts as one
+ * class), so later rules win among equals and the "after a heading" rule,
+ * which comes last, also applies to an image or table right after a heading.
  */
 /* Media, tables, quotes and rules: 1.5 lines on both sides. */
 :root :where( .is-layout-flow, .is-layout-constrained ) > :where( figure, .wp-block-image, .wp-block-gallery, .wp-block-table, .wp-block-quote, .wp-block-pullquote, .wp-block-separator, .wp-block-embed ):not( :first-child ),
@@ -224,7 +226,7 @@
 }
 
 /* After a heading: half a line, so the heading sits with what it introduces. */
-:root :where( .is-layout-flow, .is-layout-constrained ) > :where( h1, h2, h3, h4, h5, h6 ) + :not( h1, h2, h3, h4, h5, h6 ) {
+:root :where( .is-layout-flow, .is-layout-constrained ) > :where( h1, h2, h3, h4, h5, h6 ) + :not( :first-child, h1, h2, h3, h4, h5, h6 ) {
 	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * 0.5 );
 }
 

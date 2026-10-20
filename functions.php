@@ -138,37 +138,34 @@ add_action( 'init', 'shitate_register_pattern_categories' );
 /**
  * Block styles.
  *
+ * Each style's CSS lives in its own stylesheet handle (shitate-style-<name>,
+ * inline, no file) and is enqueued only when a rendered block carries that
+ * style class (shitate_enqueue_block_style_css), so a page prints the CSS of
+ * the styles it uses, once. The editor loads them all.
+ *
  * - Breadcrumbs "Single line": never wraps; the trail scrolls sideways
  *   (scrollbar hidden). Core forces flex-wrap:wrap at 0-1-1, so the
  *   selectors deliberately carry the block class as well.
  * - "Chips" on Post Terms, Categories and Paragraph: every link becomes a
  *   chip (tinted surface, brand text; inverted on hover and when current).
- *   The list cards use it for a post's categories, the category row under a
- *   list heading uses it on the Categories block and on the "All" link.
  * - Post Title / Post Excerpt "Two lines": clamps the text to two lines so
  *   cards in a grid keep the same height.
- * - Post Template layouts, all CSS only:
- *   "Cards" (grid, rows breathe more than columns), "Cards, first post
- *   large" (the first post spread across the grid; an ordinary card from
- *   page 2 on and in narrow containers), "List" (image left, text right,
- *   hairlines) and "Rows" (date, chip and title on one line, for news).
- *   The card layouts share the image hover and the PICKUP label on sticky
- *   posts; --st-label-pickup carries the translated label (see
- *   shitate_enqueue_styles). The block gap stays a single value because
- *   core's responsive grid folds it into its column formula.
+ * - Post Template layouts, all CSS only: "Cards" (grid, rows breathe more
+ *   than columns), "Cards, first post large" (the first post spread across
+ *   the grid; an ordinary card from page 2 on and in narrow containers),
+ *   "List" (image left, text right, hairlines) and "Rows" (date, chip and
+ *   title on one line, for news). The card layouts share the image hover
+ *   and the PICKUP label on sticky posts; --st-label-pickup carries the
+ *   translated label (see shitate_enqueue_styles). The block gap stays a
+ *   single value because core's responsive grid folds it into its column
+ *   formula; the space between the image and the text is set here, not in
+ *   the template, so each layout can decide it.
+ * - Navigation "Captioned" / "Underline" and Navigation Link "Button" /
+ *   "Outline": see shitate_block_style_definitions().
+ *
+ * @return array[] name, blocks, label, css.
  */
-function shitate_register_block_styles() {
-	register_block_style(
-		'core/breadcrumbs',
-		array(
-			'name'         => 'single-line',
-			'label'        => __( 'Single line', 'shitate' ),
-			'inline_style' => '.wp-block-breadcrumbs.is-style-single-line ol{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:none}'
-				. '.wp-block-breadcrumbs.is-style-single-line ol::-webkit-scrollbar{display:none}'
-				. '.wp-block-breadcrumbs.is-style-single-line li{flex:none}',
-		)
-	);
-
+function shitate_block_style_definitions() {
 	$chip  = '{display:inline-block;padding:0.125rem 0.5rem;border-radius:var(--st-radius-s);background-color:var(--st-color-base-2);color:var(--st-color-brand);font-weight:600;text-decoration:none}';
 	$chips = '.wp-block-post-terms.is-style-chips{display:inline-flex;flex-wrap:wrap;gap:var(--st-space-xxs)}'
 		. '.wp-block-post-terms.is-style-chips .wp-block-post-terms__separator{display:none}'
@@ -177,16 +174,6 @@ function shitate_register_block_styles() {
 		. 'p.is-style-chips{display:flex;flex-wrap:wrap;gap:var(--st-space-xxs)}'
 		. '.wp-block-post-terms.is-style-chips a,.wp-block-categories.is-style-chips a,p.is-style-chips a' . $chip
 		. '.wp-block-post-terms.is-style-chips a:hover,.wp-block-categories.is-style-chips a:hover,p.is-style-chips a:hover,.wp-block-categories.is-style-chips .current-cat>a,p.is-style-chips a.is-current{background-color:var(--st-color-brand);color:var(--st-color-base)}';
-	foreach ( array( 'core/post-terms', 'core/categories', 'core/paragraph' ) as $block ) {
-		register_block_style(
-			$block,
-			array(
-				'name'         => 'chips',
-				'label'        => __( 'Chips', 'shitate' ),
-				'inline_style' => $chips,
-			)
-		);
-	}
 
 	// Image hover and the PICKUP label, shared by the card layouts.
 	$media = static function ( $style ) {
@@ -197,72 +184,11 @@ function shitate_register_block_styles() {
 			. '@media (prefers-reduced-motion:reduce){' . $li . ':hover .wp-block-post-featured-image img{transform:none}}'
 			. $li . '.sticky .wp-block-post-featured-image::before{content:var(--st-label-pickup,"PICKUP");position:absolute;inset-block-start:var(--st-space-xs);inset-inline-start:var(--st-space-xs);z-index:1;padding:0.125rem 0.5rem;border-radius:var(--st-radius-s);background-color:var(--st-color-contrast);color:var(--st-color-base);font-size:var(--st-text-xs);font-weight:600;line-height:1.5}';
 	};
-	$cards_root = '.wp-block-post-template.is-style-cards';
-	$feat_root  = '.wp-block-post-template.is-style-cards-featured';
-	$list_root  = '.wp-block-post-template.is-style-list';
-	$rows_root  = '.wp-block-post-template.is-style-rows';
-	register_block_style(
-		'core/post-template',
-		array(
-			'name'         => 'cards',
-			'label'        => __( 'Cards', 'shitate' ),
-			'inline_style' => $cards_root . '{row-gap:var(--st-space-xl)}'
-				. $cards_root . ' .wp-block-post-title{font-size:var(--st-text-m)}'
-				. $media( 'cards' ),
-		)
-	);
-	register_block_style(
-		'core/post-template',
-		array(
-			'name'         => 'cards-featured',
-			'label'        => __( 'Cards, first post large', 'shitate' ),
-			'inline_style' => $feat_root . '{row-gap:var(--st-space-xl)}'
-				. $feat_root . ' .wp-block-post-title{font-size:var(--st-text-m)}'
-				. $feat_root . '>li:first-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--st-space-xl);align-content:center}'
-				. $feat_root . '>li:first-child>.wp-block-post-featured-image{grid-row:1/span 4;align-self:center}'
-				. $feat_root . '>li:first-child>:not(.wp-block-post-featured-image){grid-column:2}'
-				. $feat_root . '>li:first-child>.wp-block-post-featured-image+*{margin-block-start:0}'
-				. $feat_root . '>li:first-child:not(:has(>.wp-block-post-featured-image))>*{grid-column:1/-1}'
-				. $feat_root . '>li:first-child:not(:has(>.wp-block-post-featured-image))>:first-child{margin-block-start:0}'
-				. $feat_root . '>li:first-child .wp-block-post-title{font-size:var(--st-text-xl);-webkit-line-clamp:3}'
-				. $feat_root . '>li:first-child .wp-block-post-excerpt__excerpt{-webkit-line-clamp:3}'
-				. '.paged ' . $feat_root . '>li:first-child{grid-column:auto;display:block}'
-				. '.paged ' . $feat_root . '>li:first-child .wp-block-post-title{font-size:var(--st-text-m);-webkit-line-clamp:2}'
-				. '.paged ' . $feat_root . '>li:first-child>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}'
-				. '@container (max-width:40rem){' . $feat_root . '>li:first-child{display:block}' . $feat_root . '>li:first-child>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}}'
-				. $media( 'cards-featured' ),
-		)
-	);
-	register_block_style(
-		'core/post-template',
-		array(
-			'name'         => 'list',
-			'label'        => __( 'List', 'shitate' ),
-			'inline_style' => $list_root . '{display:flex;flex-direction:column;gap:0;container-type:inline-size}'
-				. $list_root . '>li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:var(--st-space-l);margin:0;padding-block:var(--st-space-l);border-block-end:0.0625rem solid var(--st-color-rule)}'
-				. $list_root . '>li:first-child{border-block-start:0.0625rem solid var(--st-color-rule)}'
-				. $list_root . '>li>.wp-block-post-featured-image{grid-row:1/span 4}'
-				. $list_root . '>li>:not(.wp-block-post-featured-image){grid-column:2}'
-				. $list_root . '>li>.wp-block-post-featured-image+*{margin-block-start:0}'
-				. $list_root . '>li:not(:has(>.wp-block-post-featured-image))>*{grid-column:1/-1}'
-				. $list_root . '>li:not(:has(>.wp-block-post-featured-image))>:first-child{margin-block-start:0}'
-				. $list_root . ' .wp-block-post-title{font-size:var(--st-text-l)}'
-				. '@container (max-width:40rem){' . $list_root . '>li{display:block}' . $list_root . '>li>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}}'
-				. $media( 'list' ),
-		)
-	);
-	register_block_style(
-		'core/post-template',
-		array(
-			'name'         => 'rows',
-			'label'        => __( 'Rows', 'shitate' ),
-			'inline_style' => $rows_root . '{display:flex;flex-direction:column;gap:0}'
-				. $rows_root . '>li{display:flex;flex-wrap:wrap;align-items:center;gap:var(--st-space-xs) var(--st-space-m);margin:0;padding-block:var(--st-space-s);border-block-end:0.0625rem solid var(--st-color-rule)}'
-				. $rows_root . '>li:first-child{border-block-start:0.0625rem solid var(--st-color-rule)}'
-				. $rows_root . '>li>*{margin:0}'
-				. $rows_root . ' .wp-block-post-title{flex:1 1 20rem;font-size:var(--st-text-m);font-weight:500}',
-		)
-	);
+	$cards = '.wp-block-post-template.is-style-cards';
+	$feat  = '.wp-block-post-template.is-style-cards-featured';
+	$first = $feat . '>li:first-child';
+	$list  = '.wp-block-post-template.is-style-list';
+	$rows  = '.wp-block-post-template.is-style-rows';
 
 	// Navigation, the way Japanese business themes draw it: each item is a
 	// label with a small caption under it (the link's Description field, which
@@ -297,25 +223,9 @@ function shitate_register_block_styles() {
 		}
 		return $css;
 	};
-	register_block_style(
-		'core/navigation',
-		array(
-			'name'         => 'captioned',
-			'label'        => __( 'Captioned', 'shitate' ),
-			'inline_style' => $nav_style( 'captioned', true ),
-		)
-	);
-	register_block_style(
-		'core/navigation',
-		array(
-			'name'         => 'underline',
-			'label'        => __( 'Underline', 'shitate' ),
-			'inline_style' => $nav_style( 'underline', false ),
-		)
-	);
 	// A navigation link as a call-to-action button (filled) or an outline
-	// button; full width in the mobile overlay. 0-4-0 so it wins inside the
-	// Captioned / Underline navigation.
+	// button; full width and centred in the mobile overlay. 0-4-0 so it wins
+	// inside the Captioned / Underline navigation.
 	$nav_link = '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content,.wp-block-navigation .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content{flex-direction:row;align-items:center;justify-content:center;padding:0.5rem 1rem;border-radius:var(--st-radius-s);font-weight:600;text-decoration:none;transition:background-color var(--st-transition,0.2s),color var(--st-transition,0.2s)}'
 		. '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content{background-color:var(--st-color-brand);color:var(--st-color-base)}'
 		. '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content:hover{background-color:var(--st-color-brand-hover)}'
@@ -324,33 +234,186 @@ function shitate_register_block_styles() {
 		. '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content::after,.wp-block-navigation .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content::after,.wp-block-navigation .wp-block-navigation-item.is-style-button .wp-block-navigation-item__description,.wp-block-navigation .wp-block-navigation-item.is-style-outline .wp-block-navigation-item__description{display:none}'
 		. '.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-button,.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-outline{border:0;margin-block-start:var(--st-space-m)}'
 		. '.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content,.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content{inline-size:100%;justify-content:center;padding:0.75rem 1rem}';
-	foreach ( array( 'button' => __( 'Button', 'shitate' ), 'outline' => __( 'Outline', 'shitate' ) ) as $name => $label ) {
-		register_block_style(
-			'core/navigation-link',
-			array(
-				'name'         => $name,
-				'label'        => $label,
-				'inline_style' => $nav_link,
-			)
-		);
-	}
 
-	// The link inside a Post Title is inline-block in core, which would keep
-	// the whole title on one (tall) line box; inline lets the clamp cut it.
-	$two_lines = '.is-style-two-lines.wp-block-post-title,.wp-block-post-excerpt.is-style-two-lines .wp-block-post-excerpt__excerpt{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}'
-		. '.is-style-two-lines.wp-block-post-title a{display:inline}';
-	foreach ( array( 'core/post-title', 'core/post-excerpt' ) as $block ) {
-		register_block_style(
-			$block,
-			array(
-				'name'         => 'two-lines',
-				'label'        => __( 'Two lines', 'shitate' ),
-				'inline_style' => $two_lines,
-			)
-		);
+	return array(
+		array(
+			'name'   => 'single-line',
+			'blocks' => array( 'core/breadcrumbs' ),
+			'label'  => __( 'Single line', 'shitate' ),
+			'css'    => '.wp-block-breadcrumbs.is-style-single-line ol{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:none}'
+				. '.wp-block-breadcrumbs.is-style-single-line ol::-webkit-scrollbar{display:none}'
+				. '.wp-block-breadcrumbs.is-style-single-line li{flex:none}'
+				. '.wp-block-breadcrumbs.is-style-single-line a{text-decoration:none}',
+		),
+		array(
+			'name'   => 'chips',
+			'blocks' => array( 'core/post-terms', 'core/categories', 'core/paragraph' ),
+			'label'  => __( 'Chips', 'shitate' ),
+			'css'    => $chips,
+		),
+		array(
+			'name'   => 'two-lines',
+			'blocks' => array( 'core/post-title', 'core/post-excerpt' ),
+			'label'  => __( 'Two lines', 'shitate' ),
+			// The link inside a Post Title is inline-block in core, which would
+			// keep the whole title on one (tall) line box; inline lets the clamp cut it.
+			'css'    => '.is-style-two-lines.wp-block-post-title,.wp-block-post-excerpt.is-style-two-lines .wp-block-post-excerpt__excerpt{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}'
+				. '.is-style-two-lines.wp-block-post-title a{display:inline}',
+		),
+		array(
+			'name'   => 'cards',
+			'blocks' => array( 'core/post-template' ),
+			'label'  => __( 'Cards', 'shitate' ),
+			'css'    => $cards . '{row-gap:var(--st-space-xl)}'
+				. $cards . ' .wp-block-post-title{font-size:var(--st-text-m)}'
+				. $cards . '>li>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}'
+				. $cards . '>li>.wp-block-post-excerpt{margin-block-end:0}'
+				. $media( 'cards' ),
+		),
+		array(
+			'name'   => 'cards-featured',
+			'blocks' => array( 'core/post-template' ),
+			'label'  => __( 'Cards, first post large', 'shitate' ),
+			'css'    => $feat . '{row-gap:var(--st-space-xl);container-type:inline-size}'
+				. $feat . ' .wp-block-post-title{font-size:var(--st-text-m)}'
+				. $feat . '>li>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}'
+				. $feat . '>li>.wp-block-post-excerpt{margin-block-end:0}'
+				. $first . '{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--st-space-xl);align-content:center}'
+				. $first . '>.wp-block-post-featured-image{grid-row:1/span 4;align-self:center}'
+				. $first . '>:not(.wp-block-post-featured-image){grid-column:2}'
+				. $first . '>.wp-block-post-featured-image+*{margin-block-start:0}'
+				. $first . ':not(:has(>.wp-block-post-featured-image))>*{grid-column:1/-1}'
+				. $first . ' .wp-block-post-title{font-size:var(--st-text-xl);-webkit-line-clamp:3}'
+				. $first . ' .wp-block-post-excerpt__excerpt{-webkit-line-clamp:3}'
+				// From page 2 on, and in a narrow container: an ordinary card.
+				. '.paged ' . $first . '{grid-column:auto;display:block}'
+				. '.paged ' . $first . ' .wp-block-post-title{font-size:var(--st-text-m);-webkit-line-clamp:2}'
+				. '.paged ' . $first . ' .wp-block-post-excerpt__excerpt{-webkit-line-clamp:2}'
+				. '.paged ' . $first . '>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}'
+				. '@container (max-width:40rem){' . $first . '{display:block}' . $first . ' .wp-block-post-title{font-size:var(--st-text-m);-webkit-line-clamp:2}' . $first . ' .wp-block-post-excerpt__excerpt{-webkit-line-clamp:2}' . $first . '>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}}'
+				. $media( 'cards-featured' ),
+		),
+		array(
+			'name'   => 'list',
+			'blocks' => array( 'core/post-template' ),
+			'label'  => __( 'List', 'shitate' ),
+			// One post per row, image left (a third), text right, hairlines
+			// between rows; for the default (stacked) post-template layout.
+			'css'    => $list . '{display:flex;flex-direction:column;gap:0;container-type:inline-size}'
+				. $list . '>li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:var(--st-space-l);margin:0;padding-block:var(--st-space-l);border-block-end:0.0625rem solid var(--st-color-rule)}'
+				. $list . '>li:first-child{border-block-start:0.0625rem solid var(--st-color-rule)}'
+				. $list . '>li>.wp-block-post-featured-image{grid-row:1/span 4}'
+				. $list . '>li>:not(.wp-block-post-featured-image){grid-column:2}'
+				. $list . '>li:not(:has(>.wp-block-post-featured-image))>*{grid-column:1/-1}'
+				. $list . '>li>.wp-block-post-excerpt{margin-block-end:0}'
+				. $list . ' .wp-block-post-title{font-size:var(--st-text-l)}'
+				. '@container (max-width:40rem){' . $list . '>li{display:block}' . $list . '>li>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}}'
+				. $media( 'list' ),
+		),
+		array(
+			'name'   => 'rows',
+			'blocks' => array( 'core/post-template' ),
+			'label'  => __( 'Rows', 'shitate' ),
+			// Date, chip and title on one line (news / announcements); no image.
+			'css'    => $rows . '{display:flex;flex-direction:column;gap:0}'
+				. $rows . '>li{display:flex;flex-wrap:wrap;align-items:center;gap:var(--st-space-xs) var(--st-space-m);margin:0;padding-block:var(--st-space-s);border-block-end:0.0625rem solid var(--st-color-rule)}'
+				. $rows . '>li:first-child{border-block-start:0.0625rem solid var(--st-color-rule)}'
+				. $rows . '>li>*{margin:0}'
+				. $rows . ' .wp-block-post-title{flex:1 1 20rem;font-size:var(--st-text-m);font-weight:500}',
+		),
+		array(
+			'name'   => 'captioned',
+			'blocks' => array( 'core/navigation' ),
+			'label'  => __( 'Captioned', 'shitate' ),
+			'css'    => $nav_style( 'captioned', true ),
+		),
+		array(
+			'name'   => 'underline',
+			'blocks' => array( 'core/navigation' ),
+			'label'  => __( 'Underline', 'shitate' ),
+			'css'    => $nav_style( 'underline', false ),
+		),
+		array(
+			'name'   => 'button',
+			'blocks' => array( 'core/navigation-link' ),
+			'label'  => __( 'Button', 'shitate' ),
+			'css'    => $nav_link,
+		),
+		array(
+			'name'   => 'outline',
+			'blocks' => array( 'core/navigation-link' ),
+			'label'  => __( 'Outline', 'shitate' ),
+			'css'    => $nav_link,
+		),
+	);
+}
+
+/**
+ * Register the styles and one inline stylesheet handle per style.
+ */
+function shitate_register_block_styles() {
+	foreach ( shitate_block_style_definitions() as $style ) {
+		$handle = 'shitate-style-' . $style['name'];
+		wp_register_style( $handle, false, array(), SHITATE_VERSION );
+		wp_add_inline_style( $handle, $style['css'] );
+		foreach ( $style['blocks'] as $block ) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => $style['name'],
+					'label' => $style['label'],
+				)
+			);
+		}
 	}
 }
 add_action( 'init', 'shitate_register_block_styles' );
+
+/**
+ * Enqueue a style's stylesheet when a block carrying that style renders.
+ *
+ * @param string $content Rendered block.
+ * @param array  $block   Parsed block.
+ * @return string
+ */
+function shitate_enqueue_block_style_css( $content, $block ) {
+	if ( empty( $block['attrs']['className'] ) || false === strpos( $block['attrs']['className'], 'is-style-' ) ) {
+		return $content;
+	}
+	static $map = null;
+	if ( null === $map ) {
+		$map = array();
+		foreach ( shitate_block_style_definitions() as $style ) {
+			foreach ( $style['blocks'] as $name ) {
+				$map[ $name ][ $style['name'] ] = 'shitate-style-' . $style['name'];
+			}
+		}
+	}
+	if ( empty( $block['blockName'] ) || empty( $map[ $block['blockName'] ] ) ) {
+		return $content;
+	}
+	preg_match_all( '/\bis-style-([a-z0-9-]+)/', $block['attrs']['className'], $m );
+	foreach ( $m[1] as $style_name ) {
+		if ( isset( $map[ $block['blockName'] ][ $style_name ] ) ) {
+			wp_enqueue_style( $map[ $block['blockName'] ][ $style_name ] );
+		}
+	}
+	return $content;
+}
+add_filter( 'render_block', 'shitate_enqueue_block_style_css', 10, 2 );
+
+/**
+ * The editor needs every style for its previews.
+ */
+function shitate_enqueue_block_styles_in_editor() {
+	if ( ! is_admin() ) {
+		return;
+	}
+	foreach ( shitate_block_style_definitions() as $style ) {
+		wp_enqueue_style( 'shitate-style-' . $style['name'] );
+	}
+}
+add_action( 'enqueue_block_assets', 'shitate_enqueue_block_styles_in_editor' );
 
 /**
  * Appearance → Patterns shortcut.
@@ -1000,18 +1063,23 @@ function shitate_scale_meta_auth( $allowed, $meta_key, $post_id ) {
  * @param array  $block         Parsed block.
  * @return string
  */
-function shitate_maybe_hide_post_title( $block_content, $block ) {
+function shitate_maybe_hide_post_title( $block_content, $block, $instance = null ) {
 	if ( ! is_singular() ) {
 		return $block_content;
 	}
+	// Only the page's own title: a title inside a Query Loop (which may list
+	// the same post) stays. The parsed block has no context; the instance does.
+	if ( $instance instanceof WP_Block && isset( $instance->context['queryId'] ) ) {
+		return $block_content;
+	}
 	$queried = (int) get_queried_object_id();
-	$post_id = isset( $block['context']['postId'] ) ? (int) $block['context']['postId'] : (int) get_the_ID();
+	$post_id = ( $instance instanceof WP_Block && isset( $instance->context['postId'] ) ) ? (int) $instance->context['postId'] : (int) get_the_ID();
 	if ( $queried && $post_id === $queried && get_post_meta( $queried, '_shitate_hide_title', true ) ) {
 		return '';
 	}
 	return $block_content;
 }
-add_filter( 'render_block_core/post-title', 'shitate_maybe_hide_post_title', 10, 2 );
+add_filter( 'render_block_core/post-title', 'shitate_maybe_hide_post_title', 10, 3 );
 
 /**
  * Editor sidebar panel "Type scale": per-post ratio, base size and the
@@ -1061,7 +1129,15 @@ function shitate_enqueue_styles() {
 	$use_reset = shitate_use_reset();
 	$bundle    = $use_reset ? 'assets/css/shitate-reset.min.css' : 'assets/css/shitate.min.css';
 	$debug     = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG;
-	if ( ! $debug && file_exists( get_theme_file_path( $bundle ) ) ) {
+	/**
+	 * Serve the minified bundle (true) or the four source files (false).
+	 * The per-file branch keeps 'shitate-reset' / 'shitate-utilities' /
+	 * 'shitate-style' as real stylesheets a child theme can dequeue.
+	 *
+	 * @param bool $use_bundle Default: true unless SCRIPT_DEBUG.
+	 */
+	$use_bundle = (bool) apply_filters( 'shitate_use_bundle', ! $debug );
+	if ( $use_bundle && file_exists( get_theme_file_path( $bundle ) ) ) {
 		wp_enqueue_style(
 			'shitate-tokens',
 			get_theme_file_uri( $bundle ),

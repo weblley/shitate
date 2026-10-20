@@ -171,14 +171,14 @@
 					"size": "var(--st-space-m)"
 				},
 				{
-					"slug": "line",
-					"name": "Line",
-					"size": "var(--st-line)"
-				},
-				{
 					"slug": "40",
 					"name": "L",
 					"size": "var(--st-space-l)"
+				},
+				{
+					"slug": "line",
+					"name": "Line",
+					"size": "var(--st-line)"
 				},
 				{
 					"slug": "50",
