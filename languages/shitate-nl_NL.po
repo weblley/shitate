@@ -120,11 +120,17 @@ msgstr "Bouw de site die u voor ogen had"
 msgid "Builds with the blocks the editor already ships, so the site stays easy to update."
 msgstr "Bouwt met de blokken die de editor al meelevert, zodat de site makkelijk te onderhouden blijft."
 
+msgid "Button"
+msgstr "Knop"
+
 msgid "Call us"
 msgstr "Bel ons"
 
 msgid "Can I change the colors and the type size?"
 msgstr "Kan ik de kleuren en de tekstgrootte aanpassen?"
+
+msgid "Captioned"
+msgstr "Met onderschrift"
 
 msgid "Cards"
 msgstr "Kaarten"
@@ -354,6 +360,9 @@ msgstr "Eén website"
 msgid "Optimize image loading"
 msgstr "Laden van afbeeldingen optimaliseren"
 
+msgid "Outline"
+msgstr "Omlijnd"
+
 msgid "PICKUP"
 msgstr "UITGELICHT"
 
@@ -524,6 +533,9 @@ msgstr "Typografische schaal per berichttype"
 
 msgid "Typography Scale"
 msgstr "Typografische schaal"
+
+msgid "Underline"
+msgstr "Onderstreept"
 
 msgid "Unlimited websites"
 msgstr "Onbeperkt aantal websites"

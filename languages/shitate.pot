@@ -120,10 +120,16 @@ msgstr ""
 msgid "Builds with the blocks the editor already ships, so the site stays easy to update."
 msgstr ""
 
+msgid "Button"
+msgstr ""
+
 msgid "Call us"
 msgstr ""
 
 msgid "Can I change the colors and the type size?"
+msgstr ""
+
+msgid "Captioned"
 msgstr ""
 
 msgid "Cards"
@@ -354,6 +360,9 @@ msgstr ""
 msgid "Optimize image loading"
 msgstr ""
 
+msgid "Outline"
+msgstr ""
+
 msgid "PICKUP"
 msgstr ""
 
@@ -523,6 +532,9 @@ msgid "Type scale by post type"
 msgstr ""
 
 msgid "Typography Scale"
+msgstr ""
+
+msgid "Underline"
 msgstr ""
 
 msgid "Unlimited websites"

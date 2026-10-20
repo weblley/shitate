@@ -120,11 +120,17 @@ msgstr "思い描いたサイトを、そのまま形に"
 msgid "Builds with the blocks the editor already ships, so the site stays easy to update."
 msgstr "エディター標準のブロックだけで組むので、サイトは更新しやすいまま保たれます。"
 
+msgid "Button"
+msgstr "ボタン"
+
 msgid "Call us"
 msgstr "電話"
 
 msgid "Can I change the colors and the type size?"
 msgstr "色や文字の大きさは変えられますか？"
+
+msgid "Captioned"
+msgstr "キャプション付き"
 
 msgid "Cards"
 msgstr "カード"
@@ -354,6 +360,9 @@ msgstr "1 サイト"
 msgid "Optimize image loading"
 msgstr "画像の読み込みを最適化"
 
+msgid "Outline"
+msgstr "枠線"
+
 msgid "PICKUP"
 msgstr "PICKUP"
 
@@ -524,6 +533,9 @@ msgstr "投稿タイプ別のタイプスケール"
 
 msgid "Typography Scale"
 msgstr "タイポグラフィスケール"
+
+msgid "Underline"
+msgstr "下線"
 
 msgid "Unlimited websites"
 msgstr "サイト数無制限"

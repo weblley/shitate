@@ -120,11 +120,17 @@ msgstr "Construisez le site que vous aviez en tête"
 msgid "Builds with the blocks the editor already ships, so the site stays easy to update."
 msgstr "Construit avec les blocs déjà fournis par l’éditeur, pour que le site reste facile à mettre à jour."
 
+msgid "Button"
+msgstr "Bouton"
+
 msgid "Call us"
 msgstr "Nous appeler"
 
 msgid "Can I change the colors and the type size?"
 msgstr "Puis-je changer les couleurs et la taille du texte ?"
+
+msgid "Captioned"
+msgstr "Avec légende"
 
 msgid "Cards"
 msgstr "Cartes"
@@ -354,6 +360,9 @@ msgstr "Un site"
 msgid "Optimize image loading"
 msgstr "Optimiser le chargement des images"
 
+msgid "Outline"
+msgstr "Contour"
+
 msgid "PICKUP"
 msgstr "À LA UNE"
 
@@ -524,6 +533,9 @@ msgstr "Échelle typographique par type de contenu"
 
 msgid "Typography Scale"
 msgstr "Échelle typographique"
+
+msgid "Underline"
+msgstr "Souligné"
 
 msgid "Unlimited websites"
 msgstr "Sites illimités"

@@ -264,6 +264,75 @@ function shitate_register_block_styles() {
 		)
 	);
 
+	// Navigation, the way Japanese business themes draw it: each item is a
+	// label with a small caption under it (the link's Description field, which
+	// core renders but hides), a brand-coloured bar slides in on hover and
+	// stays under the current page, drop-downs are shadowed panels, and the
+	// mobile overlay becomes a list with hairlines. "Underline" is the same
+	// without captions. Selectors carry .wp-block-navigation plus the style
+	// class (0-3-0) to outrank core's own navigation rules (0-2-0).
+	$nav_style = static function ( $style, $captions ) {
+		$n   = '.wp-block-navigation.is-style-' . $style;
+		$css = $n . ' .wp-block-navigation-item__content{position:relative;display:flex;flex-direction:column;align-items:center;gap:0.125rem;padding:0.5rem;line-height:1.3;text-decoration:none}'
+			. $n . ' .wp-block-navigation-item__content::after{content:"";position:absolute;inset-inline:0.5rem;inset-block-end:0;block-size:0.125rem;border-radius:0.0625rem;background-color:var(--st-color-brand);transform:scaleX(0);transform-origin:left;transition:transform var(--st-transition,0.2s)}'
+			. $n . ' .wp-block-navigation-item:hover>.wp-block-navigation-item__content::after,' . $n . ' .wp-block-navigation-item:focus-within>.wp-block-navigation-item__content::after,' . $n . ' .current-menu-item>.wp-block-navigation-item__content::after,' . $n . ' .current-menu-ancestor>.wp-block-navigation-item__content::after{transform:scaleX(1)}'
+			. $n . ' .current-menu-item>.wp-block-navigation-item__content,' . $n . ' .current-menu-ancestor>.wp-block-navigation-item__content{color:var(--st-color-brand)}'
+			. '@media (prefers-reduced-motion:reduce){' . $n . ' .wp-block-navigation-item__content::after{transition:none}}'
+			// Drop-down: a shadowed panel, rows with a tinted hover, no bars or captions inside.
+			. $n . ' .wp-block-navigation__submenu-container{border:0;border-radius:var(--st-radius-s);box-shadow:var(--wp--preset--shadow--card);padding:var(--st-space-xs) 0;min-inline-size:14rem}'
+			. $n . ' .wp-block-navigation__submenu-container .wp-block-navigation-item__content{flex-direction:row;align-items:center;justify-content:flex-start;padding:var(--st-space-xs) var(--st-space-m)}'
+			. $n . ' .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover{background-color:var(--st-color-base-2)}'
+			. $n . ' .wp-block-navigation__submenu-container .wp-block-navigation-item__content::after,' . $n . ' .wp-block-navigation__submenu-container .wp-block-navigation-item__description{display:none}'
+			// Mobile overlay: full-width rows with hairlines, captions beside the label.
+			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item{inline-size:100%;border-block-end:0.0625rem solid var(--st-color-rule)}'
+			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content{flex-direction:row;align-items:baseline;justify-content:flex-start;gap:var(--st-space-s);padding:var(--st-space-s) 0}'
+			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content::after{display:none}'
+			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container{box-shadow:none;padding:0 0 var(--st-space-xs) var(--st-space-m);min-inline-size:0}'
+			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item{border:0}';
+		if ( $captions ) {
+			$css .= $n . ' .wp-block-navigation-item__description{display:block;font-size:0.7em;letter-spacing:0.06em;color:var(--st-color-neutral)}'
+				. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__description{font-size:0.75em}';
+		}
+		return $css;
+	};
+	register_block_style(
+		'core/navigation',
+		array(
+			'name'         => 'captioned',
+			'label'        => __( 'Captioned', 'shitate' ),
+			'inline_style' => $nav_style( 'captioned', true ),
+		)
+	);
+	register_block_style(
+		'core/navigation',
+		array(
+			'name'         => 'underline',
+			'label'        => __( 'Underline', 'shitate' ),
+			'inline_style' => $nav_style( 'underline', false ),
+		)
+	);
+	// A navigation link as a call-to-action button (filled) or an outline
+	// button; full width in the mobile overlay. 0-4-0 so it wins inside the
+	// Captioned / Underline navigation.
+	$nav_link = '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content,.wp-block-navigation .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content{flex-direction:row;align-items:center;justify-content:center;padding:0.5rem 1rem;border-radius:var(--st-radius-s);font-weight:600;text-decoration:none;transition:background-color var(--st-transition,0.2s),color var(--st-transition,0.2s)}'
+		. '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content{background-color:var(--st-color-brand);color:var(--st-color-base)}'
+		. '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content:hover{background-color:var(--st-color-brand-hover)}'
+		. '.wp-block-navigation .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content{border:0.0625rem solid var(--st-color-brand);color:var(--st-color-brand)}'
+		. '.wp-block-navigation .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content:hover{background-color:var(--st-color-brand);color:var(--st-color-base)}'
+		. '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content::after,.wp-block-navigation .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content::after,.wp-block-navigation .wp-block-navigation-item.is-style-button .wp-block-navigation-item__description,.wp-block-navigation .wp-block-navigation-item.is-style-outline .wp-block-navigation-item__description{display:none}'
+		. '.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-button,.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-outline{border:0;margin-block-start:var(--st-space-m)}'
+		. '.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content,.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content{inline-size:100%;padding:0.75rem 1rem}';
+	foreach ( array( 'button' => __( 'Button', 'shitate' ), 'outline' => __( 'Outline', 'shitate' ) ) as $name => $label ) {
+		register_block_style(
+			'core/navigation-link',
+			array(
+				'name'         => $name,
+				'label'        => $label,
+				'inline_style' => $nav_link,
+			)
+		);
+	}
+
 	// The link inside a Post Title is inline-block in core, which would keep
 	// the whole title on one (tall) line box; inline lets the clamp cut it.
 	$two_lines = '.is-style-two-lines.wp-block-post-title,.wp-block-post-excerpt.is-style-two-lines .wp-block-post-excerpt__excerpt{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}'
