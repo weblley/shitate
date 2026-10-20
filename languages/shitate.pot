@@ -525,9 +525,6 @@ msgstr ""
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr ""
 
-msgid "Type scale"
-msgstr ""
-
 msgid "Type scale by post type"
 msgstr ""
 
@@ -625,6 +622,9 @@ msgid "per month, billed yearly"
 msgstr ""
 
 msgid "shitate"
+msgstr ""
+
+msgid "shitate settings"
 msgstr ""
 
 msgid "to choose from"

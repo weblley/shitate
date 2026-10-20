@@ -525,9 +525,6 @@ msgstr "Zwei Zeilen"
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "Schrift und Abstände schrumpfen gleichmäßig, wenn der Bildschirm schmaler wird – ohne plötzlichen Sprung bei einer festen Breite."
 
-msgid "Type scale"
-msgstr "Schriftskala"
-
 msgid "Type scale by post type"
 msgstr "Schriftskala je Inhaltstyp"
 
@@ -626,6 +623,9 @@ msgstr "pro Monat, jährliche Abrechnung"
 
 msgid "shitate"
 msgstr "shitate"
+
+msgid "shitate settings"
+msgstr "shitate-Einstellungen"
 
 msgid "to choose from"
 msgstr "zur Auswahl"

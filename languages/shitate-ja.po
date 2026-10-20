@@ -525,9 +525,6 @@ msgstr "2行で省略"
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "画面が狭くなるにつれて文字も余白も滑らかに縮むので、特定の幅で急に変わることがありません。"
 
-msgid "Type scale"
-msgstr "タイプスケール"
-
 msgid "Type scale by post type"
 msgstr "投稿タイプ別のタイプスケール"
 
@@ -626,6 +623,9 @@ msgstr "月額、年払い"
 
 msgid "shitate"
 msgstr "shitate"
+
+msgid "shitate settings"
+msgstr "shitate設定"
 
 msgid "to choose from"
 msgstr "タイプスケール"

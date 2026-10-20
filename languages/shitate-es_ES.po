@@ -525,9 +525,6 @@ msgstr "Dos líneas"
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "El texto y los espacios se reducen suavemente al estrecharse la pantalla, sin saltos bruscos en un ancho fijo."
 
-msgid "Type scale"
-msgstr "Escala tipográfica"
-
 msgid "Type scale by post type"
 msgstr "Escala tipográfica por tipo de contenido"
 
@@ -626,6 +623,9 @@ msgstr "al mes, facturado anualmente"
 
 msgid "shitate"
 msgstr "shitate"
+
+msgid "shitate settings"
+msgstr "Ajustes de shitate"
 
 msgid "to choose from"
 msgstr "para elegir"
