@@ -72,6 +72,9 @@ msgstr "私たちについて"
 msgid "Agency"
 msgstr "Agency"
 
+msgid "All"
+msgstr "すべて"
+
 msgid "All four style variations"
 msgstr "4 つのスタイルバリエーションすべて"
 
@@ -123,6 +126,12 @@ msgstr "電話"
 msgid "Can I change the colors and the type size?"
 msgstr "色や文字の大きさは変えられますか？"
 
+msgid "Cards"
+msgstr "カード"
+
+msgid "Cards, first post large"
+msgstr "カード（1件目を大きく）"
+
 msgid "Center horizontally (mx-auto)"
 msgstr "左右中央寄せ（mx-auto）"
 
@@ -131,6 +140,9 @@ msgstr "エディターで元になる 4 色を変えると、周りの淡い色
 
 msgid "Change the scale once and the whole site follows: headings, body text and the space between them."
 msgstr "スケールを一度変えれば、見出しも本文も、その間の余白もサイト全体が追従します。"
+
+msgid "Chips"
+msgstr "チップ"
 
 msgid "Choose Agency"
 msgstr "Agency を選ぶ"
@@ -273,6 +285,9 @@ msgstr "ランディングページ"
 msgid "Latest news"
 msgstr "最新のお知らせ"
 
+msgid "List"
+msgstr "リスト"
+
 msgid "Maintenance"
 msgstr "保守"
 
@@ -309,6 +324,9 @@ msgstr "短2度 — 1.067"
 msgid "Minor Third — 1.2"
 msgstr "短3度 — 1.2"
 
+msgid "News"
+msgstr "お知らせ"
+
 msgid "No posts have been published yet."
 msgstr "まだ投稿はありません。"
 
@@ -335,6 +353,9 @@ msgstr "1 サイト"
 
 msgid "Optimize image loading"
 msgstr "画像の読み込みを最適化"
+
+msgid "PICKUP"
+msgstr "PICKUP"
 
 msgid "Padding bottom"
 msgstr "下パディング"
@@ -386,6 +407,9 @@ msgstr "ブレークポイントなしのレスポンシブ"
 
 msgid "Rich"
 msgstr "リッチ"
+
+msgid "Rows"
+msgstr "行"
 
 msgid "Scale ratio"
 msgstr "スケール比率"
@@ -486,6 +510,9 @@ msgstr "今すぐ使ってみる"
 msgid "Turns a rough brief into a layout you can actually read, and keeps the grid honest."
 msgstr "ざっくりした要望を、きちんと読めるレイアウトに。グリッドの筋を通します。"
 
+msgid "Two lines"
+msgstr "2行で省略"
+
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "画面が狭くなるにつれて文字も余白も滑らかに縮むので、特定の幅で急に変わることがありません。"
 
@@ -518,6 +545,9 @@ msgstr "スタジオからのお知らせ、テーマについてのメモ、と
 
 msgid "Updates, backups and a monthly check that everything still loads the way it should."
 msgstr "更新・バックアップ・月 1 回の表示チェックで、いつでも正しく表示される状態を保ちます。"
+
+msgid "View all"
+msgstr "一覧を見る"
 
 msgid "View this demo site"
 msgstr "このデモサイトを見る"

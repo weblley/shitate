@@ -72,6 +72,9 @@ msgstr ""
 msgid "Agency"
 msgstr ""
 
+msgid "All"
+msgstr ""
+
 msgid "All four style variations"
 msgstr ""
 
@@ -123,6 +126,12 @@ msgstr ""
 msgid "Can I change the colors and the type size?"
 msgstr ""
 
+msgid "Cards"
+msgstr ""
+
+msgid "Cards, first post large"
+msgstr ""
+
 msgid "Center horizontally (mx-auto)"
 msgstr ""
 
@@ -130,6 +139,9 @@ msgid "Change the four source colors in the editor and the softer tones around t
 msgstr ""
 
 msgid "Change the scale once and the whole site follows: headings, body text and the space between them."
+msgstr ""
+
+msgid "Chips"
 msgstr ""
 
 msgid "Choose Agency"
@@ -273,6 +285,9 @@ msgstr ""
 msgid "Latest news"
 msgstr ""
 
+msgid "List"
+msgstr ""
+
 msgid "Maintenance"
 msgstr ""
 
@@ -309,6 +324,9 @@ msgstr ""
 msgid "Minor Third — 1.2"
 msgstr ""
 
+msgid "News"
+msgstr ""
+
 msgid "No posts have been published yet."
 msgstr ""
 
@@ -334,6 +352,9 @@ msgid "One website"
 msgstr ""
 
 msgid "Optimize image loading"
+msgstr ""
+
+msgid "PICKUP"
 msgstr ""
 
 msgid "Padding bottom"
@@ -385,6 +406,9 @@ msgid "Responsive without breakpoints"
 msgstr ""
 
 msgid "Rich"
+msgstr ""
+
+msgid "Rows"
 msgstr ""
 
 msgid "Scale ratio"
@@ -486,6 +510,9 @@ msgstr ""
 msgid "Turns a rough brief into a layout you can actually read, and keeps the grid honest."
 msgstr ""
 
+msgid "Two lines"
+msgstr ""
+
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr ""
 
@@ -517,6 +544,9 @@ msgid "Updates from the studio, notes on the theme and the occasional case study
 msgstr ""
 
 msgid "Updates, backups and a monthly check that everything still loads the way it should."
+msgstr ""
+
+msgid "View all"
 msgstr ""
 
 msgid "View this demo site"

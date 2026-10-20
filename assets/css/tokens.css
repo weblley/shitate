@@ -336,3 +336,48 @@
 	background-color: var(--st-color-base-2);
 	font-size: 0.9em;
 }
+
+
+/* Pagination (Query Loop): page numbers as 2.25rem square targets with the
+   current page filled; previous / next as bold links without underline. Core
+   gives each child a 0.5em right margin at 0-2-0, so the reset needs the
+   same specificity (:root + class). */
+:root :where(.wp-block-query-pagination) {
+	font-size: var(--st-text-s);
+}
+
+:root .wp-block-query-pagination > :where(*) {
+	margin: 0;
+}
+
+:root :where(.wp-block-query-pagination-numbers) {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: var(--st-space-xxs);
+}
+
+:root :where(.wp-block-query-pagination-numbers) .page-numbers {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-inline-size: 2.25rem;
+	block-size: 2.25rem;
+	padding-inline: var(--st-space-xs);
+	border-radius: var(--st-radius-s);
+	text-decoration: none;
+}
+
+:root :where(.wp-block-query-pagination-numbers) a.page-numbers:hover {
+	background-color: var(--st-color-base-2);
+}
+
+:root :where(.wp-block-query-pagination-numbers) .page-numbers.current {
+	background-color: var(--st-color-contrast);
+	color: var(--st-color-base);
+	font-weight: 600;
+}
+
+:root :where(.wp-block-query-pagination-previous, .wp-block-query-pagination-next) {
+	font-weight: 600;
+	text-decoration: none;
+}

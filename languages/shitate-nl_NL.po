@@ -72,6 +72,9 @@ msgstr "Over ons"
 msgid "Agency"
 msgstr "Agency"
 
+msgid "All"
+msgstr "Alles"
+
 msgid "All four style variations"
 msgstr "Alle vier stijlvarianten"
 
@@ -123,6 +126,12 @@ msgstr "Bel ons"
 msgid "Can I change the colors and the type size?"
 msgstr "Kan ik de kleuren en de tekstgrootte aanpassen?"
 
+msgid "Cards"
+msgstr "Kaarten"
+
+msgid "Cards, first post large"
+msgstr "Kaarten, eerste bericht groot"
+
 msgid "Center horizontally (mx-auto)"
 msgstr "Horizontaal centreren (mx-auto)"
 
@@ -131,6 +140,9 @@ msgstr "Pas de vier basiskleuren in de editor aan en de zachtere tinten eromheen
 
 msgid "Change the scale once and the whole site follows: headings, body text and the space between them."
 msgstr "Verander de schaal één keer en de hele site volgt: koppen, lopende tekst en de ruimte ertussen."
+
+msgid "Chips"
+msgstr "Chips"
 
 msgid "Choose Agency"
 msgstr "Kies Agency"
@@ -273,6 +285,9 @@ msgstr "Landingspagina’s"
 msgid "Latest news"
 msgstr "Laatste nieuws"
 
+msgid "List"
+msgstr "Lijst"
+
 msgid "Maintenance"
 msgstr "Onderhoud"
 
@@ -309,6 +324,9 @@ msgstr "Kleine secunde — 1,067"
 msgid "Minor Third — 1.2"
 msgstr "Kleine terts — 1,2"
 
+msgid "News"
+msgstr "Nieuws"
+
 msgid "No posts have been published yet."
 msgstr "Er zijn nog geen berichten gepubliceerd."
 
@@ -335,6 +353,9 @@ msgstr "Eén website"
 
 msgid "Optimize image loading"
 msgstr "Laden van afbeeldingen optimaliseren"
+
+msgid "PICKUP"
+msgstr "UITGELICHT"
 
 msgid "Padding bottom"
 msgstr "Padding onder"
@@ -386,6 +407,9 @@ msgstr "Responsief zonder breekpunten"
 
 msgid "Rich"
 msgstr "Rijk"
+
+msgid "Rows"
+msgstr "Rijen"
 
 msgid "Scale ratio"
 msgstr "Schaalverhouding"
@@ -486,6 +510,9 @@ msgstr "Probeer het nu"
 msgid "Turns a rough brief into a layout you can actually read, and keeps the grid honest."
 msgstr "Maakt van een ruwe briefing een lay-out die echt leesbaar is, en houdt het raster eerlijk."
 
+msgid "Two lines"
+msgstr "Twee regels"
+
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "Tekst en ruimte krimpen soepel mee als het scherm smaller wordt, zonder plotselinge sprong bij een vaste breedte."
 
@@ -518,6 +545,9 @@ msgstr "Nieuws uit de studio, notities over het thema en af en toe een casestudy
 
 msgid "Updates, backups and a monthly check that everything still loads the way it should."
 msgstr "Updates, back-ups en een maandelijkse controle of alles nog laadt zoals het hoort."
+
+msgid "View all"
+msgstr "Alles bekijken"
 
 msgid "View this demo site"
 msgstr "Bekijk deze demosite"

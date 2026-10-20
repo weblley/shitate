@@ -104,9 +104,24 @@ add_action( 'init', 'shitate_register_pattern_categories' );
 /**
  * Block styles.
  *
- * Breadcrumbs "Single line": never wraps; the trail scrolls sideways instead
- * (scrollbar hidden). Core forces flex-wrap:wrap at 0-1-1, so the selectors
- * here deliberately carry the block class as well.
+ * - Breadcrumbs "Single line": never wraps; the trail scrolls sideways
+ *   (scrollbar hidden). Core forces flex-wrap:wrap at 0-1-1, so the
+ *   selectors deliberately carry the block class as well.
+ * - "Chips" on Post Terms, Categories and Paragraph: every link becomes a
+ *   chip (tinted surface, brand text; inverted on hover and when current).
+ *   The list cards use it for a post's categories, the category row under a
+ *   list heading uses it on the Categories block and on the "All" link.
+ * - Post Title / Post Excerpt "Two lines": clamps the text to two lines so
+ *   cards in a grid keep the same height.
+ * - Post Template layouts, all CSS only:
+ *   "Cards" (grid, rows breathe more than columns), "Cards, first post
+ *   large" (the first post spread across the grid; an ordinary card from
+ *   page 2 on and in narrow containers), "List" (image left, text right,
+ *   hairlines) and "Rows" (date, chip and title on one line, for news).
+ *   The card layouts share the image hover and the PICKUP label on sticky
+ *   posts; --st-label-pickup carries the translated label (see
+ *   shitate_enqueue_styles). The block gap stays a single value because
+ *   core's responsive grid folds it into its column formula.
  */
 function shitate_register_block_styles() {
 	register_block_style(
@@ -119,6 +134,116 @@ function shitate_register_block_styles() {
 				. '.wp-block-breadcrumbs.is-style-single-line li{flex:none}',
 		)
 	);
+
+	$chip  = '{display:inline-block;padding:0.125rem 0.5rem;border-radius:var(--st-radius-s);background-color:var(--st-color-base-2);color:var(--st-color-brand);font-weight:600;text-decoration:none}';
+	$chips = '.wp-block-post-terms.is-style-chips{display:inline-flex;flex-wrap:wrap;gap:var(--st-space-xxs)}'
+		. '.wp-block-post-terms.is-style-chips .wp-block-post-terms__separator{display:none}'
+		. '.wp-block-categories.is-style-chips{display:flex;flex-wrap:wrap;gap:var(--st-space-xxs);margin:0;padding:0;list-style:none}'
+		. '.wp-block-categories.is-style-chips li{margin:0}'
+		. 'p.is-style-chips{display:flex;flex-wrap:wrap;gap:var(--st-space-xxs)}'
+		. '.wp-block-post-terms.is-style-chips a,.wp-block-categories.is-style-chips a,p.is-style-chips a' . $chip
+		. '.wp-block-post-terms.is-style-chips a:hover,.wp-block-categories.is-style-chips a:hover,p.is-style-chips a:hover,.wp-block-categories.is-style-chips .current-cat>a,p.is-style-chips a.is-current{background-color:var(--st-color-brand);color:var(--st-color-base)}';
+	foreach ( array( 'core/post-terms', 'core/categories', 'core/paragraph' ) as $block ) {
+		register_block_style(
+			$block,
+			array(
+				'name'         => 'chips',
+				'label'        => __( 'Chips', 'shitate' ),
+				'inline_style' => $chips,
+			)
+		);
+	}
+
+	// Image hover and the PICKUP label, shared by the card layouts.
+	$media = static function ( $style ) {
+		$li = '.wp-block-post-template.is-style-' . $style . '>li';
+		return $li . ' .wp-block-post-featured-image{position:relative;overflow:hidden}'
+			. $li . ' .wp-block-post-featured-image img{transition:transform var(--st-transition,0.2s)}'
+			. $li . ':hover .wp-block-post-featured-image img{transform:scale(1.03)}'
+			. '@media (prefers-reduced-motion:reduce){' . $li . ':hover .wp-block-post-featured-image img{transform:none}}'
+			. $li . '.sticky .wp-block-post-featured-image::before{content:var(--st-label-pickup,"PICKUP");position:absolute;inset-block-start:var(--st-space-xs);inset-inline-start:var(--st-space-xs);z-index:1;padding:0.125rem 0.5rem;border-radius:var(--st-radius-s);background-color:var(--st-color-contrast);color:var(--st-color-base);font-size:var(--st-text-xs);font-weight:600;line-height:1.5}';
+	};
+	$cards_root = '.wp-block-post-template.is-style-cards';
+	$feat_root  = '.wp-block-post-template.is-style-cards-featured';
+	$list_root  = '.wp-block-post-template.is-style-list';
+	$rows_root  = '.wp-block-post-template.is-style-rows';
+	register_block_style(
+		'core/post-template',
+		array(
+			'name'         => 'cards',
+			'label'        => __( 'Cards', 'shitate' ),
+			'inline_style' => $cards_root . '{row-gap:var(--st-space-xl)}'
+				. $cards_root . ' .wp-block-post-title{font-size:var(--st-text-m)}'
+				. $media( 'cards' ),
+		)
+	);
+	register_block_style(
+		'core/post-template',
+		array(
+			'name'         => 'cards-featured',
+			'label'        => __( 'Cards, first post large', 'shitate' ),
+			'inline_style' => $feat_root . '{row-gap:var(--st-space-xl)}'
+				. $feat_root . ' .wp-block-post-title{font-size:var(--st-text-m)}'
+				. $feat_root . '>li:first-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--st-space-xl);align-content:center}'
+				. $feat_root . '>li:first-child>.wp-block-post-featured-image{grid-row:1/span 4;align-self:center}'
+				. $feat_root . '>li:first-child>:not(.wp-block-post-featured-image){grid-column:2}'
+				. $feat_root . '>li:first-child>.wp-block-post-featured-image+*{margin-block-start:0}'
+				. $feat_root . '>li:first-child:not(:has(>.wp-block-post-featured-image))>*{grid-column:1/-1}'
+				. $feat_root . '>li:first-child:not(:has(>.wp-block-post-featured-image))>:first-child{margin-block-start:0}'
+				. $feat_root . '>li:first-child .wp-block-post-title{font-size:var(--st-text-xl);-webkit-line-clamp:3}'
+				. $feat_root . '>li:first-child .wp-block-post-excerpt__excerpt{-webkit-line-clamp:3}'
+				. '.paged ' . $feat_root . '>li:first-child{grid-column:auto;display:block}'
+				. '.paged ' . $feat_root . '>li:first-child .wp-block-post-title{font-size:var(--st-text-m);-webkit-line-clamp:2}'
+				. '.paged ' . $feat_root . '>li:first-child>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}'
+				. '@container (max-width:40rem){' . $feat_root . '>li:first-child{display:block}' . $feat_root . '>li:first-child>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}}'
+				. $media( 'cards-featured' ),
+		)
+	);
+	register_block_style(
+		'core/post-template',
+		array(
+			'name'         => 'list',
+			'label'        => __( 'List', 'shitate' ),
+			'inline_style' => $list_root . '{display:flex;flex-direction:column;gap:0;container-type:inline-size}'
+				. $list_root . '>li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:var(--st-space-l);margin:0;padding-block:var(--st-space-l);border-block-end:0.0625rem solid var(--st-color-rule)}'
+				. $list_root . '>li:first-child{border-block-start:0.0625rem solid var(--st-color-rule)}'
+				. $list_root . '>li>.wp-block-post-featured-image{grid-row:1/span 4}'
+				. $list_root . '>li>:not(.wp-block-post-featured-image){grid-column:2}'
+				. $list_root . '>li>.wp-block-post-featured-image+*{margin-block-start:0}'
+				. $list_root . '>li:not(:has(>.wp-block-post-featured-image))>*{grid-column:1/-1}'
+				. $list_root . '>li:not(:has(>.wp-block-post-featured-image))>:first-child{margin-block-start:0}'
+				. $list_root . ' .wp-block-post-title{font-size:var(--st-text-l)}'
+				. '@container (max-width:40rem){' . $list_root . '>li{display:block}' . $list_root . '>li>.wp-block-post-featured-image+*{margin-block-start:var(--st-space-m)}}'
+				. $media( 'list' ),
+		)
+	);
+	register_block_style(
+		'core/post-template',
+		array(
+			'name'         => 'rows',
+			'label'        => __( 'Rows', 'shitate' ),
+			'inline_style' => $rows_root . '{display:flex;flex-direction:column;gap:0}'
+				. $rows_root . '>li{display:flex;flex-wrap:wrap;align-items:center;gap:var(--st-space-xs) var(--st-space-m);margin:0;padding-block:var(--st-space-s);border-block-end:0.0625rem solid var(--st-color-rule)}'
+				. $rows_root . '>li:first-child{border-block-start:0.0625rem solid var(--st-color-rule)}'
+				. $rows_root . '>li>*{margin:0}'
+				. $rows_root . ' .wp-block-post-title{flex:1 1 20rem;font-size:var(--st-text-m);font-weight:500}',
+		)
+	);
+
+	// The link inside a Post Title is inline-block in core, which would keep
+	// the whole title on one (tall) line box; inline lets the clamp cut it.
+	$two_lines = '.is-style-two-lines.wp-block-post-title,.wp-block-post-excerpt.is-style-two-lines .wp-block-post-excerpt__excerpt{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}'
+		. '.is-style-two-lines.wp-block-post-title a{display:inline}';
+	foreach ( array( 'core/post-title', 'core/post-excerpt' ) as $block ) {
+		register_block_style(
+			$block,
+			array(
+				'name'         => 'two-lines',
+				'label'        => __( 'Two lines', 'shitate' ),
+				'inline_style' => $two_lines,
+			)
+		);
+	}
 }
 add_action( 'init', 'shitate_register_block_styles' );
 
@@ -845,6 +970,8 @@ function shitate_enqueue_styles() {
 		$scale_id   = (int) get_queried_object_id();
 	}
 	wp_add_inline_style( 'shitate-tokens', shitate_scale_inline_css( $scale_type, $scale_id ) );
+	// Translated label for sticky posts in list cards (CSS generated content).
+	wp_add_inline_style( 'shitate-tokens', ':root{--st-label-pickup:"' . str_replace( array( '\\', '"' ), array( '\\\\', '\\"' ), __( 'PICKUP', 'shitate' ) ) . '"}' );
 	wp_enqueue_style(
 		'shitate-utilities',
 		get_theme_file_uri( 'assets/css/utilities.css' ),

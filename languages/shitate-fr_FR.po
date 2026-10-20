@@ -72,6 +72,9 @@ msgstr "À propos"
 msgid "Agency"
 msgstr "Agency"
 
+msgid "All"
+msgstr "Tout"
+
 msgid "All four style variations"
 msgstr "Les quatre variations de style"
 
@@ -123,6 +126,12 @@ msgstr "Nous appeler"
 msgid "Can I change the colors and the type size?"
 msgstr "Puis-je changer les couleurs et la taille du texte ?"
 
+msgid "Cards"
+msgstr "Cartes"
+
+msgid "Cards, first post large"
+msgstr "Cartes, premier article en grand"
+
 msgid "Center horizontally (mx-auto)"
 msgstr "Centrer horizontalement (mx-auto)"
 
@@ -131,6 +140,9 @@ msgstr "Changez les quatre couleurs de base dans l’éditeur : les tons plus do
 
 msgid "Change the scale once and the whole site follows: headings, body text and the space between them."
 msgstr "Changez l’échelle une fois et tout le site suit : titres, texte courant et espaces entre eux."
+
+msgid "Chips"
+msgstr "Pastilles"
 
 msgid "Choose Agency"
 msgstr "Choisir Agency"
@@ -273,6 +285,9 @@ msgstr "Pages d’atterrissage"
 msgid "Latest news"
 msgstr "Actualités"
 
+msgid "List"
+msgstr "Liste"
+
 msgid "Maintenance"
 msgstr "Maintenance"
 
@@ -309,6 +324,9 @@ msgstr "Seconde mineure — 1,067"
 msgid "Minor Third — 1.2"
 msgstr "Tierce mineure — 1,2"
 
+msgid "News"
+msgstr "Actualités"
+
 msgid "No posts have been published yet."
 msgstr "Aucun article n’a encore été publié."
 
@@ -335,6 +353,9 @@ msgstr "Un site"
 
 msgid "Optimize image loading"
 msgstr "Optimiser le chargement des images"
+
+msgid "PICKUP"
+msgstr "À LA UNE"
 
 msgid "Padding bottom"
 msgstr "Marge interne basse"
@@ -386,6 +407,9 @@ msgstr "Responsive sans points de rupture"
 
 msgid "Rich"
 msgstr "Riche"
+
+msgid "Rows"
+msgstr "Lignes"
 
 msgid "Scale ratio"
 msgstr "Ratio de l’échelle"
@@ -486,6 +510,9 @@ msgstr "Essayer maintenant"
 msgid "Turns a rough brief into a layout you can actually read, and keeps the grid honest."
 msgstr "Transforme un brief sommaire en une mise en page vraiment lisible, et garde la grille honnête."
 
+msgid "Two lines"
+msgstr "Deux lignes"
+
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "Texte et espaces se réduisent progressivement quand l’écran se rétrécit, sans saut brusque à une largeur fixe."
 
@@ -518,6 +545,9 @@ msgstr "Nouvelles du studio, notes sur le thème et, de temps en temps, une étu
 
 msgid "Updates, backups and a monthly check that everything still loads the way it should."
 msgstr "Mises à jour, sauvegardes et une vérification mensuelle que tout se charge toujours comme il faut."
+
+msgid "View all"
+msgstr "Tout voir"
 
 msgid "View this demo site"
 msgstr "Voir ce site de démonstration"
