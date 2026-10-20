@@ -15,12 +15,6 @@ msgstr "$49"
 msgid "$99"
 msgstr "$99"
 
-msgid "%s: base size"
-msgstr "%s: basisgrootte"
-
-msgid "%s: scale ratio"
-msgstr "%s: verhouding"
-
 msgid "01"
 msgstr "01"
 
@@ -240,9 +234,6 @@ msgstr "Ruime witruimte en lucht rond elk element, zoals Apple dat doet."
 msgid "Get started"
 msgstr "Aan de slag"
 
-msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
-msgstr "Geeft een berichttype een eigen verhouding of basisgrootte, bijvoorbeeld een strakkere schaal voor blogberichten dan voor pagina’s. “Standaard van de site” neemt de instellingen van de typografische schaal over. Een afzonderlijk bericht of pagina kan deze nog overschrijven vanuit de zijbalk van de editor."
-
 msgid "Go live"
 msgstr "Live gaan"
 
@@ -453,9 +444,6 @@ msgstr "Eenvoudige prijzen"
 msgid "Single line"
 msgstr "Eén regel"
 
-msgid "Site default"
-msgstr "Standaard van de site"
-
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr "De zes dingen waar we het vaakst om worden gevraagd. Hernoem ze naar uw eigen werk."
 
@@ -524,9 +512,6 @@ msgstr "Twee regels"
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "Tekst en ruimte krimpen soepel mee als het scherm smaller wordt, zonder plotselinge sprong bij een vaste breedte."
-
-msgid "Type scale by post type"
-msgstr "Typografische schaal per berichttype"
 
 msgid "Typography Scale"
 msgstr "Typografische schaal"

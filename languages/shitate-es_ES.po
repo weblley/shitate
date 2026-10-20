@@ -15,12 +15,6 @@ msgstr "$49"
 msgid "$99"
 msgstr "$99"
 
-msgid "%s: base size"
-msgstr "%s: tamaño base"
-
-msgid "%s: scale ratio"
-msgstr "%s: proporción"
-
 msgid "01"
 msgstr "01"
 
@@ -240,9 +234,6 @@ msgstr "Espacio generoso y aire alrededor de cada elemento, al estilo de Apple."
 msgid "Get started"
 msgstr "Empezar"
 
-msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
-msgstr "Da a un tipo de contenido su propia proporción o tamaño base, por ejemplo una escala más ajustada para las entradas que para las páginas. «Valor del sitio» hereda los ajustes de la escala tipográfica. Una entrada o página concreta puede sobrescribirlos desde la barra lateral del editor."
-
 msgid "Go live"
 msgstr "Publicación"
 
@@ -453,9 +444,6 @@ msgstr "Precios sencillos"
 msgid "Single line"
 msgstr "Una sola línea"
 
-msgid "Site default"
-msgstr "Valor del sitio"
-
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr "Las seis cosas que más nos piden. Cámbieles el nombre según su propio trabajo."
 
@@ -524,9 +512,6 @@ msgstr "Dos líneas"
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "El texto y los espacios se reducen suavemente al estrecharse la pantalla, sin saltos bruscos en un ancho fijo."
-
-msgid "Type scale by post type"
-msgstr "Escala tipográfica por tipo de contenido"
 
 msgid "Typography Scale"
 msgstr "Escala tipográfica"

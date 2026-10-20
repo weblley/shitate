@@ -15,12 +15,6 @@ msgstr ""
 msgid "$99"
 msgstr ""
 
-msgid "%s: base size"
-msgstr ""
-
-msgid "%s: scale ratio"
-msgstr ""
-
 msgid "01"
 msgstr ""
 
@@ -240,9 +234,6 @@ msgstr ""
 msgid "Get started"
 msgstr ""
 
-msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
-msgstr ""
-
 msgid "Go live"
 msgstr ""
 
@@ -453,9 +444,6 @@ msgstr ""
 msgid "Single line"
 msgstr ""
 
-msgid "Site default"
-msgstr ""
-
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr ""
 
@@ -523,9 +511,6 @@ msgid "Two lines"
 msgstr ""
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
-msgstr ""
-
-msgid "Type scale by post type"
 msgstr ""
 
 msgid "Typography Scale"

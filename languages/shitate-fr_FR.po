@@ -15,12 +15,6 @@ msgstr "$49"
 msgid "$99"
 msgstr "$99"
 
-msgid "%s: base size"
-msgstr "%s : taille de base"
-
-msgid "%s: scale ratio"
-msgstr "%s : ratio"
-
 msgid "01"
 msgstr "01"
 
@@ -240,9 +234,6 @@ msgstr "De l’espace et de l’air autour de chaque élément, à la manière d
 msgid "Get started"
 msgstr "Commencer"
 
-msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
-msgstr "Donne à un type de contenu son propre ratio ou sa propre taille de base, par exemple une échelle plus serrée pour les articles que pour les pages. « Valeur du site » hérite des réglages de l’échelle typographique. Un article ou une page peut encore les remplacer depuis la barre latérale de l’éditeur."
-
 msgid "Go live"
 msgstr "Mise en ligne"
 
@@ -453,9 +444,6 @@ msgstr "Des tarifs simples"
 msgid "Single line"
 msgstr "Sur une ligne"
 
-msgid "Site default"
-msgstr "Valeur du site"
-
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr "Les six demandes que l’on nous fait le plus souvent. Renommez-les selon votre propre activité."
 
@@ -524,9 +512,6 @@ msgstr "Deux lignes"
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "Texte et espaces se réduisent progressivement quand l’écran se rétrécit, sans saut brusque à une largeur fixe."
-
-msgid "Type scale by post type"
-msgstr "Échelle typographique par type de contenu"
 
 msgid "Typography Scale"
 msgstr "Échelle typographique"

@@ -15,12 +15,6 @@ msgstr "$49"
 msgid "$99"
 msgstr "$99"
 
-msgid "%s: base size"
-msgstr "%s: 本文サイズ"
-
-msgid "%s: scale ratio"
-msgstr "%s: 比率"
-
 msgid "01"
 msgstr "01"
 
@@ -240,9 +234,6 @@ msgstr "Appleのように1つの要素に余白と余裕を持たせたサイト
 msgid "Get started"
 msgstr "はじめる"
 
-msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
-msgstr "投稿タイプごとに比率や本文サイズを変えられます。たとえばブログ投稿だけ固定ページより小さい比率にする、といった使い方です。「サイトの既定」はタイポグラフィスケールの設定を引き継ぎます。個別の投稿・固定ページはさらにエディターのサイドバーから上書きできます。"
-
 msgid "Go live"
 msgstr "公開"
 
@@ -453,9 +444,6 @@ msgstr "シンプルな料金"
 msgid "Single line"
 msgstr "1行（横スクロール）"
 
-msgid "Site default"
-msgstr "サイトの既定"
-
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr "よくご相談いただく 6 つの仕事です。ご自身の仕事に合わせて書き換えてください。"
 
@@ -524,9 +512,6 @@ msgstr "2行で省略"
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "画面が狭くなるにつれて文字も余白も滑らかに縮むので、特定の幅で急に変わることがありません。"
-
-msgid "Type scale by post type"
-msgstr "投稿タイプ別のタイプスケール"
 
 msgid "Typography Scale"
 msgstr "タイポグラフィスケール"
