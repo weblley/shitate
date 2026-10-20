@@ -15,6 +15,12 @@ msgstr "$49"
 msgid "$99"
 msgstr "$99"
 
+msgid "%s: base size"
+msgstr "%s: 本文サイズ"
+
+msgid "%s: scale ratio"
+msgstr "%s: 比率"
+
 msgid "01"
 msgstr "01"
 
@@ -90,6 +96,9 @@ msgstr "自動（1 とメイン比率の中間）"
 msgid "Back to home"
 msgstr "トップページへ戻る"
 
+msgid "Base size"
+msgstr "本文サイズ"
+
 msgid "Base size (px)"
 msgstr "基準サイズ（px）"
 
@@ -162,6 +171,9 @@ msgstr "コーポレートサイトやビジネスサイト、あらゆる制作
 msgid "Default"
 msgstr "既定"
 
+msgid "Default (%s)"
+msgstr "既定（%s）"
+
 msgid "Do I need a page builder plugin to use this theme?"
 msgstr "このテーマを使うのにページビルダープラグインは必要ですか？"
 
@@ -210,6 +222,9 @@ msgstr "Appleのように1つの要素に余白と余裕を持たせたサイト
 msgid "Get started"
 msgstr "はじめる"
 
+msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
+msgstr "投稿タイプごとに比率や本文サイズを変えられます。たとえばブログ投稿だけ固定ページより小さい比率にする、といった使い方です。「サイトの既定」はタイポグラフィスケールの設定を引き継ぎます。個別の投稿・固定ページはさらにエディターのサイドバーから上書きできます。"
+
 msgid "Go live"
 msgstr "公開"
 
@@ -221,6 +236,9 @@ msgstr "川上 晴"
 
 msgid "Headings, body text and spacing all come from a single ratio, so a page stays in proportion wherever you edit it."
 msgstr "見出し・本文・余白はすべてひとつの比率から生まれるので、どこを編集してもページの釣り合いが保たれます。"
+
+msgid "Hide the page title"
+msgstr "ページタイトルを出力しない"
 
 msgid "How it works"
 msgstr "進め方"
@@ -351,6 +369,9 @@ msgstr "私たちについて詳しく"
 msgid "Read the guide"
 msgstr "ガイドを読む"
 
+msgid "Removes the Post Title block from the template for this page only, for pages that open with their own hero. The document title and menus are unchanged."
+msgstr "このページだけテンプレートの「投稿タイトル」ブロックを出力しません。冒頭に独自のヒーローを置くページ向けです。ブラウザーのタイトルやメニューは変わりません。"
+
 msgid "Replace this image and text with your own story, and the layout will follow along on every screen size."
 msgstr "この画像と文章を自分たちのストーリーに置き換えてください。レイアウトはどの画面サイズでも追従します。"
 
@@ -395,6 +416,9 @@ msgstr "Small / X-Small / XX-Small を比率で割らず 0.95rem / 0.8rem / 0.75
 
 msgid "Simple pricing"
 msgstr "シンプルな料金"
+
+msgid "Site default"
+msgstr "サイトの既定"
 
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr "よくご相談いただく 6 つの仕事です。ご自身の仕事に合わせて書き換えてください。"
@@ -461,6 +485,12 @@ msgstr "ざっくりした要望を、きちんと読めるレイアウトに。
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "画面が狭くなるにつれて文字も余白も滑らかに縮むので、特定の幅で急に変わることがありません。"
+
+msgid "Type scale"
+msgstr "タイプスケール"
+
+msgid "Type scale by post type"
+msgstr "投稿タイプ別のタイプスケール"
 
 msgid "Typography Scale"
 msgstr "タイポグラフィスケール"

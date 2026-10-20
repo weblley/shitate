@@ -82,6 +82,16 @@
 	 * narrow viewports while staying a true geometric progression.
 	 */
 	--st-space-m: var(--st-text-m);
+
+	/*
+	 * One line of body text. theme.json reads --st-line-height for the body
+	 * line-height, so the two cannot drift apart. --st-line is the unit for the
+	 * vertical rhythm inside content (see "Vertical rhythm" below): the gap
+	 * between stacked blocks is one line, and the steps around headings and
+	 * media are fixed multiples of it, independent of the type-scale ratio.
+	 */
+	--st-line-height: 1.75;
+	--st-line: calc(var(--st-text-m) * var(--st-line-height));
 	--st-space-s: calc(var(--st-space-m) / var(--st-r));
 	--st-space-xs: calc(var(--st-space-m) / var(--st-r) / var(--st-r) / var(--st-r));
 	--st-space-xxs: calc(var(--st-space-xs) / var(--st-r) / var(--st-r) / var(--st-r));
@@ -163,42 +173,41 @@
 /*
  * Vertical rhythm (margin-top).
  *
- * The base gap between sibling blocks comes from blockGap, which WordPress
- * applies as margin-block-start in flow/constrained layouts and exposes as
- * --wp--style--block-gap on each layout container. The steps around it are
- * powers of the type-scale ratio (--st-r), so spacing and type follow one
- * rule and the Customizer ratio moves both (gap = --wp--style--block-gap):
- *   stacked blocks  gap × r        media / table / quote / separator  gap × r²
- *   before h3/h4    gap × r³       before h1/h2  gap × r⁴
- *   after a heading  the stacked-block gap (decided 2026-10-16: keep the
- *   paragraph rhythm even rather than pulling the heading onto its paragraph)
- * The base step is applied here rather than by raising blockGap in
- * theme.json, because blockGap also drives flex/grid gaps (navigation,
- * button rows) and raising it there wrapped the footer menu.
+ * The gap between sibling blocks comes from blockGap, which WordPress applies
+ * as margin-block-start in flow/constrained layouts and exposes as
+ * --wp--style--block-gap on each layout container. The theme's default
+ * blockGap is ONE LINE of body text (--st-line, the "Line" spacing preset),
+ * the way long-form sites such as note.com set their paragraph gap, and the
+ * steps around it are fixed multiples of the local gap (decided 2026-10-20):
+ *   stacked blocks  gap × 1       media / table / quote / separator  gap × 1.5
+ *   before h3/h4    gap × 1.5     before h1/h2  gap × 2
+ *   after a heading  gap × 0.5   (the heading groups with its paragraph)
+ * The type-scale ratio therefore moves the type, not the rhythm: raising the
+ * ratio makes headings larger but leaves paragraph spacing at one line, so
+ * a 1.5 scale no longer doubles every gap. Section spacing in patterns still
+ * uses the ratio-based --st-space-* presets.
  * Everything is a multiple of the LOCAL gap, so it tightens automatically
- * inside dense contexts (cards, boxes). First children keep no top margin.
- * The `:root` prefix lifts specificity just above the core block-gap rule
- * without needing !important; later rules win among equals, so the heading
- * "before" rules come last.
+ * inside dense contexts (cards, boxes with their own blockGap). First
+ * children keep no top margin. The `:root` prefix lifts specificity just
+ * above the core block-gap rule without needing !important; later rules win
+ * among equals, so the "after a heading" rule comes last.
  */
-/* Stacked blocks: one ratio step above blockGap (gap × r). Only flow/constrained
-   layouts, so flex/grid gaps (navigation, button rows) keep the raw blockGap. */
-:root :where( .is-layout-flow, .is-layout-constrained ) > :not( :first-child ) {
-	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * var( --st-r, 1.25 ) );
-}
-
-/* Media, tables, quotes and rules: one more step on both sides (gap × r²). */
+/* Media, tables, quotes and rules: 1.5 lines on both sides. */
 :root :where( .is-layout-flow, .is-layout-constrained ) > :where( figure, .wp-block-image, .wp-block-gallery, .wp-block-table, .wp-block-quote, .wp-block-pullquote, .wp-block-separator, .wp-block-embed ):not( :first-child ),
 :root :where( .is-layout-flow, .is-layout-constrained ) > :where( figure, .wp-block-image, .wp-block-gallery, .wp-block-table, .wp-block-quote, .wp-block-pullquote, .wp-block-separator, .wp-block-embed ) + * {
-	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * var( --st-r, 1.25 ) * var( --st-r, 1.25 ) );
+	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * 1.5 );
 }
 
-/* Before a heading: gap × r³ (h3/h4) and gap × r⁴ (h1/h2). After a heading the
-   stacked-block gap applies, so the paragraph rhythm stays even. */
+/* Before a heading: 1.5 lines (h3/h4) and 2 lines (h1/h2). */
 :root :where( .is-layout-flow, .is-layout-constrained ) > :where( h3, h4 ):not( :first-child ) {
-	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * var( --st-r, 1.25 ) * var( --st-r, 1.25 ) * var( --st-r, 1.25 ) );
+	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * 1.5 );
 }
 
 :root :where( .is-layout-flow, .is-layout-constrained ) > :where( h1, h2 ):not( :first-child ) {
-	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * var( --st-r, 1.25 ) * var( --st-r, 1.25 ) * var( --st-r, 1.25 ) * var( --st-r, 1.25 ) );
+	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * 2 );
+}
+
+/* After a heading: half a line, so the heading sits with what it introduces. */
+:root :where( .is-layout-flow, .is-layout-constrained ) > :where( h1, h2, h3, h4, h5, h6 ) + :not( h1, h2, h3, h4, h5, h6 ) {
+	margin-block-start: calc( var( --wp--style--block-gap, 1.5rem ) * 0.5 );
 }

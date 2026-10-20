@@ -15,6 +15,12 @@ msgstr "$49"
 msgid "$99"
 msgstr "$99"
 
+msgid "%s: base size"
+msgstr "%s: basisgrootte"
+
+msgid "%s: scale ratio"
+msgstr "%s: verhouding"
+
 msgid "01"
 msgstr "01"
 
@@ -90,6 +96,9 @@ msgstr "Automatisch — halverwege tussen 1 en de hoofdverhouding"
 msgid "Back to home"
 msgstr "Terug naar home"
 
+msgid "Base size"
+msgstr "Basisgrootte"
+
 msgid "Base size (px)"
 msgstr "Basisgrootte (px)"
 
@@ -162,6 +171,9 @@ msgstr "Bedrijfssites, zakelijke sites, alles wat je bouwt — vrij, en met een 
 msgid "Default"
 msgstr "Standaard"
 
+msgid "Default (%s)"
+msgstr "Standaard (%s)"
+
 msgid "Do I need a page builder plugin to use this theme?"
 msgstr "Heb ik een pagebuilder-plugin nodig voor dit thema?"
 
@@ -210,6 +222,9 @@ msgstr "Ruime witruimte en lucht rond elk element, zoals Apple dat doet."
 msgid "Get started"
 msgstr "Aan de slag"
 
+msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
+msgstr "Geeft een berichttype een eigen verhouding of basisgrootte, bijvoorbeeld een strakkere schaal voor blogberichten dan voor pagina’s. “Standaard van de site” neemt de instellingen van de typografische schaal over. Een afzonderlijk bericht of pagina kan deze nog overschrijven vanuit de zijbalk van de editor."
+
 msgid "Go live"
 msgstr "Live gaan"
 
@@ -221,6 +236,9 @@ msgstr "Haru Kawakami"
 
 msgid "Headings, body text and spacing all come from a single ratio, so a page stays in proportion wherever you edit it."
 msgstr "Koppen, lopende tekst en ruimte komen allemaal uit één verhouding, dus een pagina blijft in verhouding waar u ook bewerkt."
+
+msgid "Hide the page title"
+msgstr "Paginatitel verbergen"
 
 msgid "How it works"
 msgstr "Hoe het werkt"
@@ -351,6 +369,9 @@ msgstr "Lees meer over ons"
 msgid "Read the guide"
 msgstr "Lees de handleiding"
 
+msgid "Removes the Post Title block from the template for this page only, for pages that open with their own hero. The document title and menus are unchanged."
+msgstr "Verwijdert het blok “Berichttitel” uit het sjabloon, alleen voor deze pagina, voor pagina’s die met een eigen hero beginnen. De documenttitel en menu’s blijven ongewijzigd."
+
 msgid "Replace this image and text with your own story, and the layout will follow along on every screen size."
 msgstr "Vervang deze afbeelding en tekst door uw eigen verhaal; de lay-out volgt op elk schermformaat."
 
@@ -395,6 +416,9 @@ msgstr "Zet Klein / Extra klein / Heel klein op 0,95rem / 0,8rem / 0,75rem in pl
 
 msgid "Simple pricing"
 msgstr "Eenvoudige prijzen"
+
+msgid "Site default"
+msgstr "Standaard van de site"
 
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr "De zes dingen waar we het vaakst om worden gevraagd. Hernoem ze naar uw eigen werk."
@@ -461,6 +485,12 @@ msgstr "Maakt van een ruwe briefing een lay-out die echt leesbaar is, en houdt h
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "Tekst en ruimte krimpen soepel mee als het scherm smaller wordt, zonder plotselinge sprong bij een vaste breedte."
+
+msgid "Type scale"
+msgstr "Typografische schaal"
+
+msgid "Type scale by post type"
+msgstr "Typografische schaal per berichttype"
 
 msgid "Typography Scale"
 msgstr "Typografische schaal"

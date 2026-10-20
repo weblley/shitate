@@ -15,6 +15,12 @@ msgstr "$49"
 msgid "$99"
 msgstr "$99"
 
+msgid "%s: base size"
+msgstr "%s: tamaño base"
+
+msgid "%s: scale ratio"
+msgstr "%s: proporción"
+
 msgid "01"
 msgstr "01"
 
@@ -90,6 +96,9 @@ msgstr "Automática — a medio camino entre 1 y la proporción principal"
 msgid "Back to home"
 msgstr "Volver al inicio"
 
+msgid "Base size"
+msgstr "Tamaño base"
+
 msgid "Base size (px)"
 msgstr "Tamaño base (px)"
 
@@ -162,6 +171,9 @@ msgstr "Sitios corporativos, sitios de negocio, cualquier cosa que construyas: c
 msgid "Default"
 msgstr "Por defecto"
 
+msgid "Default (%s)"
+msgstr "Predeterminado (%s)"
+
 msgid "Do I need a page builder plugin to use this theme?"
 msgstr "¿Necesito un plugin de maquetación para usar este tema?"
 
@@ -210,6 +222,9 @@ msgstr "Espacio generoso y aire alrededor de cada elemento, al estilo de Apple."
 msgid "Get started"
 msgstr "Empezar"
 
+msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
+msgstr "Da a un tipo de contenido su propia proporción o tamaño base, por ejemplo una escala más ajustada para las entradas que para las páginas. «Valor del sitio» hereda los ajustes de la escala tipográfica. Una entrada o página concreta puede sobrescribirlos desde la barra lateral del editor."
+
 msgid "Go live"
 msgstr "Publicación"
 
@@ -221,6 +236,9 @@ msgstr "Haru Kawakami"
 
 msgid "Headings, body text and spacing all come from a single ratio, so a page stays in proportion wherever you edit it."
 msgstr "Títulos, texto y espaciado salen de una sola proporción, así que la página mantiene sus proporciones la edite donde la edite."
+
+msgid "Hide the page title"
+msgstr "Ocultar el título de la página"
 
 msgid "How it works"
 msgstr "Cómo funciona"
@@ -351,6 +369,9 @@ msgstr "Más sobre nosotros"
 msgid "Read the guide"
 msgstr "Leer la guía"
 
+msgid "Removes the Post Title block from the template for this page only, for pages that open with their own hero. The document title and menus are unchanged."
+msgstr "Quita el bloque «Título de la entrada» de la plantilla solo en esta página, para páginas que empiezan con su propio hero. El título del documento y los menús no cambian."
+
 msgid "Replace this image and text with your own story, and the layout will follow along on every screen size."
 msgstr "Sustituya esta imagen y este texto por su propia historia; el diseño se adaptará a cualquier tamaño de pantalla."
 
@@ -395,6 +416,9 @@ msgstr "Fija Pequeño / Muy pequeño / Diminuto en 0,95rem / 0,8rem / 0,75rem en
 
 msgid "Simple pricing"
 msgstr "Precios sencillos"
+
+msgid "Site default"
+msgstr "Valor del sitio"
 
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr "Las seis cosas que más nos piden. Cámbieles el nombre según su propio trabajo."
@@ -461,6 +485,12 @@ msgstr "Convierte un briefing aproximado en un diseño que de verdad se puede le
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "El texto y los espacios se reducen suavemente al estrecharse la pantalla, sin saltos bruscos en un ancho fijo."
+
+msgid "Type scale"
+msgstr "Escala tipográfica"
+
+msgid "Type scale by post type"
+msgstr "Escala tipográfica por tipo de contenido"
 
 msgid "Typography Scale"
 msgstr "Escala tipográfica"

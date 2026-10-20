@@ -225,6 +225,99 @@ function shitate_sanitize_ratio_mobile( $value ) {
  *
  * @param WP_Customize_Manager $wp_customize Customizer instance.
  */
+/**
+ * Post types that can carry their own type scale (Customizer) and per-post
+ * overrides (editor panel): every public post type with an admin UI except
+ * attachments.
+ *
+ * @return WP_Post_Type[] Keyed by post type name.
+ */
+function shitate_scale_post_types() {
+	$types = get_post_types( array( 'public' => true, 'show_ui' => true ), 'objects' );
+	unset( $types['attachment'] );
+	return apply_filters( 'shitate_scale_post_types', $types );
+}
+
+/**
+ * Sanitize an optional ratio: '' (inherit) or one of the eight ratios.
+ *
+ * @param mixed $value Submitted value.
+ * @return string
+ */
+function shitate_sanitize_ratio_optional( $value ) {
+	$value = (string) $value;
+	return '' === $value ? '' : shitate_sanitize_ratio( $value );
+}
+
+/**
+ * Sanitize an optional base size: 0 (inherit) or 12–24.
+ *
+ * @param mixed $value Submitted value.
+ * @return int
+ */
+function shitate_sanitize_text_m_optional( $value ) {
+	$size = absint( $value );
+	return ( $size >= 12 && $size <= 24 ) ? $size : 0;
+}
+
+/**
+ * Resolve the ratio and base size for a context: post override → post type
+ * override → site-wide Customizer value.
+ *
+ * @param string $post_type Post type (optional).
+ * @param int    $post_id   Post ID (optional).
+ * @return array{ratio:string,base:int}
+ */
+function shitate_scale_for( $post_type = '', $post_id = 0 ) {
+	$ratio = shitate_sanitize_ratio( get_theme_mod( 'shitate_ratio', '1.25' ) );
+	$base  = shitate_sanitize_text_m( get_theme_mod( 'shitate_text_m', 16 ) );
+
+	if ( '' !== $post_type ) {
+		$type_ratio = shitate_sanitize_ratio_optional( get_theme_mod( 'shitate_ratio_' . $post_type, '' ) );
+		$type_base  = shitate_sanitize_text_m_optional( get_theme_mod( 'shitate_text_m_' . $post_type, 0 ) );
+		if ( '' !== $type_ratio ) {
+			$ratio = $type_ratio;
+		}
+		if ( $type_base ) {
+			$base = $type_base;
+		}
+	}
+
+	if ( $post_id ) {
+		$post_ratio = shitate_sanitize_ratio_optional( get_post_meta( $post_id, '_shitate_ratio', true ) );
+		$post_base  = shitate_sanitize_text_m_optional( get_post_meta( $post_id, '_shitate_text_m', true ) );
+		if ( '' !== $post_ratio ) {
+			$ratio = $post_ratio;
+		}
+		if ( $post_base ) {
+			$base = $post_base;
+		}
+	}
+
+	return array(
+		'ratio' => $ratio,
+		'base'  => $base,
+	);
+}
+
+/**
+ * The eight ratio choices, keyed by value, with their translated labels.
+ *
+ * @return array<string,string>
+ */
+function shitate_ratio_choices() {
+	return array(
+		'1.067' => __( 'Minor Second — 1.067', 'shitate' ),
+		'1.125' => __( 'Major Second — 1.125', 'shitate' ),
+		'1.2'   => __( 'Minor Third — 1.2', 'shitate' ),
+		'1.25'  => __( 'Major Third — 1.25', 'shitate' ),
+		'1.333' => __( 'Perfect Fourth — 1.333', 'shitate' ),
+		'1.414' => __( 'Augmented Fourth — 1.414', 'shitate' ),
+		'1.5'   => __( 'Perfect Fifth — 1.5', 'shitate' ),
+		'1.618' => __( 'Golden Ratio — 1.618', 'shitate' ),
+	);
+}
+
 function shitate_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'shitate_typography',
@@ -249,16 +342,7 @@ function shitate_customize_register( $wp_customize ) {
 			'section'     => 'shitate_typography',
 			'label'       => __( 'Scale ratio', 'shitate' ),
 			'description' => __( 'Bigger ratio = more contrast between headings.', 'shitate' ),
-			'choices'     => array(
-				'1.067' => __( 'Minor Second — 1.067', 'shitate' ),
-				'1.125' => __( 'Major Second — 1.125', 'shitate' ),
-				'1.2'   => __( 'Minor Third — 1.2', 'shitate' ),
-				'1.25'  => __( 'Major Third — 1.25', 'shitate' ),
-				'1.333' => __( 'Perfect Fourth — 1.333', 'shitate' ),
-				'1.414' => __( 'Augmented Fourth — 1.414', 'shitate' ),
-				'1.5'   => __( 'Perfect Fifth — 1.5', 'shitate' ),
-				'1.618' => __( 'Golden Ratio — 1.618', 'shitate' ),
-			),
+			'choices'     => shitate_ratio_choices(),
 		)
 	);
 
@@ -367,6 +451,61 @@ function shitate_customize_register( $wp_customize ) {
 			'description' => __( 'When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone.', 'shitate' ),
 		)
 	);
+
+	// --- Per post type: ratio and base size overrides (refresh preview) ---
+	$wp_customize->add_section(
+		'shitate_typography_types',
+		array(
+			'title'       => __( 'Type scale by post type', 'shitate' ),
+			'description' => __( 'Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. "Site default" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar.', 'shitate' ),
+			'priority'    => 40,
+		)
+	);
+
+	$ratio_choices = array( '' => __( 'Site default', 'shitate' ) ) + shitate_ratio_choices();
+	$size_choices  = array( '' => __( 'Site default', 'shitate' ) );
+	for ( $px = 12; $px <= 24; $px++ ) {
+		$size_choices[ (string) $px ] = $px . 'px';
+	}
+
+	foreach ( shitate_scale_post_types() as $type => $object ) {
+		$wp_customize->add_setting(
+			'shitate_ratio_' . $type,
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'shitate_sanitize_ratio_optional',
+			)
+		);
+		$wp_customize->add_control(
+			'shitate_ratio_' . $type,
+			array(
+				'type'    => 'select',
+				'section' => 'shitate_typography_types',
+				/* translators: %s: post type name (e.g. Posts). */
+				'label'   => sprintf( __( '%s: scale ratio', 'shitate' ), $object->labels->name ),
+				'choices' => $ratio_choices,
+			)
+		);
+		$wp_customize->add_setting(
+			'shitate_text_m_' . $type,
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'shitate_sanitize_text_m_optional',
+			)
+		);
+		$wp_customize->add_control(
+			'shitate_text_m_' . $type,
+			array(
+				'type'    => 'select',
+				'section' => 'shitate_typography_types',
+				/* translators: %s: post type name (e.g. Posts). */
+				'label'   => sprintf( __( '%s: base size', 'shitate' ), $object->labels->name ),
+				'choices' => $size_choices,
+			)
+		);
+	}
 }
 add_action( 'customize_register', 'shitate_customize_register' );
 
@@ -385,9 +524,10 @@ function shitate_sanitize_checkbox( $value ) {
  *
  * @return string
  */
-function shitate_scale_inline_css() {
-	$ratio = shitate_sanitize_ratio( get_theme_mod( 'shitate_ratio', '1.25' ) );
-	$base  = shitate_sanitize_text_m( get_theme_mod( 'shitate_text_m', 16 ) );
+function shitate_scale_inline_css( $post_type = '', $post_id = 0 ) {
+	$scale = shitate_scale_for( $post_type, $post_id );
+	$ratio = $scale['ratio'];
+	$base  = $scale['base'];
 
 	$css = shitate_font_inline_css();
 	$css .= ':root{--st-ratio:' . $ratio . ';--st-text-m:' . $base . 'px;';
@@ -496,14 +636,20 @@ function shitate_font_inline_css() {
  * @param array $settings Block editor settings.
  * @return array
  */
-function shitate_scale_editor_settings( $settings ) {
+function shitate_scale_editor_settings( $settings, $context = null ) {
 	if ( ! isset( $settings['styles'] ) || ! is_array( $settings['styles'] ) ) {
 		$settings['styles'] = array();
 	}
-	$settings['styles'][] = array( 'css' => shitate_scale_inline_css() );
+	$post_type = '';
+	$post_id   = 0;
+	if ( $context && ! empty( $context->post ) && $context->post instanceof WP_Post ) {
+		$post_type = $context->post->post_type;
+		$post_id   = (int) $context->post->ID;
+	}
+	$settings['styles'][] = array( 'css' => shitate_scale_inline_css( $post_type, $post_id ) );
 	return $settings;
 }
-add_filter( 'block_editor_settings_all', 'shitate_scale_editor_settings' );
+add_filter( 'block_editor_settings_all', 'shitate_scale_editor_settings', 10, 2 );
 
 /**
  * Live preview script for the Customizer.
@@ -536,6 +682,120 @@ function shitate_utilities_toolbar_script() {
 add_action( 'enqueue_block_editor_assets', 'shitate_utilities_toolbar_script' );
 
 /**
+ * Per-post overrides: ratio, base size and "hide the page title", stored as
+ * post meta and edited from the "Type scale" panel in the editor sidebar.
+ */
+function shitate_register_scale_meta() {
+	foreach ( array_keys( shitate_scale_post_types() ) as $type ) {
+		register_post_meta(
+			$type,
+			'_shitate_ratio',
+			array(
+				'type'              => 'string',
+				'single'            => true,
+				'default'           => '',
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'shitate_sanitize_ratio_optional',
+				'auth_callback'     => 'shitate_scale_meta_auth',
+			)
+		);
+		register_post_meta(
+			$type,
+			'_shitate_text_m',
+			array(
+				'type'              => 'integer',
+				'single'            => true,
+				'default'           => 0,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'shitate_sanitize_text_m_optional',
+				'auth_callback'     => 'shitate_scale_meta_auth',
+			)
+		);
+		register_post_meta(
+			$type,
+			'_shitate_hide_title',
+			array(
+				'type'              => 'boolean',
+				'single'            => true,
+				'default'           => false,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'rest_sanitize_boolean',
+				'auth_callback'     => 'shitate_scale_meta_auth',
+			)
+		);
+	}
+}
+add_action( 'init', 'shitate_register_scale_meta', 20 );
+
+/**
+ * Only users who can edit the post may change its scale meta.
+ *
+ * @param bool   $allowed  Unused.
+ * @param string $meta_key Unused.
+ * @param int    $post_id  Post ID.
+ * @return bool
+ */
+function shitate_scale_meta_auth( $allowed, $meta_key, $post_id ) {
+	return current_user_can( 'edit_post', $post_id );
+}
+
+/**
+ * "Hide the page title": drop the Post Title block of the page being viewed.
+ *
+ * Only the title of the queried singular post is affected, so titles in
+ * query loops, cards and the document <title> stay as they are.
+ *
+ * @param string $block_content Rendered block.
+ * @param array  $block         Parsed block.
+ * @return string
+ */
+function shitate_maybe_hide_post_title( $block_content, $block ) {
+	if ( ! is_singular() ) {
+		return $block_content;
+	}
+	$queried = (int) get_queried_object_id();
+	$post_id = isset( $block['context']['postId'] ) ? (int) $block['context']['postId'] : (int) get_the_ID();
+	if ( $queried && $post_id === $queried && get_post_meta( $queried, '_shitate_hide_title', true ) ) {
+		return '';
+	}
+	return $block_content;
+}
+add_filter( 'render_block_core/post-title', 'shitate_maybe_hide_post_title', 10, 2 );
+
+/**
+ * Editor sidebar panel "Type scale": per-post ratio, base size and the
+ * hide-title switch, with a live preview in the canvas.
+ */
+function shitate_scale_panel_script() {
+	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+	if ( ! $screen || empty( $screen->post_type ) || ! array_key_exists( $screen->post_type, shitate_scale_post_types() ) ) {
+		return;
+	}
+	wp_enqueue_script(
+		'shitate-scale-panel',
+		get_theme_file_uri( 'assets/js/scale-panel.js' ),
+		array( 'wp-plugins', 'wp-editor', 'wp-element', 'wp-components', 'wp-data', 'wp-i18n' ),
+		SHITATE_VERSION,
+		true
+	);
+	$inherited = shitate_scale_for( $screen->post_type, 0 );
+	wp_add_inline_script(
+		'shitate-scale-panel',
+		'window.shitateScalePanel = ' . wp_json_encode(
+			array(
+				'ratios'    => shitate_ratio_choices(),
+				'inherited' => $inherited,
+				'minBase'   => 12,
+				'maxBase'   => 24,
+			)
+		) . ';',
+		'before'
+	);
+	wp_set_script_translations( 'shitate-scale-panel', 'shitate', get_template_directory() . '/languages' );
+}
+add_action( 'enqueue_block_editor_assets', 'shitate_scale_panel_script' );
+
+/**
  * Enqueue front-end styles.
  */
 function shitate_enqueue_styles() {
@@ -557,7 +817,13 @@ function shitate_enqueue_styles() {
 		SHITATE_VERSION
 	);
 	// Customizer type-scale override, right after tokens.css so it always wins.
-	wp_add_inline_style( 'shitate-tokens', shitate_scale_inline_css() );
+	$scale_type = '';
+	$scale_id   = 0;
+	if ( is_singular() ) {
+		$scale_type = (string) get_post_type();
+		$scale_id   = (int) get_queried_object_id();
+	}
+	wp_add_inline_style( 'shitate-tokens', shitate_scale_inline_css( $scale_type, $scale_id ) );
 	wp_enqueue_style(
 		'shitate-utilities',
 		get_theme_file_uri( 'assets/css/utilities.css' ),

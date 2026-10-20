@@ -3,10 +3,10 @@
 /*
  * Post/page editor with the template hidden: the title block sits in its own
  * wrapper above the content root, with no spacing of its own, so the first
- * paragraph touched the title. Give it the same room a heading gets on the
- * front end (gap × r², see tokens.css); the gap variable comes from Global
- * Styles so it follows the ratio.
+ * paragraph touched the title. Give it the same room a big heading gets on
+ * the front end (gap × 2, see tokens.css); the gap variable comes from Global
+ * Styles (one line of body text by default).
  */
 .editor-styles-wrapper .editor-visual-editor__post-title-wrapper {
-	margin-block-end: calc( var( --wp--style--block-gap, 1.5rem ) * var( --st-r, 1.25 ) * var( --st-r, 1.25 ) );
+	margin-block-end: calc( var( --wp--style--block-gap, 1.5rem ) * 2 );
 }

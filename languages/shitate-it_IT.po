@@ -15,6 +15,12 @@ msgstr "$49"
 msgid "$99"
 msgstr "$99"
 
+msgid "%s: base size"
+msgstr "%s: dimensione di base"
+
+msgid "%s: scale ratio"
+msgstr "%s: rapporto"
+
 msgid "01"
 msgstr "01"
 
@@ -90,6 +96,9 @@ msgstr "Automatico — a metà tra 1 e il rapporto principale"
 msgid "Back to home"
 msgstr "Torna alla home"
 
+msgid "Base size"
+msgstr "Dimensione di base"
+
 msgid "Base size (px)"
 msgstr "Dimensione base (px)"
 
@@ -162,6 +171,9 @@ msgstr "Siti aziendali, siti business, qualsiasi cosa tu costruisca — in liber
 msgid "Default"
 msgstr "Predefinito"
 
+msgid "Default (%s)"
+msgstr "Predefinito (%s)"
+
 msgid "Do I need a page builder plugin to use this theme?"
 msgstr "Serve un plugin page builder per usare questo tema?"
 
@@ -210,6 +222,9 @@ msgstr "Spazio generoso e respiro attorno a ogni elemento, come fa Apple."
 msgid "Get started"
 msgstr "Inizia"
 
+msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
+msgstr "Assegna a un tipo di contenuto un rapporto o una dimensione di base propri, ad esempio una scala più stretta per gli articoli rispetto alle pagine. «Valore del sito» eredita le impostazioni della scala tipografica. Un singolo articolo o pagina può comunque sovrascriverli dalla barra laterale dell’editor."
+
 msgid "Go live"
 msgstr "Pubblicazione"
 
@@ -221,6 +236,9 @@ msgstr "Haru Kawakami"
 
 msgid "Headings, body text and spacing all come from a single ratio, so a page stays in proportion wherever you edit it."
 msgstr "Titoli, testo e spaziature derivano tutti da un unico rapporto, così la pagina resta proporzionata ovunque la si modifichi."
+
+msgid "Hide the page title"
+msgstr "Nascondi il titolo della pagina"
 
 msgid "How it works"
 msgstr "Come funziona"
@@ -351,6 +369,9 @@ msgstr "Scopri di più su di noi"
 msgid "Read the guide"
 msgstr "Leggi la guida"
 
+msgid "Removes the Post Title block from the template for this page only, for pages that open with their own hero. The document title and menus are unchanged."
+msgstr "Rimuove il blocco «Titolo dell’articolo» dal template solo per questa pagina, per le pagine che si aprono con un proprio hero. Il titolo del documento e i menu restano invariati."
+
 msgid "Replace this image and text with your own story, and the layout will follow along on every screen size."
 msgstr "Sostituite questa immagine e questo testo con la vostra storia: il layout seguirà su ogni dimensione di schermo."
 
@@ -395,6 +416,9 @@ msgstr "Imposta Piccolo / Molto piccolo / Minuscolo a 0,95rem / 0,8rem / 0,75rem
 
 msgid "Simple pricing"
 msgstr "Prezzi semplici"
+
+msgid "Site default"
+msgstr "Valore del sito"
 
 msgid "Six things we are asked for most often. Rename them to match your own work."
 msgstr "Le sei cose che ci vengono chieste più spesso. Rinominatele in base al vostro lavoro."
@@ -461,6 +485,12 @@ msgstr "Trasforma un brief approssimativo in un layout davvero leggibile e tiene
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
 msgstr "Testo e spazi si riducono gradualmente al restringersi dello schermo, senza salti improvvisi a una larghezza fissa."
+
+msgid "Type scale"
+msgstr "Scala tipografica"
+
+msgid "Type scale by post type"
+msgstr "Scala tipografica per tipo di contenuto"
 
 msgid "Typography Scale"
 msgstr "Scala tipografica"

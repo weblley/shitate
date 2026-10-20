@@ -15,6 +15,12 @@ msgstr ""
 msgid "$99"
 msgstr ""
 
+msgid "%s: base size"
+msgstr ""
+
+msgid "%s: scale ratio"
+msgstr ""
+
 msgid "01"
 msgstr ""
 
@@ -90,6 +96,9 @@ msgstr ""
 msgid "Back to home"
 msgstr ""
 
+msgid "Base size"
+msgstr ""
+
 msgid "Base size (px)"
 msgstr ""
 
@@ -162,6 +171,9 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
+msgid "Default (%s)"
+msgstr ""
+
 msgid "Do I need a page builder plugin to use this theme?"
 msgstr ""
 
@@ -210,6 +222,9 @@ msgstr ""
 msgid "Get started"
 msgstr ""
 
+msgid "Give one post type its own ratio or base size, for example a tighter scale for blog posts than for pages. \"Site default\" inherits the Typography Scale settings. A single post or page can still override these from its editor sidebar."
+msgstr ""
+
 msgid "Go live"
 msgstr ""
 
@@ -220,6 +235,9 @@ msgid "Haru Kawakami"
 msgstr ""
 
 msgid "Headings, body text and spacing all come from a single ratio, so a page stays in proportion wherever you edit it."
+msgstr ""
+
+msgid "Hide the page title"
 msgstr ""
 
 msgid "How it works"
@@ -351,6 +369,9 @@ msgstr ""
 msgid "Read the guide"
 msgstr ""
 
+msgid "Removes the Post Title block from the template for this page only, for pages that open with their own hero. The document title and menus are unchanged."
+msgstr ""
+
 msgid "Replace this image and text with your own story, and the layout will follow along on every screen size."
 msgstr ""
 
@@ -394,6 +415,9 @@ msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of 
 msgstr ""
 
 msgid "Simple pricing"
+msgstr ""
+
+msgid "Site default"
 msgstr ""
 
 msgid "Six things we are asked for most often. Rename them to match your own work."
@@ -460,6 +484,12 @@ msgid "Turns a rough brief into a layout you can actually read, and keeps the gr
 msgstr ""
 
 msgid "Type and space shrink smoothly as the screen narrows, so there is no sudden jump at a fixed width."
+msgstr ""
+
+msgid "Type scale"
+msgstr ""
+
+msgid "Type scale by post type"
 msgstr ""
 
 msgid "Typography Scale"
