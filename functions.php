@@ -1000,12 +1000,16 @@ function shitate_enqueue_styles() {
 		wp_register_style( 'shitate-reset', false, array( 'shitate-tokens' ), SHITATE_VERSION );
 		wp_register_style( 'shitate-utilities', false, array( 'shitate-tokens' ), SHITATE_VERSION );
 		wp_enqueue_style( 'shitate-utilities' );
-		wp_enqueue_style(
+		// wp_enqueue_style() only registers when it gets a src, so the alias is
+		// registered explicitly: code that lists 'shitate-style' as a dependency
+		// must keep working when the bundle is in use.
+		wp_register_style(
 			'shitate-style',
 			is_child_theme() ? get_stylesheet_uri() : false,
 			array( 'shitate-tokens', 'shitate-utilities' ),
 			SHITATE_VERSION
 		);
+		wp_enqueue_style( 'shitate-style' );
 	} else {
 		$deps = array();
 		if ( $use_reset ) {
