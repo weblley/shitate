@@ -102,6 +102,27 @@ function shitate_register_pattern_categories() {
 add_action( 'init', 'shitate_register_pattern_categories' );
 
 /**
+ * Block styles.
+ *
+ * Breadcrumbs "Single line": never wraps; the trail scrolls sideways instead
+ * (scrollbar hidden). Core forces flex-wrap:wrap at 0-1-1, so the selectors
+ * here deliberately carry the block class as well.
+ */
+function shitate_register_block_styles() {
+	register_block_style(
+		'core/breadcrumbs',
+		array(
+			'name'         => 'single-line',
+			'label'        => __( 'Single line', 'shitate' ),
+			'inline_style' => '.wp-block-breadcrumbs.is-style-single-line ol{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:none}'
+				. '.wp-block-breadcrumbs.is-style-single-line ol::-webkit-scrollbar{display:none}'
+				. '.wp-block-breadcrumbs.is-style-single-line li{flex:none}',
+		)
+	);
+}
+add_action( 'init', 'shitate_register_block_styles' );
+
+/**
  * Appearance → Patterns shortcut.
  *
  * Block themes only get "Editor" under Appearance, which buries pattern

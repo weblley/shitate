@@ -417,6 +417,9 @@ msgstr "Small / X-Small / XX-Small を比率で割らず 0.95rem / 0.8rem / 0.75
 msgid "Simple pricing"
 msgstr "シンプルな料金"
 
+msgid "Single line"
+msgstr "1行（横スクロール）"
+
 msgid "Site default"
 msgstr "サイトの既定"
 

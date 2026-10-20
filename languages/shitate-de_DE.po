@@ -417,6 +417,9 @@ msgstr "Setzt Klein / Sehr klein / Winzig auf 0,95rem / 0,8rem / 0,75rem, statt 
 msgid "Simple pricing"
 msgstr "Einfache Preise"
 
+msgid "Single line"
+msgstr "Einzeilig"
+
 msgid "Site default"
 msgstr "Website-Standard"
 

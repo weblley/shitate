@@ -417,6 +417,9 @@ msgstr ""
 msgid "Simple pricing"
 msgstr ""
 
+msgid "Single line"
+msgstr ""
+
 msgid "Site default"
 msgstr ""
 

@@ -39,6 +39,7 @@ export default {
 			'Eight type scales': 'Acht Schriftskalen',
 			'Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme.': 'Jede Einstellung liegt in CSS-Variablen. Auch nach der Wahl einer Skala können Sie sie feinjustieren oder wechseln, indem Sie eine Variable überschreiben – statt gegen das Theme zu arbeiten.',
 			'Japanese typography': 'Japanische Typografie',
+			'Single line': 'Einzeilig',
 			'When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone.': 'Wendet bei japanischer Website-Sprache einen drucknahen Satz an: strenge Umbruchregeln (keine kleinen Kana oder Längungsstriche am Zeilenanfang), automatischer Abstand zwischen japanischem und lateinischem Text sowie proportionale Kana-/Kanji-Abstände (palt). Codeblöcke bleiben unverändert.',
 			// 2026-09 batch 1 patterns
 			'$19': '$19',
@@ -240,6 +241,7 @@ export default {
 			'Eight type scales': 'Huit échelles typographiques',
 			'Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme.': 'Chaque réglage vit dans des variables CSS. Une fois l’échelle choisie, vous pouvez encore l’ajuster ou en changer en surchargeant une variable, au lieu de contourner le thème.',
 			'Japanese typography': 'Typographie japonaise',
+			'Single line': 'Sur une ligne',
 			'When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone.': 'Lorsque la langue du site est le japonais, applique une composition proche de l’imprimé : règles de coupure strictes (pas de petits kana ni de marques d’allongement en début de ligne), espacement automatique entre texte japonais et latin, et chasse proportionnelle des kana/kanji (palt). Les blocs de code ne sont pas modifiés.',
 			// 2026-09 batch 1 patterns
 			'$19': '$19',
@@ -441,6 +443,7 @@ export default {
 			'Eight type scales': 'Ocho escalas tipográficas',
 			'Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme.': 'Cada ajuste vive en variables CSS. Una vez elegida la escala, puedes afinarla o cambiarla sobrescribiendo una variable, en lugar de pelearte con el tema.',
 			'Japanese typography': 'Tipografía japonesa',
+			'Single line': 'Una sola línea',
 			'When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone.': 'Cuando el idioma del sitio es japonés, aplica una composición de estilo impreso: reglas de salto de línea estrictas (sin kana pequeños ni marcas de alargamiento al inicio de línea), espaciado automático entre texto japonés y latino, y espaciado proporcional de kana/kanji (palt). Los bloques de código no se modifican.',
 			// 2026-09 batch 1 patterns
 			'$19': '$19',
@@ -642,6 +645,7 @@ export default {
 			'Eight type scales': 'Otto scale tipografiche',
 			'Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme.': 'Ogni impostazione vive in variabili CSS. Una volta scelta la scala puoi ancora rifinirla o cambiarla sovrascrivendo una variabile, invece di aggirare il tema.',
 			'Japanese typography': 'Tipografia giapponese',
+			'Single line': 'Una sola riga',
 			'When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone.': 'Quando la lingua del sito è il giapponese, applica una composizione simile alla stampa: regole di interruzione di riga rigorose (niente kana piccoli o segni di allungamento a inizio riga), spaziatura automatica tra testo giapponese e latino e spaziatura proporzionale di kana/kanji (palt). I blocchi di codice restano invariati.',
 			// 2026-09 batch 1 patterns
 			'$19': '$19',
@@ -843,6 +847,7 @@ export default {
 			'Eight type scales': 'Acht typografische schalen',
 			'Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme.': 'Elke instelling zit in CSS-variabelen. Ook na het kiezen van een schaal kun je die verfijnen of wisselen door een variabele te overschrijven, in plaats van om het thema heen te werken.',
 			'Japanese typography': 'Japanse typografie',
+			'Single line': 'Eén regel',
 			'When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone.': 'Past bij Japans als sitetaal een drukwerkachtige zetwijze toe: strikte afbreekregels (geen kleine kana of verlengingstekens aan het begin van een regel), automatische ruimte tussen Japanse en Latijnse tekst en proportionele kana-/kanji-spatiëring (palt). Codeblokken blijven ongewijzigd.',
 			// 2026-09 batch 1 patterns
 			'$19': '$19',
@@ -1044,6 +1049,7 @@ export default {
 			'Eight type scales': 'Oito escalas tipográficas',
 			'Every setting lives in CSS variables. Once you have picked a scale you can still fine-tune or switch it by overriding a variable, instead of working around the theme.': 'Cada definição vive em variáveis CSS. Depois de escolher a escala, pode afiná-la ou trocá-la substituindo uma variável, em vez de contornar o tema.',
 			'Japanese typography': 'Tipografia japonesa',
+			'Single line': 'Uma só linha',
 			'When the site language is Japanese, applies print-style typesetting: strict line-breaking rules (no small kana or long-vowel marks at the start of a line), automatic spacing between Japanese and Latin text, and proportional kana/kanji spacing (palt). Code blocks are left alone.': 'Quando o idioma do site é japonês, aplica uma composição semelhante à impressa: regras de quebra de linha rigorosas (sem kana pequenos nem marcas de prolongamento no início da linha), espaçamento automático entre texto japonês e latino e espaçamento proporcional de kana/kanji (palt). Os blocos de código não são alterados.',
 			// 2026-09 batch 1 patterns
 			'$19': '$19',

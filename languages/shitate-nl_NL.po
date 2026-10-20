@@ -417,6 +417,9 @@ msgstr "Zet Klein / Extra klein / Heel klein op 0,95rem / 0,8rem / 0,75rem in pl
 msgid "Simple pricing"
 msgstr "Eenvoudige prijzen"
 
+msgid "Single line"
+msgstr "Eén regel"
+
 msgid "Site default"
 msgstr "Standaard van de site"
 

@@ -417,6 +417,9 @@ msgstr "Fixe Petit / Très petit / Minuscule à 0,95rem / 0,8rem / 0,75rem au li
 msgid "Simple pricing"
 msgstr "Des tarifs simples"
 
+msgid "Single line"
+msgstr "Sur une ligne"
+
 msgid "Site default"
 msgstr "Valeur du site"
 
