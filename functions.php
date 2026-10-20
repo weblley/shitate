@@ -284,8 +284,10 @@ function shitate_register_block_styles() {
 			. $n . ' .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover{background-color:var(--st-color-base-2)}'
 			. $n . ' .wp-block-navigation__submenu-container .wp-block-navigation-item__content::after,' . $n . ' .wp-block-navigation__submenu-container .wp-block-navigation-item__description{display:none}'
 			// Mobile overlay: full-width rows with hairlines, captions beside the label.
-			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item{inline-size:100%;border-block-end:0.0625rem solid var(--st-color-rule)}'
-			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content{flex-direction:row;align-items:baseline;justify-content:flex-start;gap:var(--st-space-s);padding:var(--st-space-s) 0}'
+			// The overlay inherits the header's justification (often right); rows span the width instead.
+			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content,' . $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container,' . $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container{align-items:stretch}'
+			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item{inline-size:100%;justify-content:flex-start;align-items:stretch;text-align:start;border-block-end:0.0625rem solid var(--st-color-rule)}'
+			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content{inline-size:100%;flex-direction:row;align-items:baseline;justify-content:flex-start;gap:var(--st-space-s);padding:var(--st-space-s) 0}'
 			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content::after{display:none}'
 			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container{box-shadow:none;padding:0 0 var(--st-space-xs) var(--st-space-m);min-inline-size:0}'
 			. $n . ' .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item{border:0}';
@@ -321,7 +323,7 @@ function shitate_register_block_styles() {
 		. '.wp-block-navigation .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content:hover{background-color:var(--st-color-brand);color:var(--st-color-base)}'
 		. '.wp-block-navigation .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content::after,.wp-block-navigation .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content::after,.wp-block-navigation .wp-block-navigation-item.is-style-button .wp-block-navigation-item__description,.wp-block-navigation .wp-block-navigation-item.is-style-outline .wp-block-navigation-item__description{display:none}'
 		. '.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-button,.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-outline{border:0;margin-block-start:var(--st-space-m)}'
-		. '.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content,.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content{inline-size:100%;padding:0.75rem 1rem}';
+		. '.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-button>.wp-block-navigation-item__content,.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.is-style-outline>.wp-block-navigation-item__content{inline-size:100%;justify-content:center;padding:0.75rem 1rem}';
 	foreach ( array( 'button' => __( 'Button', 'shitate' ), 'outline' => __( 'Outline', 'shitate' ) ) as $name => $label ) {
 		register_block_style(
 			'core/navigation-link',
