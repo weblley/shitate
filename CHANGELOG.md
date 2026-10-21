@@ -6,6 +6,8 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-10-21
+
 ### Upgrade notes（1.0.5 で挙動が変わる点）
 
 - 投稿専用テンプレート `single-post.html` は、サイトエディターで保存した `single` より優先される（テンプレート階層 single-post → single）。保存済みの `single` をカスタマイズしていたサイトでは、投稿だけが新しい読み物レイアウトになり、他の投稿タイプは保存済みのまま。元に戻すにはサイトエディターで `single-post` を編集して保存する

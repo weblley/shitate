@@ -52,6 +52,19 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.5 =
+* Posts get a reading layout (single-post.html, posts only): a 42rem column, breadcrumbs, category, title, author / date / reading time, a 16:9 featured image, tags, an author box and previous / next links.
+* One list card for the posts page, archives and search, built from core blocks only: 16:9 image, category chips and date, two-line title, two-line excerpt. Three Post Template styles, "Cards, first post large", "List" and "Rows": the posts page uses the first, archives and search the list.
+* Posts page heading with the page's excerpt beside it and a row of category chips ("All" plus every category with posts); the same row on category archives. New "News rows" pattern for announcement sections. Pagination centred, with 2.25rem page-number targets.
+* Navigation styles in the manner of Japanese business themes: "Captioned" (a small caption under each item taken from the link's Description, a brand-coloured bar on hover and under the current page, shadowed drop-downs, a mobile overlay with hairline rows) and "Underline" without captions; Navigation Link "Button" and "Outline" for a call-to-action link. The default header uses Captioned.
+* More block styles: "Chips" (Post Terms, Categories, Paragraph), "Two lines" (Post Title, Post Excerpt) and "Single line" (Breadcrumbs). Each style's CSS is printed only on pages that use it.
+* Content details decided once for every site: heading tracking, thin offset link underlines, quotes, pullquotes, tables (horizontal rules, zebra rows, tabular figures), captions, separators, code blocks and inline code. Two derived colours, --st-color-rule and --st-color-underline, follow the palette.
+* Vertical rhythm is now line-based: stacked blocks one line apart, media and headings at fixed multiples of the line, half a line after a heading. The spacing scale is fixed rem steps (4 to 104px) that no longer follow the type-scale ratio or the viewport.
+* Editor: a "shitate settings" panel in the post sidebar sets the type-scale ratio and base size for one post or page and can hide the page title on pages that open with their own hero.
+* Performance: the front end loads one minified stylesheet (17 KB instead of four files, 34 KB); core's default colour, gradient and shadow presets are no longer printed (global styles 18 KB to 10 KB on a fresh install). The sources ship with the theme and SCRIPT_DEBUG serves them.
+* Upgrade notes: single-post.html takes precedence over a Site Editor copy of "single" for posts (other post types keep it); content coloured with core's default presets (has-vivid-red-color and the like) loses that colour, so recolour it with the theme palette; the four stylesheet handles are now aliases of the bundle and add_filter( 'shitate_use_bundle', '__return_false' ) restores them.
+* Fixed: an image or table right after a heading now gets half a line as documented; card excerpts no longer carry an extra bottom margin; the hide-title switch leaves titles inside a Query Loop alone; breadcrumb links lose their underline through the Single line style; the "Line" spacing preset sits in size order in the editor.
+
 = 1.0.4 =
 * Twelve new patterns built from core blocks only: about (image and text), contact banner, FAQ (details), three features, cover hero, split hero, latest posts, pricing (three plans), services grid, three steps, team (three members) and two testimonials. Sample copy ships in Japanese and six European languages.
 * Vertical rhythm now steps with the type-scale ratio: stacked blocks gap × r, media/tables/quotes gap × r², before h3/h4 gap × r³, before h1/h2 gap × r⁴. Navigation and button rows keep the plain blockGap.
