@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Changed
+
+- `screenshot.png` を公式サイトのリニューアル後のトップページで撮り直し（1200×900。フローティングの言語切替・タイプスケールボタンとキャンペーン帯は非表示で撮影）
+
 ## [1.0.5] - 2026-10-21
 
 ### Upgrade notes（1.0.5 で挙動が変わる点）
