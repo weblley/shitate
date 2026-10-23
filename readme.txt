@@ -52,6 +52,10 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.6 =
+* Requires PHP 8.3 (was 7.4). WordPress will not update or activate the theme on older PHP; please upgrade PHP before updating.
+* New screenshot taken from the renewed demo site.
+
 = 1.0.5 =
 * Posts get a reading layout (single-post.html, posts only): a 42rem column, breadcrumbs, category, title, author / date / reading time, a 16:9 featured image, tags, an author box and previous / next links.
 * One list card for the posts page, archives and search, built from core blocks only: 16:9 image, category chips and date, two-line title, two-line excerpt. Three Post Template styles, "Cards, first post large", "List" and "Rows": the posts page uses the first, archives and search the list.
