@@ -8,6 +8,7 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ### Changed
 
+- 必要な PHP バージョンを 7.4 から 8.3 に引き上げ（style.css / readme.txt の Requires PHP）。PHP 8.3 未満のサイトでは WordPress がテーマの更新・有効化を止める
 - `screenshot.png` を公式サイトのリニューアル後のトップページで撮り直し（1200×900。フローティングの言語切替・タイプスケールボタンとキャンペーン帯は非表示で撮影）
 
 ## [1.0.5] - 2026-10-21
