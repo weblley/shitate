@@ -82,6 +82,9 @@
 				title: el( 'span', { style: { display: 'inline-flex', alignItems: 'center', gap: '0.5em' } }, el( Mark ), __( 'shitate settings', 'shitate' ) ),
 				className: 'shitate-settings-panel',
 			},
+			el(
+				'div',
+				{ style: { display: 'grid', gap: '16px' } },
 			el( SelectControl, {
 				label: __( 'Scale ratio', 'shitate' ),
 				value: ratio,
@@ -111,6 +114,7 @@
 				},
 				__nextHasNoMarginBottom: true,
 			} )
+			)
 		);
 	}
 

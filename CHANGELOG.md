@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Fixed
+
+- エディターの「shitate設定」パネルで、スケール比率・本文サイズ・ページタイトルの切り替えが詰まって並んでいたのを、16px 間隔に
+
 ## [1.0.6] - 2026-10-23
 
 ### Changed
