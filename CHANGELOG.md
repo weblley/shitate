@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Changed
+
+- アイキャッチの角丸を既定で 0 に。`single.html`（投稿以外の個別ページ）と `page.html` のアイキャッチ画像から border-radius（`--st-radius-m`）を削除（`single-post.html` と一覧テンプレートはもともと角丸なし）。角丸が欲しい場合はサイトエディターでブロックの「角丸」を設定する
+
 ### Added
 
 - パターン「Posts, first post large」（`shitate/posts-featured-grid`）: 見出しと「一覧を見る」リンク、最新の投稿 1 件を大きなカード（画像の横に本文）、続く 3 件を 3 列のカードで並べる。投稿テンプレートの「カード（1件を大きく）」スタイルと同じ組み方
