@@ -6,6 +6,10 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+### Added
+
+- パターン「Posts, first post large」（`shitate/posts-featured-grid`）: 見出しと「一覧を見る」リンク、最新の投稿 1 件を大きなカード（画像の横に本文）、続く 3 件を 3 列のカードで並べる。投稿テンプレートの「カード（1件を大きく）」スタイルと同じ組み方
+
 ### Fixed
 
 - エディターの「shitate設定」パネルで、スケール比率・本文サイズ・ページタイトルの切り替えが詰まって並んでいたのを、16px 間隔に
