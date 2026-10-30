@@ -26,8 +26,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
 <div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--50)"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"width":"48px","sizeSlug":"large","linkDestination":"none","className":"mt-0"} -->
-<figure class="wp-block-image size-large is-resized mt-0"><img alt="" style="width:48px"/></figure>
+<div class="wp-block-column"><!-- wp:image {"width":"48px","height":"auto","sizeSlug":"large","linkDestination":"none","className":"mt-0"} -->
+<figure class="wp-block-image size-large is-resized mt-0"><img alt="" style="width:48px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"large"} -->
@@ -40,8 +40,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"width":"48px","sizeSlug":"large","linkDestination":"none","className":"mt-0"} -->
-<figure class="wp-block-image size-large is-resized mt-0"><img alt="" style="width:48px"/></figure>
+<div class="wp-block-column"><!-- wp:image {"width":"48px","height":"auto","sizeSlug":"large","linkDestination":"none","className":"mt-0"} -->
+<figure class="wp-block-image size-large is-resized mt-0"><img alt="" style="width:48px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"large"} -->
@@ -54,8 +54,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"width":"48px","sizeSlug":"large","linkDestination":"none","className":"mt-0"} -->
-<figure class="wp-block-image size-large is-resized mt-0"><img alt="" style="width:48px"/></figure>
+<div class="wp-block-column"><!-- wp:image {"width":"48px","height":"auto","sizeSlug":"large","linkDestination":"none","className":"mt-0"} -->
+<figure class="wp-block-image size-large is-resized mt-0"><img alt="" style="width:48px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"fontSize":"large"} -->
