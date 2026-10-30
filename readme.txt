@@ -52,6 +52,12 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.7 =
+* New pattern "Posts, first post large": a heading with a "View all" link, the latest post as a large card with the text beside its image, and the next three posts as cards in a three-column grid.
+* Featured images in the single (other post types) and page templates no longer have rounded corners by default; set a radius on the block in the Site Editor to add one.
+* The icons in the "Three features with icons" pattern now save the same markup on WordPress 7.0 and 7.1, so the editor no longer converts them when the pattern is inserted.
+* The "shitate settings" panel in the editor now has even spacing between its controls.
+
 = 1.0.6 =
 * Requires PHP 8.3 (was 7.4). WordPress will not update or activate the theme on older PHP; please upgrade PHP before updating.
 * New screenshot taken from the renewed demo site.

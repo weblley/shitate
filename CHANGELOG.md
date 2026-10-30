@@ -6,6 +6,8 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [1.0.7] - 2026-10-30
+
 ### Changed
 
 - アイキャッチの角丸を既定で 0 に。`single.html`（投稿以外の個別ページ）と `page.html` のアイキャッチ画像から border-radius（`--st-radius-m`）を削除（`single-post.html` と一覧テンプレートはもともと角丸なし）。角丸が欲しい場合はサイトエディターでブロックの「角丸」を設定する
