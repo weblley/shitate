@@ -282,6 +282,9 @@ msgstr ""
 msgid "Latest news"
 msgstr ""
 
+msgid "Leave empty to use the theme placeholder: a tinted panel with an image icon in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
+msgstr ""
+
 msgid "List"
 msgstr ""
 
@@ -378,6 +381,9 @@ msgstr ""
 msgid "Performance"
 msgstr ""
 
+msgid "Placeholder image"
+msgstr ""
+
 msgid "Priority support"
 msgstr ""
 
@@ -436,6 +442,9 @@ msgid "Send us a message with what you have in mind. A rough idea is enough to g
 msgstr ""
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
+msgstr ""
+
+msgid "Show a placeholder for posts without a featured image"
 msgstr ""
 
 msgid "Simple pricing"
@@ -498,6 +507,9 @@ msgstr ""
 msgid "Three plans, no hidden extras. Change the numbers to your own."
 msgstr ""
 
+msgid "Thumbnails"
+msgstr ""
+
 msgid "Training"
 msgstr ""
 
@@ -538,6 +550,9 @@ msgid "Updates from the studio, notes on the theme and the occasional case study
 msgstr ""
 
 msgid "Updates, backups and a monthly check that everything still loads the way it should."
+msgstr ""
+
+msgid "Used for the featured image in post lists (Query Loop) when a post has none. The featured image on a single post or page is not affected."
 msgstr ""
 
 msgid "View all"

@@ -282,6 +282,9 @@ msgstr "Landing pages"
 msgid "Latest news"
 msgstr "Últimas notícias"
 
+msgid "Leave empty to use the theme placeholder: a tinted panel with an image icon in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
+msgstr "Deixe vazio para usar a imagem de substituição do tema: um painel colorido com um ícone de imagem nas cores do site, que acompanha a variação de estilo. Para os cartões, uma imagem horizontal (16:9) é a mais adequada."
+
 msgid "List"
 msgstr "Lista"
 
@@ -378,6 +381,9 @@ msgstr "Quarta perfeita — 1,333"
 msgid "Performance"
 msgstr "Desempenho"
 
+msgid "Placeholder image"
+msgstr "Imagem de substituição"
+
 msgid "Priority support"
 msgstr "Suporte prioritário"
 
@@ -437,6 +443,9 @@ msgstr "Envie-nos uma mensagem com o que tem em mente. Uma ideia aproximada cheg
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Fixa Pequeno / Muito pequeno / Minúsculo em 0,95rem / 0,8rem / 0,75rem em vez de dividir pela proporção, o que pode torná-los demasiado pequenos para ler."
+
+msgid "Show a placeholder for posts without a featured image"
+msgstr "Mostrar uma imagem de substituição nos artigos sem imagem de destaque"
 
 msgid "Simple pricing"
 msgstr "Preços simples"
@@ -498,6 +507,9 @@ msgstr "Três ideias que moldam cada página que constrói com ele."
 msgid "Three plans, no hidden extras. Change the numbers to your own."
 msgstr "Três planos, sem extras escondidos. Substitua os números pelos seus."
 
+msgid "Thumbnails"
+msgstr "Miniaturas"
+
 msgid "Training"
 msgstr "Formação"
 
@@ -539,6 +551,9 @@ msgstr "Novidades do estúdio, notas sobre o tema e, de vez em quando, um caso d
 
 msgid "Updates, backups and a monthly check that everything still loads the way it should."
 msgstr "Atualizações, cópias de segurança e uma verificação mensal de que tudo continua a carregar como deve."
+
+msgid "Used for the featured image in post lists (Query Loop) when a post has none. The featured image on a single post or page is not affected."
+msgstr "Usada nas listas de artigos (ciclo de consulta) para os artigos sem imagem de destaque. A imagem de destaque de um artigo ou página individual não é afetada."
 
 msgid "View all"
 msgstr "Ver tudo"

@@ -282,6 +282,9 @@ msgstr "ランディングページ"
 msgid "Latest news"
 msgstr "最新のお知らせ"
 
+msgid "Leave empty to use the theme placeholder: a tinted panel with an image icon in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
+msgstr "選ばない場合は、サイトの色に合わせた背景に画像アイコンを置いた、テーマ標準の画像を使います（スタイルバリエーションの色にも合わせて変わります）。カードには横長（16:9）の画像が合います。"
+
 msgid "List"
 msgstr "リスト"
 
@@ -378,6 +381,9 @@ msgstr "完全4度 — 1.333"
 msgid "Performance"
 msgstr "パフォーマンス"
 
+msgid "Placeholder image"
+msgstr "代わりの画像"
+
 msgid "Priority support"
 msgstr "優先サポート"
 
@@ -437,6 +443,9 @@ msgstr "考えていることをメッセージでお送りください。ざっ
 
 msgid "Sets Small / X-Small / XX-Small to 0.95rem / 0.8rem / 0.75rem instead of dividing by the ratio, which can make them too small to read."
 msgstr "Small / X-Small / XX-Small を比率で割らず 0.95rem / 0.8rem / 0.75rem に固定します（比率で割ると小さすぎて読みにくくなる場合の対策）。"
+
+msgid "Show a placeholder for posts without a featured image"
+msgstr "アイキャッチ画像がない投稿に代わりの画像を表示する"
 
 msgid "Simple pricing"
 msgstr "シンプルな料金"
@@ -498,6 +507,9 @@ msgstr "このテーマで作るすべてのページを形づくる、3 つの�
 msgid "Three plans, no hidden extras. Change the numbers to your own."
 msgstr "3 つのプラン、隠れた追加料金なし。数字はご自身のものに書き換えてください。"
 
+msgid "Thumbnails"
+msgstr "サムネイル"
+
 msgid "Training"
 msgstr "トレーニング"
 
@@ -539,6 +551,9 @@ msgstr "スタジオからのお知らせ、テーマについてのメモ、と
 
 msgid "Updates, backups and a monthly check that everything still loads the way it should."
 msgstr "更新・バックアップ・月 1 回の表示チェックで、いつでも正しく表示される状態を保ちます。"
+
+msgid "Used for the featured image in post lists (Query Loop) when a post has none. The featured image on a single post or page is not affected."
+msgstr "投稿一覧（クエリーループ）で、アイキャッチ画像が設定されていない投稿に使います。投稿や固定ページの個別ページには表示しません。"
 
 msgid "View all"
 msgstr "一覧を見る"

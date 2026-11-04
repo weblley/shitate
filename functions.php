@@ -28,6 +28,8 @@ if ( ! defined( 'SHITATE_VERSION' ) ) {
 // Primary / Hover) follow their source colors when those are edited.
 require_once get_template_directory() . '/inc/colors.php';
 require_once get_template_directory() . '/inc/performance.php';
+// Query Loop thumbnails for posts without a featured image.
+require_once get_template_directory() . '/inc/noimage.php';
 
 /**
  * One-time migration of Customizer settings saved under the old "st_" prefix.
@@ -995,6 +997,50 @@ function shitate_scale_meta_auth( $allowed, $meta_key, $post_id ) {
 }
 
 /**
+ * Whether a Post Template (the repeated part of a Query Loop) is rendering.
+ *
+ * Core passes only postId / postType down to the blocks inside a Post
+ * Template, not queryId, so a block cannot tell from its context that it
+ * sits in a loop. The theme counts Post Template renders instead:
+ * render_block_data fires just before one renders, its
+ * render_block_core/post-template filter just after.
+ *
+ * @param int $change 1 when a Post Template starts, -1 when it ends.
+ * @return bool
+ */
+function shitate_in_post_template( $change = 0 ) {
+	static $depth = 0;
+	$depth = max( 0, $depth + (int) $change );
+	return $depth > 0;
+}
+
+/**
+ * Count a Post Template that is about to render.
+ *
+ * @param array $parsed_block Parsed block.
+ * @return array
+ */
+function shitate_post_template_start( $parsed_block ) {
+	if ( isset( $parsed_block['blockName'] ) && 'core/post-template' === $parsed_block['blockName'] ) {
+		shitate_in_post_template( 1 );
+	}
+	return $parsed_block;
+}
+add_filter( 'render_block_data', 'shitate_post_template_start' );
+
+/**
+ * Uncount a Post Template that has rendered.
+ *
+ * @param string $block_content Rendered block.
+ * @return string
+ */
+function shitate_post_template_end( $block_content ) {
+	shitate_in_post_template( -1 );
+	return $block_content;
+}
+add_filter( 'render_block_core/post-template', 'shitate_post_template_end' );
+
+/**
  * "Hide the page title": drop the Post Title block of the page being viewed.
  *
  * Only the title of the queried singular post is affected, so titles in
@@ -1009,8 +1055,8 @@ function shitate_maybe_hide_post_title( $block_content, $block, $instance = null
 		return $block_content;
 	}
 	// Only the page's own title: a title inside a Query Loop (which may list
-	// the same post) stays. The parsed block has no context; the instance does.
-	if ( $instance instanceof WP_Block && isset( $instance->context['queryId'] ) ) {
+	// the same post) stays.
+	if ( shitate_in_post_template() ) {
 		return $block_content;
 	}
 	$queried = (int) get_queried_object_id();
