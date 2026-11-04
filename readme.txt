@@ -30,13 +30,18 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 shitate bundles no third-party resources. All CSS, JavaScript,
-patterns and the screenshot are original work by weblley inc and are
+patterns, images and the screenshot are original work by weblley inc and are
 released under the same GPL v2 or later license; see Resources below.
 
 == Resources ==
 
 screenshot.png
 Copyright (C) 2026 weblley inc. A screenshot of the theme's own front page, rendered with the bundled patterns and no third-party content.
+License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gpl-2.0.html
+Source: created by weblley inc for this theme.
+
+assets/images/noimage.webp
+Copyright (C) 2026 weblley inc. The No Image picture shown in post lists for posts without a featured image.
 License: GNU General Public License v2 or later, https://www.gnu.org/licenses/gpl-2.0.html
 Source: created by weblley inc for this theme.
 

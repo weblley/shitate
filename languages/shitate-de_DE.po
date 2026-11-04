@@ -117,6 +117,9 @@ msgstr "Baut mit den Blöcken, die der Editor ohnehin mitbringt, damit die Websi
 msgid "Button"
 msgstr "Button"
 
+msgid "By default the No Image picture that comes with the theme is used. Pick another image to replace it, or remove it to show a plain panel in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
+msgstr "Standardmäßig wird das mitgelieferte „No Image“-Bild des Themes verwendet. Ein anderes Bild auswählen, um es zu ersetzen, oder entfernen, um eine schlichte Fläche in den Farben der Website anzuzeigen, die der Stilvariante folgt. Für die Karten eignet sich ein Querformat (16:9) am besten."
+
 msgid "Call us"
 msgstr "Anrufen"
 
@@ -281,9 +284,6 @@ msgstr "Landingpages"
 
 msgid "Latest news"
 msgstr "Neuigkeiten"
-
-msgid "Leave empty to use the theme placeholder: a tinted panel with an image icon in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
-msgstr "Leer lassen, um den Platzhalter des Themes zu verwenden: eine getönte Fläche mit Bildsymbol in den Farben der Website, die der Stilvariante folgt. Für die Karten eignet sich ein Querformat (16:9) am besten."
 
 msgid "List"
 msgstr "Liste"
