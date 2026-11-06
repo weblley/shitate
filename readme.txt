@@ -52,6 +52,12 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.8 =
+* Posts without a featured image now get a placeholder in post lists (Query Loop): a panel in the site colors that follows the style variation, or an image you pick in Customizer > Thumbnails, where the placeholder can also be turned off. Single posts and pages are not affected.
+* The page header, main content and footer now have the ids "header", "main" and "footer", for links and custom CSS. The skip link now points to #main.
+* The header and footer menus are named "Main menu" and "Footer menu" for screen readers when they have no name of their own.
+* Fixed: with "Hide the page title" turned on, the page's own title was also hidden where the page appears in a Query Loop on that page (WordPress 7.1).
+
 = 1.0.7 =
 * New pattern "Posts, first post large": a heading with a "View all" link, the latest post as a large card with the text beside its image, and the next three posts as cards in a three-column grid.
 * Featured images in the single (other post types) and page templates no longer have rounded corners by default; set a radius on the block in the Site Editor to add one.
