@@ -18,6 +18,9 @@
  *   inside the content gets none).
  * - The shitate_landmark_ids filter renames them, or drops one with ''.
  *
+ * The menus of those header and footer parts are also named for assistive
+ * technology ("Main menu", "Footer menu"; see shitate_name_navigation()).
+ *
  * @package shitate
  */
 
@@ -123,7 +126,66 @@ function shitate_main_end( $block_content, $block ) {
 add_filter( 'render_block_core/group', 'shitate_main_end', 10, 2 );
 
 /**
- * id="header" / id="footer" on the page's header and footer template parts.
+ * Whether a menu name is missing or only the generic one core gives a new
+ * menu: "Navigation" (in English or the site language), numbered when it
+ * repeats ("Navigation 2"), or a bare number left by an empty name (" 2").
+ *
+ * @param mixed $label The nav element's aria-label.
+ * @return bool
+ */
+function shitate_is_generic_nav_name( $label ) {
+	$label = is_string( $label ) ? trim( $label ) : '';
+	$base  = trim( (string) preg_replace( '/\s*\d+$/', '', $label ) );
+	if ( '' === $base ) {
+		return true;
+	}
+	// Core's own strings, compared only (core's text domain on purpose).
+	return 'navigation' === strtolower( $base )
+		|| translate( 'Navigation', 'default' ) === $base
+		|| translate_with_gettext_context( 'Navigation', 'Title of a Navigation menu', 'default' ) === $base;
+}
+
+/**
+ * Name the menu of the page's header or footer for screen readers, which
+ * list menus by name: "Main menu" / "Footer menu", when its navigation block
+ * has no name or only a generic one. A name set on the site (the menu's
+ * title, e.g. "Header menu") is kept. Only the first such menu of the part
+ * is named.
+ *
+ * @param string $block_content Rendered template part.
+ * @return string
+ */
+function shitate_name_navigation( $block_content ) {
+	$tags = new WP_HTML_Tag_Processor( $block_content );
+	if ( ! $tags->next_tag() ) {
+		return $block_content;
+	}
+	$element = strtolower( $tags->get_tag() );
+	if ( 'header' === $element ) {
+		$name = __( 'Main menu', 'shitate' );
+	} elseif ( 'footer' === $element ) {
+		$name = __( 'Footer menu', 'shitate' );
+	} else {
+		return $block_content;
+	}
+
+	while ( $tags->next_tag(
+		array(
+			'tag_name'   => 'NAV',
+			'class_name' => 'wp-block-navigation',
+		)
+	) ) {
+		if ( shitate_is_generic_nav_name( $tags->get_attribute( 'aria-label' ) ) ) {
+			$tags->set_attribute( 'aria-label', $name );
+			return $tags->get_updated_html();
+		}
+	}
+	return $block_content;
+}
+
+/**
+ * id="header" / id="footer" and the menu name on the page's header and
+ * footer template parts.
  *
  * @param string $block_content Rendered block.
  * @return string
@@ -132,6 +194,7 @@ function shitate_template_part_landmark( $block_content ) {
 	if ( shitate_in_main() ) {
 		return $block_content;
 	}
-	return shitate_landmark_id( $block_content, array( 'header', 'footer' ) );
+	$block_content = shitate_landmark_id( $block_content, array( 'header', 'footer' ) );
+	return shitate_name_navigation( $block_content );
 }
 add_filter( 'render_block_core/template-part', 'shitate_template_part_landmark' );

@@ -210,6 +210,9 @@ msgstr "ページ上のすべてのサイズは、ひとつの比率から"
 msgid "Fixed sizes for small text"
 msgstr "小さな文字の数値指定"
 
+msgid "Footer menu"
+msgstr "フッターメニュー"
+
 msgid "For people with"
 msgstr "知識がある人"
 
@@ -287,6 +290,9 @@ msgstr "選ばない場合は、サイトの色に合わせた背景に画像ア
 
 msgid "List"
 msgstr "リスト"
+
+msgid "Main menu"
+msgstr "メインメニュー"
 
 msgid "Maintenance"
 msgstr "保守"

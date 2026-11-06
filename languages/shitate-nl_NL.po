@@ -210,6 +210,9 @@ msgstr "Elke maat op de pagina komt uit één verhouding"
 msgid "Fixed sizes for small text"
 msgstr "Vaste groottes voor kleine tekst"
 
+msgid "Footer menu"
+msgstr "Footermenu"
+
 msgid "For people with"
 msgstr "Voor mensen met"
 
@@ -287,6 +290,9 @@ msgstr "Laat leeg om de tijdelijke afbeelding van het thema te gebruiken: een ge
 
 msgid "List"
 msgstr "Lijst"
+
+msgid "Main menu"
+msgstr "Hoofdmenu"
 
 msgid "Maintenance"
 msgstr "Onderhoud"

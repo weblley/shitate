@@ -210,6 +210,9 @@ msgstr "Ogni dimensione della pagina deriva da un unico rapporto"
 msgid "Fixed sizes for small text"
 msgstr "Dimensioni fisse per il testo piccolo"
 
+msgid "Footer menu"
+msgstr "Menu del footer"
+
 msgid "For people with"
 msgstr "Per chi ha"
 
@@ -287,6 +290,9 @@ msgstr "Lascia vuoto per usare il segnaposto del tema: un riquadro colorato con 
 
 msgid "List"
 msgstr "Elenco"
+
+msgid "Main menu"
+msgstr "Menu principale"
 
 msgid "Maintenance"
 msgstr "Manutenzione"

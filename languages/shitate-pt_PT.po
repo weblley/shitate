@@ -210,6 +210,9 @@ msgstr "Cada tamanho na página vem de uma única proporção"
 msgid "Fixed sizes for small text"
 msgstr "Tamanhos fixos para texto pequeno"
 
+msgid "Footer menu"
+msgstr "Menu do rodapé"
+
 msgid "For people with"
 msgstr "Para quem tem"
 
@@ -287,6 +290,9 @@ msgstr "Deixe vazio para usar a imagem de substituição do tema: um painel colo
 
 msgid "List"
 msgstr "Lista"
+
+msgid "Main menu"
+msgstr "Menu principal"
 
 msgid "Maintenance"
 msgstr "Manutenção"

@@ -210,6 +210,9 @@ msgstr "Jede Größe auf der Seite kommt aus einem Verhältnis"
 msgid "Fixed sizes for small text"
 msgstr "Feste Größen für kleinen Text"
 
+msgid "Footer menu"
+msgstr "Footer-Menü"
+
 msgid "For people with"
 msgstr "Für Menschen mit"
 
@@ -287,6 +290,9 @@ msgstr "Leer lassen, um den Platzhalter des Themes zu verwenden: eine getönte F
 
 msgid "List"
 msgstr "Liste"
+
+msgid "Main menu"
+msgstr "Hauptmenü"
 
 msgid "Maintenance"
 msgstr "Wartung"

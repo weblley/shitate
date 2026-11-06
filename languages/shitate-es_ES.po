@@ -210,6 +210,9 @@ msgstr "Cada tamaño de la página sale de una sola proporción"
 msgid "Fixed sizes for small text"
 msgstr "Tamaños fijos para el texto pequeño"
 
+msgid "Footer menu"
+msgstr "Menú del pie de página"
+
 msgid "For people with"
 msgstr "Para quienes tienen"
 
@@ -287,6 +290,9 @@ msgstr "Déjalo vacío para usar la imagen de reemplazo del tema: un panel tinta
 
 msgid "List"
 msgstr "Lista"
+
+msgid "Main menu"
+msgstr "Menú principal"
 
 msgid "Maintenance"
 msgstr "Mantenimiento"

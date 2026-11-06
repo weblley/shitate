@@ -210,6 +210,9 @@ msgstr "Chaque taille de la page découle d’un seul ratio"
 msgid "Fixed sizes for small text"
 msgstr "Tailles fixes pour les petits textes"
 
+msgid "Footer menu"
+msgstr "Menu du pied de page"
+
 msgid "For people with"
 msgstr "Pour celles et ceux qui ont"
 
@@ -287,6 +290,9 @@ msgstr "Laissez vide pour utiliser l’image de remplacement du thème : un apla
 
 msgid "List"
 msgstr "Liste"
+
+msgid "Main menu"
+msgstr "Menu principal"
 
 msgid "Maintenance"
 msgstr "Maintenance"

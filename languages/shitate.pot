@@ -210,6 +210,9 @@ msgstr ""
 msgid "Fixed sizes for small text"
 msgstr ""
 
+msgid "Footer menu"
+msgstr ""
+
 msgid "For people with"
 msgstr ""
 
@@ -286,6 +289,9 @@ msgid "Leave empty to use the theme placeholder: a tinted panel with an image ic
 msgstr ""
 
 msgid "List"
+msgstr ""
+
+msgid "Main menu"
 msgstr ""
 
 msgid "Maintenance"
