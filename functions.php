@@ -30,6 +30,8 @@ require_once get_template_directory() . '/inc/colors.php';
 require_once get_template_directory() . '/inc/performance.php';
 // Query Loop thumbnails for posts without a featured image.
 require_once get_template_directory() . '/inc/noimage.php';
+// Default ids on the page landmarks: #header, #main, #footer.
+require_once get_template_directory() . '/inc/landmarks.php';
 
 /**
  * One-time migration of Customizer settings saved under the old "st_" prefix.
