@@ -117,9 +117,6 @@ msgstr "エディター標準のブロックだけで組むので、サイトは
 msgid "Button"
 msgstr "ボタン"
 
-msgid "By default the No Image picture that comes with the theme is used. Pick another image to replace it, or remove it to show a plain panel in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
-msgstr "初期状態ではテーマ付属の「No Image」画像を使います。別の画像に替えることも、削除してサイトの色に合わせたシンプルな表示にすることもできます（スタイルバリエーションの色にも合わせて変わります）。カードには横長（16:9）の画像が合います。"
-
 msgid "Call us"
 msgstr "電話"
 
@@ -284,6 +281,9 @@ msgstr "ランディングページ"
 
 msgid "Latest news"
 msgstr "最新のお知らせ"
+
+msgid "Leave empty to use the theme placeholder: a tinted panel with an image icon in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
+msgstr "選ばない場合は、サイトの色に合わせた背景に画像アイコンを置いた、テーマ標準の画像を使います（スタイルバリエーションの色にも合わせて変わります）。カードには横長（16:9）の画像が合います。"
 
 msgid "List"
 msgstr "リスト"

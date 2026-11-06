@@ -117,9 +117,6 @@ msgstr "Construye con los bloques que ya trae el editor, para que el sitio siga 
 msgid "Button"
 msgstr "Botón"
 
-msgid "By default the No Image picture that comes with the theme is used. Pick another image to replace it, or remove it to show a plain panel in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
-msgstr "De forma predeterminada se usa la imagen «No Image» incluida en el tema. Elige otra imagen para sustituirla o quítala para mostrar un panel sencillo con los colores del sitio, que sigue la variación de estilo. Para las tarjetas conviene una imagen horizontal (16:9)."
-
 msgid "Call us"
 msgstr "Llámanos"
 
@@ -284,6 +281,9 @@ msgstr "Páginas de aterrizaje"
 
 msgid "Latest news"
 msgstr "Últimas noticias"
+
+msgid "Leave empty to use the theme placeholder: a tinted panel with an image icon in the site colors, which follows the style variation. A landscape image (16:9) suits the cards best."
+msgstr "Déjalo vacío para usar la imagen de reemplazo del tema: un panel tintado con un icono de imagen en los colores del sitio, que sigue la variación de estilo. Para las tarjetas conviene una imagen horizontal (16:9)."
 
 msgid "List"
 msgstr "Lista"
