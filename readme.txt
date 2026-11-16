@@ -52,6 +52,12 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.9 =
+* Time to Read: in languages counted in characters (Japanese, Chinese) the block now assumes 500 characters a minute. WordPress's default of 189 is words a minute, so reading times came out about 2.6 times too long. A speed saved on the block still wins; the shitate_reading_speed filter changes the default (return 0 for WordPress's).
+* Posts (single-post.html) show the date of the last update after the publish date, as "· Updated …", when the post was updated on a later day. single.html leaves out a same-day update the same way.
+* single.html: the English-only "Posted:" and "Updated:" labels before the dates are replaced with translated "Published" and "Updated" labels.
+* Reminder for sites updating from 1.0.4 or earlier: since 1.0.5, posts use single-post.html ahead of a Site Editor copy of "single". If you customized "single", make the same change to "single-post" so posts show it too.
+
 = 1.0.8 =
 * Posts without a featured image now get a placeholder in post lists (Query Loop): a panel in the site colors that follows the style variation, or an image you pick in Customizer > Thumbnails, where the placeholder can also be turned off. Single posts and pages are not affected.
 * The page header, main content and footer now have the ids "header", "main" and "footer", for links and custom CSS. The skip link now points to #main.
