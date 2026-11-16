@@ -396,6 +396,9 @@ msgstr ""
 msgid "Project Manager"
 msgstr ""
 
+msgid "Published"
+msgstr ""
+
 msgid "Read more about us"
 msgstr ""
 
@@ -541,6 +544,9 @@ msgid "Unlimited websites"
 msgstr ""
 
 msgid "Up to five websites"
+msgstr ""
+
+msgid "Updated"
 msgstr ""
 
 msgid "Updates for as long as you subscribe"

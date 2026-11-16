@@ -396,6 +396,9 @@ msgstr "Suporte prioritário"
 msgid "Project Manager"
 msgstr "Gestora de projeto"
 
+msgid "Published"
+msgstr "Publicado"
+
 msgid "Read more about us"
 msgstr "Saber mais sobre nós"
 
@@ -542,6 +545,9 @@ msgstr "Sites ilimitados"
 
 msgid "Up to five websites"
 msgstr "Até cinco sites"
+
+msgid "Updated"
+msgstr "Atualizado"
 
 msgid "Updates for as long as you subscribe"
 msgstr "Atualizações enquanto a subscrição estiver ativa"

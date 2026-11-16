@@ -396,6 +396,9 @@ msgstr "Prioriteitsondersteuning"
 msgid "Project Manager"
 msgstr "Projectmanager"
 
+msgid "Published"
+msgstr "Gepubliceerd"
+
 msgid "Read more about us"
 msgstr "Lees meer over ons"
 
@@ -542,6 +545,9 @@ msgstr "Onbeperkt aantal websites"
 
 msgid "Up to five websites"
 msgstr "Tot vijf websites"
+
+msgid "Updated"
+msgstr "Bijgewerkt"
 
 msgid "Updates for as long as you subscribe"
 msgstr "Updates zolang u geabonneerd bent"

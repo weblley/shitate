@@ -396,6 +396,9 @@ msgstr "優先サポート"
 msgid "Project Manager"
 msgstr "プロジェクトマネージャー"
 
+msgid "Published"
+msgstr "投稿"
+
 msgid "Read more about us"
 msgstr "私たちについて詳しく"
 
@@ -542,6 +545,9 @@ msgstr "サイト数無制限"
 
 msgid "Up to five websites"
 msgstr "5 サイトまで"
+
+msgid "Updated"
+msgstr "更新"
 
 msgid "Updates for as long as you subscribe"
 msgstr "契約中はずっと更新"

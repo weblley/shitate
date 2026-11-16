@@ -71,3 +71,28 @@ shitate is distributed under the terms of the GNU GPL.
 :where(a, button, summary, .wp-element-button, .wp-block-button__link, input[type="submit"], input[type="button"], input[type="reset"]) {
 	transition: var(--st-transition, 0.2s);
 }
+
+/*
+ * Post dates in the single templates. The labels before the dates are
+ * translated: --st-label-published / --st-label-updated come from the
+ * theme's inline CSS (shitate_label_inline_css()).
+ * .has-shitate-separator gives a date its own "·" separator, spaced with the
+ * same gap as its row: core renders nothing for the last-updated date of a
+ * post that was never updated, and the separator goes with it.
+ */
+.wp-block-post-date.is-shitate-published time::before {
+	content: var(--st-label-published, "Published") " ";
+}
+
+.wp-block-post-date.is-shitate-updated time::before {
+	content: var(--st-label-updated, "Updated") " ";
+}
+
+.wp-block-post-date.has-shitate-separator {
+	display: flex;
+	gap: inherit;
+}
+
+.wp-block-post-date.has-shitate-separator::before {
+	content: "·";
+}

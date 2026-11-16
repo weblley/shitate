@@ -32,6 +32,10 @@ require_once get_template_directory() . '/inc/performance.php';
 require_once get_template_directory() . '/inc/noimage.php';
 // Default ids on the page landmarks: #header, #main, #footer.
 require_once get_template_directory() . '/inc/landmarks.php';
+// Time to Read: a reading speed for languages counted in characters.
+require_once get_template_directory() . '/inc/reading-time.php';
+// The last-updated date in the single templates: from the day after publishing.
+require_once get_template_directory() . '/inc/post-dates.php';
 
 /**
  * One-time migration of Customizer settings saved under the old "st_" prefix.
@@ -905,10 +909,34 @@ function shitate_scale_editor_settings( $settings, $context = null ) {
 	if ( $context && ! empty( $context->post ) && $context->post instanceof WP_Post ) {
 		$post_id = (int) $context->post->ID;
 	}
-	$settings['styles'][] = array( 'css' => shitate_scale_inline_css( $post_id ) );
+	$settings['styles'][] = array( 'css' => shitate_scale_inline_css( $post_id ) . shitate_label_inline_css() );
 	return $settings;
 }
 add_filter( 'block_editor_settings_all', 'shitate_scale_editor_settings', 10, 2 );
+
+/**
+ * Translated labels that the theme's CSS shows as generated content: PICKUP
+ * on sticky posts in list cards, and Published / Updated before the dates in
+ * the single templates (style.css).
+ *
+ * @return string
+ */
+function shitate_label_inline_css() {
+	$labels = array(
+		'pickup'    => __( 'PICKUP', 'shitate' ),
+		'published' => __( 'Published', 'shitate' ),
+		'updated'   => __( 'Updated', 'shitate' ),
+	);
+
+	$css = '';
+	foreach ( $labels as $name => $text ) {
+		// A CSS string: escape backslashes and quotes, keep line breaks and markup out.
+		$text = str_replace( array( '\\', '"', "\n", "\r", '<' ), array( '\\\\', '\\"', ' ', ' ', '\\3c ' ), $text );
+		$css .= '--st-label-' . $name . ':"' . $text . '";';
+	}
+
+	return ':root{' . $css . '}';
+}
 
 /**
  * Live preview script for the Customizer.
@@ -1180,8 +1208,8 @@ function shitate_enqueue_styles() {
 	// Customizer type-scale override, right after the tokens so it always wins.
 	$scale_id = is_singular() ? (int) get_queried_object_id() : 0;
 	wp_add_inline_style( 'shitate-tokens', shitate_scale_inline_css( $scale_id ) );
-	// Translated label for sticky posts in list cards (CSS generated content).
-	wp_add_inline_style( 'shitate-tokens', ':root{--st-label-pickup:"' . str_replace( array( '\\', '"' ), array( '\\\\', '\\"' ), __( 'PICKUP', 'shitate' ) ) . '"}' );
+	// Translated labels shown by the CSS (generated content).
+	wp_add_inline_style( 'shitate-tokens', shitate_label_inline_css() );
 }
 add_action( 'wp_enqueue_scripts', 'shitate_enqueue_styles' );
 
