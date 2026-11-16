@@ -312,9 +312,6 @@ msgstr ""
 msgid "Marketing Lead, Kitamura Foods"
 msgstr ""
 
-msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
-msgstr ""
-
 msgid "Mika Fujita"
 msgstr ""
 
@@ -357,9 +354,6 @@ msgstr ""
 msgid "One website"
 msgstr ""
 
-msgid "Optimize image loading"
-msgstr ""
-
 msgid "Outline"
 msgstr ""
 
@@ -382,9 +376,6 @@ msgid "Perfect Fifth — 1.5"
 msgstr ""
 
 msgid "Perfect Fourth — 1.333"
-msgstr ""
-
-msgid "Performance"
 msgstr ""
 
 msgid "Placeholder image"

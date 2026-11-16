@@ -312,9 +312,6 @@ msgstr "上マージン"
 msgid "Marketing Lead, Kitamura Foods"
 msgstr "マーケティング責任者、北村食品"
 
-msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
-msgstr "テンプレート内の最初の大きな画像を優先読み込み（fetchpriority=\"high\"）にし、それ以降の画像を遅延読み込み（loading=\"lazy\"）にします。WP Rocket や Perfmatters などの高速化プラグインで画像の読み込みを制御している場合は、干渉を避けるためにオフにしてください。"
-
 msgid "Mika Fujita"
 msgstr "藤田 美香"
 
@@ -357,9 +354,6 @@ msgstr "ひとつのタイプスケール"
 msgid "One website"
 msgstr "1 サイト"
 
-msgid "Optimize image loading"
-msgstr "画像の読み込みを最適化"
-
 msgid "Outline"
 msgstr "枠線"
 
@@ -383,9 +377,6 @@ msgstr "完全5度 — 1.5"
 
 msgid "Perfect Fourth — 1.333"
 msgstr "完全4度 — 1.333"
-
-msgid "Performance"
-msgstr "パフォーマンス"
 
 msgid "Placeholder image"
 msgstr "代わりの画像"

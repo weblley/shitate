@@ -312,9 +312,6 @@ msgstr "Margem superior"
 msgid "Marketing Lead, Kitamura Foods"
 msgstr "Responsável de marketing, Kitamura Foods"
 
-msgid "Marks the first large image in the template as high priority and lazy-loads the images after it. Turn this off if a performance plugin (WP Rocket, Perfmatters, etc.) handles image loading, so the two do not interfere."
-msgstr "Marca a primeira imagem grande do modelo como alta prioridade e carrega as imagens seguintes de forma diferida. Desative esta opção se um plugin de desempenho (WP Rocket, Perfmatters, etc.) gerir o carregamento de imagens, para evitar interferências."
-
 msgid "Mika Fujita"
 msgstr "Mika Fujita"
 
@@ -357,9 +354,6 @@ msgstr "Uma única escala tipográfica"
 msgid "One website"
 msgstr "Um site"
 
-msgid "Optimize image loading"
-msgstr "Otimizar o carregamento de imagens"
-
 msgid "Outline"
 msgstr "Contorno"
 
@@ -383,9 +377,6 @@ msgstr "Quinta perfeita — 1,5"
 
 msgid "Perfect Fourth — 1.333"
 msgstr "Quarta perfeita — 1,333"
-
-msgid "Performance"
-msgstr "Desempenho"
 
 msgid "Placeholder image"
 msgstr "Imagem de substituição"
