@@ -52,6 +52,9 @@ No fonts are bundled; the typography relies on system font stacks.
 
 == Changelog ==
 
+= 1.0.10 =
+* Removed the opt-in image loading optimization (Customizer > Performance > Optimize image loading, added in 1.0.0 and off by default). It added fetchpriority and lazy-loading hints to images placed in block templates. Sites that never turned it on see no change. Sites that had turned it on go back to WordPress's default handling of template images; images inside post content keep the hints WordPress adds itself.
+
 = 1.0.9 =
 * Time to Read: in languages counted in characters (Japanese, Chinese) the block now assumes 500 characters a minute. WordPress's default of 189 is words a minute, so reading times came out about 2.6 times too long. A speed saved on the block still wins; the shitate_reading_speed filter changes the default (return 0 for WordPress's).
 * Posts (single-post.html) show the date of the last update after the publish date, as "· Updated …", when the post was updated on a later day. single.html leaves out a same-day update the same way.

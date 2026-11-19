@@ -6,9 +6,11 @@ Shitate テーマの変更履歴。書式は [Keep a Changelog](https://keepacha
 
 ## [Unreleased]
 
+## [1.0.10] - 2026-11-19
+
 ### Removed
 
-- 画像読み込みの最適化（`inc/performance.php`、カスタマイザー「パフォーマンス › 画像の読み込みを最適化」）を廃止。テンプレート内の画像に `fetchpriority="high"` / `loading="lazy"` を補う機能で、既定はオフだった。高速化に関する設定は shitate pro blocks の設定画面「高速化」タブにまとめる方針になり、同じ処理をプラグインへ移した（pro blocks 1.14.0 の次の版から）。カスタマイザーで ON にしていたサイトは、プラグインがその値を引き継ぐ。プラグインを使っていないサイトでは、ON にしていた場合にこのヒントが付かなくなる（コアの既定の動作に戻る）。theme mod `shitate_image_loading` とフィルター `shitate_optimize_image_loading` はテーマからは参照しなくなる
+- 画像読み込みの最適化（`inc/performance.php`、カスタマイザー「パフォーマンス › 画像の読み込みを最適化」）を廃止。テンプレート内の画像に `fetchpriority="high"` / `loading="lazy"` を補う機能で、既定はオフだった。高速化に関する設定は shitate pro blocks の設定画面「高速化」タブにまとめる方針になり、同じ処理をプラグインへ移した（pro blocks 1.15.0 から）。カスタマイザーで ON にしていたサイトは、プラグインがその値を引き継ぐ。プラグインを使っていないサイトでは、ON にしていた場合にこのヒントが付かなくなる（コアの既定の動作に戻る）。theme mod `shitate_image_loading` とフィルター `shitate_optimize_image_loading` はテーマからは参照しなくなる
 
 ## [1.0.9] - 2026-11-16
 
